@@ -1,0 +1,67 @@
+/* the asterisk (*) is a universal select */
+* {
+    color: hotpink;
+}
+
+body {
+    background-color: beige;
+    font-size: 1rem;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h1 {
+    color: black;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: blueviolet;
+    font-size: 1.8rem;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+.blue-color {
+    color: blue;
+}
+
+#pink-color {
+    color: pink;
+}
+
+section {
+    text-align: center;
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.heading-border {
+    border: 3px dashed gray;
+}
+
+/*h1 {
+  color: red;
+}
+
+h2 {
+  color: green;
+}
+
+h3 {
+  color: violet;
+}
+
+p {
+  color: blue;
+}
+
+li {
+  color: brown;
+}
