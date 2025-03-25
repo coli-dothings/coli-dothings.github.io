@@ -1,0 +1,32 @@
+body {
+  font-size: 1.1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+p {
+  border: 1px solid crimson;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  /* margin 0 auto to always center align element */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px dashed green;
+}
+
+.vcenter {
+  line-height: 360px;
+  /* height - top padding - bottom padding */
+}
+
+span {
+  color: blueviolet;
+}
