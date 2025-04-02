@@ -1,0 +1,84 @@
+/* ===================================================
+  DESIGN THEORY
+  For design, I wanted to take a more form over function
+  approach, similar to the website by Rich Brown. Though, 
+  with a lot more emphasis on readability. 
+
+  I am using uneven, or irregular grid structure, taken
+  inspiration from the De Stijil movement. Most notable of
+  which is "Piet Mongrid" by Piet Mondrian, the red yellow
+  blue stacked blocks. 
+  Grid is the foundation of webdesign in the modern age, 
+  and still have been the foundation of design in history.
+  ========================================================*/
+
+body {
+  background-color: wheat; /*color pallete later*/
+  display: flex;
+  margin: auto;
+  max-width: 1200px;
+  justify-content: center;
+
+  /*font family placeholder*/
+}
+
+.container {
+  display: grid;
+  /*This allow frontPage grid and mainPage grid to not stack
+    next to each other, and go block by block*/
+}
+
+/*========================================================
+Front Page
+The 6:4 ratio is what the grid is based on. Orginally I 
+wanted 1620x1080px to fit laptop screen, but after some 
+testing, it was too big with the additions of side bars on screen.
+==========================================================*/
+.frontPage {
+  display: grid;
+  grid-template-columns: repeat(12fr);
+  grid-template-rows: repeat(8fr);
+  width: 1050px;
+  height: 700px;
+  padding-left: 30px;
+  /*background-image:url(Kimo\ 02.png); /*test img*/
+
+  /*Fixed width and height to make sure background image is
+    sized correctly*/
+}
+h1 {
+  color: null;
+  font-size: 3rem;
+  text-align: left;
+  text-transform: uppercase;
+  grid-column: 1;
+  grid-row: 2;
+}
+#oart {
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  /*Transform text to vertical, but keeping its orientation*/
+
+  font-size: 3rem;
+  grid-column: 11;
+  grid-row: 2/8;
+}
+#name {
+  grid-row: 3;
+}
+#richbrown {
+  grid-row: 4;
+}
+
+/*========================================================
+Main Page
+
+==========================================================*/
+
+.mainPage {
+  display: grid;
+  grid-template-columns: repeat(6fr);
+  grid-template-rows: repeat(4fr);
+  width: 1050px;
+  min-height: 700px;
+}

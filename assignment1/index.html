@@ -3,53 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mai's assignment 1</title>
+    <title>Mai's Assignment 1</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
   </head>
   <body>
-    <div class="frontPage">
-      <!-- =====================================================
-      This is the first page.
-      The div is for easier management, by sectioning this from 
-      the rest of the content. As a container in html.
-      Heading 1 & 2 are for the 2 biggest texts on the screen
-      that I deemed important.
-      I also wanted a way to link to the original richbrown page that
-      is visually pleasing.
-      bgImg stands for background image. I used class so I can uniformly
-      change and assign style to other items of the class, if needed.
-      ===========================================================-->
+    <div class="container">
+      <!--container for both page sections-->
+      <div class="frontPage">
+        <!-- =====================================================
+        This is the first page.
+        The div is for an invisible grid that I can arrange the text
+        elements into
+        Heading 1 & 2 are for the 2 biggest texts on the screen
+        that I deemed important.
+        I also wanted a way to link to the original richbrown page that
+        is visually pleasing.
+        bgImg stands for background image. I used class so I can uniformly
+        change and assign style to other items of the class, if needed.
+        ===========================================================-->
 
-      <h1>
-        Interaction Experience<br />
-        Research Project
-      </h1>
-      <h2 id="oart">OART1013</h2>
-      <p id="name">Mai Anh Vo s4021256</p>
-      <a href="https://www.richbrown.info/" id="richbrown">Rich Brown</a>
-      <img src="" alt="" class="bgImg" />
-    </div>
+        <h1>
+          Interaction Experience<br />
+          Research Project
+        </h1>
+        <h2 id="oart">OART1013</h2>
+        <p id="name">Mai Anh Vo s4021256</p>
+        <a href="https://www.richbrown.info/" id="richbrown">Rich Brown</a>
+        <img src="" alt="" class="bgImg" />
+      </div>
 
-    <div class="mainPage">
-      <!--=========================================================
-      The main page section.
-      I intend to use a grid system, with each question is contained 
-      in a box in each div.
-
-      The grid is fully designed in a physical note prior to coding,
-      for smoother coding. Design and coding done seperately.
-
-      All question numbers are heading level 3, differing by class, so I 
-      can style both per h3 and per class. Same principle to 'questions' 
-      and 'answers'.
-      There is also the Accent variation to the classes.
-      ==============================================================-->
-
-      <div class="mainPage" id="q1to9">
-        <!--Box 1 to 9 will be contained a different grid than 10 to 13.
-        This is to accomidate the longer length of those later questions,
-        and put more emphasis on those too.-->
+      <div class="mainPage">
+        <!--=========================================================
+        The main page section.
+        I intend to use a grid system, with each question is contained 
+        in a box in each div. 'mainPage' is the grid container.
+  
+        The grid is fully designed in a physical note prior to coding,
+        for smoother coding. Design and coding done seperately.
+  
+        All question numbers are heading level 3, differing by class, so I 
+        can style both per h3 and per class. Same principle to 'question' 
+        and 'answer'.
+        There is also the Accent variation to the classes.
+  
+        The div using class instead of IDs are more for convenience, less 
+        confusion on syntax during styling
+        ==============================================================-->
 
         <div class="box1">
           <h3 class="qNum"></h3>
@@ -69,15 +69,15 @@
         <div class="imgBox1"></div>
         <div class="imgBox2"></div>
         <div class="imgBox3"></div>
-      </div>
 
-      <div class="mainPage" id="q10to13">
+        <!--Box 10 to 13 will have a different layout to accomidate
+        longer length answers, though same grid as the rest-->
         <div class="box10"></div>
         <div class="box11"></div>
         <div class="box12"></div>
         <div class="box13"></div>
 
-        <!--Every question box will have an decorative image-->
+        <!--decorative images alongside box 10 to 13-->
         <div class="imgBox4"></div>
         <div class="imgBox5"></div>
         <div class="imgBox6"></div>
