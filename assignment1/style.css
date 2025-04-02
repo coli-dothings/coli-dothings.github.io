@@ -4,12 +4,15 @@
   approach, similar to the website by Rich Brown. Though, 
   with a lot more emphasis on readability. 
 
-  I am using uneven, or irregular grid structure, taken
-  inspiration from the De Stijil movement. Most notable of
-  which is "Piet Mongrid" by Piet Mondrian, the red yellow
-  blue stacked blocks. 
+  I am using irregular grid structure, taken inspiration from 
+  the De Stijil movement. Most notable of which is "Piet Mongrid" 
+  by Piet Mondrian, the red yellow blue stacked blocks. 
   Grid is the foundation of webdesign in the modern age, 
   and still have been the foundation of design in history.
+
+  All artworks were drawn by me in Krita, following 
+  an Art Deco style with bolder shapes and lines; maximalist 
+  contrast over minimalist of the website.
   ========================================================*/
 
 body {
@@ -41,7 +44,7 @@ testing, it was too big with the additions of side bars on screen.
   width: 1110px;
   height: 740px;
   background-color: aqua; /*temp bg*/
-  /*background-image:url();
+  background-image: url(frontPage.png);
   /*Fixed width and height to make sure background image is
     sized correctly*/
 }
