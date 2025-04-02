@@ -10,27 +10,28 @@
   <body>
     <div class="container">
       <!--container for both page grids sections, important so they
-      stack in chronological order-->
+      stack in chronological order, and allow some design room-->
       <div class="frontPage">
         <!-- =====================================================
         This is the first page.
-        The frontPage div is for an invisible grid that I can arrange 
-        the text elements into.
-        Heading 1 & 2 are for the 2 biggest texts on the screen
-        that I deemed important.
-        I also wanted a way to link to the original richbrown page that
-        is visually pleasing, so the text will be stylized.
-        'name' and 'richbrown' are put into div to align in sub-grid.
+        The frontPage div is for an invisible grid that can arrange 
+        text elements into, and define border for background image.
+        The text elements are put into div to be styled sub-grid, except
+        'oart' because vertical text react strangely to it.
+        The headings will use a different font family to paragraph.
         ===========================================================-->
 
-        <h1>
-          Interaction Experience<br />
-          Research Project
-        </h1>
+        <div id="title">
+          <h1>
+            Interaction Experience<br />
+            Research Project
+          </h1>
+        </div>
         <h2 id="oart">OART1013</h2>
         <div id="name"><p>Mai Anh Vo s4021256</p></div>
         <div id="richbrown">
           <a href="https://www.richbrown.info/">Rich Brown</a>
+          <!--Stylized Rick Brown text that link to the website-->
         </div>
       </div>
 
@@ -46,10 +47,10 @@
         All question numbers are heading level 3, differing by class, so I 
         can style both per h3 and per class. Same principle to 'question' 
         and 'answer'.
-        There is also the Accent variation to the classes.
+        There is also the Accent variation to the classes, for accent color.
   
         The div using class instead of IDs are more for convenience, less 
-        confusion on syntax during styling
+        confusion on syntax during styling.
         ==============================================================-->
 
         <div class="box1">
