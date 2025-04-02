@@ -9,18 +9,18 @@
   </head>
   <body>
     <div class="container">
-      <!--container for both page sections-->
+      <!--container for both page grids sections, important so they
+      stack in chronological order-->
       <div class="frontPage">
         <!-- =====================================================
         This is the first page.
-        The div is for an invisible grid that I can arrange the text
-        elements into
+        The frontPage div is for an invisible grid that I can arrange 
+        the text elements into.
         Heading 1 & 2 are for the 2 biggest texts on the screen
         that I deemed important.
         I also wanted a way to link to the original richbrown page that
-        is visually pleasing.
-        bgImg stands for background image. I used class so I can uniformly
-        change and assign style to other items of the class, if needed.
+        is visually pleasing, so the text will be stylized.
+        'name' and 'richbrown' are put into div to align in sub-grid.
         ===========================================================-->
 
         <h1>
@@ -28,9 +28,10 @@
           Research Project
         </h1>
         <h2 id="oart">OART1013</h2>
-        <p id="name">Mai Anh Vo s4021256</p>
-        <a href="https://www.richbrown.info/" id="richbrown">Rich Brown</a>
-        <img src="" alt="" class="bgImg" />
+        <div id="name"><p>Mai Anh Vo s4021256</p></div>
+        <div id="richbrown">
+          <a href="https://www.richbrown.info/">Rich Brown</a>
+        </div>
       </div>
 
       <div class="mainPage">
@@ -39,8 +40,8 @@
         I intend to use a grid system, with each question is contained 
         in a box in each div. 'mainPage' is the grid container.
   
-        The grid is fully designed in a physical note prior to coding,
-        for smoother coding. Design and coding done seperately.
+        The main grid is fully designed in a physical note prior to coding,
+        for smoother coding. Though some details are improvised.
   
         All question numbers are heading level 3, differing by class, so I 
         can style both per h3 and per class. Same principle to 'question' 
