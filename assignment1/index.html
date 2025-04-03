@@ -6,6 +6,13 @@
     <title>Mai's Assignment 1</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Notable&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!--Font family Raleway and Notable-->
   </head>
   <body>
     <div class="container">
@@ -30,7 +37,7 @@
         <h2 id="oart">OART1013</h2>
         <div id="name"><p>Mai Anh Vo s4021256</p></div>
         <div id="richbrown">
-          <a href="https://www.richbrown.info/">Rich Brown</a>
+          <a href="https://www.richbrown.info/" id="rb">Rich Brown</a>
           <!--Stylized Rick Brown text that link to the website-->
         </div>
       </div>
@@ -44,47 +51,101 @@
         The main grid is fully designed in a physical note prior to coding,
         for smoother coding. Though some details are improvised.
   
-        All question numbers are heading level 3, differing by class, so I 
-        can style both per h3 and per class. Same principle to 'question' 
-        and 'answer'.
-        There is also the Accent variation to the classes, for accent color.
+        All question numbers are heading level 3, more for navigation 
+        accessibility later on. For now I use the class to style.
+        There is also the Accent variations to the classes, for accent color.
   
-        The div using class instead of IDs are more for convenience, less 
-        confusion on syntax during styling.
+        'boxMainGrid' is the class so I can style box background. ID is for
+        indentification when I start arranging them in the grid.
         ==============================================================-->
 
-        <div class="box1">
+        <div class="boxMainGrid" id="box1">
+          <h3 class="qNum">Q1</h3>
+          <p class="question">
+            What was the first thing you paid attention to when interacting with
+            the experience?
+          </p>
+          <p class="answer">
+            The rapid firing bold text of the loading screen was the first thing
+            I paid attention to. Then to the cascading movement of the
+            individual elements over the video background once the loading is
+            complete.
+          </p>
+        </div>
+        <div class="boxMainGrid" id="box2">
           <h3 class="qNum"></h3>
           <p class="question"></p>
           <p class="answer"></p>
         </div>
-        <div class="box2"></div>
-        <div class="box3"></div>
-        <div class="box4"></div>
-        <div class="box5"></div>
-        <div class="box6"></div>
-        <div class="box7"></div>
-        <div class="box8"></div>
-        <div class="box9"></div>
+        <div class="boxMainGrid" id="box3">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box4">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box5">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box6">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box7">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box8">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box9">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box10">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box11">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box12">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
+        <div class="boxMainGrid" id="box13">
+          <h3 class="qNum"></h3>
+          <p class="question"></p>
+          <p class="answer"></p>
+        </div>
 
-        <!--Every 3 question boxes will have an decorative image-->
-        <!--All artworks were drawn by me in Krita, scale based on the grid-->
-        <div class="imgBox1"></div>
-        <div class="imgBox2"></div>
-        <div class="imgBox3"></div>
-
-        <!--Box 10 to 13 will have a different layout to accomidate
-        longer length answers, though same grid as the rest-->
-        <div class="box10"></div>
-        <div class="box11"></div>
-        <div class="box12"></div>
-        <div class="box13"></div>
-
-        <!--decorative images alongside box 10 to 13-->
-        <div class="imgBox4"></div>
-        <div class="imgBox5"></div>
-        <div class="imgBox6"></div>
-        <div class="imgBox7"></div>
+        <!--================================================================
+        All artworks were drawn by me in Krita, with no use of AI.
+        To prevent clipping issues with the grid borders, I had include them
+        as background-image in the style sheet, so they're always clipped 
+        to the shapes, even after adjusting padding and gaps.
+        =================================================================-->
+        <div class="artMainGrid" id="artImgBox1"></div>
+        <div class="artMainGrid" id="artImgBox2"></div>
+        <div class="artMainGrid" id="artImgBox3"></div>
+        <div class="artMainGrid" id="artImgBox4"></div>
+        <div class="artMainGrid" id="artImgBox5"></div>
+        <div class="artMainGrid" id="artImgBox6"></div>
+        <div class="artMainGrid" id="artImgBox7"></div>
       </div>
     </div>
   </body>
