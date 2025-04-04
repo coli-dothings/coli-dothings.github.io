@@ -15,9 +15,13 @@
   contrast over minimalist of the website.
   ===========================================================
   TYPOGRAPHY
-  Art Deco display font heading. 
-  Sans sariff monospace paragraph. easy to read and perserve 
-  geometric aesthetic 
+  Headings use Notable display font, which is an Art Deco style
+  font. Display fonts are harder to read, meant for short form and
+  large display, which is why I picked it for the headings.
+
+  Raleway is a geometric sans serif font, which fits in my grid-heavy
+  geometric design, even with its offset numbers, which works in favor
+  of Art Deco.
   ===========================================================
   COLOR PALLETE
   Limited pallete. Predominately beige brown and its accents. Next 
@@ -50,8 +54,8 @@ body {
 /*========================================================
 Front Page
 The 6:4 ratio is what the grid is based on. Orginally I 
-wanted 1620x1080px to fit laptop screen, but after some 
-testing, it was too big with the additions of side bars on screen.
+tested with 1620x1080px to fit laptop screen, but after some 
+trials, it was too big with the additions of side bars on screen.
 ==========================================================*/
 .frontPage {
   display: grid;
@@ -67,7 +71,7 @@ testing, it was too big with the additions of side bars on screen.
   font-family: "Notable", sans-serif;
   font-weight: auto;
   font-style: normal;
-  /*Most items in frontpage will use this font family*/
+  /*Most items in frontpage will use this display font, meant for design*/
 }
 #title {
   color: white;
@@ -118,7 +122,13 @@ a#rb:hover {
 
 /*========================================================
 Main Page
-5 pages 1110x740px, on a 6:4 grid. Basic but functional
+5 repeat sections of 1110x740px, on a 6:4 grid. This meant every 4 
+rows is a full 'page', where every box lines up in a top/bottom
+horizontal line. This is so the page is defined into definitive
+sections, where the screen does not cut half into one question
+or another.
+The design is meant to lead the eyes downward on a path. Accent
+boxes and art boxes both help with this.
 ==========================================================*/
 
 .mainPage {
@@ -174,11 +184,15 @@ Main Page
   color: black;
 }
 /*========================================================
-Grid arrangment
-- Grid sizes and why
-- Rules of box size and why
-Box 10 to 13 will have a different layout to accomidate
-longer length answers, though same grid as the rest
+GRID ARRANGEMENT
+-Each box size are to accomidate different length answer.
+Though no box can have a height or width of 1, because display
+text will often look ugly in extreme ratio.
+-Box 10 to 13 will have a different layout to accomidate
+longer length answers, 2 per page as opposed to 3 per,
+though same grid as the rest.
+-Art boxes must always have one side on the outside of the grid,
+for the illusion of cutting into the grid through its negative space.
 ==========================================================*/
 #box1 {
   grid-column: 2/5;
