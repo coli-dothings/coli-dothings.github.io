@@ -20,38 +20,31 @@
   geometric aesthetic 
   ===========================================================
   COLOR PALLETE
-  Limited pallete. Predomiately brown and its shades. Next is 
-  green as the secondary color, and white as accent. 
-  In the grid, the color relationships are flipped, with white 
+  Limited pallete. Predominately beige brown and its accents. Next 
+  to green as close secondary color, and white as accent. Mostly shown
+  in frontPage. 50/45/5 ratio
+  In the main grid, color relationships are flipped, with white 
   becoming the predominate color.
   Main:
   -BG Beige Brown: #9d9179
-  -Green: #114135
+  -Moss green: #114135
   -Off white: #e8e6e0
-  -White
+  -White: #FFFFFF
   Brown accent:
+  -Lighter beige: #dbccb3
   -Gold brown: #89744a
   -Darkest brown: #22170e
   ===========================================================*/
 body {
-  background-color: wheat;
-  display: flex;
+  background-color: #9d9179;
   margin: auto;
   max-width: 1200px;
   justify-content: center;
-
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   /*Most common font, often paragraph font, I state in here*/
-}
-
-.container {
-  /*This allow frontPage grid and mainPage grid to not stack
-    next to each other, and go block by block*/
-  display: block;
-  justify-content: center;
 }
 
 /*========================================================
@@ -66,7 +59,7 @@ testing, it was too big with the additions of side bars on screen.
   grid-template-rows: repeat(8, 1fr);
   width: 1110px;
   height: 740px;
-  background-color: aqua; /*bg image substitude for testing*/
+  background-color: #114135; /*backup bg-color if image unload*/
   background-image: url(frontPage.png);
   /*Fixed width and height to make sure background image is
   sized correctly*/
@@ -91,7 +84,7 @@ testing, it was too big with the additions of side bars on screen.
   writing-mode: vertical-lr;
   text-orientation: upright;
   /*Transform text to vertical, but keeping its orientation*/
-  color: black;
+  color: white;
   font-weight: 700;
   font-size: 3rem;
   grid-column: 12;
@@ -99,7 +92,7 @@ testing, it was too big with the additions of side bars on screen.
 }
 #name {
   font-family: "Raleway", sans-serif;
-  color: wheat; /*green*/
+  color: #e8e6e0;
   font-weight: 600;
   font-size: 1.6rem;
   align-content: end;
@@ -116,11 +109,11 @@ a#rb {
   /*So I made a seperate link ID to style here*/
   font-weight: bolder;
   font-size: 5rem;
-  color: darkgoldenrod;
+  color: #22170e;
   text-decoration: none; /*removes the underscore*/
 }
 a#rb:hover {
-  color: brown;
+  color: #89744a;
 } /*hover over link interaction*/
 
 /*========================================================
@@ -137,34 +130,49 @@ Main Page
 
   gap: 3px;
   padding-top: 3px;
-  background-color: black;
+  background-color: #114135;
   /*This let me color only the inside border of all boxes 
   using main grid bg-color*/
 }
 .boxMainGrid {
-  background-color: whitesmoke;
+  background-color: #e8e6e0;
   padding: 10px;
   align-content: baseline;
   list-style-position: inside;
   /*Move the numbered list inward to align with text*/
 }
 .artMainGrid {
-  background-color: aqua;
+  background-color: #9d9179; /*backup bg-color if image unload*/
 }
 .qNum {
   font-family: "Notable", sans-serif;
-  color: blue;
+  color: #114135;
+  font-size: 2rem;
+  padding-bottom: 0.5rem; /*Space out text below*/
 }
 .question {
   font-weight: bold;
-  color: darkgoldenrod;
+  font-size: 1.4rem;
+  color: #89744a;
+  padding-bottom: 0.3rem;
 }
 .answer {
+  color: #22170e;
+  font-size: 1.1rem;
+}
+/*Accent Variant*/
+.boxMainGrid.accent {
+  background-color: #dbccb3;
+}
+.qNum.accent {
+  color: #0a3323;
+}
+.question.accent {
+  color: #3e2b1b;
+}
+.answer.accent {
   color: black;
 }
-
-/*Accent Variant*/
-
 /*========================================================
 Grid arrangment
 - Grid sizes and why
@@ -189,12 +197,12 @@ longer length answers, though same grid as the rest
   grid-row: 5/7;
 }
 #box5 {
-  grid-column: 4/7;
-  grid-row: 6/9;
-}
-#box6 {
   grid-column: 1/4;
   grid-row: 7/9;
+}
+#box6 {
+  grid-column: 4/7;
+  grid-row: 6/9;
 }
 #box7 {
   grid-column: 1/3;
