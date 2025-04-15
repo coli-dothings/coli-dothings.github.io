@@ -1,0 +1,29 @@
+:root {
+  --bg-color: rgba(144, 133, 145, 0.455);
+  --my-padding: 10px;
+  --my-border: 24px;
+}
+/*set variable!*/
+audio {
+  display: block;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: var(--my-padding);
+  font-size: 1.2rem;
+  border-radius: var(--my-border);
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: var(--bg-color);
+}
+
+button:hover {
+  scale: 0.9;
+}
+
+video {
+  width: 600px;
+  display: block;
+  margin-bottom: 20px;
+}
