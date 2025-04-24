@@ -22,7 +22,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
 }
 
 /* Add additional styles as needed */
@@ -45,14 +45,13 @@ header {
 
 /* Navigation styling */
 nav {
-  margin-top: 20px;
   text-align: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 nav ul li {

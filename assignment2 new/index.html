@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A2</title>
+    <!-- add the font family of your choice -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!--Navigation Section-->
+    <nav></nav>
+
+    <!--Main Content Section-->
+    <main class="container">
+      <!--header is a landing page, transition smooth into m-player
+      Share BG art with the player-->
+      <header></header>
+
+      <div class="player">
+        <!--a holder/reciever of the playlist, which then play the media
+        Does not contain the playlist itself-->
+
+        <!--Track information that change to each track when plays-->
+        <div class="media-details">
+          <div class="album-band">
+            <div id="album-name"></div>
+            <div id="band-name"></div>
+          </div>
+          <div class="now-playing"></div>
+        </div>
+
+        <!--custom controls section-->
+        <div class="controls">
+          <button id="playpause-btn" onclick="playPauseTrack()"></button>
+          <button id="nexttrack-btn" onclick="nextTrack()"></button>
+          <button id="prevtrack-btn" onclick="prevTrack()"></button>
+
+          <!--define control progress bar-->
+          <div class="progress-bar">
+            <!--tempt test. CHANGE LATER-->
+            <div class="current-time">00:00</div>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="0"
+              class="seek_slider"
+              onchange="seekTo()"
+            />
+            <div class="total-duration">00:00</div>
+          </div>
+
+          <!--define volume control-->
+          <div class="volume-bar">
+            <!--tempt test. CHANGE LATER-->
+            <i class="fa fa-volume-down"></i>
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="99"
+              class="volume_slider"
+              onchange="setVolume()"
+            />
+            <i class="fa fa-volume-up"></i>
+          </div>
+        </div>
+
+        <!--A section for a disc visual that spins when media plays
+          Sit under the media details and controls on the z axis-->
+        <div class="bg-anim-disc">
+          <div id="disc"></div>
+        </div>
+      </div>
+    </main>
+
+    <!--Playlist Section-->
+    <section>
+      <!--Playlist control buttons-->
+      <button id="play-all">
+        Play All <img src="placeholderimg" alt="" id="play-all-btn" />
+      </button>
+      <button id="add-to">
+        Add To <img src="placeholderimg" alt="" id="add-to-btn" />
+      </button>
+
+      <div class="playlist">
+        <!--all playlist items go here-->
+      </div>
+    </section>
+
+    <!--Footer Section-->
+    <footer>
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
