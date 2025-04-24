@@ -1,0 +1,35 @@
+/*=====================================================================
+DESIGN THEORY
+
+=======================================================================
+TYPOGRAPHY
+
+=======================================================================
+COLOR PALLETE
+2 disctint modes:
+- OFF mode
+- ON mode
+
+A third set for accent color of indiv track, seperated from ON & OFF
+=====================================================================*/
+
+:root {
+  --item-usecase: ; /*name scheme ex*/
+}
+
+body,
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
+
+nav {
+}
+
+header {
+}
