@@ -28,8 +28,6 @@ ul {
 body {
   /*p font family*/
   background-color: white;
-  max-width: 1200px;
-  margin: auto;
 }
 
 /*Navigation styling*/
@@ -43,15 +41,18 @@ nav {
 
 /*Main Content Section*/
 .container {
+  max-width: 1200px;
+  margin: auto;
   width: 100%;
-  padding: 10px;
   background-color: wheat;
 }
 
 /*Header styling*/
 header {
+  min-height: 800px;
   background-image: url();
   background-color: aquamarine; /*Backup bg color*/
+  padding: 20px;
 
   /*header font family*/
 }
