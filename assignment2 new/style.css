@@ -26,10 +26,32 @@ ul {
 }
 
 body {
+  /*p font family*/
+  background-color: white;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/*Navigation styling*/
 nav {
+  overflow: hidden;
+  /*Set the nav bar in a fixed position, at the top of screen, full width*/
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
+/*Main Content Section*/
+.container {
+  width: 100%;
+  padding: 10px;
+  background-color: wheat;
+}
+
+/*Header styling*/
 header {
+  background-image: url();
+  background-color: aquamarine; /*Backup bg color*/
+
+  /*header font family*/
 }

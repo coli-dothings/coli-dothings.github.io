@@ -15,9 +15,18 @@
 
     <!--Main Content Section-->
     <main class="container">
-      <!--header is a landing page, transition smooth into m-player
-      Share BG art with the player-->
-      <header></header>
+      <header>
+        <!--=================================================================
+      Header is a landing page, transition smooth into media player
+      Share BG art with the player.
+
+      All album and band details are fictional, created solely for assignment
+      ==================================================================-->
+        <p id="subtitle">ALBUM</p>
+        <h1 id="album">Sounds of a feather</h1>
+        <h2 id="band">By <i>I wish it was midnight</i></h2>
+        <div id="click-any"><p>Click anywhere to play sound</p></div>
+      </header>
 
       <div class="player">
         <!--a holder/reciever of the playlist, which then play the media
@@ -26,10 +35,10 @@
         <!--Track information that change to each track when plays-->
         <div class="media-details">
           <div class="album-band">
-            <div id="album-name"></div>
-            <div id="band-name"></div>
+            <div id="album-name">Sounds of a feather</div>
+            <div id="band-name">I wish it was midnight</div>
           </div>
-          <div class="now-playing"></div>
+          <div class="now-playing">Track name</div>
         </div>
 
         <!--custom controls section-->
@@ -40,23 +49,25 @@
 
           <!--define control progress bar-->
           <div class="progress-bar">
-            <!--tempt test. CHANGE LATER-->
             <div class="current-time">00:00</div>
+            <!--Using input-range element to allow user to jump to specific time 
+            in the sound track-->
             <input
               type="range"
               min="1"
               max="100"
               value="0"
-              class="seek_slider"
-              onchange="seekTo()"
+              class="progress_slider"
+              onchange="setProgressTo()"
             />
             <div class="total-duration">00:00</div>
           </div>
 
           <!--define volume control-->
           <div class="volume-bar">
-            <!--tempt test. CHANGE LATER-->
-            <i class="fa fa-volume-down"></i>
+            <img src="" alt="Volume" id="volume-icon" />
+            <!--Similar to progress bar, but the value is set to max automatically.
+            Because volume is set to max on default player-->
             <input
               type="range"
               min="1"
@@ -65,7 +76,6 @@
               class="volume_slider"
               onchange="setVolume()"
             />
-            <i class="fa fa-volume-up"></i>
           </div>
         </div>
 
@@ -81,11 +91,9 @@
     <section>
       <!--Playlist control buttons-->
       <button id="play-all">
-        Play All <img src="placeholderimg" alt="" id="play-all-btn" />
+        Play All <img src="" alt="" id="play-all-btn" />
       </button>
-      <button id="add-to">
-        Add To <img src="placeholderimg" alt="" id="add-to-btn" />
-      </button>
+      <button id="add-to">Add To <img src="" alt="" id="add-to-btn" /></button>
 
       <div class="playlist">
         <!--all playlist items go here-->
@@ -94,7 +102,11 @@
 
     <!--Footer Section-->
     <footer>
-      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <p id="copyright">
+        &copy; 2024 Media Player Website. All rights reserved.
+      </p>
+      <p id="credits-name">Mai Anh Vo</p>
+      <p id="credits-id">s4021256</p>
     </footer>
   </body>
 </html>
