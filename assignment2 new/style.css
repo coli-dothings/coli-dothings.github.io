@@ -27,16 +27,22 @@ ul {
 
 body {
   /*p font family*/
-  background-color: white;
+  background-color: white; /*if browswer doesnt support gradient*/
+  background-image: linear-gradient(to right, white 50%, black 50%);
+  /*change white to cream var, black to repsonsive bg var*/
 }
 
 /*Navigation styling*/
 nav {
-  overflow: hidden;
   /*Set the nav bar in a fixed position, at the top of screen, full width*/
+  overflow: hidden;
   position: fixed;
+  z-index: 99;
   top: 0;
   width: 100%;
+
+  padding: 0.2rem;
+  background-color: blueviolet;
 }
 
 /*Main Content Section*/
@@ -44,15 +50,43 @@ nav {
   max-width: 1200px;
   margin: auto;
   width: 100%;
-  background-color: wheat;
 }
 
 /*Header styling*/
 header {
-  min-height: 800px;
+  min-height: 860px;
   background-image: url();
-  background-color: aquamarine; /*Backup bg color*/
-  padding: 20px;
+  background-color: bisque; /*Backup bg color*/
+
+  display: flex;
+  position: relative;
 
   /*header font family*/
 }
+
+.head-left {
+  width: 60%;
+  background-color: aquamarine;
+  padding-top: 2rem;
+  z-index: 3;
+}
+
+.head-right {
+  width: 40%;
+  background-color: blue;
+  padding-top: 2rem;
+  z-index: 1;
+}
+
+#test {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-color: brown;
+  background-image: linear-gradient(to right, white 50%, black 50%);
+  margin-top: 130px;
+  margin-left: 36%;
+  border-radius: 50%;
+  z-index: 2;
+}
+/*by having item NOT in either children div. Set margin by % and index to 2*/

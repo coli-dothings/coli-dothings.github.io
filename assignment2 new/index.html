@@ -13,19 +13,31 @@
     <!--Navigation Section-->
     <nav>test nav</nav>
 
-    <!--Main Content Section-->
+    <!--=====================================================================
+    Main Content Section
+
+    All 3 sections (pages) share a same split-layout of left&right, with the 
+    right side positioned below the left, and each side having different BG.
+    Could lead to more interesting responsive designs.
+    ======================================================================-->
     <main class="container">
       <header>
         <!--=================================================================
-      Header is a landing page, transition smooth into media player
-      Share BG art with the player.
+        Header is a landing page, transition smooth into media player
+        Share BG art with the player.
 
-      All album and band details are fictional, created solely for assignment
-      ==================================================================-->
-        <p id="subtitle">ALBUM</p>
-        <h1 id="album">Sounds of a feather</h1>
-        <h2 id="band">By <i>I wish it was midnight</i></h2>
-        <div id="click-any"><p>Click anywhere to play sound</p></div>
+        All album and band details are fictional, created solely for assignment
+        ==================================================================-->
+        <div class="head-left">
+          <p id="subtitle">ALBUM</p>
+          <h1 id="album">Sounds of a feather</h1>
+          <div id="click-any"><p>Click anywhere to play sound</p></div>
+        </div>
+
+        <div class="head-right">
+          <h2 id="band">By <i>I wish it was midnight</i></h2>
+        </div>
+        <div id="test"></div>
       </header>
 
       <div class="player">
