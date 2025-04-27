@@ -59,7 +59,7 @@ header {
   background-color: bisque; /*Backup bg color*/
 
   display: flex;
-  position: relative;
+  position: relative; /*set position relative so child can set absolute*/
 
   /*header font family*/
 }
