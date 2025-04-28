@@ -1,20 +1,46 @@
 /*=====================================================================
 DESIGN THEORY
+This is a webpage for a music album, which I wanted to capture the 
+feeling of an indie band, with more eccentric designs.
+Specifically, the webpage layout is based on vinyl album covers.
 
+To do this I split the webpage into 2 sections: a cover space with 
+light, colorful maximal background, and a negative space thats darker,
+with minimal design.
+On the player section, there should be a disc that spin when a track is
+playing. All negative space should change color upon this as well.
+
+As for functions. To qualify as an album player, I want it to have:
+- Function to play sound media called by it.
+- Next track and Prev track functions.
+- Audio level adjustment.
+- Responsive progress bar that user can seek to any points on track.
 =======================================================================
 TYPOGRAPHY
+Both Rocky 3D and Palette Mosaic are very experimental display fonts.
+Big, blocky and attention demanding, so it can pop over the chaotic
+colors of the BG. 
+Special Elite is the common typing font. Easier to read, but have a 
+physical presence (ink stamp), similar to both display fonts. 
+This give a scrap book like appearance.
 
+The footer has a barcode font is to fit with the Album cover theme.
 =======================================================================
 COLOR PALLETE
-2 disctint modes:
-- OFF mode
-- ON mode
+Despite having a messy, colorful background, all other elements have
+minimal color pallette to keep a grounded design indentity.
+Mainly paper beige 60%, with dark red middle body 20%, black/dark colors
+for the negative space 20%
 
-A third set for accent color of indiv track, seperated from ON & OFF
+The background negative (dark colors) should change responsive to which
+track is playing, centrallized on 1 var CSS, which is controlled by JS.
 =====================================================================*/
 
 :root {
-  --item-usecase: ; /*name scheme ex*/
+  --primary-white-color: #e6e3cc;
+  --bg-left-color: #000000;
+  --red-body-color: #540800;
+  --red-controls-color: #8c0401; /*set 60 opacity default*/
 }
 
 body,
@@ -26,12 +52,42 @@ ul {
 }
 
 body {
-  /*p font family*/
-  background-color: white; /*if browswer doesnt support gradient*/
-  background-image: linear-gradient(to right, white 50%, black 50%);
-  /*change white to cream var, black to repsonsive bg var*/
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+
+  background-color: var(--primary-white-color);
+  /*if browswer doesnt support gradient*/
+  background-image: linear-gradient(
+    to right,
+    var(--primary-white-color) 60%,
+    var(--bg-left-color) 40%
+  );
+  /*Create split background colors using linear gradient*/
 }
 
+h1 {
+  font-family: "Rock 3D", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 7rem;
+}
+
+h2 {
+  font-family: "Palette Mosaic", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+}
+
+p {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+/*==========================================================================
 /*Navigation styling*/
 nav {
   /*Set the nav bar in a fixed position, at the top of screen, full width*/
@@ -41,44 +97,66 @@ nav {
   top: 0;
   width: 100%;
 
-  padding: 0.2rem;
+  padding: 5px;
   background-color: blueviolet;
 }
 
+/*=========================================================================
 /*Main Content Section*/
 .container {
+  overflow: hidden;
   max-width: 1200px;
   margin: auto;
   width: 100%;
 }
 
+/*==========================================================================
 /*Header styling*/
 header {
   min-height: 860px;
-  background-image: url();
-  background-color: bisque; /*Backup bg color*/
-
   display: flex;
   position: relative; /*set position relative so child can set absolute*/
+}
 
-  /*header font family*/
+.head-right #band {
+  color: var(--primary-white-color);
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+}
+
+.head-right #band i {
+  font-size: 6rem;
+  padding: 60px;
+}
+
+#subtitle {
+  font-size: 4rem;
+}
+
+#click-any {
+  background-color: var(--bg-left-color);
+  padding: 8px;
+  border-radius: 7px;
+
+  color: var(--primary-white-color);
 }
 
 .head-left {
   width: 60%;
-  background-color: aquamarine;
-  padding-top: 2rem;
+  background-image: url();
+  background-color: var(--primary-white-color);
+  padding-top: 30px;
   z-index: 3;
 }
 
 .head-right {
   width: 40%;
-  background-color: blue;
-  padding-top: 2rem;
+  background-color: var(--bg-left-color);
+  padding-top: 30px;
   z-index: 1;
 }
 
-#test {
+/*#test {
   position: absolute;
   width: 600px;
   height: 600px;
@@ -88,5 +166,6 @@ header {
   margin-left: 36%;
   border-radius: 50%;
   z-index: 2;
-}
+}*/
 /*by having item NOT in either children div. Set margin by % and index to 2*/
+/*Remove example after coding player page*/

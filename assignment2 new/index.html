@@ -4,7 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A2</title>
-    <!-- add the font family of your choice -->
+    <!--Font family: Rock 3D, Palette Mosaic, Special Elite, Libre Barcode 39 Text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Palette+Mosaic&family=Rock+3D&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
@@ -30,12 +36,12 @@
         ==================================================================-->
         <div class="head-left">
           <p id="subtitle">ALBUM</p>
-          <h1 id="album">Sounds of a feather</h1>
-          <div id="click-any"><p>Click anywhere to play sound</p></div>
+          <h1 id="album">Sound of a Feather</h1>
+          <p><span id="click-any">Click anywhere to play sound</span></p>
         </div>
 
         <div class="head-right">
-          <h2 id="band">By <i>I wish it was midnight</i></h2>
+          <h2 id="band">by <br /><i>INDEX RESET</i></h2>
         </div>
         <div id="test"></div>
       </header>
@@ -47,7 +53,7 @@
         <!--Track information that change to each track when plays-->
         <div class="media-details">
           <div class="album-band">
-            <div id="album-name">Sounds of a feather</div>
+            <div id="album-name">Sound of a Feather</div>
             <div id="band-name">I wish it was midnight</div>
           </div>
           <div class="now-playing">Track name</div>
@@ -117,11 +123,14 @@
 
     <!--Footer Section-->
     <footer>
-      <p id="copyright">
-        &copy; 2024 Media Player Website. All rights reserved.
+      <p>&copy; 2024 Media Player Website. All rights reserved.</p>
+      <p>
+        All names indicated are fictional and created solely for an assignment
       </p>
-      <p id="credits-name">Mai Anh Vo</p>
-      <p id="credits-id">s4021256</p>
+      <div class="credit">
+        <p id="credit-name">Mai Anh Vo</p>
+        <p id="credit-id">s4021256</p>
+      </div>
     </footer>
   </body>
 </html>
