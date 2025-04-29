@@ -36,96 +36,100 @@
         ==================================================================-->
         <div class="head-left">
           <p id="subtitle">ALBUM</p>
-          <h1 class="album">Sound of a Feather</h1>
-          <p><span id="click-any">Click anywhere to play sound</span></p>
+          <h1 class="album">Sounds of a Feather</h1>
         </div>
 
         <div class="head-right">
           <h2 class="band">by <br /><i>INDEX RESET</i></h2>
+          <p><span id="click-me">Click me to play sound</span></p>
         </div>
-        <div id="test"></div>
       </header>
 
       <div class="player">
         <!--a holder/reciever of the playlist, which then play the media
         Does not contain the playlist itself-->
 
-        <!--Track information that change to each track when plays-->
-        <div class="media-details">
-          <div class="album-band">
-            <div class="album">Sound of a Feather</div>
-            <div class="band">Index Reset</div>
+        <div class="player-left">
+          <!--Track information that change to each track when plays-->
+          <div class="media-details">
+            <div class="album-band">
+              <div class="album">Sounds of a Feather</div>
+              <div class="band">Index Reset</div>
+            </div>
+            <div class="track-name">Track name</div>
           </div>
-          <div class="track-name">Track name</div>
         </div>
 
-        <!--custom controls section-->
-        <div class="controls">
-          <button id="playpause-btn" onclick="playPauseTrack()"></button>
-          <button id="nexttrack-btn" onclick="nextTrack()"></button>
-          <button id="prevtrack-btn" onclick="prevTrack()"></button>
+        <div class="player-right">
+          <!--custom controls section-->
+          <div class="controls">
+            <button id="playpause-btn" onclick="playPauseTrack()"></button>
+            <button id="nexttrack-btn" onclick="nextTrack()"></button>
+            <button id="prevtrack-btn" onclick="prevTrack()"></button>
 
-          <!--define control progress bar-->
-          <div class="progress-bar">
-            <div class="current-time">00:00</div>
-            <!--Using input-range element to allow user to seek to specific time 
+            <!--define control progress bar-->
+            <div class="progress-bar">
+              <div class="current-time">00:00</div>
+              <!--Using input-range element to allow user to seek to specific time 
             in the sound track-->
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="0"
-              class="progress_slider"
-              onchange="setProgressTo()"
-            />
-            <div class="total-duration">00:00</div>
-          </div>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="0"
+                class="progress_slider"
+                onchange="setProgress()"
+              />
+              <div class="total-duration">00:00</div>
+            </div>
 
-          <!--define volume control-->
-          <div class="volume-bar">
-            <img src="" alt="Volume" id="volume-icon" />
-            <!--Similar to progress bar, but the value is set to max automatically.
+            <!--define volume control-->
+            <div class="volume-bar">
+              <img src="" alt="Volume" id="volume-icon" />
+              <!--Similar to progress bar, but the value is set to max automatically.
             Because volume is set to max on default player-->
-            <input
-              type="range"
-              min="1"
-              max="100"
-              value="99"
-              class="volume_slider"
-              onchange="setVolume()"
-            />
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value="99"
+                class="volume_slider"
+                onchange="setVolume()"
+              />
+            </div>
           </div>
         </div>
 
         <!--A section for a disc visual that spins when media plays
-          Sit under the media details and controls on the z axis-->
-        <div class="bg-anim-disc">
-          <div id="disc"></div>
+        Sit under the media details and controls, above left div on the z axis-->
+        <div class="disc">
+          <div id="disc-img"></div>
         </div>
       </div>
+
+      <!--Playlist Section-->
+      <section>
+        <div class="playlist">
+          <!--all playlist items go here-->
+
+          <h3>PLAYLIST</h3>
+          <!--Playlist control buttons-->
+          <button id="play-all">
+            Play All <img src="" alt="" id="play-all-btn" />
+          </button>
+          <button id="add-to">
+            Add To <img src="" alt="" id="add-to-btn" />
+          </button>
+        </div>
+      </section>
     </main>
-
-    <!--Playlist Section-->
-    <section>
-      <div class="playlist">
-        <!--all playlist items go here-->
-
-        <h3>PLAYLIST</h3>
-        <!--Playlist control buttons-->
-        <button id="play-all">
-          Play All <img src="" alt="" id="play-all-btn" />
-        </button>
-        <button id="add-to">
-          Add To <img src="" alt="" id="add-to-btn" />
-        </button>
-      </div>
-    </section>
 
     <!--Footer Section-->
     <footer>
       <p>&copy; 2024 Media Player Website. All rights reserved.</p>
       <p>
-        All names indicated are fictional and created solely for an assignment
+        All names and details indicated are fictional and created solely for
+        this assignment.
       </p>
       <div class="credit">
         <p id="credit-name">Mai Anh Vo</p>

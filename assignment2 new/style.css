@@ -97,7 +97,7 @@ nav {
   width: 100%;
 
   padding: 5px;
-  background-color: blueviolet;
+  background-color: var(--bg-left-color); /*set gradient here too*/
 }
 
 /*=========================================================================
@@ -114,7 +114,26 @@ nav {
 header {
   min-height: 860px;
   display: flex;
-  position: relative; /*set position relative so child can set absolute*/
+}
+
+.head-left {
+  width: 60%;
+  background-image: url(BG\ head\ R.png);
+  background-size: cover;
+  background-color: var(--primary-white-color);
+  padding-top: 40px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.head-right {
+  width: 40%;
+  background-color: var(--bg-left-color);
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .head-left .album {
@@ -126,6 +145,7 @@ header {
   writing-mode: vertical-lr;
   text-orientation: upright;
   font-size: 5rem;
+  padding-top: 90px;
 }
 
 .head-right .band i {
@@ -135,42 +155,76 @@ header {
 
 #subtitle {
   font-size: 4rem;
-  color: var(--red-body-color);
+  color: var(--bg-left-color);
+  padding-bottom: 20px;
 }
 
-#click-any {
+#click-me {
   background-color: var(--red-body-color);
   padding: 6px;
   border-radius: 8px;
   color: var(--primary-white-color);
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  letter-spacing: 0.1rem;
+}
+#click-me:hover {
+  cursor: pointer;
+  background-color: var(--red-controls-color);
 }
 
-.head-left {
+/*=====================================================================
+/*Main player styling*/
+.player {
+  min-height: 860px;
+  display: flex;
+  position: relative;
+  /*set position relative so child (disc) can set absolute in relation*/
+}
+
+.player-left {
   width: 60%;
-  background-image: url(BG\ head\ R.png);
+  background-image: url(BG\ player\ R.png);
   background-size: cover;
   background-color: var(--primary-white-color);
-  padding-top: 40px;
+  padding-right: 10px;
+  display: flex;
   z-index: 3;
 }
 
-.head-right {
+.player-right {
   width: 40%;
   background-color: var(--bg-left-color);
-  padding-top: 90px;
   z-index: 1;
 }
 
-/*#test {
+.disc {
   position: absolute;
   width: 600px;
   height: 600px;
-  background-color: brown;
-  background-image: linear-gradient(to right, white 50%, black 50%);
+  background-image: url(disc.png);
   margin-top: 130px;
   margin-left: 36%;
   border-radius: 50%;
   z-index: 2;
-}*/
-/*by having item NOT in either children div. Set margin by % and index to 2*/
-/*Remove example after coding player page*/
+}
+
+/*==========================================================================
+/*Playlist styling*/
+.playlist {
+  min-height: 860px;
+  display: flex;
+}
+
+.playlist-left {
+  width: 60%;
+  background-image: url(BG\ player\ R.png);
+  background-size: cover;
+  background-color: var(--primary-white-color);
+  padding-right: 10px;
+}
+
+.playlist-right {
+  width: 40%;
+  background-color: var(--bg-left-color);
+}
