@@ -32,7 +32,8 @@
         Header is a landing page, transition smooth into media player
         Share BG art with the player.
 
-        All album and band details are fictional, created solely for assignment
+        All album and band details are fictional, created solely for assignment.
+        All artworks were created by me using Krita.
         ==================================================================-->
         <div class="head-left">
           <p id="subtitle">ALBUM</p>
@@ -41,7 +42,7 @@
 
         <div class="head-right">
           <h2 class="band">by <br /><i>INDEX RESET</i></h2>
-          <p><span id="click-me">Click me to play sound</span></p>
+          <button id="click-me"><p>Click me to play sound</p></button>
         </div>
       </header>
 
@@ -112,14 +113,24 @@
         <div class="playlist">
           <!--all playlist items go here-->
 
-          <h3>PLAYLIST</h3>
-          <!--Playlist control buttons-->
-          <button id="play-all">
-            Play All <img src="" alt="" id="play-all-btn" />
-          </button>
-          <button id="add-to">
-            Add To <img src="" alt="" id="add-to-btn" />
-          </button>
+          <div class="playlist-left">
+            <!--Playlist control buttons-->
+            <button id="play-all">
+              Play All <img src="" alt="" id="play-all-btn" />
+            </button>
+            <button id="add-to">
+              Add To <img src="" alt="" id="add-to-btn" />
+            </button>
+
+            <div id="track1-body"></div>
+            <div id="track2-body"></div>
+            <div id="track3-body"></div>
+            <div id="track4-body"></div>
+          </div>
+
+          <div class="playlist-right">
+            <h3>PLAYLIST</h3>
+          </div>
         </div>
       </section>
     </main>
