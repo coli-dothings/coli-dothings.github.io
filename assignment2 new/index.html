@@ -36,12 +36,12 @@
         ==================================================================-->
         <div class="head-left">
           <p id="subtitle">ALBUM</p>
-          <h1 id="album">Sound of a Feather</h1>
+          <h1 class="album">Sound of a Feather</h1>
           <p><span id="click-any">Click anywhere to play sound</span></p>
         </div>
 
         <div class="head-right">
-          <h2 id="band">by <br /><i>INDEX RESET</i></h2>
+          <h2 class="band">by <br /><i>INDEX RESET</i></h2>
         </div>
         <div id="test"></div>
       </header>
@@ -53,10 +53,10 @@
         <!--Track information that change to each track when plays-->
         <div class="media-details">
           <div class="album-band">
-            <div id="album-name">Sound of a Feather</div>
-            <div id="band-name">I wish it was midnight</div>
+            <div class="album">Sound of a Feather</div>
+            <div class="band">Index Reset</div>
           </div>
-          <div class="now-playing">Track name</div>
+          <div class="track-name">Track name</div>
         </div>
 
         <!--custom controls section-->
@@ -68,7 +68,7 @@
           <!--define control progress bar-->
           <div class="progress-bar">
             <div class="current-time">00:00</div>
-            <!--Using input-range element to allow user to jump to specific time 
+            <!--Using input-range element to allow user to seek to specific time 
             in the sound track-->
             <input
               type="range"

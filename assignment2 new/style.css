@@ -11,7 +11,7 @@ On the player section, there should be a disc that spin when a track is
 playing. All negative space should change color upon this as well.
 
 As for functions. To qualify as an album player, I want it to have:
-- Function to play sound media called by it.
+- Function to play sound media called by it & Playlist.
 - Next track and Prev track functions.
 - Audio level adjustment.
 - Responsive progress bar that user can seek to any points on track.
@@ -66,18 +66,17 @@ body {
   /*Create split background colors using linear gradient*/
 }
 
-h1 {
+/*Typography overall styling*/
+.album {
   font-family: "Rock 3D", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 7rem;
 }
 
-h2 {
+.band {
   font-family: "Palette Mosaic", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 5rem;
 }
 
 p {
@@ -118,41 +117,47 @@ header {
   position: relative; /*set position relative so child can set absolute*/
 }
 
-.head-right #band {
+.head-left .album {
+  font-size: 7rem;
+}
+
+.head-right .band {
   color: var(--primary-white-color);
   writing-mode: vertical-lr;
   text-orientation: upright;
+  font-size: 5rem;
 }
 
-.head-right #band i {
+.head-right .band i {
   font-size: 6rem;
-  padding: 60px;
+  padding: 70px;
 }
 
 #subtitle {
   font-size: 4rem;
+  color: var(--red-body-color);
 }
 
 #click-any {
-  background-color: var(--bg-left-color);
-  padding: 8px;
-  border-radius: 7px;
-
+  background-color: var(--red-body-color);
+  padding: 6px;
+  border-radius: 8px;
   color: var(--primary-white-color);
 }
 
 .head-left {
   width: 60%;
-  background-image: url();
+  background-image: url(BG\ head\ R.png);
+  background-size: cover;
   background-color: var(--primary-white-color);
-  padding-top: 30px;
+  padding-top: 40px;
   z-index: 3;
 }
 
 .head-right {
   width: 40%;
   background-color: var(--bg-left-color);
-  padding-top: 30px;
+  padding-top: 90px;
   z-index: 1;
 }
 
