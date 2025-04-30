@@ -36,7 +36,7 @@
         All artworks and icons were created by me using Krita and Adobe Illustrator.
         ==================================================================-->
         <div class="head-left">
-          <p id="subtitle">ALBUM</p>
+          <p id="subtitle">Album</p>
           <h1 class="album">Sounds of a Feather</h1>
         </div>
 
@@ -57,22 +57,48 @@
               <div class="album">Sounds of a Feather</div>
               <div class="band">Index Reset</div>
             </div>
-            <div class="track-name">Track name</div>
+            <div class="track-number">
+              <div id="track-number">PLAYING X of 4</div>
+              <div id="track-name">Track name</div>
+            </div>
           </div>
         </div>
 
         <div class="player-right">
           <!--custom controls section-->
           <div class="controls">
-            <div class="btn-grp">
-              <button id="playpause-btn" onclick="playPauseTrack()"></button>
-              <button id="nexttrack-btn" onclick="nextTrack()"></button>
-              <button id="prevtrack-btn" onclick="prevTrack()"></button>
+            <div class="inline-right">
+              <div class="btn-grp">
+                <button id="nexttrack-btn" onclick="nextTrack()">
+                  <img src="Icons-02.png" alt="" id="nexttrack-img" />
+                </button>
+                <button id="playpause-btn" onclick="playPauseTrack()">
+                  <img src="Icons-01.png" alt="" id="playpause-img" />
+                </button>
+                <button id="prevtrack-btn" onclick="prevTrack()">
+                  <img src="Icons-03.png" alt="" id="prevtrack-img" />
+                </button>
+              </div>
+
+              <!--define volume control-->
+              <div class="volume-bar">
+                <!--Similar to progress bar, but the value is set to max automatically.
+            Because volume is set to max on default player-->
+                <input
+                  type="range"
+                  min="1"
+                  max="100"
+                  value="99"
+                  class="volume-slider"
+                  onchange="setVolume()"
+                />
+                <img src="Icons-05.png" alt="Volume" id="volume-icon" />
+              </div>
             </div>
 
             <!--define control progress bar-->
             <div class="progress-bar">
-              <div class="current-time">00:00</div>
+              <div id="current-time">00:00</div>
               <!--Using input-range element to allow user to seek to specific time 
             in the sound track-->
               <input
@@ -80,30 +106,10 @@
                 min="1"
                 max="100"
                 value="0"
-                class="progress_slider"
+                class="progress-slider"
                 onchange="setProgress()"
               />
-              <div class="total-duration">00:00</div>
-            </div>
-
-            <!--define volume control-->
-            <div class="volume-bar">
-              <img
-                src="Icons-05.png"
-                alt="Volume"
-                id="volume-icon"
-                height="50px"
-              />
-              <!--Similar to progress bar, but the value is set to max automatically.
-            Because volume is set to max on default player-->
-              <input
-                type="range"
-                min="1"
-                max="100"
-                value="99"
-                class="volume_slider"
-                onchange="setVolume()"
-              />
+              <div id="total-duration">00:00</div>
             </div>
           </div>
         </div>
@@ -123,17 +129,29 @@
           <div class="playlist-left">
             <!--Playlist control buttons-->
             <button id="play-all">
-              Play All <img src="" alt="" id="play-all-btn" />
+              Play All <img src="Icons-06.png" alt="" id="play-all-img" />
             </button>
 
-            <div id="track1-body"></div>
-            <div id="track2-body"></div>
-            <div id="track3-body"></div>
-            <div id="track4-body"></div>
+            <div id="track1-body">
+              <img src="Icons-07.png" alt="" class="track-body-play-img" />
+              <p>track name</p>
+            </div>
+            <div id="track2-body">
+              <img src="Icons-07.png" alt="" class="track-body-play-img" />
+              <p>track name</p>
+            </div>
+            <div id="track3-body">
+              <img src="Icons-07.png" alt="" class="track-body-play-img" />
+              <p>track name</p>
+            </div>
+            <div id="track4-body">
+              <img src="Icons-07.png" alt="" class="track-body-play-img" />
+              <p>track name</p>
+            </div>
           </div>
 
           <div class="playlist-right">
-            <h3>PLAYLIST</h3>
+            <h3>PLAY<br /><i>LIST</i></h3>
           </div>
         </div>
       </section>
