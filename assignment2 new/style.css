@@ -255,15 +255,17 @@ header {
 .playlist-left {
   width: 60%;
   background-color: var(--primary-white-color);
+  background-image: url(BG\ playlist\ R.png);
+  background-size: cover;
   padding-right: 10px;
   align-content: center;
 }
 
 .playlist-right {
   width: 40%;
+  background-color: var(--BG-right-color);
   background-image: url(BG\ tear\ L.png);
   background-size: cover;
-  background-color: var(--BG-right-color);
   display: flex;
   justify-content: center;
   align-items: center;
