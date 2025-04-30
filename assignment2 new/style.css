@@ -38,7 +38,7 @@ track is playing, centrallized on 1 var CSS, which is controlled by JS.
 
 :root {
   --primary-white-color: #e6e3cc;
-  --bg-left-color: #000000;
+  --BG-right-color: #000000;
   --red-body-color: #540800;
   --red-controls-color: #8c0401; /*set 60 opacity default*/
 }
@@ -61,7 +61,7 @@ body {
   background-image: linear-gradient(
     to right,
     var(--primary-white-color) 60%,
-    var(--bg-left-color) 40%
+    var(--BG-right-color) 40%
   );
   /*Create split background colors using linear gradient*/
 }
@@ -98,7 +98,7 @@ nav {
   width: 100%;
 
   padding: 5px;
-  background-color: var(--bg-left-color); /*set gradient here too*/
+  background-color: var(--BG-right-color); /*set gradient here too*/
 }
 
 /*=========================================================================
@@ -131,7 +131,7 @@ header {
 
 .head-right {
   width: 40%;
-  background-color: var(--bg-left-color);
+  background-color: var(--BG-right-color);
   padding-top: 40px;
   display: flex;
   justify-content: space-around;
@@ -157,7 +157,7 @@ header {
 
 #subtitle {
   font-size: 4rem;
-  color: var(--bg-left-color);
+  color: var(--BG-right-color);
   padding-bottom: 20px;
 }
 
@@ -182,13 +182,13 @@ header {
   background-size: cover;
   background-color: var(--primary-white-color);
   padding-right: 10px;
-  display: flex;
   z-index: 3; /*layer on top*/
 }
 
 .player-right {
   width: 40%;
-  background-color: var(--bg-left-color);
+  background-color: var(--BG-right-color);
+  justify-items: right;
   z-index: 1; /*layer on bottom, above body BG*/
 }
 
@@ -202,6 +202,26 @@ header {
   margin-top: 130px;
   margin-left: 36%;
   z-index: 2; /*layer in the middle*/
+}
+
+/*Boxes with track details*/
+.media-details {
+  padding: 40px;
+  display: flex;
+  gap: 20px;
+}
+.album-band {
+  width: 50%;
+  background-color: var(--red-body-color);
+  color: var(--primary-white-color);
+  padding: 10px;
+  outline: 6px double var(--red-body-color);
+}
+.track-name {
+  width: 35%;
+  background-color: var(--BG-right-color);
+  color: var(--primary-white-color);
+  padding: 10px;
 }
 
 /*==========================================================================
@@ -222,16 +242,17 @@ header {
   width: 40%;
   background-image: url(BG\ tear\ L.png);
   background-size: cover;
-  background-color: var(--bg-left-color);
+  background-color: var(--BG-right-color);
   display: flex;
   justify-content: center;
 }
 
 .playlist-left div {
-  background-color: var(--red-body-color);
+  background-color: gray;
   height: 60px;
-  margin-top: 40px;
   width: 90%;
+  margin-top: 10px;
+  border-radius: 10px;
 }
 
 .playlist-right h3 {
@@ -254,4 +275,24 @@ button {
 button:hover {
   cursor: pointer;
   background-color: var(--red-controls-color);
+}
+
+/*===========================================================
+/*Footer styling*/
+footer {
+  background-color: var(--primary-white-color);
+  background-image: url(BG\ player\ R.png);
+  background-repeat: no-repeat;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 100px;
+}
+
+footer p {
+  max-width: 1000px;
+  justify-items: left;
+}
+#credit-id {
+  font-family: "";
 }

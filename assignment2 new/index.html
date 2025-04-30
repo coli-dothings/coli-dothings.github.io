@@ -33,7 +33,7 @@
         Share BG art with the player.
 
         All album and band details are fictional, created solely for assignment.
-        All artworks were created by me using Krita.
+        All artworks and icons were created by me using Krita and Adobe Illustrator.
         ==================================================================-->
         <div class="head-left">
           <p id="subtitle">ALBUM</p>
@@ -64,9 +64,11 @@
         <div class="player-right">
           <!--custom controls section-->
           <div class="controls">
-            <button id="playpause-btn" onclick="playPauseTrack()"></button>
-            <button id="nexttrack-btn" onclick="nextTrack()"></button>
-            <button id="prevtrack-btn" onclick="prevTrack()"></button>
+            <div class="btn-grp">
+              <button id="playpause-btn" onclick="playPauseTrack()"></button>
+              <button id="nexttrack-btn" onclick="nextTrack()"></button>
+              <button id="prevtrack-btn" onclick="prevTrack()"></button>
+            </div>
 
             <!--define control progress bar-->
             <div class="progress-bar">
@@ -86,7 +88,12 @@
 
             <!--define volume control-->
             <div class="volume-bar">
-              <img src="" alt="Volume" id="volume-icon" />
+              <img
+                src="Icons-05.png"
+                alt="Volume"
+                id="volume-icon"
+                height="50px"
+              />
               <!--Similar to progress bar, but the value is set to max automatically.
             Because volume is set to max on default player-->
               <input
@@ -118,9 +125,6 @@
             <button id="play-all">
               Play All <img src="" alt="" id="play-all-btn" />
             </button>
-            <button id="add-to">
-              Add To <img src="" alt="" id="add-to-btn" />
-            </button>
 
             <div id="track1-body"></div>
             <div id="track2-body"></div>
@@ -142,10 +146,7 @@
         All names and details indicated are fictional and created solely for
         this assignment.
       </p>
-      <div class="credit">
-        <p id="credit-name">Mai Anh Vo</p>
-        <p id="credit-id">s4021256</p>
-      </div>
+      <p id="name-id">Mai Anh Vo - s4021256</p>
     </footer>
   </body>
 </html>
