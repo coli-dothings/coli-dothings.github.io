@@ -30,7 +30,6 @@
       <header>
         <!--=================================================================
         Header is a landing page, transition smooth into media player
-        Share BG art with the player.
 
         All album and band details are fictional, created solely for assignment.
         All artworks and icons were created by me using Krita and Adobe Illustrator.
@@ -42,13 +41,17 @@
 
         <div class="head-right">
           <h2 class="band">by <br /><i>INDEX RESET</i></h2>
-          <button id="click-me"><p>Click me to play sound</p></button>
+          <button id="click-me"><p>An unreal music album</p></button>
         </div>
       </header>
 
       <div class="player">
-        <!--a holder/reciever of the playlist, which then play the media
-        Does not contain the playlist itself-->
+        <!--a reciever of the playlist, which then play the media given by js-->
+
+        <audio
+          src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Hes.mp3"
+          id="my-audio"
+        ></audio>
 
         <div class="player-left">
           <!--Track information that change to each track when plays-->
@@ -69,13 +72,13 @@
           <div class="controls">
             <div class="inline-right">
               <div class="btn-grp">
-                <button id="nexttrack-btn" onclick="nextTrack()">
+                <button id="nexttrack-btn">
                   <img src="Icons-02.png" alt="" id="nexttrack-img" />
                 </button>
-                <button id="playpause-btn" onclick="playPauseTrack()">
+                <button id="playpause-btn">
                   <img src="Icons-01.png" alt="" id="playpause-img" />
                 </button>
-                <button id="prevtrack-btn" onclick="prevTrack()">
+                <button id="prevtrack-btn">
                   <img src="Icons-03.png" alt="" id="prevtrack-img" />
                 </button>
               </div>
@@ -117,7 +120,7 @@
         <!--A section for a disc visual that spins when media plays
         Sit under the media details and controls, above left div on the z axis-->
         <div class="disc">
-          <div id="disc-img"></div>
+          <img src="disc.png" alt="" id="disc-img" />
         </div>
       </div>
 
@@ -134,19 +137,19 @@
 
             <div id="track1-body">
               <img src="Icons-07.png" alt="" class="track-body-play-img" />
-              <p>track name</p>
+              <p>Hes</p>
             </div>
             <div id="track2-body">
               <img src="Icons-07.png" alt="" class="track-body-play-img" />
-              <p>track name</p>
+              <p>Dry Down ft. Ben Snaath</p>
             </div>
             <div id="track3-body">
               <img src="Icons-07.png" alt="" class="track-body-play-img" />
-              <p>track name</p>
+              <p>Leapt</p>
             </div>
             <div id="track4-body">
               <img src="Icons-07.png" alt="" class="track-body-play-img" />
-              <p>track name</p>
+              <p>Water Feature</p>
             </div>
           </div>
 
