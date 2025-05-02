@@ -285,6 +285,7 @@ header {
   align-items: center;
   gap: 10px;
   opacity: 90%;
+  cursor: pointer;
 
   transition: scale 0.2s;
 }
