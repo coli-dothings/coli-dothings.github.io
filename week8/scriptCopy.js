@@ -84,6 +84,7 @@ musicVideoButton.addEventListener("click", function chooseVideo() {
 
 function playVideo(no) {
   myVideo.src = videoList[no].src;
+  console.log(no);
   console.log(myVideo.src);
   myVideo.load();
   myVideo.play();

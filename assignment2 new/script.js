@@ -23,9 +23,42 @@ const audioList = [
 ];
 
 const myAudio = document.querySelector("#my-audio");
-console.log(myAudio);
+
+//---------------------------------------------------------------------------------
+//loading new track, reset values and
+//updating html style based on which track load logic
+
+//declare details that need update
+const trackNumber = document.querySelector("#track-number");
+const trackName = document.querySelector("#track-name");
+
+//fetch the timer numbers on the progress bar
+const currentTimeNum = document.querySelector("#current-time");
+const totalDurationNum = document.querySelector("#total-duration");
+
+//fetch the sliders' values
+const progressSlider = document.querySelector(".progress-slider");
+const volumeSlider = document.querySelector(".volume-slider");
+
+//declare an index to search through audio list
+let trackIndex = 0;
+
+//load new track logic
+function loadTrack(trackIndex) {
+  //Load new track
+  myAudio.src = audioList[trackIndex].src;
+  myAudio.load();
+
+  //Update details
+  //Show which number track is playing and length of playlist
+  trackNumber.textContent =
+    "PLAYING " + (trackIndex + 1) + " OF " + audioList.length;
+  //update name
+  trackName.textContent = audioList[trackIndex].name;
+}
 
 //------------------------------------------------------------------------------
+//Custom controls section
 //play pause logic
 const playPauseButton = document.querySelector("#playpause-btn");
 console.log(playPauseButton);
@@ -57,6 +90,13 @@ function playAudio() {
   //Using the animated spin class from css
   disc.classList.add("spin");
   console.log(disc);
+
+  //make the right-BG color track color when play
+  document.body.style.setProperty(
+    "--BG-right-color",
+    audioList[trackIndex].color
+  );
+  console.log("play");
 }
 //pause audio logic
 function pauseAudio() {
@@ -67,17 +107,15 @@ function pauseAudio() {
   disc.classList.remove("spin");
   console.log(disc);
 
-  //make the right BG color black
+  //make the right-BG color black when paused
   document.body.style.setProperty("--BG-right-color", "black");
+  console.log("pause");
 }
 
 //----------------------------------------------------------------------------
 //Moving to next track and prev track logic
 const nextTrackButton = document.querySelector("#nexttrack-btn");
 const prevTrackButton = document.querySelector("#prevtrack-btn");
-
-//declare an index to search through audio list
-let trackIndex = 0;
 
 //listen for click
 nextTrackButton.addEventListener("click", nextTrack);
@@ -111,54 +149,170 @@ function prevTrack() {
   playAudio();
 }
 
-//------------------------------------------------------------------------
-//loading new track, reset values and
-//updating html based on which track load logic
+//----------------------------------------------------------------------------------------
+//move to the next track when the current finishes
+myAudio.addEventListener("ended", autoPlayNext);
 
-//declare details that need update
-const trackNumber = document.querySelector("#track-number");
-const trackName = document.querySelector("#track-name");
+//stop auto play if end of playlist
+function autoPlayNext() {
+  if (trackIndex < audioList.length - 1) {
+    nextTrack();
+  } else {
+    pauseAudio();
+  }
+}
 
-function loadTrack(trackIndex) {
-  //clear the previous seek timer before reset
-  clearInterval(updateTimer);
-  resetValues();
+//----------------------------------------------------------------------------------------
+//Progress bar logic
+//listen for when user changes the slider
+progressSlider.addEventListener("change", setProgress);
 
-  //Load new track
+//update progress bar when time update
+myAudio.addEventListener("timeupdate", progressUpdate);
+
+//Calculate the time of the audio should be set to
+//based on the user manual input on the progress slider
+//if user set slider to 50 => audio current time set to halfway point
+function setProgress() {
+  let setTo = myAudio.duration * (progressSlider.value / 100);
+
+  //set the audio to that time/progress position
+  myAudio.currentTime = setTo;
+}
+
+//logic to let progress bar be update by audio running
+function progressUpdate() {
+  let progressPos = 0;
+
+  //Occasionally on track change delay the duration is NaN
+  //Add this if statement fix that
+  if (!isNaN(myAudio.duration)) {
+    progressPos = myAudio.currentTime * (100 / myAudio.duration);
+    //set progress bar
+    progressSlider.value = progressPos;
+
+    //Calculate the time left using current time divided by 60
+    //The remainder is the seconds. All round up to interger
+    let currentMinutes = Math.floor(myAudio.currentTime / 60);
+    let currentSeconds = Math.floor(myAudio.currentTime % 60);
+
+    //Calculate the total duration using duration time divided by 60
+    //The remainder is the seconds. All round up to interger
+    let durationMinutes = Math.floor(myAudio.duration / 60);
+    let durationSeconds = Math.floor(myAudio.duration % 60);
+
+    // Add a zero if the number is one digit
+    if (currentSeconds < 10) {
+      currentSeconds = "0" + currentSeconds;
+    }
+    if (currentMinutes < 10) {
+      currentMinutes = "0" + currentMinutes;
+    }
+    // Add a zero if the number is one digit
+    if (durationSeconds < 10) {
+      durationSeconds = "0" + durationSeconds;
+    }
+    if (durationMinutes < 10) {
+      durationMinutes = "0" + durationMinutes;
+    }
+
+    // Display the updated duration
+    currentTimeNum.textContent = currentMinutes + ":" + currentSeconds;
+    totalDurationNum.textContent = durationMinutes + ":" + durationSeconds;
+  }
+}
+
+//---------------------------------------------------------------------------------------
+//Volume bar logic
+//listen when user change volume slider
+volumeSlider.addEventListener("change", setVolume);
+
+//set volume based on slider percentage, same as progress slider
+function setVolume() {
+  myAudio.volume = volumeSlider.value / 100;
+}
+
+//----------------------------------------------------------------------------------------
+//Playlist track select logic
+//select the track body element
+const trackBody1 = document.querySelector("#track-body-1");
+//play selected track
+trackBody1.addEventListener("click", function chooseTrack() {
+  playTrack(0);
+});
+
+const trackBody2 = document.querySelector("#track-body-2");
+trackBody2.addEventListener("click", function chooseTrack() {
+  playTrack(1);
+});
+
+const trackBody3 = document.querySelector("#track-body-3");
+trackBody3.addEventListener("click", function chooseTrack() {
+  playTrack(2);
+});
+
+const trackBody4 = document.querySelector("#track-body-4");
+trackBody4.addEventListener("click", function chooseTrack() {
+  playTrack(3);
+});
+
+//select Play All button
+//Since the whole system is set to auto play by default
+//Play All functionally just set audio to play to the first one in list
+const playAllButton = document.querySelector("#play-all");
+playAllButton.addEventListener("click", function chooseTrack() {
+  playTrack(0);
+});
+
+//logic to play selected track
+function playTrack(no) {
+  trackIndex = no;
+  console.log(trackIndex);
+
+  //for some reason calling loadTrack() function here breaks it
+  //so I put it in manually
   myAudio.src = audioList[trackIndex].src;
   myAudio.load();
-
-  //Update details
-  //Show which number track is playing and length of playlist
   trackNumber.textContent =
     "PLAYING " + (trackIndex + 1) + " OF " + audioList.length;
-  //update name
   trackName.textContent = audioList[trackIndex].name;
-  //update BG color
-  document.body.style.setProperty(
-    "--BG-right-color",
-    audioList[trackIndex].color
-  );
-  console.log(audioList[trackIndex].color);
 
-  //-------------------------------------------------------------
-  //Ok ngl these 2 lines be sketch as hell fix this after all done
-  //set interval for updating the progress slider after last one cleared
-  updateTimer = setInterval(progressUpdate, 1000);
-
-  //move to the next track when the current finishes
-  myAudio.addEventListener("ended", nextTrack);
+  playAudio();
 }
 
-//fetch the numbers on the progress bar
-const currentTime = document.querySelector("#current-time");
-const totalDuration = document.querySelector("#total-duration");
+//----------------------------------------------------------------------------------------
+//Clicky CD case sound logic
+//Selecting ALL buttons in document
+var allButtonsArray = document.querySelectorAll("button");
+console.log(allButtonsArray);
+//set clicky sound source
+const clickyCD = document.querySelector("#clicky-cd");
 
-//fetch the sliders' values
-const progressSlider = document.querySelector(".progress-slider");
-const volumeSlider = document.querySelector(".volume-slider");
-
-function resetValues() {
-  currentTime.textContent = "00:00";
-  totalDuration.textContent = "00:00";
+//add a clicky sound function to all of them
+for (let i = 0; i < allButtonsArray.length; i++) {
+  allButtonsArray[i].addEventListener("click", clickyAudio);
 }
+function clickyAudio() {
+  clickyCD.play();
+}
+
+//---------------------------------------------------------------------------------------
+//Insert CD sound logic
+//Selecting all track body from playlist section
+//Using same selection method as CSS
+var allTrackBodyArray = document.querySelectorAll(".playlist-left div");
+console.log(allTrackBodyArray);
+
+const insertCD = document.querySelector("#insert-cd");
+
+//add the insert cd sound function to all of them
+for (let i = 0; i < allTrackBodyArray.length; i++) {
+  allTrackBodyArray[i].addEventListener("click", insertCDAudio);
+}
+function insertCDAudio() {
+  insertCD.play();
+}
+
+//----------------------------------------------------------------------------------------
+//Final line. Load the first track to the player.
+loadTrack(trackIndex);

@@ -16,9 +16,6 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <!--Navigation Section-->
-    <nav>test nav</nav>
-
     <!--=====================================================================
     Main Content Section
 
@@ -52,6 +49,9 @@
           src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/p-hase_Hes.mp3"
           id="my-audio"
         ></audio>
+
+        <!--sfx sound play when click any button-->
+        <audio src="CDCaseOpen_SFXB.4048.wav" id="clicky-cd"></audio>
 
         <div class="player-left">
           <!--Track information that change to each track when plays-->
@@ -93,7 +93,6 @@
                   max="100"
                   value="99"
                   class="volume-slider"
-                  onchange="setVolume()"
                 />
                 <img src="Icons-05.png" alt="Volume" id="volume-icon" />
               </div>
@@ -110,7 +109,6 @@
                 max="100"
                 value="0"
                 class="progress-slider"
-                onchange="setProgress()"
               />
               <div id="total-duration">00:00</div>
             </div>
@@ -135,19 +133,22 @@
               Play All <img src="Icons-06.png" alt="" id="play-all-img" />
             </button>
 
-            <div id="track1-body">
+            <!--sfx sound play when select track body-->
+            <audio src="CDPutIntoCDPlayer_SFXB.4056.wav" id="insert-cd"></audio>
+
+            <div id="track-body-1">
               <img src="Icons-07.png" alt="" class="track-body-play-img" />
               <p>Hes</p>
             </div>
-            <div id="track2-body">
+            <div id="track-body-2">
               <img src="Icons-07.png" alt="" class="track-body-play-img" />
               <p>Dry Down ft. Ben Snaath</p>
             </div>
-            <div id="track3-body">
+            <div id="track-body-3">
               <img src="Icons-07.png" alt="" class="track-body-play-img" />
               <p>Leapt</p>
             </div>
-            <div id="track4-body">
+            <div id="track-body-4">
               <img src="Icons-07.png" alt="" class="track-body-play-img" />
               <p>Water Feature</p>
             </div>

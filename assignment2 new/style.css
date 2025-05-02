@@ -93,20 +93,6 @@ p {
   font-size: 1.2rem;
 }
 
-/*==========================================================================
-/*Navigation styling*/
-nav {
-  /*Set the nav bar in a fixed position, at the top of screen, full width*/
-  overflow: hidden;
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  width: 100%;
-
-  padding: 5px;
-  background-color: var(--BG-right-color); /*set gradient here too*/
-}
-
 /*=========================================================================
 /*Main Content Section*/
 .container {
@@ -137,7 +123,7 @@ header {
 .head-right {
   width: 40%;
   background-color: var(--BG-right-color);
-  padding-top: 40px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -287,7 +273,7 @@ header {
   padding-bottom: 20px;
 }
 
-/*play-list tracks style*/
+/*play-list track body style*/
 .playlist-left div {
   background-color: var(--grey-disc-color);
   border-left: solid 8px var(--red-body-color);
