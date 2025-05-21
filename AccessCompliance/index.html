@@ -15,6 +15,21 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <nav id="nav">
+      <!-- static nav menu expand right -->
+      <div id="nav-btn">
+        <img src="burger menu.png" alt="menu" id="menu-icon" />
+      </div>
+      <div id="gradient"></div>
+      <div id="side-drawer">
+        <ul>
+          <li><a href="#introduction-section">Statement</a></li>
+          <li><a href="#video-transcript-section">Visage of Time</a></li>
+          <li><a href="#3d-section">Tactile Print</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <header>
       <!-- heading 1, big image, big text -->
       <img
@@ -30,19 +45,14 @@
           2025
         </p>
       </div>
-      <div class="line"></div>
+      <div class="big-line"></div>
     </header>
-
-    <nav>
-      <!-- static nav menu expand right -->
-      test nav
-    </nav>
 
     <main>
       <!-- -------------------------------------------------------- 
        Intro section
        ------------------------------------------------------------>
-      <div class="introduction-section">
+      <div id="introduction-section">
         <h2>INTRODUCTION</h2>
         <h3>Introduction to "Visage of Time" and Artist statement</h3>
 
@@ -88,7 +98,7 @@
             The video is aided with use of audio descriptions and closed
             captions as part of the artistic practice.
           </p>
-          <p id="side">
+          <p class="side-text">
             On the side, accompanying the piece is a tactile print of the final
             illustration. With attention placed in texture to bring out areas of
             interest, and braille typeface where text used to be. It serves as
@@ -104,11 +114,11 @@
       <!-- -------------------------------------------------------- 
        Video section
        ------------------------------------------------------------>
-      <div class="video-transcript-section">
+      <div id="video-transcript-section">
         <h2>Visage of Time (video), 2025</h2>
         <h3>Center Piece - Audio Visual with Closed Captions</h3>
 
-        <iframe
+        <!-- <iframe
           width="560"
           height="315"
           src="https://www.youtube.com/embed/2_mynifaDj8?si=3gUx66c92_WNJage"
@@ -117,7 +127,7 @@
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreens
-        ></iframe>
+        ></iframe> -->
 
         <div class="transcript">
           <div class="line"><!-- line divider --></div>
@@ -321,13 +331,13 @@
       <!-- -------------------------------------------------------- 
        3D model section
        ------------------------------------------------------------>
-      <div class="3d-section">
+      <div id="3d-section">
         <h2>Captured in Still (Tactile print), 2025</h2>
         <h3>Captured in Still - Tactile print model</h3>
 
         <video
           src="3d model sun dial movement.mp4"
-          id="3d-video"
+          id="model-video"
           loop
           muted
           autoplay
@@ -418,8 +428,14 @@
     </main>
 
     <footer>
-      <!-- all rights reserved publishing art accessiblity website
-         add names and student ID and class code here -->
+      <div id="left-footer">
+        <p>Mai Anh Vo - s4021256</p>
+        <p>&copy; 2025 Publication Website. All rights reserved.</p>
+      </div>
+      <div id="right-footer">
+        <p>RMIT Australia</p>
+        <p>DS_BP309_2510_VIS_StudioA_7</p>
+      </div>
     </footer>
   </body>
 </html>

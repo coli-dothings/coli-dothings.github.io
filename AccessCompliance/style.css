@@ -1,9 +1,14 @@
 /*body section*/
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --bg-color: rgb(247, 246, 222);
   --p-font-color: black;
   --accent-color: rgb(215, 198, 102);
   --bold-color: rgb(146, 102, 0);
+  --special-color: rgb(0, 61, 71);
 }
 
 body {
@@ -11,6 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: var(--p-font-color);
 }
 
 #head-text,
@@ -23,6 +29,7 @@ main {
 img {
   max-width: 100%;
   height: auto;
+  justify-self: center;
 }
 
 iframe {
@@ -52,10 +59,11 @@ h3 {
   padding-bottom: 10px;
 }
 p {
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 i {
   font-style: italic;
+  color: var(--special-color);
 }
 
 .big-text {
@@ -70,21 +78,77 @@ i {
 .subtitle {
   font-weight: 500;
   font-size: 1rem;
+  color: var(--bold-color);
+}
+.side-text {
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 /* ===================================================================
-main section */
-header {
+NAV section */
+nav {
+  position: fixed;
+  display: flex;
+  top: 5px;
+  right: -200px;
+  z-index: 99;
+  transition: translate 0.5s ease-in-out;
 }
 
-.line {
+#side-drawer {
+  width: 160px;
+  background-color: rgba(247, 246, 222, 0.944);
+  padding: 8px;
+}
+#side-drawer li {
+  padding-bottom: 15px;
+  list-style-position: inside;
+}
+#side-drawer a {
+  font-weight: 500;
+  color: var(--p-font-color);
+  text-decoration: none;
+}
+#side-drawer a:hover {
+  color: var(--bold-color);
+}
+
+#gradient {
+  width: 40px;
+  background-image: linear-gradient(
+    to left,
+    rgba(247, 246, 222, 0.944),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+#menu-icon {
+  all: unset;
+  width: 40px;
+  height: auto;
+  opacity: 40%;
+}
+#menu-icon:hover,
+#menu-icon:active {
+  opacity: 100%;
+}
+
+ul > li:hover {
+  color: red;
+}
+
+/* ===================================================================
+Main section */
+.line,
+.big-line {
   height: 2px;
   background-color: var(--accent-color);
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
-header .line {
+.big-line {
   height: 4px;
 }
 
@@ -94,4 +158,27 @@ header .line {
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+}
+
+audio {
+  padding-right: 10px;
+}
+
+.transcript {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+footer {
+  display: flex;
+  background-color: var(--accent-color);
+  justify-content: space-between;
+  padding: 20px 10px 5px 10px;
+}
+#left-footer {
+  text-align: left;
+}
+#right-footer {
+  text-align: right;
 }
