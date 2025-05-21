@@ -18,4 +18,4 @@ function openDrawer() {
 }
 
 const my3DVideo = document.querySelector("#model-video");
-my3DVideo.playbackRate = 0.5;
+my3DVideo.playbackRate = 0.25;
