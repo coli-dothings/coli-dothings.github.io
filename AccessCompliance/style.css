@@ -1,12 +1,97 @@
-/*Main body section*/
+/*body section*/
 :root {
-  --bg-color: white;
+  --bg-color: rgb(247, 246, 222);
   --p-font-color: black;
-  --accent-color: lightgrey;
+  --accent-color: rgb(215, 198, 102);
+  --bold-color: rgb(146, 102, 0);
 }
 
-/* iframe {
-    aspect-ratio: 16 / 9;
-    width: 100% !important;
-    height: auto;
-} */
+body {
+  background-color: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#head-text,
+main {
+  margin: auto;
+  max-width: 960px;
+  padding: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  aspect-ratio: 16 / 9;
+  width: 100% !important;
+  height: auto;
+}
+
+h1 {
+  font-weight: 900;
+  font-style: normal;
+  font-size: 3rem;
+  color: var(--p-font-color);
+  padding-bottom: 15px;
+}
+h2 {
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2rem;
+  color: var(--bold-color);
+  padding-bottom: 10px;
+}
+h3 {
+  font-weight: 600;
+  font-style: italic;
+  font-size: 1.4rem;
+  padding-bottom: 10px;
+}
+p {
+  font-size: 1.1rem;
+}
+i {
+  font-style: italic;
+}
+
+.big-text {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.small-text {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+.subtitle {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* ===================================================================
+main section */
+header {
+}
+
+.line {
+  height: 2px;
+  background-color: var(--accent-color);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+header .line {
+  height: 4px;
+}
+
+.audio {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
