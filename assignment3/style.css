@@ -1,0 +1,49 @@
+/* ====================================================================
+DESIGN THEORY
+Early internet maximalist content and minimalist composition
+Main body content
+Text box interactive
+BG muisc
+=======================================================================
+TYPOGRAPHY
+=======================================================================
+COLOR PALLETE
+Define all colors in root. accent is on hover color
+======================================================================*/
+
+:root {
+  --bg-color: black;
+  --text-color: white;
+  --window-text-color: n;
+  --accent-color: gold;
+}
+
+body {
+  max-width: 1200px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+main {
+  display: flex;
+}
+
+#soundboard-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  width: 800px;
+  min-height: 3700px;
+
+  gap: 3px;
+  padding-top: 3px;
+  background-color: var(--text-color);
+}
+
+.box-maingrid {
+  background-color: var(--bg-color);
+  padding: 10px;
+  align-content: baseline;
+  list-style-position: inside;
+  /*Move the numbered list inward to align with text*/
+}
