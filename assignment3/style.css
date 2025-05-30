@@ -50,4 +50,13 @@ main {
   align-content: baseline;
   list-style-position: inside;
   /*Move the numbered list inward to align with text*/
+  position: relative;
+}
+
+.box-maingrid:hover {
+  background-color: var(--accent-color);
+}
+
+#img1 {
+  position: absolute;
 }
