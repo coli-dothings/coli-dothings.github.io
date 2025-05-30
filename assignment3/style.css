@@ -48,8 +48,6 @@ main {
   background-color: var(--bg-color);
   padding: 10px;
   align-content: baseline;
-  list-style-position: inside;
-  /*Move the numbered list inward to align with text*/
   position: relative;
 }
 
@@ -59,4 +57,14 @@ main {
 
 #img1 {
   position: absolute;
+}
+
+/* ------------------------------------------------------------------- */
+#textbox-container {
+  width: 400px;
+  height: 300px;
+  background-color: gray;
+  position: fixed;
+  right: 0;
+  top: 0;
 }
