@@ -28,15 +28,19 @@ main {
   display: flex;
 }
 
+#title-container {
+  width: 300px;
+  padding: 20px; /* padding is inside, margin outside*/
+}
+
 #soundboard-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(20, 1fr);
-  width: 800px;
-  min-height: 3700px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(17, 1fr);
+  width: 600px;
+  height: 2040px;
 
   gap: 3px;
-  padding-top: 3px;
   background-color: var(--text-color);
 }
 
