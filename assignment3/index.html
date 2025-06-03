@@ -130,12 +130,15 @@
 
     <div id="textbox-container">
       <!-- Windows text box, custom BG image GIF-->
-      <div id="close-window-btn"></div>
+      <div id="close-window-btn">
+        <img src="save icon window.gif" alt="" id="close-icon-img" />
+        <div id="close-icon-bg"></div>
+      </div>
       <p class="text-cursor">
         <i id="window-text"></i>
         <i id="blink-cursor">_</i>
         <!-- make blink-cursor always run behind window-text
-        using built-in <p> flex-wrap and blink CSS animation -->
+        using built-in <p> flex-wrap, seperate by <i> tags -->
       </p>
     </div>
 

@@ -80,7 +80,7 @@ main {
   background-image: url(1x2.gif);
 }
 .i1x2sw {
-  background-image: url();
+  background-image: url(1x2sw.gif);
 }
 .i1x3 {
   background-image: url(1x3.gif);
@@ -92,7 +92,7 @@ main {
   background-image: url(2x3.gif);
 }
 .i2x3sw {
-  background-image: url();
+  background-image: url(2x3sw.gif);
 }
 .i2x4 {
   background-image: url(2x4.gif);
@@ -106,16 +106,41 @@ main {
 #textbox-container {
   width: 400px;
   height: 300px;
-  background-color: gray;
-  background-image: none;
+  background-image: url(window.gif);
 
   position: fixed;
-  right: 5%;
-  top: 20%;
-  padding: 20px;
-  padding-top: 80px;
+  right: 80px;
+  top: 20px;
+  padding: 30px;
+  padding-top: 70px;
+  z-index: -1;
+}
+#close-window-btn {
+  position: fixed;
+  right: 90px;
+  top: 30px;
+  cursor: pointer;
+}
 
-  display: none;
+#close-icon-img {
+  position: relative;
+  z-index: 9;
+}
+#close-icon-bg {
+  position: fixed;
+  right: 95px;
+  top: 36px;
+  width: 26px;
+  height: 24px;
+  z-index: 8;
+}
+/* creating a seperate div allow the bg color to turn red on hover
+using CSS, while keeping the animated GIF icon */
+#close-window-btn:hover #close-icon-bg {
+  background-color: rgb(206, 0, 0);
+}
+#close-window-btn:active #close-icon-img {
+  scale: 90%;
 }
 
 .text-cursor {
@@ -126,6 +151,7 @@ main {
 
 #blink-cursor {
   animation: blink 1s infinite;
+  /* make the blink cursor in typing text */
 }
 @keyframes blink {
   0% {
