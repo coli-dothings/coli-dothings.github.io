@@ -17,8 +17,8 @@
         to each other using main's flex box.
 
         Soundboard will be using a grid systen with different box sizes
-        nestled inside. Each box contain either 'button' or 'slider'
-        that would play soundbites on click.
+        nestled inside. Each box contain interable icons that would play 
+        soundbites on click, alongside animation.
         ------------------------------------------------------------->
       <div id="title-container">
         <!-- Title, introduction and flavor texts -->
@@ -33,44 +33,110 @@
 
       <div id="soundboard-container">
         <!-- Every box share the same class, with different IDs -->
+        <!-- Every box contain a div that use the icon img as the background -->
+        <!-- This is for CSS animation using BG sprite sheets as GIF replacement -->
         <div class="box-maingrid" id="box1">
-          <img src="SK idle.gif" alt="" id="img1" />
-          <video src="Day2.mp4" id="vid1" muted autoplay loop></video>
+          <div class="icon i1x4"></div>
+          <!-- Class "icon" refer to all icon imgs inside grid -->
+          <!-- Class "i1x4" refer to all icons size 1x4 -->
         </div>
-        <div class="box-maingrid" id="box2"></div>
-        <div class="box-maingrid" id="box3"></div>
-        <div class="box-maingrid" id="box4"></div>
-        <div class="box-maingrid" id="box5"></div>
-        <div class="box-maingrid" id="box6"></div>
-        <div class="box-maingrid" id="box7"></div>
-        <div class="box-maingrid" id="box8"></div>
-        <div class="box-maingrid" id="box9"></div>
-        <div class="box-maingrid" id="box10"></div>
-        <div class="box-maingrid" id="box11"></div>
-        <div class="box-maingrid" id="box12"></div>
-        <div class="box-maingrid" id="box13"></div>
-        <div class="box-maingrid" id="box14"></div>
-        <div class="box-maingrid" id="box15"></div>
-        <div class="box-maingrid" id="box16"></div>
-        <div class="box-maingrid" id="box17"></div>
-        <div class="box-maingrid" id="box18"></div>
-        <div class="box-maingrid" id="box19"></div>
-        <div class="box-maingrid" id="box20"></div>
-        <div class="box-maingrid" id="box21"></div>
-        <div class="box-maingrid" id="box22"></div>
-        <div class="box-maingrid" id="box23"></div>
-        <div class="box-maingrid" id="box24"></div>
+        <div class="box-maingrid" id="box2">
+          <div class="icon i1x2sw"></div>
+          <!-- sw = sideway icon -->
+        </div>
+        <div class="box-maingrid" id="box3">
+          <div class="icon i1x2sw"></div>
+        </div>
+        <div class="box-maingrid" id="box4">
+          <div class="icon i1x1b"></div>
+        </div>
+        <div class="box-maingrid" id="box5">
+          <div class="icon i1x2"></div>
+        </div>
+        <div class="box-maingrid" id="box6">
+          <div class="icon i1x3"></div>
+        </div>
+        <div class="box-maingrid" id="box7">
+          <div class="icon i2x3"></div>
+        </div>
+        <div class="box-maingrid" id="box8">
+          <div class="icon i1x3"></div>
+        </div>
+        <div class="box-maingrid" id="box9">
+          <div class="icon i1x3"></div>
+        </div>
+        <div class="box-maingrid" id="box10">
+          <div class="icon i1x1"></div>
+        </div>
+        <div class="box-maingrid" id="box11">
+          <div class="icon i1x1b"></div>
+        </div>
+        <div class="box-maingrid" id="box12">
+          <div class="icon i2x4"></div>
+        </div>
+        <div class="box-maingrid" id="box13">
+          <div class="icon i1x1"></div>
+        </div>
+        <div class="box-maingrid" id="box14">
+          <div class="icon i2x4"></div>
+        </div>
+        <div class="box-maingrid" id="box15">
+          <div class="icon i3x3"></div>
+        </div>
+        <div class="box-maingrid" id="box16">
+          <div class="icon i1x4"></div>
+        </div>
+        <div class="box-maingrid" id="box17">
+          <div class="icon i1x4"></div>
+        </div>
+        <div class="box-maingrid" id="box18">
+          <div class="icon i1x2"></div>
+        </div>
+        <div class="box-maingrid" id="box19">
+          <div class="icon i1x1"></div>
+        </div>
+        <div class="box-maingrid" id="box20">
+          <div class="icon i1x1b"></div>
+        </div>
+        <div class="box-maingrid" id="box21">
+          <div class="icon i1x2sw"></div>
+        </div>
+        <div class="box-maingrid" id="box22">
+          <div class="icon i1x1b"></div>
+        </div>
+        <div class="box-maingrid" id="box23">
+          <div class="icon i3x3"></div>
+        </div>
+        <div class="box-maingrid" id="box24">
+          <div class="icon i1x3"></div>
+        </div>
+        <div class="box-maingrid" id="box25">
+          <div class="icon i1x3"></div>
+        </div>
+        <div class="box-maingrid" id="box26">
+          <div class="icon i1x1"></div>
+        </div>
+        <div class="box-maingrid" id="box27">
+          <div class="icon i1x2"></div>
+        </div>
+        <div class="box-maingrid" id="box28">
+          <div class="icon i1x2"></div>
+        </div>
+        <div class="box-maingrid" id="box29">
+          <div class="icon i2x3sw"></div>
+        </div>
       </div>
     </main>
 
     <div id="textbox-container">
       <!-- Windows text box, custom BG image GIF-->
-      <div class="text-cursor">
-        <p id="window-text"></p>
-        <p id="blink-cursor">_</p>
+      <div id="close-window-btn"></div>
+      <p class="text-cursor">
+        <i id="window-text"></i>
+        <i id="blink-cursor">_</i>
         <!-- make blink-cursor always run behind window-text
-        using CSS animation and flex-wrap -->
-      </div>
+        using built-in <p> flex-wrap and blink CSS animation -->
+      </p>
     </div>
 
     <div id="bg-track-container">
