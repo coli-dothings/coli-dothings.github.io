@@ -22,6 +22,9 @@ body {
   max-width: 1200px;
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
 
 main {
@@ -32,7 +35,65 @@ main {
 /*Title and flavor text styling*/
 #title-container {
   width: 220px;
-  padding: 10px; /* padding is inside, margin outside*/
+  padding: 15px; /* padding is inside, margin outside*/
+  background-color: var(--bg-color);
+}
+
+/* horizontal line dividing text sections*/
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-family: "Six Caps", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8rem;
+  line-height: 1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+h2,
+p {
+  font-family: "Pathway Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.3;
+}
+
+h2 {
+  font-size: 1.3rem;
+  padding-bottom: 8px;
+}
+
+footer p {
+  font-family: "VT323", sans-serif;
+}
+
+/* Small idle shuffling animation to match the visual style */
+h1,
+h2,
+p {
+  animation: text-shuffle 1s infinite;
+}
+@keyframes text-shuffle {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  51% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
 }
 
 /*----------------------------------------------------------------*/
@@ -42,7 +103,7 @@ main {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(19, 1fr);
   min-width: 600px;
-  min-height: 2280px;
+  min-height: auto;
   aspect-ratio: 60 / 228;
   /*aspect ratio maintain consistent square size of grid*/
 
@@ -63,13 +124,16 @@ main {
   cursor: pointer;
 }
 
-/* Setting the background for all icons of same type */
 .icon {
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  /* keep the GIF original size, non repeat */
 }
 
+/* Setting the background for all icons of same type */
+/* All base idle animations */
 .i1x1b {
   background-image: url(1x1\ black.gif);
 }
@@ -99,6 +163,40 @@ main {
 }
 .i3x3 {
   background-image: url(3x3.gif);
+}
+/* ==============================================================
+ICON CLASS specific animation 
+
+Using GIF allow the background to be transparent, however, unlike
+MP4(video), GIF, as an image class, does not specify start and end point.
+
+This means to play an animation once (e.g. animation fire on click)
+I need to use a transparent PNG spritemap containing all
+frames of animation, and animate manually using CSS to control its
+speed, start and end. 
+Use JS 'animationed' Event to know when animation is finished.
+Similar to 'ended' when using video.
+==================================================================*/
+
+.i1x1-idle {
+  background-image: url();
+  background-size: null;
+  /* set BG size to 100% times the number of frames. This makes each
+  frame fill the exact size of div */
+  /* The default BG size is 100% - see above code (line-130) */
+  animation: animateframe steps(null) null;
+  /* Use CSS animation to slide each frame into place. Use steps to 
+  jump from frame to frame (remove smooth). 
+  steps(num) = total frames - 1 */
+}
+
+@keyframes animateframe {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 
 /* ------------------------------------------------------------------- */
@@ -144,6 +242,8 @@ using CSS, while keeping the animated GIF icon */
 }
 
 .text-cursor {
+  font-family: "VT323", monospace;
+  font-size: 1.2rem;
   color: var(--window-text-color);
 
   /* font-family: ; */
@@ -167,6 +267,7 @@ using CSS, while keeping the animated GIF icon */
     opacity: 0%;
   }
 }
+
 /*=====================================================================
 /*GRID ARRANGEMENT - define each space each box inside grid takes*/
 /* grid: Starting number/Ending number+1 */
