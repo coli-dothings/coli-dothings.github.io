@@ -66,12 +66,13 @@ function playIcon() {
 
   //Set which animation variant will be played
   // using weighted probability
-  let rng = Math.floor(Math.random() * 100);
-  if (rng < 80) {
-    return 1;
-  } else {
-    return 2;
-  }
+  // let rng = Math.floor(Math.random() * 100);
+  // if (rng < 80) {
+  //   let variant = 1;
+  // } else {
+  //   let variant = 2;
+  // }
+  // console.log(variant);
 }
 
 //-----------------------------------------------------------------
