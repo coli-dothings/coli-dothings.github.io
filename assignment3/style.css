@@ -418,6 +418,20 @@ using CSS, while keeping the animated GIF icon */
   }
 }
 
+/* ---------------------------------------------------------------- */
+/* BG track icon */
+#bg-track-container {
+  position: fixed;
+  right: 80px;
+  top: 320px;
+
+  cursor: pointer;
+}
+
+#bg-track-container:hover {
+  scale: 90%;
+}
+
 /*=====================================================================
 /*GRID ARRANGEMENT - define each space each box inside grid takes*/
 /* grid: Starting number/Ending number+1 */
