@@ -174,20 +174,170 @@ This means to play an animation once (e.g. animation fire on click)
 I need to use a transparent PNG spritemap containing all
 frames of animation, and animate manually using CSS to control its
 speed, start and end. 
+These animated class will be added ontop of the existing icon classes. 
+Due being later in the code, the new style will be applied.
+
 Use JS 'animationed' Event to know when animation is finished.
-Similar to 'ended' when using video.
+Similar to 'ended' Event when using video.
 ==================================================================*/
 
+/* 1x1 */
 .i1x1-idle {
   background-image: url();
-  background-size: null;
+  background-size: 0%;
   /* set BG size to 100% times the number of frames. This makes each
   frame fill the exact size of div */
   /* The default BG size is 100% - see above code (line-130) */
-  animation: animateframe steps(null) null;
+  animation: animateframe steps(null) time;
   /* Use CSS animation to slide each frame into place. Use steps to 
   jump from frame to frame (remove smooth). 
   steps(num) = total frames - 1 */
+}
+.i1x1-var1 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i1x1-var2 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+
+/* 1x2 */
+.i1x2-idle {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i1x2-var1 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i1x2-var2 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+
+/* 1x2sw */
+.i1x2sw-idle {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i1x2sw-var1 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i1x2sw-var2 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+
+/* 1x3 */
+.i1x3-idle {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i1x3-var1 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i1x3-var2 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+
+/* 1x4 */
+.i1x4-idle {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i1x4-var1 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i1x4-var2 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+
+/* 2x3 */
+.i2x3-idle {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i2x3-var1 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i2x3-var2 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+
+/* 2x3sw */
+.i2x3sw-idle {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i2x3sw-var1 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i2x3sw-var2 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+
+/* 2x4 */
+.i2x4-idle {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i2x4-var1 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i2x4-var2 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+
+/* 3x3 */
+.i3x3-idle {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i3x3-var1 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
+}
+.i3x3-var2 {
+  background-image: url();
+  background-size: 0%;
+  animation: animateframe steps(num) time;
 }
 
 @keyframes animateframe {
