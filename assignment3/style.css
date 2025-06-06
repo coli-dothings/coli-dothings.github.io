@@ -79,7 +79,7 @@ footer p {
 h1,
 h2,
 p {
-  animation: text-shuffle 1s infinite;
+  animation: text-shuffle 0.8s infinite;
 }
 @keyframes text-shuffle {
   0% {
@@ -183,161 +183,166 @@ Similar to 'ended' Event when using video.
 
 /* 1x1 */
 .i1x1-idle {
-  background-image: url();
-  background-size: 0%;
+  background-image: url(1x1idle.png);
+  background-size: 1800%;
   /* set BG size to 100% times the number of frames. This makes each
   frame fill the exact size of div */
-  /* The default BG size is 100% - see above code (line-130) */
-  animation: animateframe steps(null) time;
+  /* The default BG size is set 100% - see above code (line-130) */
+  animation: animateframe steps(17) 2250ms;
   /* Use CSS animation to slide each frame into place. Use steps to 
-  jump from frame to frame (remove smooth). 
+  jump from frame to frame (remove smooth transition). 
   steps(num) = total frames - 1 */
+  /* Animation duration is calculated by taking the initial fps of anim
+  (8fps for 1x1), divide by 1000 to know the ms between each frame
+  Then multiply by number of frames. */
+  /* Each set (1x1, 1x2, ...) has a different fps for a varied look */
+  /* All variants of a set has the same fps */
 }
 .i1x1-var1 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x1var1.png);
+  background-size: 3900%;
+  animation: animateframe steps(38) 4875ms;
 }
 .i1x1-var2 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x1var2.png);
+  background-size: 3500%;
+  animation: animateframe steps(34) 4375ms;
 }
 
 /* 1x2 */
 .i1x2-idle {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x2idle.png);
+  background-size: 1500%;
+  animation: animateframe steps(14) 2499ms;
 }
 .i1x2-var1 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x2var1.png);
+  background-size: 2900%;
+  animation: animateframe steps(28) 4831ms;
 }
 .i1x2-var2 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x2var2.png);
+  background-size: 2900%;
+  animation: animateframe steps(28) 4831ms;
 }
 
 /* 1x2sw */
 .i1x2sw-idle {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x2swidle.png);
+  background-size: 1500%;
+  animation: animateframe steps(14) 2499;
 }
 .i1x2sw-var1 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x2swvar1.png);
+  background-size: 2900%;
+  animation: animateframe steps(28) 4831ms;
 }
 .i1x2sw-var2 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x2swvar2.png);
+  background-size: 2900%;
+  animation: animateframe steps(28) 4831ms;
 }
 
 /* 1x3 */
 .i1x3-idle {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x3idle.png);
+  background-size: 1500%;
+  animation: animateframe steps(14) 2142ms;
 }
 .i1x3-var1 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x3var1.png);
+  background-size: 2800%;
+  animation: animateframe steps(27) 3998ms;
 }
 .i1x3-var2 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x3var2.png);
+  background-size: 2800%;
+  animation: animateframe steps(27) 3998ms;
 }
 
 /* 1x4 */
 .i1x4-idle {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x4idle.png);
+  background-size: 800%;
+  animation: animateframe steps(7) 800ms;
 }
 .i1x4-var1 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x4var1.png);
+  background-size: 3000%;
+  animation: animateframe steps(29) 3000ms;
 }
 .i1x4-var2 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(1x4var2.png);
+  background-size: 2900%;
+  animation: animateframe steps(28) 2900ms;
 }
 
 /* 2x3 */
 .i2x3-idle {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(2x3idle.png);
+  background-size: 1200%;
+  animation: animateframe steps(11) 1500ms;
 }
 .i2x3-var1 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(2x3var1.png);
+  background-size: 2700%;
+  animation: animateframe steps(26) 3375ms;
 }
 .i2x3-var2 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(2x3var2.png);
+  background-size: 2700%;
+  animation: animateframe steps(26) 3375ms;
 }
 
 /* 2x3sw */
 .i2x3sw-idle {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(2x3swidle.png);
+  background-size: 1200%;
+  animation: animateframe steps(11) time;
 }
 .i2x3sw-var1 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(2x3swvar1.png);
+  background-size: 2700%;
+  animation: animateframe steps(26) 3375ms;
 }
 .i2x3sw-var2 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(2x3swvar2.png);
+  background-size: 2700%;
+  animation: animateframe steps(26) 3375ms;
 }
 
 /* 2x4 */
 .i2x4-idle {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(2x4idle.png);
+  background-size: 1400%;
+  animation: animateframe steps(13) 1555ms;
 }
 .i2x4-var1 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(2x4ivar1.png);
+  background-size: 3100%;
+  animation: animateframe steps(30) 3444ms;
 }
 .i2x4-var2 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(2x4var2.png);
+  background-size: 3100%;
+  animation: animateframe steps(30) 3444ms;
 }
 
 /* 3x3 */
 .i3x3-idle {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(3x3idle.png);
+  background-size: 1600%;
+  animation: animateframe steps(15) 1600ms;
 }
 .i3x3-var1 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(3x3var1.png);
+  background-size: 3100%;
+  animation: animateframe steps(30) 3100ms;
 }
 .i3x3-var2 {
-  background-image: url();
-  background-size: 0%;
-  animation: animateframe steps(num) time;
+  background-image: url(3x3var2.png);
+  background-size: 3100%;
+  animation: animateframe steps(30) 3100ms;
 }
 
 @keyframes animateframe {
@@ -362,6 +367,8 @@ Similar to 'ended' Event when using video.
   padding: 30px;
   padding-top: 70px;
   z-index: -1;
+  /* fixed position but sit behind the main soundboard if screen
+  is small. Better for when coding too */
 }
 #close-window-btn {
   position: fixed;
@@ -371,10 +378,12 @@ Similar to 'ended' Event when using video.
 }
 
 #close-icon-img {
+  /* img is a transparent BG GIF, with only border visible */
   position: relative;
   z-index: 9;
 }
 #close-icon-bg {
+  /* A CSS defined square shape, size to fit inside the icon img */
   position: fixed;
   right: 95px;
   top: 36px;
@@ -424,6 +433,8 @@ using CSS, while keeping the animated GIF icon */
   position: fixed;
   right: 80px;
   top: 320px;
+  z-index: -2;
+  /* icon sit behind soundboard when screen is small */
 
   cursor: pointer;
 }
