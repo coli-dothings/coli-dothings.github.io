@@ -1,14 +1,18 @@
 /* ====================================================================
 DESIGN THEORY
-Early internet maximalist content and minimalist composition
-Main body content
-Text box interactive
-BG muisc
+Early 2000s internet maximalist content (icons) and minimalist 
+composition (the grid and left leaning comp)
+Whimsical website, with hidden but very linear interactions.
 =======================================================================
 TYPOGRAPHY
+For the Title and Intro section I picked a high compact font that look
+like it was squeezed into its tiny space. Little clautraphobic.
+The old-window system like font is VT323, which aid the aesthetic but
+I want to use sparringly, in conjunction with the 2 other fonts.
 =======================================================================
 COLOR PALLETE
-Define all colors in root. accent is on hover color
+Define all colors in root. Close but not true black or white.
+Accent of dark cyan which also show up in icon design sporadically
 ======================================================================*/
 
 :root {
@@ -75,7 +79,7 @@ footer p {
   font-family: "VT323", sans-serif;
 }
 
-/* Small idle shuffling animation to match the visual style */
+/* Small idle text shuffling animation to match the visual style */
 h1,
 h2,
 p {

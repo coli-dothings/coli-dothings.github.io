@@ -21,6 +21,15 @@ const audioList = [
   "SB_Trumpet.mp3",
   "SB_Water.mp3",
   "SB_Wind.mp3",
+  "SB_Balloon.mp3",
+  "SB_heart.mp3",
+  "SB_Synth.mp3",
+  "SB_Wet celery.mp3",
+  "SB_Tram.mp3",
+  "SB_Nightfrost.mp3",
+  "SB_Phosphor.mp3",
+  "SB_Brutal.mp3",
+  "SB_Andro.mp3",
 ];
 console.log(audioList);
 
@@ -310,7 +319,7 @@ const allIdleStates = [
 // At this point I realized I could' optimize the above CSS animation
 // code, using a nested list in this fashion.
 // But upon attempt it created a nesting code disaster that I can not think
-// is a good coding practice. So I will not.
+// is considered good coding practice. So I will not.
 
 // Every 500ms, play the idle animation of 1 random icon
 setInterval(idlePlay, 500);
@@ -378,7 +387,7 @@ function closeWin() {
   }
 }
 
-// function is called everytime a soundboard icon is cliked (js: 68)
+// function is called everytime a soundboard icon is cliked (line-77)
 function updateWindow() {
   // Display how many times audio has been played
   windowText.innerHTML = "You've played " + numClicked + " sound(s)!";
@@ -386,6 +395,7 @@ function updateWindow() {
   document.body.style.setProperty("--window-text-color", "black");
 
   // set events at higher numClicked milestones
+  // Mainly text, occasionally sound and root color change
   if (numClicked === 10) {
     windowText.innerHTML += " You feel something shifted forwards";
     flavorText.innerHTML =
@@ -436,11 +446,19 @@ How can I push through water with these hands made to grasp
     flavorText.innerHTML =
       "[...]<br />Removing the front plate as opposed to the lid revealed a light sensor, and a visible countdown timer. Exactly 5 seconds after the meet up time. No trigger set on the lid. He narrowed his eyes on the countdown. The bomber wanted the timer to be seen by opening the lid— Sadistic, and meticulously planned, which never spelled good things for him. <br /><br />The first moves were to cut off the sensors and locate the power source. Whoever made this was paranoid enough to set a few traps around the detonator, and he had a pretty good suspicion on who that might be. A sigh escaped him. He’s going to have to find a roundabout way to contact the Inspector about this later. His finger surely didn’t shake when it accidentally grazed over an open wire, because he was taught fear like that would kill him. He knew it would kill him. Maybe he could borrow the bumbling man’s voice again. He switched to using his flashlight once the photosensors were clear, and kept a close ear on the low humming of electrical current. He wondered what dinner awaits him. ";
   }
+  if (numClicked === 100) {
+    // Only play this once
+    var congratAudio = new Audio("Celebration.mp3");
+    setTimeout(playCongrat, 2000);
+    function playCongrat() {
+      congratAudio.play();
+    }
+    console.log("congrats audio");
+  }
   if (numClicked >= 100) {
     windowText.innerHTML +=
       " Woah! You've reached 100! That's... I didn't expect you to! There's nothing planned beyond this point though the system is very modular, so adding more wouldn't be an issue. Thanks for playing! <3";
     flavorText.innerHTML =
       "Hurray!<br /> Hurray!<br /> (Nothing goes beyond this razor edge we brought ourselves, yet we enjoyed something along the way didn't we? I hope you did.) <br /><br />Thank you for playing!";
-    // play congrats audio
   }
 }
