@@ -15,7 +15,7 @@ Define all colors in root. accent is on hover color
   --bg-color: rgb(14, 15, 18);
   --text-color: rgb(217, 217, 217);
   --window-text-color: black;
-  --accent-color: darkslateblue;
+  --accent-color: rgb(5, 93, 87);
 }
 
 body {
@@ -124,10 +124,12 @@ p {
   cursor: pointer;
 }
 
-.icon {
+.icon,
+.i1x1b {
   width: 100%;
   height: 100%;
   background-size: 100%;
+  background-position: 0%;
   background-repeat: no-repeat;
   /* keep the GIF original size, non repeat */
 }
@@ -187,7 +189,7 @@ Similar to 'ended' Event when using video.
   background-size: 1800%;
   /* set BG size to 100% times the number of frames. This makes each
   frame fill the exact size of div */
-  /* The default BG size is set 100% - see above code (line-130) */
+  /* The default BG size is set 100% - see above code (line-131) */
   animation: animateframe steps(17) 2250ms;
   /* Use CSS animation to slide each frame into place. Use steps to 
   jump from frame to frame (remove smooth transition). 
@@ -404,8 +406,6 @@ using CSS, while keeping the animated GIF icon */
   font-family: "VT323", monospace;
   font-size: 1.2rem;
   color: var(--window-text-color);
-
-  /* font-family: ; */
 }
 
 #blink-cursor {
