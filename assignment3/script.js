@@ -387,6 +387,16 @@ function closeWin() {
   }
 }
 
+// Set time out for the loading warning at the beginning
+// if user still havent interact
+setTimeout(loadWindowText, 8000);
+function loadWindowText() {
+  if (numClicked === 0) {
+    windowText.innerHTML = "Shhhh! Try clicking around!";
+    console.log("shhhh");
+  }
+}
+
 // function is called everytime a soundboard icon is cliked (line-77)
 function updateWindow() {
   // Display how many times audio has been played
