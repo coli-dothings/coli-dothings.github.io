@@ -189,7 +189,7 @@ Similar to 'ended' Event when using video.
   background-size: 1800%;
   /* set BG size to 100% times the number of frames. This makes each
   frame fill the exact size of div */
-  /* The default BG size is set 100% - see above code (line-131) */
+  /* The default BG size is set 100% - see above code (css: 131) */
   animation: animateframe steps(17) 2250ms;
   /* Use CSS animation to slide each frame into place. Use steps to 
   jump from frame to frame (remove smooth transition). 
@@ -300,7 +300,7 @@ Similar to 'ended' Event when using video.
 .i2x3sw-idle {
   background-image: url(2x3swidle.png);
   background-size: 1200%;
-  animation: animateframe steps(11) time;
+  animation: animateframe steps(11) 1500ms;
 }
 .i2x3sw-var1 {
   background-image: url(2x3swvar1.png);
