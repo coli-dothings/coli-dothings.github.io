@@ -1,0 +1,30 @@
+{
+  "full_name": "stundet 2",
+  "profile_pic": "profile/profile.webp",
+  "primary_specialization": "specialization 1",
+  "secondary_skills": ["skill 1", "skill 2"],
+  "bio": "mock bio 2",
+  "graduation_year": "2026",
+  "website": "https://www.instagram.com/coli_artsnstuffs/",
+
+  "key_projects": [
+    {
+      "title": "Long title of project 1",
+      "project_type": "3D",
+      "project_cover_image": "projects/project1.webp",
+      "youtube_link": ""
+    },
+    {
+      "title": "Long title of project 2",
+      "project_type": "video",
+      "project_cover_image": "projects/project2.webp",
+      "youtube_link": "https://youtu.be/amTsBProNo4?si=X8NgW_cXcQG99n2g"
+    },
+    {
+      "title": "Long title of jazz piano 3",
+      "project_type": "sound",
+      "project_cover_image": "projects/project3.webp",
+      "youtube_link": "https://youtu.be/NCKmnppmkfg?si=IB5eTHLsKKz2hN1Z"
+    }
+  ]
+}
