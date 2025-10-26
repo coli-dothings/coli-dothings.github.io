@@ -67,7 +67,7 @@ const jsonList = [
 var studentList = [];
 for (let i = 0; i < jsonList.length; i++) {
   studentList[i] = JSON.parse(jsonList[i]);
+  //console.log("student list" + i);
 }
 
 console.log("json list length is " + jsonList.length);
-console.log(studentList);

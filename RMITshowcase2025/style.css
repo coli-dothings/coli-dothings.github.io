@@ -1,0 +1,28 @@
+:root {
+  --bg-color: black;
+  --text-color: white;
+  --three-d-color: red;
+  --uxui-color: blue;
+  --video-color: yellow;
+  --graphics-color: green;
+}
+
+/* body contain document size, and font-fallback edge cases */
+body {
+  max-width: 1000px;
+  background-color: var(--bg-color);
+  background-image: url(BG.webp);
+  color: var(--text-color);
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+/*------------------------------------------------------------*/
+/*The container for each type. all-project is flex horizontal*/
