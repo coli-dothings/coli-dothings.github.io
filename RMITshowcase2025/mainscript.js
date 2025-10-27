@@ -1,11 +1,8 @@
-console.log("main script log: " + studentList[0].key_projects[0].title);
+//console.log("main script log: " + studentList[0].key_projects[0].title);
 // testing for global value between files
 
 // indexing through each student profile
 for (let i = 0; i < studentList.length; i++) {
-  // search through each project
-  // console.log("student no " + i);
-
   for (let ii = 0; ii < studentList[i].key_projects.length; ii++) {
     // create a switch case for each project to organize
     // "project_type": "sound/3D/UXUI/video/graphics",

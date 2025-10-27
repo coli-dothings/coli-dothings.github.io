@@ -1,20 +1,17 @@
 :root {
-  --bg-color: black;
+  --bg-color: rgb(5, 4, 24);
   --text-color: white;
-  --three-d-color: red;
-  --uxui-color: blue;
-  --sound-color: violet;
-  --video-color: yellow;
-  --graphics-color: green;
+  --three-d-color: rgb(255, 127, 127);
+  --uxui-color: rgb(172, 215, 255);
+  --sound-color: rgb(255, 139, 236);
+  --video-color: rgb(255, 255, 130);
+  --graphics-color: rgb(144, 255, 89);
+  /* --bg-gradient: linear-gradient(180deg, rgb(12, 12, 46), rgba(0, 0, 0, 0)); */
 }
 
 /* body contain document size, and font-fallback edge cases */
 body {
-  /* max-width: 1200px; */
-  /* margin: auto; */
-
   background-color: var(--bg-color);
-  /* background-image: url(BGs.webp); */
   color: var(--text-color);
   font-family: "Comfortaa", sans-serif;
 }
@@ -26,9 +23,9 @@ body {
   right: 0;
   height: 100vh;
   width: 100vw;
-  background-image: linear-gradient(180deg, rgb(6, 6, 10), rgba(0, 0, 0, 0)),
-    url(BGs.webp);
-  background-size: 400px;
+  background-image: url(BGsdark.webp);
+  /* background-image: url(BGs.webp); */
+  background-size: 60vh;
   z-index: -1;
 }
 
@@ -37,12 +34,16 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 4.5rem;
+  padding: 3vh 0vh;
 }
 h2 {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
 }
 h3 {
-  font-family: "Plaster", system-ui;
-  font-weight: 400;
+  font-family: "Moirai One", system-ui;
+  font-weight: 800;
   font-style: normal;
   font-size: 3rem;
 }
@@ -54,22 +55,33 @@ p {
   font-style: normal;
 }
 
+/* Heading spacing from edge of screen */
+header,
+.project-head {
+  padding: 1vh 3vh;
+}
+
 /*------------------------------------------------------------*/
 /* color coding style */
 #three-d-container {
   color: var(--three-d-color);
+  scrollbar-color: var(--three-d-color) black;
 }
 #uxui-container {
   color: var(--uxui-color);
+  scrollbar-color: var(--uxui-color) black;
 }
 #sound-container {
   color: var(--sound-color);
+  scrollbar-color: var(--sound-color) black;
 }
-#video-conatiner {
+#video-container {
   color: var(--video-color);
+  scrollbar-color: var(--video-color) black;
 }
 #graphics-container {
   color: var(--graphics-color);
+  scrollbar-color: var(--graphics-color) black;
 }
 
 /*------------------------------------------------------------*/
@@ -79,29 +91,34 @@ p {
 }
 
 .scroll-container {
-  scrollbar-width: thin;
-  scrollbar-color: red black;
+  scrollbar-width: none;
 
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
-
-  /* background-color: var(--bg-color); */
 }
 
 .item {
   display: inline-block;
-
-  padding: 1rem;
+  padding: 1vh 3vh;
 }
 
-.name-plate {
+/* .name-plate {
   background-color: var(--bg-color);
-  max-height: 2rem;
-  margin: 8px;
+  max-height: 2.5rem;
+  margin: 4px;
+  padding: 8px;
+} */
+.name-plate p {
+  background-color: var(--bg-color);
+  max-height: 2.5rem;
+  margin: 4px;
+  padding: 4px;
+  text-align: center;
 }
 
 .project-img {
-  max-height: 400px;
-  border-radius: 20%;
+  max-height: 40vh;
+  border-radius: 50%;
+  border: 4px solid;
 }
