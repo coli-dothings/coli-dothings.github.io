@@ -18,7 +18,7 @@ body {
 
 h1 {
   font-family: "Moirai One", system-ui;
-  font-weight: 400;
+  font-weight: 800;
   font-style: normal;
   font-size: 4rem;
   padding: 3vh 0vh;
@@ -71,7 +71,14 @@ header {
 #header-text {
   position: absolute;
   top: 0;
+  z-index: 3;
+}
+#overlay {
+  position: absolute;
   z-index: 2;
+  background-color: rgba(0, 0, 0, 0.562);
+  height: 100%;
+  width: 100%;
 }
 
 #header-preview {
@@ -79,8 +86,27 @@ header {
   top: 0;
   height: 100%;
   width: 100%;
-  z-index: 0;
-  /* background img css animation */
+  z-index: 1;
+  background-image: url(./s4021256/projects/project1.webp);
+  background-size: 100vw;
+  animation: preview 20s infinite;
+}
+@keyframes preview {
+  0%,
+  20% {
+    background-image: url(./s4021256/projects/project1.webp);
+  }
+  33%,
+  53% {
+    background-image: url(./s4021256/projects/project2.webp);
+  }
+  66%,
+  86% {
+    background-image: url(./s4021256/projects/project3.webp);
+  }
+  100% {
+    background-image: url(./s4021256/projects/project1.webp);
+  }
 }
 
 #intro {
@@ -89,17 +115,22 @@ header {
   bottom: 0;
   height: 12%;
   width: 100%;
-  z-index: 3;
+  z-index: 4;
   background-color: var(--bg-color);
 }
 #intro-text {
   text-align: center;
-  padding: 10px 0px;
+  padding-top: 10px;
 }
 #intro-icon {
-  text-align: center;
-  margin: auto;
-  /* CSS transition bobbing up and down on hover */
+  position: absolute;
+  top: 40px;
+  left: 50vw;
+  transform: translateY(0px);
+  transition: transform 2s;
+}
+#intro:hover #intro-icon {
+  transform: translateY(10px);
 }
 
 /*------------------------------------------------------------*/
