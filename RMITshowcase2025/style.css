@@ -16,30 +16,17 @@ body {
   font-family: "Comfortaa", sans-serif;
 }
 
-/*fixed static BG art that doesnt scroll*/
-#fixed-bg {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  height: 100vh;
-  width: 100vw;
-  background-image: url(BGsdark.webp);
-  /* background-image: url(BGs.webp); */
-  background-size: 60vh;
-  z-index: -1;
-}
-
 h1 {
   font-family: "Moirai One", system-ui;
   font-weight: 400;
   font-style: normal;
-  font-size: 4.5rem;
+  font-size: 4rem;
   padding: 3vh 0vh;
 }
 h2 {
   font-family: "Comfortaa", sans-serif;
-  font-weight: 400;
-  font-size: 2rem;
+  font-weight: 300;
+  font-size: 1.2rem;
 }
 h3 {
   font-family: "Moirai One", system-ui;
@@ -51,14 +38,69 @@ h3 {
 p {
   font-family: "Comfortaa", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 300;
+  font-weight: 600;
   font-style: normal;
 }
 
-/* Heading spacing from edge of screen */
-header,
+/*fixed static BG art that doesnt scroll*/
+#fixed-bg {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(BGsdark.webp);
+  background-size: 60vh;
+  z-index: -1;
+}
+
+/* ------------------------------------------------------------ */
+/* HEADER STYLE */
+#header-text,
 .project-head {
   padding: 1vh 3vh;
+}
+
+header {
+  height: 80vh;
+  /* width: 100vw; */
+  background-color: black;
+  position: relative;
+  /* set relative for child to set absolute */
+}
+
+#header-text {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+
+#header-preview {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  /* background img css animation */
+}
+
+#intro {
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  height: 12%;
+  width: 100%;
+  z-index: 3;
+  background-color: var(--bg-color);
+}
+#intro-text {
+  text-align: center;
+  padding: 10px 0px;
+}
+#intro-icon {
+  text-align: center;
+  margin: auto;
+  /* CSS transition bobbing up and down on hover */
 }
 
 /*------------------------------------------------------------*/
