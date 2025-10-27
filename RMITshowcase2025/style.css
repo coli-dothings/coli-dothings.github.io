@@ -50,7 +50,6 @@ p {
   height: 100vh;
   width: 100vw;
   background-image: url(BGsdark.webp);
-  background-size: 60vh;
   z-index: -1;
 }
 
@@ -63,7 +62,7 @@ p {
 
 header {
   height: 80vh;
-  /* width: 100vw; */
+  overflow: hidden;
   background-color: black;
   position: relative;
   /* set relative for child to set absolute */
