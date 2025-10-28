@@ -1,2 +1,5 @@
-// alert(myData.key_projects[1].title);
-// test global var sharing
+const profileNum = sessionStorage.getItem("profileNum");
+const profileTest = document.querySelector("#test-profile");
+
+profileTest.innerHTML = "Profile Num " + profileNum;
+document.title = "Student " + profileNum;
