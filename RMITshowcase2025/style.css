@@ -88,7 +88,8 @@ header {
   width: 100%;
   z-index: 1;
   background-image: url(./s4021256/projects/project1.webp);
-  background-size: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
   animation: preview 20s infinite;
 }
 @keyframes preview {
@@ -126,7 +127,6 @@ header {
   position: absolute;
   top: 40px;
   left: 50vw;
-  transform: translateY(0px);
   transition: transform 2s;
 }
 #intro:hover #intro-icon {
@@ -134,30 +134,39 @@ header {
 }
 
 /*------------------------------------------------------------*/
-/* color coding style */
-#three-d-container {
-  color: var(--three-d-color);
-  scrollbar-color: var(--three-d-color) black;
-}
-#uxui-container {
-  color: var(--uxui-color);
-  scrollbar-color: var(--uxui-color) black;
-}
-#sound-container {
-  color: var(--sound-color);
-  scrollbar-color: var(--sound-color) black;
-}
-#video-container {
-  color: var(--video-color);
-  scrollbar-color: var(--video-color) black;
-}
-#graphics-container {
-  color: var(--graphics-color);
-  scrollbar-color: var(--graphics-color) black;
+/*Footer style*/
+footer {
+  height: fit-content;
+  background-color: var(--bg-color);
+  margin-top: 40px;
+  padding: 50px;
 }
 
 /*------------------------------------------------------------*/
-/*The container for each type*/
+/* color coding style */
+#three-d-container {
+  color: var(--three-d-color);
+  /* scrollbar-color: var(--three-d-color) black; */
+}
+#uxui-container {
+  color: var(--uxui-color);
+  /* scrollbar-color: var(--uxui-color) black; */
+}
+#sound-container {
+  color: var(--sound-color);
+  /* scrollbar-color: var(--sound-color) black; */
+}
+#video-container {
+  color: var(--video-color);
+  /* scrollbar-color: var(--video-color) black; */
+}
+#graphics-container {
+  color: var(--graphics-color);
+  /* scrollbar-color: var(--graphics-color) black; */
+}
+
+/*------------------------------------------------------------*/
+/*MAIN container for each type*/
 .container {
   padding-top: 2rem;
 }
@@ -173,19 +182,20 @@ header {
 .item {
   display: inline-block;
   padding: 1vh 3vh;
+  max-width: 400px;
 }
 
-/* .name-plate {
+.name-plate {
   background-color: var(--bg-color);
-  max-height: 2.5rem;
-  margin: 4px;
-  padding: 8px;
-} */
-.name-plate p {
-  background-color: var(--bg-color);
-  max-height: 2.5rem;
-  margin: 4px;
+  max-width: 250px;
+  height: 3rem;
+  overflow: hidden;
   padding: 4px;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 8px;
+}
+.name-plate p {
   text-align: center;
 }
 
@@ -193,4 +203,9 @@ header {
   max-height: 40vh;
   border-radius: 50%;
   border: 4px solid;
+  transition: scale 0.5s;
+}
+.project-img:hover {
+  scale: 95%;
+  cursor: pointer;
 }
