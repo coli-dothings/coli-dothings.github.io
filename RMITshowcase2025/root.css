@@ -1,0 +1,100 @@
+/* 
+*   RESET.CSS
+*   Kevin Powell
+*   https://youtu.be/cCAtD_BAHNw 
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit; /* Get rid of all font sizes and heights */
+}
+
+html {
+  /*color-scheme: dark light; /* Default dark */
+  hanging-punctuation: first last; /* Not supported in Chrome */
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Media responsive */
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 75ch;
+  text-wrap: pretty; /* Prevents orphans on lines */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+/*------------------------------------------------------------------------*/
+
+:root {
+  --bg-color: rgb(5, 4, 24);
+  --text-color: white;
+  --three-d-color: rgb(255, 127, 127);
+  --uxui-color: rgb(172, 215, 255);
+  --sound-color: rgb(255, 139, 236);
+  --video-color: rgb(255, 255, 130);
+  --graphics-color: rgb(144, 255, 89);
+}
+
+/* body contain document size, and font-fallback edge cases */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Comfortaa", sans-serif;
+}
+
+h1 {
+  font-family: "Moirai One", system-ui;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 4rem;
+  padding: 3vh 0vh;
+}
+h2 {
+  font-family: "Comfortaa", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+h3 {
+  font-family: "Moirai One", system-ui;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+p {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
