@@ -1,0 +1,81 @@
+/* NAV SECTION */
+nav {
+  width: 100%;
+  max-height: 40px;
+  background-color: var(--bg-color);
+  padding-left: 20px;
+}
+nav a {
+  display: flex;
+  text-decoration: none;
+  color: var(--text-color);
+  align-items: center;
+}
+nav img {
+  height: 30px;
+}
+
+/*====================================================*/
+/* Split screen */
+#body-flex {
+  display: flex;
+}
+
+/* sidebar section */
+aside {
+  width: 30vw;
+  background-image: url(BGsdark.webp);
+  padding: 10px;
+}
+
+.item {
+  padding-bottom: 20px;
+}
+
+/*====================================================*/
+/* MAIN SECTION */
+main {
+  width: 70vw;
+  background-color: black;
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+/* Project info */
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+#project-info-flex {
+  display: flex;
+}
+
+#project-info-flex img {
+  width: 60%;
+  align-self: flex-start;
+}
+
+#project-info {
+  padding: 0px 10px;
+}
+
+/* Student info */
+#student-info-bio-flex {
+  display: flex;
+}
+
+#student-name-skills {
+  width: 50%;
+}
+
+#name-pfp {
+  display: flex;
+}
+#pfp {
+  width: 40%;
+  align-self: center;
+}
+
+#bio-box {
+}
