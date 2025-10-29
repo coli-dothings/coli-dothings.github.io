@@ -36,7 +36,7 @@ aside {
 /* MAIN SECTION */
 main {
   width: 70vw;
-  background-color: black;
+  background-color: var(--bg-color);
   display: grid;
   grid-row-gap: 10px;
 }
@@ -60,22 +60,34 @@ iframe {
   padding: 0px 10px;
 }
 
-/* Student info */
+/* Student info 
 #student-info-bio-flex {
-  display: flex;
-}
+   display: flex; 
+}*/
 
 #student-name-skills {
-  width: 50%;
+  width: 60%;
 }
 
 #name-pfp {
   display: flex;
+  align-items: center;
 }
 #pfp {
-  width: 40%;
-  align-self: center;
+  width: 30%;
+  border-radius: 50%;
+  padding: 20px;
+}
+#full-name {
+  font-size: 1.6rem;
 }
 
 #bio-box {
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid white;
+  background-color: black;
+}
+#bio-box a {
+  color: white;
 }
