@@ -73,22 +73,4 @@ for (let i = 0; i < jsonList.length; i++) {
 
 console.log("json list length is " + jsonList.length);
 
-//======================================================================
-// Profile update page
-
-// Test html page transfer
-/*
-const itemsArray = document.querySelectorAll(".item");
-
-// Add click event to transfer to page
-for (let i = 0; i < itemsArray.length; i++) {
-  itemsArray[i].addEventListener("click", function displayProfile() {
-    chooseProfile(i);
-  });
-}
-
-function chooseProfile(i) {
-  sessionStorage.setItem("profileNum", i);
-  window.location.href = "profile.html";
-}
-*/
+// Because data.js go first it can not use any data from main or profile JS

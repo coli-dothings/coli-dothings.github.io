@@ -139,6 +139,7 @@ footer {
   display: inline-block;
   padding: 1vh 3vh;
   max-width: 400px;
+  cursor: pointer;
 }
 
 .name-plate {
@@ -163,5 +164,4 @@ footer {
 }
 .project-img:hover {
   scale: 95%;
-  cursor: pointer;
 }

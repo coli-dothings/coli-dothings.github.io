@@ -1,5 +1,8 @@
-const profileNum = sessionStorage.getItem("profileNum");
-const profileTest = document.querySelector("#test-profile");
+const studentID = sessionStorage.getItem("studentID");
+const projectID = sessionStorage.getItem("projectID");
 
-profileTest.innerHTML = "Profile Num " + profileNum;
-document.title = "Student " + profileNum;
+const profileTest = document.querySelector("#test-profile");
+//console.log(studentList[studentID].key_projects[projectID]);
+
+profileTest.innerHTML = studentList[studentID].key_projects[projectID].title;
+document.title = studentList[studentID].full_name;
