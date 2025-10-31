@@ -144,6 +144,6 @@ for (let i = 0; i < itemsArray.length; i++) {
     sessionStorage.setItem("studentID", studentID);
     sessionStorage.setItem("projectID", projectID);
 
-    window.location.href = "profile.html";
+    window.location.href = "profileMock.html";
   });
 }

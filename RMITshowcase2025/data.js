@@ -5,7 +5,7 @@ const jsonList = [
   `{
   "ID":"s4021256",
   "full_name": "Mai Anh Vo",
-  "profile_pic": "profile/profile.webp",
+  "profile_pic": "s4021256/profile/profile.webp",
   "primary_specialization": "Illustrations",
   "secondary_skills": ["Sound Design", "Web Design"],
   "bio": "mock bio 1 by Mai Anh Vo",
@@ -36,7 +36,7 @@ const jsonList = [
   `{
   "ID":"s1234567",
   "full_name": "student 2",
-  "profile_pic": "profile/profile.jpg",
+  "profile_pic": "s1234567/profile/profile.jpg",
   "primary_specialization": "specialization 1",
   "secondary_skills": ["skill 1", "skill 2"],
   "bio": "mock bio 2 by student 2",
