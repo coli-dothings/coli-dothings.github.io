@@ -12,21 +12,6 @@ let itemID = 0;
 // indexing through each student profile
 for (let i = 0; i < studentList.length; i++) {
   for (let ii = 0; ii < studentList[i].key_projects.length; ii++) {
-    // Format content
-    /*
-    formattedContentArray.push(`
-    <div class="item" id="item${itemID}">
-     <img
-        class="project-img"
-        src="${studentList[i].key_projects[ii].project_cover_image}"
-        alt="project id ${i}"
-      />
-      <div class="name-plate"><p>${studentList[i].full_name}</p></div>
-    </div>
-    `) ;
-    itemID++;*/
-
-    // create a switch case for each project to organize
     // "project_type": "sound/3D/UXUI/video/graphics",
     switch (studentList[i].key_projects[ii].project_type) {
       //Use [i] to get student's info
