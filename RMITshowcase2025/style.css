@@ -136,27 +136,36 @@ footer {
   overflow-y: hidden;
   white-space: nowrap;
 
-  background-image: url(scrolldiv.webp);
+  background-image: url(scrolldiv1.webp);
   background-repeat: repeat-x;
-  background-size: auto 100%;
+  background-size: auto 200%;
+  animation: animateframe steps(2, jump-none) 1s infinite;
 }
 
 #three-d-scroll {
   background-position-x: 0px;
 }
 #uxui-scroll {
-  background-image: url();
-  /* scrolldiv2 */
+  background-image: url(scrolldiv2.webp);
 }
 #sound-scroll {
   background-position-x: 500px;
 }
 #video-scroll {
-  background-image: url();
-  background-position-x: 300px;
+  background-image: url(scrolldiv2.webp);
+  background-position-x: 600px;
 }
 #graphics-scroll {
   background-position-x: 100px;
+}
+
+@keyframes animateframe {
+  0% {
+    background-position-y: 0%;
+  }
+  100% {
+    background-position-y: 100%;
+  }
 }
 
 /*==========================================================*/
