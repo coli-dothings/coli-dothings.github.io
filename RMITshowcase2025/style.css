@@ -107,30 +107,24 @@ footer {
 }
 
 /*==========================================================*/
-/* color coding style */
+/*MAIN container for each type*/
+
 #three-d-container {
   color: var(--three-d-color);
-  /* scrollbar-color: var(--three-d-color) black; */
 }
 #uxui-container {
   color: var(--uxui-color);
-  /* scrollbar-color: var(--uxui-color) black; */
 }
 #sound-container {
   color: var(--sound-color);
-  /* scrollbar-color: var(--sound-color) black; */
 }
 #video-container {
   color: var(--video-color);
-  /* scrollbar-color: var(--video-color) black; */
 }
 #graphics-container {
   color: var(--graphics-color);
-  /* scrollbar-color: var(--graphics-color) black; */
 }
 
-/*==========================================================*/
-/*MAIN container for each type*/
 .container {
   padding-top: 2rem;
 }
@@ -141,8 +135,31 @@ footer {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+
+  background-image: url(scrolldiv.webp);
+  background-repeat: repeat-x;
+  background-size: auto 100%;
 }
 
+#three-d-scroll {
+  background-position-x: 0px;
+}
+#uxui-scroll {
+  background-image: url();
+  /* scrolldiv2 */
+}
+#sound-scroll {
+  background-position-x: 500px;
+}
+#video-scroll {
+  background-image: url();
+  background-position-x: 300px;
+}
+#graphics-scroll {
+  background-position-x: 100px;
+}
+
+/*==========================================================*/
 .item {
   display: inline-block;
   padding: 1vh 3vh;
