@@ -62,12 +62,7 @@ p {
 
 :root {
   --bg-color: #050515;
-  --text-color: white;
-  --three-d-color: rgb(255, 127, 127);
-  --uxui-color: rgb(172, 215, 255);
-  --sound-color: rgb(255, 139, 236);
-  --video-color: rgb(255, 255, 130);
-  --graphics-color: rgb(144, 255, 89);
+  --text-color: rgb(255, 252, 188);
 }
 
 /* body contain document size, and font-fallback edge cases */

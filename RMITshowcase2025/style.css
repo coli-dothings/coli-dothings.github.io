@@ -28,22 +28,6 @@ main {
   padding: 10px 2vw;
 }
 
-#three-d-container {
-  color: var(--three-d-color);
-}
-#uxui-container {
-  color: var(--uxui-color);
-}
-#sound-container {
-  color: var(--sound-color);
-}
-#video-container {
-  color: var(--video-color);
-}
-#graphics-container {
-  color: var(--graphics-color);
-}
-
 .container {
   padding-top: 2rem;
 }
@@ -204,9 +188,10 @@ main {
 .project-img {
   max-height: 40vh;
   border-radius: 50%;
-  border: 4px solid;
+
   transition: scale 0.5s;
 }
 .project-img:hover {
+  border: 4px solid;
   scale: 95%;
 }
