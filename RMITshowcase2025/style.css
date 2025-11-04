@@ -1,101 +1,5 @@
-/*fixed static BG art that doesnt scroll*/
-#fixed-bg {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  height: 100vh;
-  width: 100vw;
-  background-image: url(BGsdark.webp);
-  z-index: -2;
-}
-
-.fish-Anim {
-  position: fixed;
-  top: 0;
-  left: 30vw;
-  background-image: url();
-  /* foundation of fish anim class */
-}
-
 /* ==========================================================*/
 /* HEADER STYLE */
-#header-text,
-.project-head {
-  padding: 1vh 3vh;
-}
-
-header {
-  height: 80vh;
-  overflow: hidden;
-  background-color: black;
-  position: relative;
-  /* set relative for child to set absolute */
-}
-
-#header-text {
-  position: absolute;
-  top: 0;
-  z-index: 3;
-}
-#overlay {
-  position: absolute;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.562);
-  height: 100%;
-  width: 100%;
-}
-
-#header-preview {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  background-image: url(./s4021256/projects/project1.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
-  animation: preview 20s infinite;
-}
-@keyframes preview {
-  0%,
-  20% {
-    background-image: url(./s4021256/projects/project1.webp);
-  }
-  33%,
-  53% {
-    background-image: url(./s4021256/projects/project2.webp);
-  }
-  66%,
-  86% {
-    background-image: url(./s4021256/projects/project3.webp);
-  }
-  100% {
-    background-image: url(./s4021256/projects/project1.webp);
-  }
-}
-
-#intro {
-  position: absolute;
-  overflow: hidden;
-  bottom: 0;
-  height: 12%;
-  width: 100%;
-  z-index: 4;
-  background-color: var(--bg-color);
-}
-#intro-text {
-  text-align: center;
-  padding-top: 10px;
-}
-#intro-icon {
-  position: absolute;
-  top: 40px;
-  left: 50vw;
-  transition: transform 2s;
-}
-#intro:hover #intro-icon {
-  transform: translateY(10px);
-}
 
 /*==========================================================*/
 /*Footer style*/
@@ -108,6 +12,14 @@ footer {
 
 /*==========================================================*/
 /*MAIN container for each type*/
+main {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.project-head {
+  padding: 10px 2vw;
+}
 
 #three-d-container {
   color: var(--three-d-color);
@@ -142,6 +54,7 @@ footer {
   animation: animateframe steps(2, jump-none) 1s infinite;
 }
 
+/* Add variety to BG position as it loops */
 #three-d-scroll {
   background-position-x: 0px;
 }
@@ -166,6 +79,97 @@ footer {
   100% {
     background-position-y: 100%;
   }
+}
+
+/*==========================================================*/
+/* DECORATIONS */
+#fixed-bg {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(BGsdark.webp);
+  z-index: -2;
+}
+
+#fish {
+  position: fixed;
+  z-index: -1;
+  top: -400px;
+  left: 30vw;
+  height: 400px;
+  width: 400px;
+  background-image: url(fishAnim.webp);
+  background-size: auto 600%;
+  background-repeat: no-repeat;
+  transform-origin: -3000px 0px;
+}
+.fishAnim {
+  animation: animateframe steps(6, jump-none) 625ms 16, curvepath 12s ease-in;
+}
+@keyframes curvepath {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+.flower {
+  position: absolute;
+  width: 250px;
+  height: 252px;
+  cursor: pointer;
+}
+.flower div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.layer1 {
+  z-index: 1;
+  background-image: url(flowerL1.webp);
+  transition: scale 2s;
+  animation: rotate 5s infinite alternate forwards ease-in-out;
+}
+.layer2 {
+  z-index: 2;
+  background-image: url(flowerL2.webp);
+  transition: scale 1s;
+  animation: rotate 5s infinite alternate forwards;
+}
+.layer3 {
+  z-index: 3;
+  background-image: url(flowerL3.webp);
+  transition: scale 0.5s;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+.flower:hover div {
+  scale: 90%;
+}
+
+#flower1 {
+  top: 0px;
+  left: 30vw;
+}
+#flower2 {
+  top: 800px;
+  left: 70vw;
+}
+#flower3 {
+  top: 1880px;
+  left: 2vw;
 }
 
 /*==========================================================*/
