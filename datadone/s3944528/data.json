@@ -1,0 +1,33 @@
+{
+  "full_name": "Jaxson Dirk Smith",
+  "profile_pic": "s3944528/profile/profile.webp",
+  "primary_specialization": "Sound Design",
+  "secondary_skills": ["Video Editing", "Graphic Design"],
+  "graduation_year": "2025",
+  "website": "https://www.instagram.com/living_whisperer/",
+  "bio": "My name is Jaxson Smith. I am a digital graphic enthusiast that also specializes in the design of sounds and webpage design and I have worked tirelessly to achieve my goals of becoming a digital designer. I have founded my interests with the help of RMIT university and accomplished many tasks regarding professional sound designing and webpage building. Throughout my studies I have taken a liking towards the manipulation of sound and applications it has towards modern media. The way it changes a mood, how it can improve a scene, shifting focuses between different focal groups, it's just something I believe has the utmost importance in the design industry. When it comes to webpage design, I feel the importance of a good layout, to a decently well placed widget or graphic. My digital journey doesn’t end there as I will pursue greater goals to achieve more.",
+
+  "key_projects": [
+    {
+      "title": "Identity Dissonance",
+      "project_type": "sound",
+      "project_cover_image": "s3944528/projects/project1.webp",
+      "project_description": "Identity Dissonance is about the tragic story of a young Amateur journalist, John Walker, that finds himself in the aftermath of a traumatic experience, leaving him speechless and not like himself. In this 9–10-minute presentation audiences will have the opportunity to listen along to an interrogation and uncover pieces of the story to see what happened to this man via recordings and questions set by a detective.",
+      "youtube_link": "https://youtu.be/JuHWkrj1otQ"
+    },
+    {
+      "title": "Artists Vs. Ai",
+      "project_type": "UXUI",
+      "project_cover_image": "s3944528/projects/project2.webp",
+      "project_description": "AVAI is a webpage blog designed to unveil the arising threat of AI explore the dominance it has over the Graphic Design Industry. Using Artists views and experiences to further reinforce the dangers of AI we can look at how Art is a construct of Human emotion not of a machines.",
+      "youtube_link": "https://youtu.be/G3-hl3j-dx0"
+    },
+    {
+      "title": "Project: Era",
+      "project_type": "3D",
+      "project_cover_image": "s3944528/projects/project3.webp",
+      "project_description": "Project Era is a walk in the park experience of a simulated world. The experience uncovers new tribes, phenomena and even rituals that correlate to a new species and culture. Not everything needs to be fast paced, sometimes exploring can uncover new things.",
+      "youtube_link": "https://youtu.be/WMo_9QnTGo4"
+    }
+  ]
+}

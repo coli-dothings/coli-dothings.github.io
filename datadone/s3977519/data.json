@@ -1,0 +1,33 @@
+{
+  "full_name": "Rena Lim Yueh Ning",
+  "profile_pic": "s3977519/profile/profile.webp",
+  "primary_specialization": "UX, Environments",
+  "secondary_skills": ["Graphic Design"],
+  "graduation_year": "2025",
+  "website": "https://renalyndesignworks.framer.website/",
+  "bio": "Hi, I'm Rena - a multimedia artist whose works express ideas shaped by emotional, psychological, and philosophical experiences.<br />Digital media, to me, is another medium through which I can express, communicate, and create. I believe ideas shouldn't be tied to any single medium; instead, the medium should always serve the idea. For me, good design, is clear, simple and genuine - something that supports the message and the people it is created for.<br /><br />Therefore, I am driven by clarity and simplicity, which guides my works both conceptually and visually. I believe that designs could always be better but should always be sufficient. Through my practice, I aim to create works that are creative, purposeful, and engage with the audience meaningfully.",
+
+  "key_projects": [
+    {
+      "title": "Rumination",
+      "project_type": "UXUI",
+      "project_cover_image": "s3977519/projects/project1.webp",
+      "project_description": "Rumination explores the state of being in meaningless, deep repetitive thought. The work seeks to capture the helplessness and exhaustion of having no answers, no solutions. This mirrors a process of ruminative exploration in identity confusion where individuals are unable to define or commit to life goals. Guided by an uncertain and divided sense of self, the game unfolds through a series of environments that aim at disorienting the player, immersing them into this psychological tension.",
+      "youtube_link": "https://youtu.be/4gogeDZlG-o"
+    },
+    {
+      "title": "Soon",
+      "project_type": "UXUI",
+      "project_cover_image": "s3977519/projects/project2.webp",
+      "project_description": "Designed to bridge staying connected with temporary or permanent long distance family relationships, Soon is a plug-in app linked to other communication apps that facilitates and maximises connection and communication through the use of AI, habit trackers and digital automation. One of its features - a status sync, notifies and calls members during passive available time, i.e. driving, when switched on. The app tracks routines for both parties to maximise availability and suggest spontaneous/new call times.",
+      "youtube_link": ""
+    },
+    {
+      "title": "Moments In Between - Brown Monotony",
+      "project_type": "graphics",
+      "project_cover_image": "s3977519/projects/project3.webp",
+      "project_description": "This series of work explores a space where two individuals make a choice to be present, and to embrace monotony. These images represent the restlessness, silence and boredom that takes place as an intrinsic part of human relations. The current digital age where interactions become more avoidant: every tension, unwanted or non-exhilarating moment is filled up. “Moments in between” celebrates them — the bulk of empty stares and daydreams, dull and awkwardness, a choice to set aside the highly stimulating digital world and remain in the physical.",
+      "youtube_link": "https://youtu.be/Ec1XuSV3W_g"
+    }
+  ]
+}

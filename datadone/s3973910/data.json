@@ -1,0 +1,33 @@
+{
+  "full_name": "Luohan Chen",
+  "profile_pic": "s3973910/profile/profile.webp",
+  "primary_specialization": "Web Experiences",
+  "secondary_skills": ["Motion Graphics", "3D Design"],
+  "graduation_year": "2025",
+  "website": "http://luohan.world",
+  "bio": "I am a multidisciplinary designer hailing from the sunny island of Singapore. Growing up, the magic of media was impressed upon me by creators worldwide. I want to create the same effect on people with my work and hopefully inspire the next generation of creatives.<br />I love anything and everything design, so I often research and use different mediums in my works. I like to compile all the skills I learnt into a web-based experience, creating unique, interesting and polished websites with a variety of content and technologies.",
+
+  "key_projects": [
+    {
+      "title": "Imaginarium",
+      "project_type": "UXUI",
+      "project_cover_image": "s3973910/projects/project1.webp",
+      "project_description": "Imaginarium is a collaborative, immersive web-based experience that invites participants to input their ideas to a web portal, with their inputs showing up to a central page where everyone's inputs are gathered for all to see. Imaginarium was a group project and my contribution was the idea and coding. The Project was created using HTML, CSS and Javascript, with Three.js.",
+      "youtube_link": "https://youtu.be/XMGo9pK7tYY"
+    },
+    {
+      "title": "Fortress X AMAA Artist Alley Motion",
+      "project_type": "graphics",
+      "project_cover_image": "s3973910/projects/project2.webp",
+      "project_description": "Fortress X AMAA Artist Alley is a motion graphic work showcasing the artists that are tabling at the Fortress X AMAA Artist alley held at Fortress. I was contacted to create a moving graphic for the main screen in the Fortress Esports areana. The project was created using Adobe Illustrator and After Effects.",
+      "youtube_link": "https://youtu.be/01YWgEyy9yk"
+    },
+    {
+      "title": "Pasar Malam",
+      "project_type": "3D",
+      "project_cover_image": "s3973910/projects/project3.webp",
+      "project_description": "Pasar Malam is a 3D diorama that relives a nostalgic memory of me as a child, playing games at a Pasar Malam (Night Market) stall back in Singapore. The model features custom painted textures, animations, and cloth physics. The project was created in Autodesk Maya and uploaded to Sketchfab.",
+      "youtube_link": ""
+    }
+  ]
+}

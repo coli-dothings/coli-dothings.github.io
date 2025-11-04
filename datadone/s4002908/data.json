@@ -1,0 +1,33 @@
+{
+  "full_name": "Jasmine Griffiths",
+  "profile_pic": "s4002908/profile/profile.webp",
+  "primary_specialization": "Sound Design",
+  "secondary_skills": [],
+  "graduation_year": "2025",
+  "website": "https://jasmine-k-g.github.io/Portfolio/",
+  "bio": "Hello, I am a sound designer who is drawn to work that has something to say.<br />I am particularly enamoured with natural environments, which informs my naturalistic approach to sound design. I specialise in detailed, realistic and creative sound design - my aim is always to create soundscapes you can get lost in and forget your reality, while maintaining an authenticity that connects the work to the real world from which it was made.<br />In addition to audio-only work, I have sound designed for animations, games, podcasts, television and hybrid/multi-sensory projects, and I'm always looking for new ways to explore the sonic medium, and push the boundaries of my expertise.",
+
+  "key_projects": [
+    {
+      "title": "Overgrown",
+      "project_type": "sound",
+      "project_cover_image": "s4002908/projects/project1.webp",
+      "project_description": "Overgrown is a narrative audio work following a young woman who is living alone for the first time, and who's houseplants do not make very good company.<br />It features the voices of Sophie Harvey and Cleo Fawcett.",
+      "youtube_link": "https://youtu.be/M5ZoK3aXUl4"
+    },
+    {
+      "title": "Seismic Test",
+      "project_type": "sound",
+      "project_cover_image": "s4002908/projects/project2.webp",
+      "project_description": "Seismic Testing is a method of mapping the sea floor by shooting air guns toward the bottom of the ocean. The sound levels used in seismic testing are very high, and can be disruptive and harmful to sea life.<br />This binaural sound work was made in response to the seismic testing proposed by Veridien (an oil and gas company, f.k.a. CGG) in the Otway Basin off the coasts of Victoria, in waters frequented by endangered Pygmy Blue Whales and in proximity to the endangered Southern Right Whale's calving ground - the only calving ground for the Southern Right Whale's eastern population.<br />Learn more about seismic testing at https://www.marineconservation.org.au/what-is-seismic-blasting/",
+      "youtube_link": "https://youtu.be/7UtJsZKSg-A?si=ynCqoWd7ShbLQN-J"
+    },
+    {
+      "title": "Void",
+      "project_type": "sound",
+      "project_cover_image": "s4002908/projects/project3.webp",
+      "project_description": "Animation by Waroonrat Thanaboonsrikoon.<br />\"VOID\" is a 2D animated short film that seeks to shed light on the often-overlooked emotional turmoil experienced by children living in domestically violent households. The work is inspired by the heartbreaking words of a survivor who shared, \"...I felt never seen as a victim...\"",
+      "youtube_link": "https://youtu.be/RUao8Mtjgy4"
+    }
+  ]
+}

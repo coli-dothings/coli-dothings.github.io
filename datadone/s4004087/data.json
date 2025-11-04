@@ -1,0 +1,33 @@
+{
+  "full_name": "Hanh Minh Lu",
+  "profile_pic": "s4004087/profile/profile.webp",
+  "primary_specialization": "Game Design",
+  "secondary_skills": ["Graphic Design", "2D animation"],
+  "graduation_year": "2025",
+  "website": "https://hamslide.itch.io",
+  "bio": "Hanh is a Designer who strives for innovative and captivating story telling with interactive media such as games and websites. With a belief that games shouldn't just be about clicking buttons but a narrative to engage in different concepts and ideas, incorporating unique mechanics and functions, they wanted to bring more enthusiasm into the media itself, breaking the stereotype of gaming.<br />Hanh also specialised in Graphic Design and Animation, formerly working as the main Designer for DreamMakers, a Vietnamese international student organisation in New Zealand. Their love for digital art also prolongs through many of their website designs with their expressive style. ",
+
+  "key_projects": [
+    {
+      "title": "Spectre of Self",
+      "project_type": "UXUI",
+      "project_cover_image": "s4004087/projects/project1.webp",
+      "project_description": "Spectre of Self is an 2D RPG game following a resigned detective who has the ability to see ghosts. He came back to put an end to the case he ran away, with us as the helper. This game is heavily focused on the relationship between the player and the character, with the main protagonist aware of our existence and his inevitable ending. You as a player have to help the detective overcome his fear and use his ability to get closer to the truth. However, you also need to maintain his sanity, for the ghosts are not kind.<br />Spectre of Self is still in the demo version, with development planned to be finished after the creator's graduation.",
+      "youtube_link": "https://youtu.be/54HQ-U75M4Y"
+    },
+    {
+      "title": "Lost in the Supermarket",
+      "project_type": "UXUI",
+      "project_cover_image": "s4004087/projects/project2.webp",
+      "project_description": "Lost in the Supermarket is a 'destruction' simulator taking inspiration from the childhood of the creator. Being lost in a Vietnamese supermarket, you as a child have to wander around and wait until mom can find you; by then, you can do anything: observing things in silence or wreck the entire market. With many influences from liminal space and SCP-3008, Lost in the Supermarket intends to replicate the feeling of being alone in a place where you can't escape. The game doesn't scare you with monsters or scary imagery but the endless loneliness of a child who was lost. This game is also a glance into the creator's childhood, with anecdotes about their favourite food and drink.",
+      "youtube_link": "https://youtu.be/o1kVuXZ79H8"
+    },
+    {
+      "title": "Dream Sweet in Sea Major",
+      "project_type": "video",
+      "project_cover_image": "s4004087/projects/project3.webp",
+      "project_description": "Dream Sweet in Sea Major is a paper cutout animation based on the song Dream Sweet in Sea Major by Miracle Musical. The project was the combination of still frame animation using paper and clay, with post-production editing on Adobe After Effect.<br />The animation emphasises the use of colour, imagery and personal contextualising of lyrics, further enhancing the dreamy and eerie features of the song itself. Metaphor imageries were selected to visualise the creator's imagination, as a way to step in their creative headspace. The project showcases Hanh's ability to use different materials, combining digital and physical art to create multi-media works.",
+      "youtube_link": "https://youtu.be/XjwXnABm_2Q"
+    }
+  ]
+}

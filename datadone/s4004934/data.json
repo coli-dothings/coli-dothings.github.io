@@ -1,0 +1,33 @@
+{
+  "full_name": "Kai Wing Cheng",
+  "profile_pic": "s4004934/profile/profile.webp",
+  "primary_specialization": "Illustration",
+  "secondary_skills": ["3D", "Graphic Design"],
+  "graduation_year": "2025",
+  "website": "https://readymag.website/u1298341730/Wing/",
+  "bio": "I'm Wing! A digital media designer and concept artist who loves crafting stories through images, spaces, and interactions. I see design as a dialogue between art and technology, a way to build worlds that feel alive, emotional, and immersive.<br />My background in concept art and graphic design has shaped my eye for composition, colour, and visual rhythm. Whether designing a character, an interface, or an entire environment, I aim to weave narrative into every element, creating experiences that feel both intuitive and meaningful.<br />I'm passionate about projects that blur boundaries between creativity and technology, where storytelling meets interactivity. In the evolving landscape of gaming and visual media, I'm driven to keep exploring how design can inspire curiosity, connection, and play.",
+
+  "key_projects": [
+    {
+      "title": "Afterlight",
+      "project_type": "graphics",
+      "project_cover_image": "s4004934/projects/project1.webp",
+      "project_description": "",
+      "youtube_link": ""
+    },
+    {
+      "title": "Covernant of Apocalypse by Wing Cheng and Gaea Ghafari",
+      "project_type": "UXUI",
+      "project_cover_image": "s4004934/projects/project2.webp",
+      "project_description": "",
+      "youtube_link": "https://www.youtube.com/watch?v=y718dRCaLSg"
+    },
+    {
+      "title": "Somnia",
+      "project_type": "3D",
+      "project_description": "",
+      "project_cover_image": "s4004934/projects/project3.webp",
+      "youtube_link": ""
+    }
+  ]
+}

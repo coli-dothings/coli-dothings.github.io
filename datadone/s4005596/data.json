@@ -1,0 +1,33 @@
+{
+  "full_name": "Sapna Rajesh",
+  "profile_pic": "s4005596/profile/profile.webp",
+  "primary_specialization": "Video",
+  "secondary_skills": ["Graphic Design", "Sound Design"],
+  "graduation_year": "2025",
+  "website": "https://sapnaaar.myportfolio.com/",
+  "bio": "I am a multidisciplinary creative with a strong passion for crafting visual stories that convey emotion and meaning. With a focus on video, I aim to create work that is not only compelling visually, but also rich in thematic depth and narrative intent. With experience across digital media, visual communication, and production, I enjoy bringing concepts to life throughout all stages of production, from ideation to post-production editing practices. My work is driven with the desire to contribute to the contemporary media landscape with work that is poignant, meaningful and thought-provoking, that effectively engages audiences visually, emotionally, and intellectually. I am motivated by the curiosity to explore and research thematic elements whilst experimenting with forms of visual storytelling that best express and enhance a subject. I thoroughly enjoy crafting visuals through experiments involving light, shadow, and colour, and further extending this exploration through overlaying, recontextualising. and repurposing visuals to create new interpretations and meanings.",
+
+  "key_projects": [
+    {
+      "title": "PRELOVED: The poignant relationship between humans and the inanimate",
+      "project_type": "video",
+      "project_cover_image": "s4005596/projects/project1.webp",
+      "project_description": "A poetic documentary that explores the concept of perceived value within inanimate objects shaped by sentimental associations. The film is an introspective and speculative piece that involves interviews and anecdotes from real people, to weave together a thematically meaningful and visually innovative narrative. The piece implements a poetic and personal approach that results in an intimate and emotionally driven narrative.",
+      "youtube_link": "https://youtu.be/iBxqxm8YBg8"
+    },
+    {
+      "title": "MESMER - Video Artwork",
+      "project_type": "graphics",
+      "project_cover_image": "s4005596/projects/project2.webp",
+      "project_description": "An audio-visual piece with the aim of offering a visual experience to audiences through the use of simple motion graphics to mesmerise audiences. The video design involves a focus on the implementation of patterns, symmetry and rhythm in a visual manner to capture a sense of exquisite interest.",
+      "youtube_link": "https://youtu.be/H1GHg5UKgRI"
+    },
+    {
+      "title": "Reading Between The Line: The Death Of Media Literacy",
+      "project_type": "video",
+      "project_cover_image": "s4005596/projects/project3.webp",
+      "project_description": "A video collage exploring the concept of the \"death\" of media literacy in the contemporary media landscape, and one-dimensional readings of complex narratives. The piece involves content borrowed from art such as film, television, music, essays (etc.), and sequenced and layered together whilst being interspersed with creative shots of my own. There was prominent use of the principles of colour and lighting, to experiment with reflections and shadow-work through the use of a projector, to create striking visuals with embedded meaning.",
+      "youtube_link": "https://youtu.be/bDaBx3tA-DI"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "full_name": "Kai Susanto",
+  "profile_pic": "s4003386/profile/profile.webp",
+  "primary_specialization": "3D environments",
+  "secondary_skills": ["UX/UI", "Interactive experiences"],
+  "graduation_year": "2025",
+  "website": "https://s4003386.github.io/KaiSusantoPortfolioSite/",
+  "bio": "My name is Kai Susanto. I'm a digital designer who is striving to make imaginative, beautiful, and impactful games, websites, and other interactive media. I love to believe in the media I create, where it can have a life of its own in another users head. Immersive environments like those are something I am deeply passionate about creating and experiencing, where strong visual direction, storytelling through sound and environment, and interactivity come together to make people feel new things. I am familiar with various software to create my projects, including Unreal engine/Unity, Figma/Visual studio, and image creating software such as Photoshop/Clip studio paint/Illustrator. Subsequently, I am somewhat familiar with C++ and HTML programming languages in order to create interactive experiences.<br />I currently plan to further develop my craft of programming, digital art, and sound.",
+
+  "key_projects": [
+    {
+      "title": "Untitled",
+      "project_type": "3D",
+      "project_cover_image": "s4003386/projects/project1.webp",
+      "project_description": "'Untitled' is a small 3d environment designed after brutalist liminal landscapes. The player is invited to explore by their own volition in a perpetual 'liminal' space to nowhere. The environment is designed after my own emotions going through life, where sometimes it can feel like there is no real end goal.",
+      "youtube_link": "https://youtu.be/0mKi0vUOI28"
+    },
+    {
+      "title": "Professional Practice Historical Sites",
+      "project_type": "UXUI",
+      "project_cover_image": "s4003386/projects/project2.webp",
+      "project_description": "These sites were designed for a historical showcase of the different design styles from each era. These sites in particular are designed after the earliest concepts of a Screen display, GUI, and the first sites on the internet (and subsequently, the first web browsers). Participants in the event were invited to interact with simplified versions of these design styles to be able to understand how designers thought of early computer concepts and to see what interacting with early computer systems was like.",
+      "youtube_link": "https://youtu.be/zM2ZRPgNYlg"
+    },
+    {
+      "title": "Cerulean Cycle",
+      "project_type": "3D",
+      "project_cover_image": "s4003386/projects/project3.webp",
+      "project_description": "'Cerulean Cycle' is a game based on a hypothetical future reality where humans have since left to space, and the only remaining inhabitants are the automata that they created. The world has been severely altered by human activity as a result of the extreme development of technology, inspired by cold war and todays technological races. The environment is thus designed after the new world, where the player can experience for themselves what this hypothetical taken to the extreme looks like.",
+      "youtube_link": "https://youtu.be/HyjF0fNEyws"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "full_name": "Max Cheng Shen",
+  "profile_pic": "s3909151/profile/profile.webp",
+  "primary_specialization": "Sound Design",
+  "secondary_skills": ["Audiovisual Design", "Visual Art"],
+  "graduation_year": "2025",
+  "website": "https://www.instagram.com/mvx_cheng/",
+  "bio": "Max Cheng Shen is a Singapore-born, Melbourne-based sound designer and music creative whose work explores the boundaries between sound, emotion, and environment. His practice centers on creating immersive sonic worlds that transport listeners beyond the ordinary, drawing them into spaces where sound becomes both narrative and atmosphere.<br />Combining his knowledge in music composition, mixing & mastering with skills in visual creation and live sound performance, Max approaches each project through deep research and experimentation. This process-driven mindset allows him to craft soundscapes that are conceptually rich and technically refined.<br />Guided by a desire to think outside the box, Max constantly seeks new ways to shape sound and challenge perception, transforming listening into an experiential journey. His work reflects a fascination with how sonic design can evoke imagination, memory, and emotion.<br />Beyond his creative practice, Max continues to explore music production and DJing, channeling his curiosity for rhythm, texture, and atmosphere into every aspect of his craft.",
+
+  "key_projects": [
+    {
+      "title": "Dreamscape Oasis II",
+      "project_type": "sound",
+      "project_cover_image": "s3909151/projects/project1.webp",
+      "project_description": "Dreamscape Oasis II is an immersive audiovisual installation designed to transport audiences into a surreal and tranquil environment. Combining multichannel sound design with large-scale visuals, the project reconfigures the familiar into a dreamlike realm that encourages reflection, serenity, and sensory exploration. The ambisonic soundtrack, inspired by artists like Brian Eno and Aaron Hibell, blends ambient soundscapes, synths, and spatial effects to create depth and movement within the space. Together, these elements form an evolving sensory experience that blurs boundaries between reality and imagination. Installed within RMIT's Black Box, Dreamscape Oasis II serves as both an artistic and technical exploration of how sound and visuals can merge to heighten perception, offering audiences a meditative escape into a surreal, fluid, and emotionally resonant world.",
+      "youtube_link": "https://youtu.be/-LzHYJsBFjo"
+    },
+    {
+      "title": "Godzilla re-sound design",
+      "project_type": "sound",
+      "project_cover_image": "s3909151/projects/project2.webp",
+      "project_description": "This 4-minute re-sound design piece reimagines the final battle between Godzilla and King Ghidorah from Godzilla: King of the Monsters, focusing on creating a powerful and immersive sonic experience. The project explores the sound aesthetics of colossal creatures and the distinct powers they possess, blending organic and synthetic elements to heighten their scale and intensity. Complementing the sound design is a minimalist yet evocative soundtrack featuring traditional Japanese taiko drums and choral textures, chosen to honor the film's cultural origins while amplifying its cinematic grandeur. The result is an epic, emotionally charged soundscape that merges mythic symbolism with modern sound design techniques to reframe the iconic clash in a fresh auditory dimension.",
+      "youtube_link": "https://youtu.be/IWhJ0GTB8yk"
+    },
+    {
+      "title": "Biophony & Geophony (Nature's Sonic Twins)",
+      "project_type": "sound",
+      "project_cover_image": "s3909151/projects/project3.webp",
+      "project_description": "Biophony & Geophony (Nature's Sonic Twins) is a short sonic artwork that explores the intricate relationship between the natural world's two primary sound sources: biophony (the collective sound of living organisms) and geophony (the non-biological sounds of nature, such as wind or water). The composition weaves these organic soundscapes with binaural frequencies, designed to evoke a meditative and immersive listening experience. By blending the rhythmic patterns of wildlife with the steady ambience of natural environments, the piece aims to restore a sense of calm and connection between humans and nature. Its fluid spatial design allows it to be presented in surround-sound installations or adapted for sound therapy sessions, where listeners can experience the therapeutic effects of natural acoustics. Ultimately, Biophony & Geophony (Nature's Sonic Twins) invites audiences to listen deeply, reflecting on the sonic balance that sustains Earth's living and physical systems.",
+      "youtube_link": "https://youtu.be/y1_J2F0PAVI"
+    }
+  ]
+}

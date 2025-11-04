@@ -1,0 +1,26 @@
+{
+  "full_name": "Magnus Muir",
+  "profile_pic": "s3813111/profile/profile.webp",
+  "primary_specialization": "3D and Video",
+  "secondary_skills": ["Speculative Design"],
+  "graduation_year": "2025",
+  "website": "https://www.instagram.com/mag.obj/",
+  "bio": "",
+
+  "key_projects": [
+    {
+      "title": "Dreams of the Afterward",
+      "project_type": "video",
+      "project_cover_image": "s3813111/projects/project1.webp",
+      "project_description": "",
+      "youtube_link": "https://youtu.be/4-hIDv1e08I"
+    },
+    {
+      "title": "Hope",
+      "project_type": "3D",
+      "project_cover_image": "s3813111/projects/project2.webp",
+      "project_description": "",
+      "youtube_link": "https://youtu.be/W3pp5KE0pBY"
+    }
+  ]
+}

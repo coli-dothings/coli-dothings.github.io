@@ -1,0 +1,33 @@
+{
+  "full_name": "Ian Fasil Bin Zailee",
+  "profile_pic": "s3991528/profile/profile.webp",
+  "primary_specialization": "Video",
+  "secondary_skills": ["UI/UX"],
+  "graduation_year": "2025",
+  "website": "https://ianfasil.framer.website/",
+  "bio": "Ian is a creative media practitioner who specialises in creating video-based works and has participated in many different video-based projects such as the Funkadelics X Kaizen Creative Film Festival in 2024. Currently, he interns for the creative advertising agency Flying Art Studios and continues to home in on his craft in video. With eight years' worth of video-editing skills, Ian continues to find ways to push his creative process and seeks to be more dynamic and vibrant as a filmmaker. Ian also specialises in UI/UX and seeks to pursue creating UI/UX passion projects as a secondary skill. With skills in UI/UX software such as Figma, he stays entrained in the workflow of app design and strives to be more attuned to what makes an app or website have great user experience.<br />Lastly, Ian is also a dancer and currently practises Litefeet as a dance style by going to Litefeet jams on Thursdays. Additionally, he also involves himself within the Melbourne Street Dance Scene by participating in dance battles and going to other jams around the city. Doing so allows him to give back to the scene that has moulded him the most.",
+
+  "key_projects": [
+    {
+      "title": "Leaving: An Introspection",
+      "project_type": "video",
+      "project_cover_image": "s3991528/projects/project1.webp",
+      "project_description": "Leaving: An Introspection is a narrative film. It seeks to utilise dance as a medium to convey the feelings an international student experiences as he comes to grips with the idea of having to leave the country upon graduating. Coming from a place of personal introspection, the film stars individuals from the expansive Melbourne Street Dance Scene in hopes that viewers will be able to resonate with the emotions highlighted within each sequence.",
+      "youtube_link": "https://youtu.be/q-Qehdx7nLQ"
+    },
+    {
+      "title": "smile.",
+      "project_type": "video",
+      "project_cover_image": "s3991528/projects/project2.webp",
+      "project_description": "smile. is an immersive video experiment created as an attempt at conjuring feelings of discomfort and anxiety within viewers. The artist smiles in the video as a way to create misattribution between the self and the overall atmosphere of the video. Additionally, effects such as data moshing and compositing of sequences were done within the video to aid in creating that feeling of discomfort amongst viewers. All these attributes amalgamate to form the output as shown.",
+      "youtube_link": "https://youtu.be/usoaHykqzbI"
+    },
+    {
+      "title": "BurnCity",
+      "project_type": "UI/UX",
+      "project_cover_image": "s3991528/projects/project3.webp",
+      "project_description": "BurnCity is an app targeted towards the Melbourne Street Dance Scene. As a community that has many varying demographics and street dance styles alike, the app aims to offer a space for all dancers within Melbourne to congregate digitally and interact amongst each other. Functions within the app include Forums, a digital space that dancers can have a chat in about topics regarding dance in general. With a Feed function in the app, dancers will also be able to post their own dance progress within spaces that are catered towards each street dance style.",
+      "youtube_link": ""
+    }
+  ]
+}

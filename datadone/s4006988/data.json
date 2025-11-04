@@ -1,0 +1,33 @@
+{
+  "full_name": "Nicole Sese",
+  "profile_pic": "s4006988/profile/profile.webp",
+  "primary_specialization": "Video",
+  "secondary_skills": ["Graphic Design", "Motion Graphics"],
+  "graduation_year": "2025",
+  "website": "https://www.instagram.com/nicolevsese/",
+  "bio": "Specialising in video, my passion lies in the integration of graphics and motion design within film as a storytelling medium. With a strong background in graphic design and a focus on creating effective and accessible visual communication, my practice is guided by a commitment to clear narratives, the creative interplay between text and imagery, and the emotional resonance found in film aesthetics and movement. As a designer who values both film and graphic design, my studies have inspired me to explore animation and generative creative coding as tools for expressing emotion, abstract storytelling, and advocacy through visual media.",
+
+  "key_projects": [
+    {
+      "title": "SONORITY: pebbles in a vase",
+      "project_type": "video",
+      "project_cover_image": "s4006988/projects/project1.webp",
+      "project_description": "'SONORITY: pebbles in a vase' is a sensory exploration of childhood memory, centered around a quiet yet vivid moment of play. The project reimagines a personal experience of dropping pebbles into a vase, an act both simple and rhythmic, through sound, texture, and movement. By evoking the tactile and sonic qualities of this memory, the work invites viewers to connect with the curiosity and imagination of childhood. Through color, sound, and visual abstraction,a fleeting and intimate recollection into an immersive narrative that celebrates the textures of memory",
+      "youtube_link": "https://youtu.be/ZwQXUSZEM2I?si=8boKuH3czucyIKmT"
+    },
+    {
+      "title": "A Dugongs Eyes",
+      "project_type": "video",
+      "project_cover_image": "s4006988/projects/project2.webp",
+      "project_description": "'A Dugongs Eyes' is an advocative animation, spreading awareness centred around the preservation of Dugongs as an endagered and treasured species, a call to protect their natural habitat.",
+      "youtube_link": "https://youtu.be/pBX3xxAbJwQ?si=No7umqlJ5ZFRHrRP"
+    },
+    {
+      "title": "the voids mind",
+      "project_type": "video",
+      "project_cover_image": "s4006988/projects/project3.webp",
+      "project_description": "'the voids mind' is a narrative crafted through creative code and motion graphics, which explores the context of the internal disconnects and challenges when being drowned in the inevitable chaos of the mind when faced with chaos, grief, and loss.",
+      "youtube_link": "https://youtu.be/1deqyW0-DLw"
+    }
+  ]
+}

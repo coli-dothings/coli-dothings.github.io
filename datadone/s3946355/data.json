@@ -1,0 +1,33 @@
+{
+  "full_name": "Nick Duncan",
+  "profile_pic": "s3946355/profile/profile.webp",
+  "primary_specialization": "Sound Design",
+  "secondary_skills": ["Composition", "Game Development"],
+  "graduation_year": "2025",
+  "website": "https://snoodledev.github.io/portfolio/",
+  "bio": "Nick is a digital composer and sound designer, specialising in stylish and emotionally impactful audio for games and interactive media.<br />Great sound builds the world of a work, drawing in viewers and shaping the emotional impact of the experience. This is Nick's specialty – weaving depth and emotion into the setting and narrative of a project through detailed immersive soundscapes. He aims not just to develop appropriate audio components, but to fully integrate them with the vision of the project as a greater whole. He values the collaborative aspects of multimedia creation highly, seeking to work closely with collaborators to understand what the vision of the project truly needs, and realise a cohesive and quality outcome.<br />With a lifetime passion for music and several years of experience working on a variety of multimedia projects, he's developed a range of technical and creative skills specialised for developing the sounds of games, film and interactive media. He's gained a broad and thorough understanding of digital practice and creative multimedia through RMIT's Bachelor of Design (Digital Media), and has developed his skills further through numerous creative collaborations and independent projects. ",
+
+  "key_projects": [
+    {
+      "title": "METAL NEST",
+      "project_type": "3D",
+      "project_cover_image": "s3946355/projects/project1.webp",
+      "project_description": "METAL NEST is a short, minimalistic game with a heavy focus on immersive and engaging sound design, created as a solo project. You are put in the place of a nomadic beast, left to wander a surreal and oppressive industrial structure. I aimed to utilise the potential of positional audio to create a series of contrasting environments that have a strong sense of physicality and space. This involved layering and blending many audio layers in 3D space, as well as realtime custom effects like dynamic reverb and position-based attenuation.<br />This project was created in Unity, heavily utilising FMOD integration.",
+      "youtube_link": "https://youtu.be/YSJ_-I5yvCo"
+    },
+    {
+      "title": "The Mast",
+      "project_type": "sound",
+      "project_cover_image": "s3946355/projects/project2.webp",
+      "project_description": "The Mast is a popular and highly-regarded mod for the video game Rain World, featuring a considerable expansion to the game world and a full original soundtrack, as well as custom sound design elements.<br />Alongside being the composer and sound designer, I fulfilled the roles of level designer and overall project lead. The mod's production also involved collaborating with programmers to implement custom music triggers and other more advanced code features.",
+      "youtube_link": "https://youtu.be/lHv_xCdEuKo?t=200"
+    },
+    {
+      "title": "Fathomless",
+      "project_type": "3D",
+      "project_cover_image": "s3946355/projects/project3.webp",
+      "project_description": "Fathomless is a short atmospheric horror-management game about holding a failing starship together until help arrives. The player is put into the shoes of a crew member desperately trying to maintain the obtuse, failing systems of a decaying ship, transferring power, repairing systems and fending off unknown horrors.<br />The public version of Fathomless, a collaboration between 4 developers including myself, was created for and subsequently won the MiniJam 173 game jam. I was a key contributor in many aspects of development, as a lead sound designer, programmer and game designer, also contributing to level design and 3D asset creation.",
+      "youtube_link": ""
+    }
+  ]
+}

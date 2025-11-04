@@ -1,0 +1,33 @@
+{
+  "full_name": "Sejun Park",
+  "profile_pic": "s3928228/profile/profile.webp",
+  "primary_specialization": "Multimedia",
+  "secondary_skills": ["Graphic Design", "Video Edit", "3D-Design"],
+  "graduation_year": "2025",
+  "website": "",
+  "bio": "",
+
+  "key_projects": [
+    {
+      "title": "Journey of Self",
+      "project_type": "Poetic Short Film",
+      "project_cover_image": "s3928228/projects/project1.webp",
+      "project_description": "",
+      "youtube_link": "https://youtu.be/N2lKt72U9Nw"
+    },
+    {
+      "title": "Echoes in the Forest",
+      "project_type": "3D-Imersive Game Design",
+      "project_cover_image": "s3928228/projects/project2.webp",
+      "project_description": "",
+      "youtube_link": "https://www.youtube.com/watch?v=409EG-Qsu3I&t=8s"
+    },
+    {
+      "title": "Depression",
+      "project_type": "Documentary",
+      "project_cover_image": "s3928228/projects/project3.webp",
+      "project_description": "",
+      "youtube_link": "https://youtu.be/-O8OtDM3hF8"
+    }
+  ]
+}

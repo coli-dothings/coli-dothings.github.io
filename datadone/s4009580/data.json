@@ -1,0 +1,33 @@
+{
+  "full_name": "Andrea Ly",
+  "profile_pic": "s4009580/profile/profile.webp",
+  "primary_specialization": "Interaction Design",
+  "secondary_skills": ["Concept Design", "Illustration"],
+  "graduation_year": "2025",
+  "website": "https://andrealy904.wixsite.com/myportfolio",
+  "bio": "Hi! My name is Andrea Ly, a digital designer based in Melbourne striving for impactful and compelling solutions in interactive design, predominantly websites and game prototyping. I strongly believe in the immersion of an experience, more specifically emotionally through utilising compelling visuals and a driving narrative. Alongside media who is driven by the heart, I also aim to convey empathy as the core of all my work, even in mediums like graphic design, photography, UX/UI, video, as I believe my work should serve impactful to the heart. My right (and left) hand man will always be Procreate and Figma but honourable mentions to Adobe Illustrator, Lightroom, Premiere Pro and After Effects. I love the feeling of discovering things, be it completely new or details in the old, I hope you can hear my voice through my projects.",
+
+  "key_projects": [
+    {
+      "title": "voidspace",
+      "project_type": "video",
+      "project_cover_image": "s4009580/projects/project1.webp",
+      "project_description": "'Voidspace' is an abstract, post-apocalyptic world, inhabited by otherworldly organisms who mindlessly eat each other to survive. This world takes on nihilistic idealisms as there is no purpose, social constructs or desires and nods at our current society at its purposelessness and inevitable end.",
+      "youtube_link": "https://youtu.be/GOSyuk9I5eM"
+    },
+    {
+      "title": "Vtuber design",
+      "project_type": "graphics",
+      "project_cover_image": "s4009580/projects/project2.webp",
+      "project_description": "Designing a full body character for a client who contextually wants to stream and have a character to rig.",
+      "youtube_link": ""
+    },
+    {
+      "title": "SABI",
+      "project_type": "UXUI",
+      "project_cover_image": "s4009580/projects/project3.webp",
+      "project_description": "SABI is an interactive, indie RPG-inspired game prototyped on Figma, exploring the dynamics of 3 friends in the form of a Scrapbook and diving into their memories and weaving together their sense of connection. Through uncovering these beautiful memories, the player uncovers a disheartening truth that serves as a reminder to slow down and embrace the present.",
+      "youtube_link": "https://youtu.be/QXjvnbuXNW8"
+    }
+  ]
+}

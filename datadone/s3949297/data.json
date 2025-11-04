@@ -1,0 +1,33 @@
+{
+  "full_name": "Ryan Zibell",
+  "profile_pic": "s3949297/profile/profile.webp",
+  "primary_specialization": "Sound",
+  "secondary_skills": ["Video"],
+  "graduation_year": "2025",
+  "website": "https://ryanzib26.wixsite.com/portfolio",
+  "bio": "I am a sound designer and composer that explores the harsher and experimental side of what sound can do. I work with genres such as noise, metal and glitch along side themes of horror and brutality. I've worked In a range of different media formats composing and designing sound for film, games and spatial performances. I believe through developing an understanding of why things such as sound, deters us or causes fear we can unravel deeper layers of the human experience, exposing and challenging the darker corners of our consciousness.",
+
+  "key_projects": [
+    {
+      "title": "Sonic Descent: Inferno",
+      "project_type": "sound",
+      "project_cover_image": "s3949297/projects/project1.webp",
+      "project_description": "\"Sonic Descent: Inferno\" This piece reimagines Dante Alighieri's literary classic \"Inferno\" as a sound composition, transforming the poem's descent through hell into an immersive auditory experience.  The piece utilizes a range of both synthetic and recorded sounds combined with a hellish instrumentation, to situate the listener into Dante's allegorical landscape of sin and punishment.",
+      "youtube_link": "https://youtu.be/sxwtAKUHwKY"
+    },
+    {
+      "title": "SCUM",
+      "project_type": "sound",
+      "project_cover_image": "s3949297/projects/project2.webp",
+      "project_description": "\"SCUM\" is an audio-visual piece exploring how to push brutality to the limits. utilizing heavy metal, noise music and scientific methods into pushing the audience into discomfort.",
+      "youtube_link": "https://youtu.be/kc7_BsMHg-c"
+    },
+    {
+      "title": "Divided",
+      "project_type": "sound",
+      "project_cover_image": "s3949297/projects/project3.webp",
+      "project_description": "\"Divided\" is an audio-visual exploration of societal fragmentation through time. Using historical footage, from protests, wars and other historical moments it confronts the viewer with a relentless stream of conflict, resistance, and propaganda. The manipulation of time mirrors the way collective memory is shaped and warped, emphasizing how the media both reflects and fractures our understanding of truth. Divided challenges us to consider how cycles of division persist, asking whether we're witnessing progress or simply echoes of the same unresolved tensions.",
+      "youtube_link": "https://youtu.be/2IhUItpOWLY"
+    }
+  ]
+}

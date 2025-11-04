@@ -1,0 +1,33 @@
+{
+  "full_name": "Seumas Shearer-Boyd",
+  "profile_pic": "s3601825/profile/profile.webp",
+  "primary_specialization": "Sound Design",
+  "secondary_skills": ["Illustrations", "Videography"],
+  "graduation_year": "2025",
+  "website": "https://www.instagram.com/2badkiddo/",
+  "bio": "28 years of life has led me to understand lots of different things and produce a decent catalogue of designs. I have experience with visual projection mapping for musical performances, designing my own t-shirts and clothing, performing live as a DJ and as a drummer, animating and producing music for my own cartoons. I really do enjoy doing lots of different things, constant in improvement is my motivation for life. I love to create and destroy things, this is my happy place. Experimenting will usually take place at a computer when I am drawing, making a video or a song, twiddling with Touch Designer to make the screen go a bit funny. Professionally, I try to blend this playful experimentation with what best suits each work. Using my love cartoons, electronic dance music and many more things to construct my designs.",
+
+  "key_projects": [
+    {
+      "title": "Koalas In Kilts",
+      "project_type": "sound",
+      "project_cover_image": "s3601825/projects/project1.webp",
+      "project_description": "Koalas in Kilts was a spatial audio piece I made to be played in with multiple speakers. Returning home from living in Glasgow, I was living with my parents (Dad is Scottish) and was feeling very disconnected with the place I called home (Australia). Having no kitchen and a construction site happening at my family home, I was feeling pretty stressed and melancholy. This audio piece used this idea as inspiration and to construct it I recorded many instances with family, Australian wildlife and construction, outside and within my own home. Australia and Scotland are quite different in the way they sound.",
+      "youtube_link": ""
+    },
+    {
+      "title": "Plastic Never Breaks",
+      "project_type": "video",
+      "project_cover_image": "s3601825/projects/project2.webp",
+      "project_description": "Plastic Never Breaks was a audio visual piece I created using Ableton and Touch Designer. I used a Gamecube Controller to automate different visual and audio parameters. Everything shown on screen was mapped to a different button or joystick on the device. The piece explored my relationship to plastic, as a child I really wanted to create toys however knowing the fact that most of it could not be destroyed and would pollute the ocean left me a little depressed.",
+      "youtube_link": "https://youtu.be/-kwLv-G5Onc?si=wtYC1NumTiVUo-w7."
+    },
+    {
+      "title": "Botify Kill'd My Reep Reams",
+      "project_type": "sound",
+      "project_description": "Botify Kill'd My Reep Reams was my first EP I created using Ableton. I took inspiration from my many favourite animes, creating songs by sampling them and made them each into fast tempo electronic dance songs. Using samples from animes like Bleach, Sonny Boy, Naruto etc. This album was a stepping stone for my audio work in electronic dance music.",
+      "project_cover_image": "s3601825/projects/project3.webp",
+      "youtube_link": ""
+    }
+  ]
+}

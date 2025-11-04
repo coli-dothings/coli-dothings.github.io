@@ -1,0 +1,33 @@
+{
+  "full_name": "KC Yeo",
+  "profile_pic": "s4015960/profile/profile.webp",
+  "primary_specialization": "UX/UI",
+  "secondary_skills": ["3D Modeling"],
+  "graduation_year": "2025",
+  "website": "",
+  "bio": "Hi! I'm KC, a UX/UI designer who loves bringing ideas to life through interactive websites and mobile app prototypes. I enjoy experimenting with design and technology to make experiences that feel engaging, meaningful, and a little bit fun.<br />Sometimes, I dive into 3D modeling to add extra depth and personality to my projects — it's a great way to make digital spaces feel more alive. I'm always curious about trying new tools and exploring creative ways to tell stories or solve problems through design.<br />Whether it's crafting a smooth user journey or building something completely experimental, I aim to make work that connects with people and sparks a bit of curiosity.",
+
+  "key_projects": [
+    {
+      "title": "Anyone Home?",
+      "project_type": "UXUI",
+      "project_cover_image": "s4015960/projects/project1.webp",
+      "project_description": "\"Anyone Home?\" is an interactive website with only one feature, that is to let users know if they're available to call when they're long distance. <br />The project is using SSE (server-sent events). It works only one-way, from the server to the clients via HTTP connection. It means when server has new updates, it pushes to broadcast the entire update to clients that have the HTTP connection open.",
+      "youtube_link": "https://youtu.be/fUwJdr7EW6Y"
+    },
+    {
+      "title": "3D Kopitiam",
+      "project_type": "3D",
+      "project_cover_image": "s4015960/projects/project2.webp",
+      "project_description": "\"3D Kopitiam\" is a 3D model that represents my chldhood back in Malaysia. The lighting and materials of the kopitiam is to mimic real life models. <br />It is intentioanlly made for viewers to feel a sense on nostalgia along with low-oly models to mimic toy house.",
+      "youtube_link": "https://youtu.be/-ujAdQzh_ns"
+    },
+    {
+      "title": "The Sino-Malay Conflict: 13 May 1969",
+      "project_type": "UXUI",
+      "project_cover_image": "s4015960/projects/project3.webp",
+      "project_description": "“The Sino-Malay Conflict: 13 May 1969” is an interactive storytelling website that explores one of the darker chapters of Malaysian history. <br />Its aim is to shed light on the events of May 13 and foster a deeper understanding among Malaysians of their shared past and cultural roots.",
+      "youtube_link": "https://youtu.be/8NXCkVP2lz4"
+    }
+  ]
+}

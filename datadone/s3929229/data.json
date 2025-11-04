@@ -1,0 +1,33 @@
+{
+  "full_name": "Thai Phan",
+  "profile_pic": "s3929229/profile/profile.webp",
+  "primary_specialization": "Visual Effects",
+  "secondary_skills": ["Videography", "Interactive Media"],
+  "graduation_year": "2025",
+  "website": "https:/thaithantho.info",
+  "bio": "Thai Phan (also known as thaithantho) is a Vietnamese visual artist based in Melbourne who creates weird, glitchy, and occasionally beautiful things using 3D, VFX, or whatever tool happens to catch his curiosity that week.<br />The name thaithantho is a playful fusion of his name and the Vietnamese words “than thở” or “thẫn thờ,” rhythmic expressions loosely meaning “dull” or “complaining.” It's a self-aware roast to his younger self, a perpetually bored kid who complained about everything. That spirit of delightful pessimism still runs through his work, which often delves into digital chaos, fractured identity, and the absurdity of modern life.<br />Driven by a love for visual storytelling and emerging technologies, Thai's practice sits at the intersection of art, design, and experimentation. He plays with materials, motion, and glitches, constantly trying (and occasionally failing) to make sense of the world through images. His work also extends into film, photography, sound, and graphic design, mostly because he can't sit still.",
+
+  "key_projects": [
+    {
+      "title": "Ă̸̢̢ḿ̶̧͓ͅ I̶̛̐̈͠.  ̸͐̏͑̅D̴̘͈͂͝ȯ̸̟̽͛i̶͛͋̉̓n̴͂̎̒̿g̶̩̰̅͌ ̴̎͗̔͝T̴͐̒̚͠h̸͆̈̈́͝is Ri͈̯g̶͍͗̽͘h̴͌͗͆͝t̶͙̥͛́?̷̎͌",
+      "project_type": "video",
+      "project_cover_image": "s3929229/projects/project1.webp",
+      "project_description": "A digitized brain that craves creativity and freedom, yet constantly doubts itself. Each glitch in its existence is not an error, but a distinct character, an essential, unexpected moment in its unfolding creative journey.<br />This piece runs as an autonomous generative system, cycling for 2 to 2.5 minutes per iteration. No human input is required, and each cycle produces a unique visual outcome, shaped by fluctuating states of creative uncertainty. The work is created using TouchDesigner, Max/MSP, and VCV Rack, and is displayed on a CRT monitor, highlighting the tactile texture and temporal artifacts of the analog screen.",
+      "youtube_link": "https://player.vimeo.com/video/1130098714?h=fdda3ae60c"
+    },
+    {
+      "title": "Dominic Fike - Mama's Boy (Unoffcial Video)",
+      "project_type": "video",
+      "project_cover_image": "s3929229/projects/project2.webp",
+      "project_description": "The mama's boy music video explores themes of grief and remembrance as we change the audience's perception of the lyrics in this complementary narrative. Our interpretation of 'Mama's Boy' and its lyrics are illustrated through the perspective of a son whose parents have passed away and he is dealing with the grief of it all. The video particularly focuses on the memories of the dead mother and how her life and personality is reflected in her son. The goal was to depict the life of the parents when they were the same age as the son is now to highlight similarities. Although she is gone, he is spiritually closer to her than he thinks.<br />This music video has been produced as part of the course The Spectacle of Music Video: From MTV to YouTube and is intended solely for educational and non-commercial purposes. All rights to the original music, lyrics, and recordings remain the property of their respective copyright owners. The inclusion of this material is for the purposes of study, analysis, and scholarly practice under the principles of fair use. No copyright infringement is intended.",
+      "youtube_link": "https://player.vimeo.com/video/1130100307?h=4eee040a5c"
+    },
+    {
+      "title": "'Poor' Thoughts",
+      "project_type": "video",
+      "project_cover_image": "s3929229/projects/project3.webp",
+      "project_description": "This is a group project I work on with two other designers Peter and Tuan. Our endeavour is a narrative experiment that mostly utilizes visual effects. The so-called short film tells the tale of a teenager's irrational thinking around three in the morning, which could eventually lead to the trippiest experiment that is seen on screen.<br />The work is titled Poor Thoughts and focuses on the themes of \"Growth, Chaos, and Evolution\". The story's theme is that the main character is around our age and is about to take the crucial shift from adolescence to maturity. The visual will be a companion piece that aims to express the fundamental subject of the narrative diversely and more ambitiously, allowing viewers to build their perspective of the story",
+      "youtube_link": "https://player.vimeo.com/video/1016752750?h=4be0117d76"
+    }
+  ]
+}
