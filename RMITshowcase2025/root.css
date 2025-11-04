@@ -56,6 +56,10 @@ p {
 }
 /*------------------------------------------------------------------------*/
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 :root {
   --bg-color: rgb(5, 4, 24);
   --text-color: white;
