@@ -25,30 +25,14 @@ main {
 }
 
 .project-head {
-  padding: 10px 2vw;
+  padding: 10px 3vw;
 }
 
 .container {
   padding-top: 2rem;
 }
 
-.scroll-container {
-  scrollbar-width: none;
-
-  overflow-x: scroll;
-  overflow-y: hidden;
-  white-space: nowrap;
-
-  background-image: url(scrolldiv1.webp);
-  background-repeat: repeat-x;
-  background-size: auto 200%;
-  animation: animateframe steps(2, jump-none) 1s infinite;
-}
-
 /* Add variety to BG position as it loops */
-#three-d-scroll {
-  background-position-x: 0px;
-}
 #uxui-scroll {
   background-image: url(scrolldiv2.webp);
 }
@@ -63,27 +47,8 @@ main {
   background-position-x: 100px;
 }
 
-@keyframes animateframe {
-  0% {
-    background-position-y: 0%;
-  }
-  100% {
-    background-position-y: 100%;
-  }
-}
-
 /*==========================================================*/
 /* DECORATIONS */
-#fixed-bg {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  height: 100vh;
-  width: 100vw;
-  background-image: url(BGsdark.webp);
-  z-index: -2;
-}
-
 #fish {
   position: fixed;
   z-index: -1;
@@ -108,48 +73,6 @@ main {
   }
 }
 
-.flower {
-  position: absolute;
-  width: 250px;
-  height: 252px;
-  cursor: pointer;
-}
-.flower div {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-}
-
-.layer1 {
-  z-index: 1;
-  background-image: url(flowerL1.webp);
-  transition: scale 2s;
-  animation: rotate 5s infinite alternate forwards ease-in-out;
-}
-.layer2 {
-  z-index: 2;
-  background-image: url(flowerL2.webp);
-  transition: scale 1s;
-  animation: rotate 5s infinite alternate forwards;
-}
-.layer3 {
-  z-index: 3;
-  background-image: url(flowerL3.webp);
-  transition: scale 0.5s;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(-5deg);
-  }
-  100% {
-    transform: rotate(10deg);
-  }
-}
-.flower:hover div {
-  scale: 90%;
-}
-
 #flower1 {
   top: 400px;
   left: 30vw;
@@ -164,34 +87,3 @@ main {
 }
 
 /*==========================================================*/
-.item {
-  display: inline-block;
-  padding: 1vh 3vh;
-  max-width: 400px;
-  cursor: pointer;
-}
-
-.name-plate {
-  background-color: var(--bg-color);
-  max-width: 250px;
-  height: 3rem;
-  overflow: hidden;
-  padding: 4px;
-  border-radius: 10px;
-  margin: auto;
-  margin-top: 8px;
-}
-.name-plate p {
-  text-align: center;
-}
-
-.project-img {
-  max-height: 40vh;
-  border-radius: 50%;
-
-  transition: scale 0.5s;
-}
-.project-img:hover {
-  border: 4px solid;
-  scale: 95%;
-}

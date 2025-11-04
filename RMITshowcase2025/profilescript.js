@@ -10,8 +10,8 @@ const projectDescription = document.querySelector("#project-description");
 
 const pfp = document.querySelector("#pfp");
 const fullName = document.querySelector("#full-name");
-const skillPrime = document.querySelector("#skill1");
-const skillSecondary = document.querySelector("#skill2");
+// const skillPrime = document.querySelector("#skill1");
+// const skillSecondary = document.querySelector("#skill2");
 const bio = document.querySelector("#bio");
 const website = document.querySelector("#website");
 
@@ -33,7 +33,7 @@ projectTitle.innerHTML = profileData.title;
 
 pfp.src = studentList[studentID].profile_pic;
 fullName.innerHTML = studentList[studentID].full_name;
-skillPrime.innerHTML = studentList[studentID].primary_specialization;
+// skillPrime.innerHTML = studentList[studentID].primary_specialization;
 //skill secondary need a for-loop for 1-2 skills edge case
 bio.innerHTML = studentList[studentID].bio;
 website.href = studentList[studentID].website;

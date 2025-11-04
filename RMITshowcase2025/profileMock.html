@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Moirai+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Moirai+One&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -24,66 +24,52 @@
         <p>Home Page</p>
       </a>
     </nav>
-    <div id="body-flex">
-      <main>
-        <iframe
-          id="youtube"
-          src="https://www.youtube.com/embed/avoY90IKX7I?si=U_BqG70pw39fBcoO"
-          frameborder="0"
-        ></iframe>
 
-        <!-- Project info -->
-        <div id="project-info-flex">
-          <img id="project-img" src="s4021256\projects\project3.webp" alt="" />
-          <div id="project-info">
-            <h3 id="project-title">WARA WAR@</h3>
-            <!-- collapsible bar -->
-            <p id="project-description">Read Description...</p>
-          </div>
+    <main>
+      <div class="rounded" id="yt-container">
+        <iframe id="youtube" src="" frameborder="0"></iframe>
+      </div>
+
+      <section id="project-info">
+        <h3 id="project-title"></h3>
+        <div class="collapsible">
+          <p>Read Description</p>
+          <p id="project-description"></p>
         </div>
+      </section>
 
-        <!-- Student info -->
-        <div id="student-info-bio-flex">
-          <div id="student-name-skills">
-            <div id="name-pfp">
-              <img src="s4021256\profile\profile.webp" alt="" id="pfp" />
+      <section id="cover">
+        <h3 id="cover-text">COVER <i>IMAGE</i></h3>
+        <img src="" alt="" class="rounded" id="project-img" />
+      </section>
 
-              <div id="skills-container">
-                <p id="full-name">Mai Anh Vo</p>
-                <p class="skill" id="skill1">Illustrations</p>
-                <p class="skill" id="skill2">Skill 2 Skill 3</p>
-                <!-- IDK what to do with skill yet -->
-              </div>
+      <section id="student-info">
+        <div id="pfp-section">
+          <img src="" alt="" id="pfp" />
+          <div id="name-skill">
+            <p id="full-name"></p>
+            <p class="skill" id="primary">Primary skill</p>
+            <div id="secondary-skill">
+              <!-- format secondary: p class="skill" id="secondary1" -->
             </div>
           </div>
-
-          <div id="bio-box">
-            <h2>bio</h2>
-            <p id="bio">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-              id commodi libero officia earum, dicta quam neque laborum
-              dignissimos asperiores ab, mollitia molestias ipsam veritatis
-              iure! Aperiam, quod nesciunt iusto dolore voluptas enim libero
-              natus commodi veritatis quia dignissimos iure, eos architecto
-              reprehenderit ducimus, numquam minus accusantium eius placeat
-              eveniet quaerat animi eaque vitae error. Recusandae tempore, fugit
-              est veniam vero nostrum velit non ullam itaque repellendus numquam
-              sapiente, dolores fuga iste consectetur delectus quae, tenetur
-              nesciunt minima molestiae ratione!
-            </p>
-            <a href="https://www.instagram.com/coli_artsnstuffs/" id="website"
-              >My website</a
-            >
-          </div>
         </div>
-      </main>
+        <div id="bio-box" class="rounded">
+          <p id="bio"></p>
+          <a href="" id="website">Contact me</a>
+        </div>
+      </section>
+    </main>
 
-      <!-- -------------------------------------------------------------- -->
-      <!-- Sidebar -->
-      <aside>
-        <h3>My works</h3>
-        <div class="scroll-container"></div>
-      </aside>
+    <div id="my-works">
+      <h3>MY WORKS</h3>
+      <div class="scroll-container"></div>
+    </div>
+    <div id="fixed-bg"></div>
+    <div class="flower" id="flower1">
+      <div class="layer1"></div>
+      <div class="layer2"></div>
+      <div class="layer3"></div>
     </div>
   </body>
 </html>
