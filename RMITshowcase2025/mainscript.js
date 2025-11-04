@@ -132,3 +132,15 @@ for (let i = 0; i < itemsArray.length; i++) {
     window.location.href = "profileMock.html";
   });
 }
+
+//================================================================================
+// Decoration
+// play fish anim every 1.5 min
+const fish = document.querySelector("#fish");
+
+setInterval(fishAnim, 90000);
+function fishAnim() {
+  fish.classList.remove("fishAnim");
+  fish.offsetHeight;
+  fish.classList.add("fishAnim");
+}

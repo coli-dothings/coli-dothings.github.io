@@ -55,13 +55,13 @@ p {
   }
 }
 /*------------------------------------------------------------------------*/
-
+/* remove blue highlight on mobile */
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
 :root {
-  --bg-color: rgb(5, 4, 24);
+  --bg-color: #050515;
   --text-color: white;
   --three-d-color: rgb(255, 127, 127);
   --uxui-color: rgb(172, 215, 255);
