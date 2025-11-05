@@ -62,7 +62,7 @@ p {
 
 :root {
   --bg-color: #050515;
-  --text-color: rgb(255, 252, 188);
+  --text-color: rgb(216, 230, 255);
 }
 
 /* body contain document size, and font-fallback edge cases */
