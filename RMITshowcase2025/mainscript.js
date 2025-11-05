@@ -114,7 +114,6 @@ graphicsDisplay.innerHTML += contentGraphics;
 
 //================================================================================
 // Data transfer
-// ADD THE SAME CLASS AS ABOVE, REUSE FORMAT CODE
 
 const itemsArray = document.querySelectorAll(".item");
 console.log("itemsArray length is " + itemsArray.length);
@@ -144,3 +143,5 @@ function fishAnim() {
   fish.offsetHeight;
   fish.classList.add("fishAnim");
 }
+
+console.log(soundDisplay.querySelectorAll(".item"));

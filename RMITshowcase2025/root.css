@@ -77,7 +77,6 @@ h1 {
   font-weight: 800;
   font-style: normal;
   font-size: 4rem;
-  padding: 3vh 0vh;
 }
 h2 {
   font-family: "Livvic", sans-serif;
@@ -95,6 +94,15 @@ p {
   font-family: "Livvic", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
 }
 
 /*======================================================*/

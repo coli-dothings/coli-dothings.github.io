@@ -46,15 +46,12 @@ iframe {
   aspect-ratio: 16/9;
 }
 
-h3 {
-  font-size: 2rem;
-}
-
 /* COVER img */
 #cover {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
+  aspect-ratio: 2/1;
 }
 
 #cover-text {
