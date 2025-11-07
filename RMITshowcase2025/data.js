@@ -72,7 +72,7 @@ const studentList = [
       {
         title: "Dreamscape Oasis II",
         project_type: "sound",
-        project_cover_image: "s3909151/Projects/project1.webp",
+        project_cover_image: "s3909151/projects/project1.webp",
         project_description:
           "Dreamscape Oasis II is an immersive audiovisual installation designed to transport audiences into a surreal and tranquil environment. Combining multichannel sound design with large-scale visuals, the project reconfigures the familiar into a dreamlike realm that encourages reflection, serenity, and sensory exploration. The ambisonic soundtrack, inspired by artists like Brian Eno and Aaron Hibell, blends ambient soundscapes, synths, and spatial effects to create depth and movement within the space. Together, these elements form an evolving sensory experience that blurs boundaries between reality and imagination. Installed within RMIT's Black Box, Dreamscape Oasis II serves as both an artistic and technical exploration of how sound and visuals can merge to heighten perception, offering audiences a meditative escape into a surreal, fluid, and emotionally resonant world.",
         youtube_link: "https://youtube.com/embed/-LzHYJsBFjo",
@@ -80,7 +80,7 @@ const studentList = [
       {
         title: "Godzilla re-sound design",
         project_type: "sound",
-        project_cover_image: "s3909151/Projects/project2.webp",
+        project_cover_image: "s3909151/projects/project2.webp",
         project_description:
           "This 4-minute re-sound design piece reimagines the final battle between Godzilla and King Ghidorah from Godzilla: King of the Monsters, focusing on creating a powerful and immersive sonic experience. The project explores the sound aesthetics of colossal creatures and the distinct powers they possess, blending organic and synthetic elements to heighten their scale and intensity. Complementing the sound design is a minimalist yet evocative soundtrack featuring traditional Japanese taiko drums and choral textures, chosen to honor the film's cultural origins while amplifying its cinematic grandeur. The result is an epic, emotionally charged soundscape that merges mythic symbolism with modern sound design techniques to reframe the iconic clash in a fresh auditory dimension.",
         youtube_link: "https://youtube.com/embed/IWhJ0GTB8yk",
@@ -88,7 +88,7 @@ const studentList = [
       {
         title: "Biophony & Geophony (Nature's Sonic Twins)",
         project_type: "sound",
-        project_cover_image: "s3909151/Projects/project3.webp",
+        project_cover_image: "s3909151/projects/project3.webp",
         project_description:
           "Biophony & Geophony (Nature's Sonic Twins) is a short sonic artwork that explores the intricate relationship between the natural world's two primary sound sources: biophony (the collective sound of living organisms) and geophony (the non-biological sounds of nature, such as wind or water). The composition weaves these organic soundscapes with binaural frequencies, designed to evoke a meditative and immersive listening experience. By blending the rhythmic patterns of wildlife with the steady ambience of natural environments, the piece aims to restore a sense of calm and connection between humans and nature. Its fluid spatial design allows it to be presented in surround-sound installations or adapted for sound therapy sessions, where listeners can experience the therapeutic effects of natural acoustics. Ultimately, Biophony & Geophony (Nature's Sonic Twins) invites audiences to listen deeply, reflecting on the sonic balance that sustains Earth's living and physical systems.",
         youtube_link: "https://youtube.com/embed/y1_J2F0PAVI",
@@ -177,7 +177,7 @@ const studentList = [
       {
         title: "Xero Start",
         project_type: "UXUI",
-        project_cover_image: "s3942372/Projects/project1.webp",
+        project_cover_image: "s3942372/projects/project1.webp",
         project_description:
           "A project completed for 'Xero', the app, 'Xero Start' is meant to be an intro to business for aspiring entrepreneurs who don't know where to start. With a focus on users with dyslexia and others with similar disadvantages, 'Xero Start' provides an easy to use, easy to understand way of providing lessons to users.<br />Try the prototype out for yourself: https://www.figma.com/proto/rec1OZlazFwuZgQS20KF1K/Low-Fidelity-Prototype?page-id=373%3A471&node-id=407-4849&p=f&viewport=1555%2C-4063%2C0.45&t=SlqbTFaSm3mjfT1t-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=407%3A4849",
         youtube_link: "",
@@ -185,7 +185,7 @@ const studentList = [
       {
         title: "Project: Buddy (Beta)",
         project_type: "UXUI",
-        project_cover_image: "s3942372/Projects/project2.webp",
+        project_cover_image: "s3942372/projects/project2.webp",
         project_description:
           "'Project: Buddy (Beta)' is a satirical web experience meant to make fun of the rise in AI in health care services such as online therapy and counselling. Through a simple interface and by clicking through options, the user dives deeper and deeper into their 'therapy' session with an AI.<br />Experience it for yourself: https://s3942372.github.io/im-2310/a3/",
         youtube_link: "",
@@ -193,7 +193,7 @@ const studentList = [
       {
         title: "Punchin' Time!",
         project_type: "UXUI",
-        project_cover_image: "s3942372/Projects/project3.webp",
+        project_cover_image: "s3942372/projects/project3.webp",
         project_description:
           "'Punchin' Time!' Is a game made on Scratch meant to encapsulate one of the major reasons behind school bullying, how it starts, and why it continues. Based on personal experience, this game allows users to take on the role of the bully through one simple act: clicking. Will you be able to resist?<br />Test the game out here: https://scratch.mit.edu/projects/1075088739/fullscreen/",
         youtube_link: "",
@@ -202,7 +202,7 @@ const studentList = [
   },
   {
     full_name: "Jaxson Dirk Smith",
-    profile_pic: "s3944528/Profile/profile.webp",
+    profile_pic: "s3944528/profile/profile.webp",
     primary_specialization: "Sound Design",
     secondary_skills: ["Video Editing", "Graphic Design"],
     graduation_year: "2025",
@@ -212,7 +212,7 @@ const studentList = [
       {
         title: "Identity Dissonance",
         project_type: "sound",
-        project_cover_image: "s3944528/Projects/project1.webp",
+        project_cover_image: "s3944528/projects/project1.webp",
         project_description:
           "Identity Dissonance is about the tragic story of a young Amateur journalist, John Walker, that finds himself in the aftermath of a traumatic experience, leaving him speechless and not like himself. In this 9–10-minute presentation audiences will have the opportunity to listen along to an interrogation and uncover pieces of the story to see what happened to this man via recordings and questions set by a detective.",
         youtube_link: "https://youtube.com/embed/JuHWkrj1otQ",
@@ -220,7 +220,7 @@ const studentList = [
       {
         title: "Artists Vs. Ai",
         project_type: "UXUI",
-        project_cover_image: "s3944528/Projects/project2.webp",
+        project_cover_image: "s3944528/projects/project2.webp",
         project_description:
           "AVAI is a webpage blog designed to unveil the arising threat of AI explore the dominance it has over the Graphic Design Industry. Using Artists views and experiences to further reinforce the dangers of AI we can look at how Art is a construct of Human emotion not of a machines.",
         youtube_link: "https://youtube.com/embed/G3-hl3j-dx0",
@@ -228,7 +228,7 @@ const studentList = [
       {
         title: "Project: Era",
         project_type: "3D",
-        project_cover_image: "s3944528/Projects/project3.webp",
+        project_cover_image: "s3944528/projects/project3.webp",
         project_description:
           "Project Era is a walk in the park experience of a simulated world. The experience uncovers new tribes, phenomena and even rituals that correlate to a new species and culture. Not everything needs to be fast paced, sometimes exploring can uncover new things.",
         youtube_link: "https://youtube.com/embed/WMo_9QnTGo4",
