@@ -726,4 +726,4 @@ const studentList = [
     ],
   },
 ];
-console.log(studentList.length);
+console.log("studentList lenth is " + studentList.length);

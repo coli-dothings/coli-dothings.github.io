@@ -142,6 +142,7 @@ p {
 }
 
 .project-img {
+  object-fit: cover;
   max-height: 40vh;
   aspect-ratio: 1;
   border-radius: 50%;

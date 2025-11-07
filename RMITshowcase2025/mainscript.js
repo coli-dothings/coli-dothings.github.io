@@ -5,13 +5,12 @@ let contentSound = "";
 let contentVideo = "";
 let contentGraphics = "";
 
-let contentBreak = "";
-
 // All content formatted
 //let formattedContentArray = [];
 let itemID = 0;
 
 // indexing through each student profile
+/*
 for (let i = 0; i < studentList.length; i++) {
   for (let ii = 0; ii < studentList[i].key_projects.length; ii++) {
     // "project_type": "sound/3D/UXUI/video/graphics",
@@ -89,19 +88,99 @@ for (let i = 0; i < studentList.length; i++) {
         break;
 
       default:
-        contentBreak += `
-    <div class="item s${i} p${ii}" id="item${itemID}">
-     <img
-        class="project-img"
-        src="${studentList[i].key_projects[ii].project_cover_image}"
-        alt="project id ${i}"
-      />
-      <div class="name-plate"><p>${studentList[i].key_projects[ii].title}</p></div>
-    </div>
-    `;
         console.log("switch case BREAK");
         break;
     }
+  }
+}
+*/
+for (let i = 0; i < studentList.length; i++) {
+  switch (studentList[i].key_projects[0].project_type) {
+    //Use [i] to get student's info
+    //Use [0] to get project's info
+    case "3D":
+      contentThreeD += `
+    <div class="item s${i} p${0}" id="item${itemID}">
+     <img
+        class="project-img"
+        src="${studentList[i].key_projects[0].project_cover_image}"
+        alt="project id ${i}"
+      />
+      <div class="name-plate"><p>${
+        studentList[i].key_projects[0].title
+      }</p></div>
+    </div>
+    `;
+      itemID++;
+      break;
+
+    case "UXUI":
+      contentUXUI += `
+    <div class="item s${i} p${0}" id="item${itemID}">
+     <img
+        class="project-img"
+        src="${studentList[i].key_projects[0].project_cover_image}"
+        alt="project id ${i}"
+      />
+      <div class="name-plate"><p>${
+        studentList[i].key_projects[0].title
+      }</p></div>
+    </div>
+    `;
+      itemID++;
+      break;
+
+    case "sound":
+      contentSound += `
+    <div class="item s${i} p${0}" id="item${itemID}">
+     <img
+        class="project-img"
+        src="${studentList[i].key_projects[0].project_cover_image}"
+        alt="project id ${i}"
+      />
+      <div class="name-plate"><p>${
+        studentList[i].key_projects[0].title
+      }</p></div>
+    </div>
+    `;
+      itemID++;
+      break;
+
+    case "video":
+      contentVideo += `
+    <div class="item s${i} p${0}" id="item${itemID}">
+     <img
+        class="project-img"
+        src="${studentList[i].key_projects[0].project_cover_image}"
+        alt="project id ${i}"
+      />
+      <div class="name-plate"><p>${
+        studentList[i].key_projects[0].title
+      }</p></div>
+    </div>
+    `;
+      itemID++;
+      break;
+
+    case "graphics":
+      contentGraphics += `
+    <div class="item s${i} p${0}" id="item${itemID}">
+     <img
+        class="project-img"
+        src="${studentList[i].key_projects[0].project_cover_image}"
+        alt="project id ${i}"
+      />
+      <div class="name-plate"><p>${
+        studentList[i].key_projects[0].title
+      }</p></div>
+    </div>
+    `;
+      itemID++;
+      break;
+
+    default:
+      console.log("switch case BREAK");
+      break;
   }
 }
 
@@ -112,14 +191,12 @@ const uxuiDisplay = document.querySelector("#uxui-scroll");
 const soundDisplay = document.querySelector("#sound-scroll");
 const videoDisplay = document.querySelector("#video-scroll");
 const graphicsDisplay = document.querySelector("#graphics-scroll");
-const breakDisplay = document.querySelector("#break-scroll");
 
 threeDDisplay.innerHTML += contentThreeD;
 uxuiDisplay.innerHTML += contentUXUI;
 soundDisplay.innerHTML += contentSound;
 videoDisplay.innerHTML += contentVideo;
 graphicsDisplay.innerHTML += contentGraphics;
-breakDisplay.innerHTML += contentBreak;
 
 //================================================================================
 // Data transfer
@@ -129,13 +206,19 @@ console.log("itemsArray length is " + itemsArray.length);
 
 for (let i = 0; i < itemsArray.length; i++) {
   let myString = itemsArray[i].classList.toString();
-  let studentID = myString.charAt(6);
-  let projectID = myString.charAt(9);
-  //console.log(studentID);
+  let studentIDnew;
+  let projectIDnew;
+  if (myString.length > 10) {
+    studentIDnew = myString.charAt(6) + "" + myString.charAt(7);
+    projectIDnew = myString.charAt(10);
+  } else {
+    studentIDnew = myString.charAt(6);
+    projectIDnew = myString.charAt(9);
+  }
 
   itemsArray[i].addEventListener("click", function () {
-    sessionStorage.setItem("studentID", studentID);
-    sessionStorage.setItem("projectID", projectID);
+    sessionStorage.setItem("studentID", studentIDnew);
+    sessionStorage.setItem("projectID", projectIDnew);
 
     window.location.href = "profileMock.html";
   });

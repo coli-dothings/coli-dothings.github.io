@@ -1,3 +1,5 @@
+console.log("profile page");
+
 const studentID = sessionStorage.getItem("studentID");
 const projectID = sessionStorage.getItem("projectID");
 console.log(studentID + " " + projectID);
@@ -59,12 +61,18 @@ myProject.innerHTML += myContent;
 
 // Function call project from project page, by setting new session data
 const itemsArray = document.querySelectorAll(".item");
-console.log("itemsArray length is " + itemsArray.length);
 
 for (let i = 0; i < itemsArray.length; i++) {
   let myString = itemsArray[i].classList.toString();
-  let studentIDnew = myString.charAt(6);
-  let projectIDnew = myString.charAt(9);
+  let studentIDnew;
+  let projectIDnew;
+  if (myString.length > 10) {
+    studentIDnew = myString.charAt(6) + "" + myString.charAt(7);
+    projectIDnew = myString.charAt(10);
+  } else {
+    studentIDnew = myString.charAt(6);
+    projectIDnew = myString.charAt(9);
+  }
 
   itemsArray[i].addEventListener("click", function () {
     sessionStorage.setItem("studentID", studentIDnew);
