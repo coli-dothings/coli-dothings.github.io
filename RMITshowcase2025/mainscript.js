@@ -94,6 +94,9 @@ for (let i = 0; i < studentList.length; i++) {
   }
 }
 */
+let uxuicount = 0;
+let vidcount = 0;
+let soundcount = 0;
 for (let i = 0; i < studentList.length; i++) {
   switch (studentList[i].key_projects[0].project_type) {
     //Use [i] to get student's info
@@ -128,6 +131,7 @@ for (let i = 0; i < studentList.length; i++) {
     </div>
     `;
       itemID++;
+      uxuicount++;
       break;
 
     case "sound":
@@ -144,6 +148,7 @@ for (let i = 0; i < studentList.length; i++) {
     </div>
     `;
       itemID++;
+      soundcount++;
       break;
 
     case "video":
@@ -160,6 +165,7 @@ for (let i = 0; i < studentList.length; i++) {
     </div>
     `;
       itemID++;
+      vidcount++;
       break;
 
     case "graphics":
@@ -184,6 +190,7 @@ for (let i = 0; i < studentList.length; i++) {
   }
 }
 
+console.log("u" + uxuicount + " v" + vidcount + " s" + soundcount);
 //const testDisplay = document.querySelector("#test-scroll");
 
 const threeDDisplay = document.querySelector("#three-d-scroll");
