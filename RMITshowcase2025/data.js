@@ -727,3 +727,5 @@ const studentList = [
   },
 ];
 console.log("studentList lenth is " + studentList.length);
+
+//case sensitive check
