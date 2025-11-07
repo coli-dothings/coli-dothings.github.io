@@ -1,0 +1,33 @@
+{
+  "full_name": "Sejun Park",
+  "profile_pic": "s3938228/profile/profile.webp",
+  "primary_specialization": "Multimedia",
+  "secondary_skills": ["Graphic Design", "Video Edit", "3D-Design"],
+  "graduation_year": "2025",
+  "website": "",
+  "bio": "Hi! I'm Sejun a Media Designer who thrives on creative variety. I work across multiple disciplines from 3D character animation and documentary filmmaking to packaging and web design seamlessly shifting between design roles while maintaining a cohesive creative vision. My toolkit includes Adobe Illustrator, Blender, Photoshop and DaVinci Resolve. I've had the privilege of seeing my team's visual-jogging project and event-showcase work exhibited at my school. I'm passionate about collaborating with advertising agencies, design studios and production companies that value versatility, storytelling and bold creative solutions.",
+
+  "key_projects": [
+    {
+      "title": "Journey of Self",
+      "project_type": "Poetic Short Film",
+      "project_cover_image": "s3938228/projects/project1.webp",
+      "project_description": "This project is a poetic narrative short film exploring the emotional journey of displacement, belonging, and identity experienced by young adults as they transition away from their family homes. The film invites viewers to connect with the universal feelings of separation and self-rediscovery during this stage of life.<br /><br />Through visual metaphors and sensory storytelling, the project transforms a personal theme into an introspective exploration of self-reconnection and emotional growth.",
+      "youtube_link": "https://youtu.be/N2lKt72U9Nw"
+    },
+    {
+      "title": "Echoes in the Forest",
+      "project_type": "3D-Imersive Game Design",
+      "project_cover_image": "s3938228/projects/project2.webp",
+      "project_description": "Echoes in the Forest is an interactive narrative game that follows a personal journey of self-discovery. Players explore a mysterious forest filled with symbolic objects and ambient messages, each revealing emotional insights about life, hope, and change. Through light, sound, and atmosphere, the experience invites reflection on how we navigate uncertainty and find direction within ourselves.",
+      "youtube_link": "https://www.youtube.com/watch?v=409EG-Qsu3I&t=8s"
+    },
+    {
+      "title": "Depression",
+      "project_type": "Documentary",
+      "project_cover_image": "s3938228/projects/project3.webp",
+      "project_description": "This documentary follows a young woman struggling with depression who feels abandoned despite being surrounded by caring people. Inspired by a close friend's experience, the film explores how depression distorts perception and relationships.<br /><br />The project's message encourages viewers to recognize and cherish genuine connections in their lives. It demonstrates my ability to create meaningful content that tackles sensitive subjects with empathy and care.",
+      "youtube_link": "https://youtu.be/-O8OtDM3hF8"
+    }
+  ]
+}
