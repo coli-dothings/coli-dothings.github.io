@@ -5,6 +5,8 @@ let contentSound = "";
 let contentVideo = "";
 let contentGraphics = "";
 
+let contentBreak = "";
+
 // All content formatted
 //let formattedContentArray = [];
 let itemID = 0;
@@ -17,7 +19,6 @@ for (let i = 0; i < studentList.length; i++) {
       //Use [i] to get student's info
       //Use [ii] to get project's info
       case "3D":
-        console.log(studentList[i].key_projects[ii].title + " is 3D type");
         contentThreeD += `
     <div class="item s${i} p${ii}" id="item${itemID}">
      <img
@@ -32,7 +33,6 @@ for (let i = 0; i < studentList.length; i++) {
         break;
 
       case "UXUI":
-        console.log(studentList[i].key_projects[ii].title + " is uxui type");
         contentUXUI += `
     <div class="item s${i} p${ii}" id="item${itemID}">
      <img
@@ -47,7 +47,6 @@ for (let i = 0; i < studentList.length; i++) {
         break;
 
       case "sound":
-        console.log(studentList[i].key_projects[ii].title + " is sound type");
         contentSound += `
     <div class="item s${i} p${ii}" id="item${itemID}">
      <img
@@ -62,7 +61,6 @@ for (let i = 0; i < studentList.length; i++) {
         break;
 
       case "video":
-        console.log(studentList[i].key_projects[ii].title + " is uxui type");
         contentVideo += `
     <div class="item s${i} p${ii}" id="item${itemID}">
      <img
@@ -77,7 +75,6 @@ for (let i = 0; i < studentList.length; i++) {
         break;
 
       case "graphics":
-        console.log(studentList[i].key_projects[ii].title + " is graphic type");
         contentGraphics += `
     <div class="item s${i} p${ii}" id="item${itemID}">
      <img
@@ -92,6 +89,16 @@ for (let i = 0; i < studentList.length; i++) {
         break;
 
       default:
+        contentBreak += `
+    <div class="item s${i} p${ii}" id="item${itemID}">
+     <img
+        class="project-img"
+        src="${studentList[i].key_projects[ii].project_cover_image}"
+        alt="project id ${i}"
+      />
+      <div class="name-plate"><p>${studentList[i].key_projects[ii].title}</p></div>
+    </div>
+    `;
         console.log("switch case BREAK");
         break;
     }
@@ -105,12 +112,14 @@ const uxuiDisplay = document.querySelector("#uxui-scroll");
 const soundDisplay = document.querySelector("#sound-scroll");
 const videoDisplay = document.querySelector("#video-scroll");
 const graphicsDisplay = document.querySelector("#graphics-scroll");
+const breakDisplay = document.querySelector("#break-scroll");
 
 threeDDisplay.innerHTML += contentThreeD;
 uxuiDisplay.innerHTML += contentUXUI;
 soundDisplay.innerHTML += contentSound;
 videoDisplay.innerHTML += contentVideo;
 graphicsDisplay.innerHTML += contentGraphics;
+breakDisplay.innerHTML += contentBreak;
 
 //================================================================================
 // Data transfer
@@ -143,5 +152,3 @@ function fishAnim() {
   fish.offsetHeight;
   fish.classList.add("fishAnim");
 }
-
-console.log(soundDisplay.querySelectorAll(".item"));

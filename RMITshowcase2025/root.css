@@ -119,6 +119,7 @@ p {
   background-size: auto 200%;
   animation: animateframe steps(2, jump-none) 1s infinite;
 }
+
 .item {
   display: inline-block;
   padding: 1vh 3vh;
@@ -142,6 +143,7 @@ p {
 
 .project-img {
   max-height: 40vh;
+  aspect-ratio: 1;
   border-radius: 50%;
 
   transition: scale 0.5s;
