@@ -3,6 +3,7 @@ console.log("profile page");
 const studentID = sessionStorage.getItem("studentID");
 const projectID = sessionStorage.getItem("projectID");
 console.log(studentID + " " + projectID);
+// Set heading to student name
 
 // Get all HTML element
 const youTube = document.querySelector("#youtube");
@@ -46,12 +47,14 @@ let myContent = "";
 for (let i = 0; i < studentList[studentID].key_projects.length; i++) {
   myContent += `
     <div class="item s${studentID} p${i}" id="item${i}">
+    <div class="img-container">
      <img
         class="project-img"
         src="${studentList[studentID].key_projects[i].project_cover_image}"
         alt="project id ${i}"
       />
       <div class="name-plate"><p>${studentList[studentID].key_projects[i].title}</p></div>
+      </div>
     </div>
     `;
 }
@@ -64,19 +67,19 @@ const itemsArray = document.querySelectorAll(".item");
 
 for (let i = 0; i < itemsArray.length; i++) {
   let myString = itemsArray[i].classList.toString();
-  let studentIDnew;
-  let projectIDnew;
+  let studentID;
+  let projectID;
   if (myString.length > 10) {
-    studentIDnew = myString.charAt(6) + "" + myString.charAt(7);
-    projectIDnew = myString.charAt(10);
+    studentID = myString.charAt(6) + "" + myString.charAt(7);
+    projectID = myString.charAt(10);
   } else {
-    studentIDnew = myString.charAt(6);
-    projectIDnew = myString.charAt(9);
+    studentID = myString.charAt(6);
+    projectID = myString.charAt(9);
   }
 
   itemsArray[i].addEventListener("click", function () {
-    sessionStorage.setItem("studentID", studentIDnew);
-    sessionStorage.setItem("projectID", projectIDnew);
+    sessionStorage.setItem("studentID", studentID);
+    sessionStorage.setItem("projectID", projectID);
 
     window.location.href = "profileMock.html";
   });

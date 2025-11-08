@@ -18,36 +18,6 @@ footer {
   background-position: top;
 }
 /*==========================================================*/
-/*MAIN container for each type*/
-main {
-  position: relative;
-  overflow-x: hidden;
-}
-
-.project-head {
-  padding: 10px 3vw;
-}
-
-.container {
-  padding-top: 2rem;
-}
-
-/* Add variety to BG position as it loops */
-#uxui-scroll {
-  background-image: url(scrolldiv2.webp);
-}
-#sound-scroll {
-  background-position-x: 500px;
-}
-#video-scroll {
-  background-image: url(scrolldiv2.webp);
-  background-position-x: 600px;
-}
-#graphics-scroll {
-  background-position-x: 100px;
-}
-
-/*==========================================================*/
 /* DECORATIONS */
 #fish {
   position: fixed;
@@ -85,18 +55,36 @@ main {
   top: 1880px;
   left: 2vw;
 }
-
 /*==========================================================*/
-/* item bobbing anim */
-.item {
-  animation: bobbing 2s infinite alternate ease-in-out;
-  animation-delay: 0s;
+/* MAIN */
+#grid-container {
+  margin: 0vw 8vw;
+  min-width: 600px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+  aspect-ratio: 4/14;
+
+  gap: 30px;
+  background-color: red;
 }
-@keyframes bobbing {
-  0% {
-    transform: translateY(0px);
-  }
-  100% {
-    transform: translateY(10px);
-  }
+
+.box {
+  grid-row: span 2;
+  background-color: blue;
+  position: relative;
+}
+.item {
+  position: absolute;
+  top: 10%;
+}
+.img-container {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.project-img {
+  height: 100%;
+  object-fit: cover;
 }
