@@ -71,7 +71,6 @@ for (let i = 0; i < itemsArray.length; i++) {
   itemsArray[i].addEventListener("click", function () {
     sessionStorage.setItem("studentID", studentID);
     sessionStorage.setItem("projectID", projectID);
-
     window.location.href = "profileMock.html";
   });
 }
@@ -80,10 +79,17 @@ for (let i = 0; i < itemsArray.length; i++) {
 // Decoration
 // play fish anim every 1.5 min
 const fish = document.querySelector("#fish");
+const fish2 = document.querySelector("#fish2");
+const fishMirrored = document.querySelector("#mirror");
 
-setInterval(fishAnim, 90000);
+setInterval(fishAnim, 60000);
 function fishAnim() {
   fish.classList.remove("fishAnim");
-  fish.offsetHeight;
-  fish.classList.add("fishAnim");
+  fish2.classList.remove("fishAnimReverse");
+  fishMirrored.classList.remove("mirror");
+  setTimeout(() => {
+    fish.classList.add("fishAnim");
+    fish2.classList.add("fishAnimReverse");
+    fishMirrored.classList.add("mirror");
+  }, 1);
 }

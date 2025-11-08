@@ -19,21 +19,40 @@ footer {
 }
 /*==========================================================*/
 /* DECORATIONS */
-#fish {
-  position: fixed;
-  z-index: -1;
-  top: -400px;
-  left: 30vw;
+.fish {
   height: 400px;
   width: 400px;
   background-image: url(fishAnim.webp);
   background-size: auto 600%;
   background-repeat: no-repeat;
+}
+#fish {
+  top: -400px;
+  left: 30vw;
   transform-origin: -3000px 0px;
+  position: fixed;
+  z-index: -1;
 }
 .fishAnim {
   animation: animateframe steps(6, jump-none) 625ms 16, curvepath 12s ease-in;
 }
+#fish2 {
+  bottom: -400px;
+  right: 30vw;
+  transform-origin: 3000px 0px;
+  position: fixed;
+  z-index: -1;
+}
+#mirror {
+  transform: scaleY(-1);
+}
+.mirror {
+  animation: animateframe steps(6, jump-none) 625ms 16 30s;
+}
+.fishAnimReverse {
+  animation: curvepath 12s ease-in 30s;
+}
+
 @keyframes curvepath {
   0% {
     transform: rotate(0deg);
@@ -45,19 +64,12 @@ footer {
 /*==========================================================*/
 /* MAIN */
 #grid-container {
-  margin: 0vw 8vw;
-  min-width: 600px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(13, 1fr);
-  aspect-ratio: 4/10;
-
-  gap: 30px;
-  /* background-color: red; */
+  gap: 3vw;
+  animation: bobbing 4s infinite alternate ease-in-out;
 }
 .box {
   grid-row: span 2;
-  /* background-color: blue; */
   position: relative;
   overflow: hidden;
 }
@@ -73,28 +85,41 @@ footer {
   aspect-ratio: 1;
   border-radius: 50%;
   overflow: hidden;
+  transition: scale 0.5s;
+}
+.img-container:hover {
+  border: 4px solid;
+  scale: 95%;
 }
 .project-img {
   height: 100%;
   object-fit: cover;
 }
+.name-plate {
+  margin-top: 12px;
+}
+.name-plate p {
+  text-align: center;
+}
 
 /*==========================================================*/
 /* GRID ITEM ORDER */
 .box-head {
-  background-color: blue;
+  background-color: var(--bg-color);
+  display: grid;
+  place-items: center;
 }
 #head-3d {
-  order: 1;
-}
-.box-3d {
-  order: 2;
-}
-#head-uxui {
   order: 3;
 }
-.box-uxui {
+.box-3d {
   order: 4;
+}
+#head-uxui {
+  order: 1;
+}
+.box-uxui {
+  order: 2;
 }
 #head-sound {
   order: 5;
@@ -123,4 +148,61 @@ footer {
 }
 #space3 {
   order: 10;
+}
+
+/*==========================================================*/
+/* GRID random offset & bobbing animation */
+#box14,
+#box20,
+#box3,
+#box11,
+.box-head {
+  animation: bobbing 7s infinite alternate ease-in-out -5s;
+}
+@keyframes bobbing {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(30px);
+  }
+}
+
+/* PC 786px or larger */
+@media only screen and (min-width: 768px) {
+  #box1,
+  #box5,
+  #box19 {
+    transform: translateX(-3vw);
+  }
+  #box9,
+  #space3 {
+    transform: translateX(3vw);
+  }
+  #grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+    aspect-ratio: 4/10;
+    margin: 0vw 8vw;
+    min-width: 600px;
+  }
+}
+/* Mobile 787px or smaller */
+@media only screen and (max-width: 787px) {
+  #grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(26, 1fr);
+    aspect-ratio: 2/20;
+    margin: 0vw 5vw;
+  }
+}
+#box3,
+#box7,
+#box12,
+#box16,
+#box20 {
+  transform: translateY(7vh);
+}
+#box2 {
+  transform: translateY(-7vh);
 }
