@@ -159,7 +159,7 @@ function updateDialog() {
     switch (clickNum) {
       case 1:
         dialogText.innerHTML =
-          "A living pond of creativity where ideas surface and mingle.";
+          "Welcome to the RMIT Digital Media Showcase 2025!</br></br> A living pond of creativity where ideas surface and mingle.";
         break;
       case 2:
         dialogText.innerHTML =
@@ -179,3 +179,8 @@ function updateDialog() {
   }
 }
 //localStorage.clear();
+
+setTimeout(changeFlavor, 60000);
+function changeFlavor() {
+  flavorText.innerHTML = "it's Digital Media Showcase of 2025!";
+}

@@ -81,7 +81,8 @@ h2 {
   font-size: 2rem;
   color: var(--accent-light-color);
 }
-p {
+p,
+a {
   font-family: "Special Elite", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -95,7 +96,8 @@ p {
   h2 {
     font-size: 1.2rem;
   }
-  p {
+  p,
+  a {
     font-size: 0.8rem;
   }
 }
