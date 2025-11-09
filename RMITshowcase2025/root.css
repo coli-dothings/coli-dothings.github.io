@@ -100,8 +100,8 @@ p {
   h1 {
     font-size: 3rem;
   }
-  h3 {
-    font-size: 2rem;
+  p {
+    font-size: 0.8rem;
   }
 }
 
@@ -130,6 +130,7 @@ p {
 .flower {
   position: relative;
   width: 100%;
+  max-width: 200px;
   aspect-ratio: 1;
   cursor: pointer;
 }
@@ -138,7 +139,7 @@ p {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 }
 
 .layer1 {

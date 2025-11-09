@@ -53,7 +53,6 @@ footer {
 .fishAnimReverse {
   animation: curvepath 12s ease-in 30s;
 }
-
 @keyframes curvepath {
   0% {
     transform: rotate(0deg);
@@ -72,7 +71,7 @@ footer {
 .box {
   grid-row: span 2;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .box-head {
   position: relative;
@@ -84,12 +83,30 @@ footer {
   background-image: url(boxhead.webp);
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  display: grid;
-  place-items: center;
+}
+.head-bg h2 {
+  padding: 40% 2vw;
+  text-align: center;
+  transform: rotate(5deg);
+}
+#head-sound h2,
+#head-video h2 {
+  transform: rotate(-8deg);
 }
 #head-uxui .head-bg,
 #head-3d .head-bg {
   top: -8vh;
+  transform: rotate(8deg);
+}
+
+/* SPACER */
+.space {
+  position: relative;
+}
+.flower {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* ITEM */
@@ -97,6 +114,7 @@ footer {
   position: absolute;
   top: 10%;
   cursor: pointer;
+  z-index: 1;
 }
 .img-container {
   width: 100%;
@@ -170,7 +188,7 @@ footer {
 #box3,
 #box11,
 .box-head {
-  animation: bobbing 7s infinite alternate ease-in-out -5s;
+  animation: bobbing 3s infinite alternate ease-in-out -5s;
 }
 @keyframes bobbing {
   0% {
@@ -202,6 +220,23 @@ footer {
   #head-video .head-bg {
     top: -10vh;
   }
+  #box3,
+  #box7,
+  #box12,
+  #box20 {
+    transform: translateY(7vh);
+  }
+  #box2,
+  #box16 {
+    transform: translateY(-7vh);
+  }
+  #flower1 {
+    left: -8vw;
+  }
+  #flower3 {
+    top: -10vh;
+    left: 10vw;
+  }
 }
 /* Mobile 787px or smaller */
 @media only screen and (max-width: 787px) {
@@ -211,14 +246,25 @@ footer {
     aspect-ratio: 2/20;
     margin: 6vw 5vw 0vw;
   }
-}
-#box3,
-#box7,
-#box12,
-#box20 {
-  transform: translateY(7vh);
-}
-#box2,
-#box16 {
-  transform: translateY(-7vh);
+  #box3,
+  #box7,
+  #box12,
+  #box20 {
+    transform: translateY(3vh);
+  }
+  #box2,
+  #box16 {
+    transform: translateY(-3vh);
+  }
+  #space2 {
+    grid-row: 17;
+    grid-column: 1;
+  }
+  #space3 {
+    grid-row: 25;
+    grid-column: 1;
+  }
+  #flower2 {
+    top: -10vh;
+  }
 }
