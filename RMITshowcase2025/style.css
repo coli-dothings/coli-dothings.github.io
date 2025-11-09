@@ -329,3 +329,34 @@ footer a:hover {
     background-position: bottom;
   }
 }
+
+.bub {
+  position: absolute;
+  z-index: -1;
+  width: 100px;
+  height: 100px;
+  background-image: url(bubble.webp);
+  background-size: auto 700%;
+}
+.bubAnim {
+  animation: animateframe steps(7, jump-none) 1.2s;
+}
+#bub1 {
+  top: 20vh;
+  left: 0;
+}
+#bub2 {
+  left: 10vw;
+}
+#bub3 {
+  top: 50vh;
+  right: 0;
+}
+#bub4 {
+  bottom: 2vh;
+  left: 50vw;
+}
+#bub5 {
+  top: 240vh;
+  left: 30vw;
+}

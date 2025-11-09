@@ -98,8 +98,19 @@ function fishAnim() {
   }, 10);
 }
 
-// play bubble random
+// play bubble random every 1s
 // play anim, once animationend, remove class animation
+const allBubble = document.querySelectorAll(".bub");
+setInterval(playBubble, 1000);
+function playBubble() {
+  let rng = Math.floor(Math.random() * allBubble.length);
+  allBubble[rng].classList.add("bubAnim");
+}
+for (let i = 0; i < allBubble.length; i++) {
+  allBubble[i].addEventListener("animationend", function () {
+    allBubble[i].classList.remove("bubAnim");
+  });
+}
 
 // frog
 const frog = document.querySelector(".frog");
