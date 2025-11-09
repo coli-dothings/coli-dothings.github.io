@@ -1,3 +1,6 @@
+:root {
+  --light-blue: rgb(116, 115, 204);
+}
 /* NAV SECTION */
 nav {
   width: 100%;
@@ -61,14 +64,34 @@ iframe {
   max-width: 90%;
   height: auto;
 }
+
+/* Project info */
 #project-info {
   margin: 10px;
+}
+.na {
+  color: var(--light-blue);
+}
+#read-more-toggle {
+  font-weight: 600;
+  color: var(--light-blue);
+  cursor: pointer;
+  padding-top: 5px;
+  display: inline;
+  transition: color 0.2s;
+}
+#read-more-toggle:hover {
+  color: var(--text-color);
+}
+#more {
+  display: none;
 }
 
 /* Student info */
 #pfp-section {
   display: flex;
   align-items: center;
+  padding-bottom: 10px;
 }
 #pfp {
   border-radius: 50%;
@@ -76,24 +99,69 @@ iframe {
   max-width: 400px;
   padding: 0vw 3vw;
 }
+.skill {
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  padding: 6px;
+  display: inline;
+}
+#primary {
+  border: 2px solid var(--accent-light-color);
+}
+#secondary {
+  padding-top: 18px;
+}
+#secondary .skill {
+  border: 2px solid var(--accent-color);
+  color: var(--light-blue);
+}
 #bio-box {
   margin: 3vw;
   padding: 2vw;
   border: 3px solid var(--accent-light-color);
   background-color: var(--bg-color);
 }
+#bio {
+  margin-bottom: 10px;
+}
+#website {
+  color: var(--text-color);
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+#website:hover {
+  color: var(--light-blue);
+}
 
 h3 {
   font-size: 2rem;
+  padding-bottom: 10px;
 }
+
 /*====================================================*/
 /* My works */
+aside {
+  position: relative;
+}
+@keyframes bobbing {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
 #works-container {
+  padding-top: 4vh;
   display: grid;
+  margin: 5px;
+  animation: bobbing 3s infinite alternate ease-in-out;
 }
 #works-head {
-  text-align: center;
-  padding-bottom: 2vh;
+  display: inline;
+}
+.flower {
+  order: 2;
 }
 /* PC */
 @media only screen and (min-width: 768px) {
@@ -109,6 +177,9 @@ h3 {
   aside {
     margin-right: 2vw;
   }
+  #cover-text {
+    font-size: 2rem;
+  }
 }
 
 /* Mobile */
@@ -117,8 +188,16 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     gap: 3vw;
   }
-
+  #works-head {
+    padding-left: 3vw;
+  }
   #pfp {
     width: 30vw;
+  }
+  #bio-box {
+    padding: 4vw;
+  }
+  #cover-text {
+    font-size: 1rem;
   }
 }

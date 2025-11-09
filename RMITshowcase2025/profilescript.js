@@ -11,8 +11,8 @@ const projectDescription = document.querySelector("#project-description");
 
 const pfp = document.querySelector("#pfp");
 const fullName = document.querySelector("#full-name");
-// const skillPrime = document.querySelector("#skill1");
-// const skillSecondary = document.querySelector("#skill2");
+const skillPrime = document.querySelector("#primary");
+const skillSecondary = document.querySelector("#secondary");
 const bio = document.querySelector("#bio");
 const website = document.querySelector("#website");
 
@@ -29,15 +29,58 @@ if (!profileData.youtube_link) {
 
 projectImg.src = profileData.project_cover_image;
 projectTitle.innerHTML = profileData.title;
-//projectDescription.innerHTML = profileData.project_description
-//Need to add this in data.js and profile.html
 
 pfp.src = studentList[studentID].profile_pic;
 fullName.innerHTML = studentList[studentID].full_name;
-// skillPrime.innerHTML = studentList[studentID].primary_specialization;
-//skill secondary need a for-loop for 1-2 skills edge case
+skillPrime.innerHTML = studentList[studentID].primary_specialization;
+for (let i = 0; i < studentList[studentID].secondary_skills.length; i++) {
+  skillSecondary.innerHTML += `<p class="skill" id="secondary${i}">${studentList[studentID].secondary_skills[i]}</p>`;
+}
 bio.innerHTML = studentList[studentID].bio;
-website.href = studentList[studentID].website;
+if (!studentList[studentID].website) {
+  website.remove();
+  console.log("removed website");
+} else {
+  website.href = studentList[studentID].website;
+}
+
+//=====================================================
+// Read more on description
+const readMore = document.querySelector("#read-more-toggle");
+const split = 30;
+if (!profileData.project_description) {
+  projectDescription.innerHTML = "no description";
+  projectDescription.classList.add("na");
+  console.log("no description");
+  readMore.remove();
+} else {
+  insertSpan();
+  readMore.addEventListener("click", readMoreToggle);
+}
+function insertSpan() {
+  if (profileData.project_description.length < split) {
+    readMore.remove();
+  } else {
+    let fullText = profileData.project_description;
+    let firstPart = fullText.substring(0, split);
+    let secondPart = fullText.substring(split);
+    projectDescription.innerHTML = `${firstPart}<span id="dots">...</span><span id="more">${secondPart}</span>`;
+    var dots = document.querySelector("#dots");
+  }
+}
+
+function readMoreToggle() {
+  var moreText = document.querySelector("#more");
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    moreText.style.display = "none";
+    readMore.innerHTML = "Read more";
+  } else {
+    dots.style.display = "none";
+    moreText.style.display = "inline";
+    readMore.innerHTML = "Read less";
+  }
+}
 
 //============================================================================
 // Get works container, formatt project item then input html
