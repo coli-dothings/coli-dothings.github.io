@@ -99,9 +99,20 @@ function fishAnim() {
 
 // frog
 const frog = document.querySelector(".frog");
-const bgAudio = document.querySelector("#bg-track");
+const bgTrack = document.querySelector("#bg-track");
 frog.addEventListener("click", toggleAudio);
-function toggleAudio() {}
+function toggleAudio() {
+  var frogYip = new Audio("");
+  frogYip.play();
+
+  if (bgTrack.muted) {
+    bgTrack.muted = false;
+    frog.classList.add("frogAnim");
+  } else {
+    bgTrack.muted = true;
+    frog.classList.remove("frogAnim");
+  }
+}
 //================================================================================
 // Header dialog
 const blocker = document.querySelector("#blocker");
