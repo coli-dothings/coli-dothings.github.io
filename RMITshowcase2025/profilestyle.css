@@ -1,7 +1,6 @@
 /* NAV SECTION */
 nav {
   width: 100%;
-  background-color: var(--bg-color);
   padding: 5px 20px;
 }
 nav a {
@@ -29,9 +28,8 @@ main {
   max-width: 1000px;
 }
 section {
-  padding-bottom: 4vh;
+  padding-bottom: 5vh;
 }
-
 .rounded {
   border-radius: 20px;
 }
@@ -45,7 +43,6 @@ iframe {
   width: 100%;
   aspect-ratio: 16/9;
 }
-
 /* COVER img */
 #cover {
   display: flex;
@@ -53,15 +50,19 @@ iframe {
   align-items: flex-start;
   aspect-ratio: 2/1;
 }
-
 #cover-text {
   writing-mode: vertical-lr;
   text-orientation: upright;
+  margin-left: 10px;
 }
-
 #project-img {
+  transform-origin: top left;
   transform: rotate(2deg);
-  max-width: 70%;
+  max-width: 90%;
+  height: auto;
+}
+#project-info {
+  margin: 10px;
 }
 
 /* Student info */
@@ -75,18 +76,45 @@ iframe {
   max-width: 400px;
   padding: 0vw 3vw;
 }
-#full-name {
-  font-size: 2rem;
-}
-
 #bio-box {
   margin: 3vw;
   padding: 2vw;
-  border: 3px solid;
+  border: 3px solid var(--accent-light-color);
+  background-color: var(--bg-color);
+}
+
+h3 {
+  font-size: 2rem;
 }
 /*====================================================*/
 /* My works */
-#my-works,
-.scroll-container {
+#works-container {
+  display: grid;
+}
+#works-head {
   text-align: center;
+  padding-bottom: 2vh;
+}
+/* PC */
+@media only screen and (min-width: 768px) {
+  #flex-body-pc {
+    display: flex;
+    gap: 2vw;
+  }
+  #works-container {
+    max-width: 400px;
+    width: 20vw;
+    gap: 6vh;
+  }
+  aside {
+    margin-right: 2vw;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  #works-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3vw;
+  }
 }

@@ -6,14 +6,12 @@
     <title>Test Profile Page</title>
     <link rel="stylesheet" href="root.css" />
     <link rel="stylesheet" href="profilestyle.css" />
-    <!-- Use profilescript.js and data.js (common file) -->
     <script src="data.js" defer></script>
     <script src="profilescript.js" defer></script>
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&family=Moirai+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -25,45 +23,47 @@
       </a>
     </nav>
 
-    <main>
-      <div class="rounded" id="yt-container">
-        <iframe id="youtube" src="" frameborder="0"></iframe>
-      </div>
-
-      <section id="project-info">
-        <h3 id="project-title"></h3>
-        <div class="collapsible">
-          <p>Read Description</p>
-          <p id="project-description"></p>
+    <div id="flex-body-pc">
+      <main>
+        <div class="rounded" id="yt-container">
+          <iframe id="youtube" src="" frameborder="0"></iframe>
         </div>
-      </section>
 
-      <section id="cover">
-        <h3 id="cover-text">COVER <i>IMAGE</i></h3>
-        <img src="" alt="" class="rounded" id="project-img" />
-      </section>
+        <section id="project-info">
+          <h3 id="project-title"></h3>
+          <div class="collapsible">
+            <p>Read Description</p>
+            <p id="project-description"></p>
+          </div>
+        </section>
 
-      <section id="student-info">
-        <div id="pfp-section">
-          <img src="" alt="" id="pfp" />
-          <div id="name-skill">
-            <p id="full-name"></p>
-            <p class="skill" id="primary">Primary skill</p>
-            <div id="secondary-skill">
-              <!-- format secondary: p class="skill" id="secondary1" -->
+        <section id="cover">
+          <p id="cover-text">COVER IMAGE</p>
+          <img src="" alt="" class="rounded" id="project-img" />
+        </section>
+
+        <section id="student-info">
+          <div id="pfp-section">
+            <img src="" alt="" id="pfp" />
+            <div id="name-skill">
+              <h3 id="full-name"></h3>
+              <p class="skill" id="primary"></p>
+              <div id="secondary-skill">
+                <!-- format secondary: p class="skill" id="secondary1" -->
+              </div>
             </div>
           </div>
-        </div>
-        <div id="bio-box" class="rounded">
-          <p id="bio"></p>
-          <a href="" id="website">Contact me</a>
-        </div>
-      </section>
-    </main>
+          <div id="bio-box" class="rounded">
+            <p id="bio"></p>
+            <a href="" id="website">Contact me</a>
+          </div>
+        </section>
+      </main>
 
-    <div id="my-works">
-      <h3>MY WORKS</h3>
-      <div class="scroll-container"></div>
+      <aside id="my-works">
+        <h2 id="works-head">MY WORKS</h2>
+        <div id="works-container"></div>
+      </aside>
     </div>
 
     <div id="fixed-bg"></div>

@@ -1,10 +1,8 @@
-console.log("profile page");
-
 const studentID = sessionStorage.getItem("studentID");
 const projectID = sessionStorage.getItem("projectID");
-console.log(studentID + " " + projectID);
+console.log("profile page " + studentID + " " + projectID);
 // Set heading to student name
-
+document.title = studentList[studentID].full_name + "'s profile";
 // Get all HTML element
 const youTube = document.querySelector("#youtube");
 const projectImg = document.querySelector("#project-img");
@@ -42,10 +40,14 @@ bio.innerHTML = studentList[studentID].bio;
 website.href = studentList[studentID].website;
 
 //============================================================================
-// For student works section, re-use "item" format function from mainscript.js
-let myContent = "";
+// Get works container, formatt project item then input html
+const worksContainer = document.querySelector("#works-container");
 for (let i = 0; i < studentList[studentID].key_projects.length; i++) {
-  myContent += `
+  worksContainer.innerHTML += formatted(i);
+}
+function formatted(index) {
+  let i = index;
+  return `
     <div class="item s${studentID} p${i}" id="item${i}">
     <div class="img-container">
      <img
@@ -53,14 +55,11 @@ for (let i = 0; i < studentList[studentID].key_projects.length; i++) {
         src="${studentList[studentID].key_projects[i].project_cover_image}"
         alt="project id ${i}"
       />
-      <div class="name-plate"><p>${studentList[studentID].key_projects[i].title}</p></div>
       </div>
+      <div class="name-plate"><p>${studentList[studentID].key_projects[i].title}</p></div>
     </div>
     `;
 }
-
-const myProject = document.querySelector(".scroll-container");
-myProject.innerHTML += myContent;
 
 // Function call project from project page, by setting new session data
 const itemsArray = document.querySelectorAll(".item");

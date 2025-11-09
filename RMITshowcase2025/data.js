@@ -666,20 +666,20 @@ const studentList = [
     bio: "Hi, I'm Dinny, currently Melbourne based designer. I create graphic works, fine-line drawings and indulge in the unrealistic world.<br />I am deeply intrigued by Nihilism, spirits and the relation between humans and other living organisms and how they influence one another as the world develops. Through interactive 3D environments and conceptual digital projects, I aim to tap into the colours of feeling, memory and imagination. I believe that understanding and reflecting on the past, present, and future of human actions can facilitate more meaningful connections with the spiritual side of us.",
     key_projects: [
       {
-        title: "VOIDSPACE",
-        project_type: "video",
-        project_cover_image: "s4014548/projects/project1.webp",
-        project_description:
-          "The world voidspace, is an abstract, post-apocalyptic space, capturing vibrant, dreamcore, surrealistic environments. The world is inhabited by floating organisms gory and creepy in nature. They have no feelings and their goal is to eat each other to survive. The world is a portrayal of the overall purposelessness of life, that the world ends and everyone dies so everything we do has no meaning.",
-        youtube_link: "https://youtube.com/embed/QROwpjSIu8I",
-      },
-      {
         title: "Apple",
         project_type: "video",
         project_cover_image: "s4014548/projects/project2.webp",
         project_description:
           "In a surreal world, apples grow as parasites inside humans, symbolising desire and decay. They consume their hosts from within, revealing how greed and ego corrupt humanity. Through dreamlike visuals and unsettling sound.",
         youtube_link: "https://youtube.com/embed/b7V4-j62SnE.",
+      },
+      {
+        title: "VOIDSPACE",
+        project_type: "video",
+        project_cover_image: "s4014548/projects/project1.webp",
+        project_description:
+          "The world voidspace, is an abstract, post-apocalyptic space, capturing vibrant, dreamcore, surrealistic environments. The world is inhabited by floating organisms gory and creepy in nature. They have no feelings and their goal is to eat each other to survive. The world is a portrayal of the overall purposelessness of life, that the world ends and everyone dies so everything we do has no meaning.",
+        youtube_link: "https://youtube.com/embed/QROwpjSIu8I",
       },
       {
         title: "No Name",
@@ -728,4 +728,4 @@ const studentList = [
 ];
 console.log("studentList lenth is " + studentList.length);
 
-//dirk
+//voidspace
