@@ -7,6 +7,7 @@ for (let i = 0; i < boxGrid.length; i++) {
     case "3D":
       boxGrid[i].innerHTML = formatted(i);
       boxGrid[i].classList.add("box-3d");
+      boxGrid[i].querySelector(".project-img").loading = "lazy";
       break;
     case "UXUI":
       boxGrid[i].innerHTML = formatted(i);
@@ -19,18 +20,17 @@ for (let i = 0; i < boxGrid.length; i++) {
     case "video":
       boxGrid[i].innerHTML = formatted(i);
       boxGrid[i].classList.add("box-video");
+      boxGrid[i].querySelector(".project-img").loading = "lazy";
       break;
     case "graphics":
       boxGrid[i].innerHTML = formatted(i);
       boxGrid[i].classList.add("box-graphics");
+      boxGrid[i].querySelector(".project-img").loading = "lazy";
       break;
     default:
       console.log("case break");
       break;
   }
-  //   if (i > 8) {
-  //     boxGrid[i].querySelector(".project-img").loading = "lazy";
-  //   }
 }
 
 function formatted(index) {
@@ -93,3 +93,6 @@ function fishAnim() {
     fishMirrored.classList.add("mirror");
   }, 10);
 }
+
+// play bubble random
+// play anim, once animationend, remove class animation
