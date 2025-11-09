@@ -72,7 +72,7 @@ iframe {
 }
 #pfp {
   border-radius: 50%;
-  width: 30vw;
+  width: 20vw;
   max-width: 400px;
   padding: 0vw 3vw;
 }
@@ -116,5 +116,9 @@ h3 {
   #works-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 3vw;
+  }
+
+  #pfp {
+    width: 30vw;
   }
 }
