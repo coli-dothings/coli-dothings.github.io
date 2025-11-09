@@ -62,7 +62,7 @@ const studentList = [
   },
   {
     full_name: "Max Cheng Shen",
-    profile_pic: "s3909151/Profile/profile.webp",
+    profile_pic: "s3909151/profile/profile.webp",
     primary_specialization: "Sound Design",
     secondary_skills: ["Audiovisual Design", "Visual Art"],
     graduation_year: "2025",
@@ -167,7 +167,7 @@ const studentList = [
   },
   {
     full_name: "Charlene Xu",
-    profile_pic: "s3942372/Profile/profile.webp",
+    profile_pic: "s3942372/profile/profile.webp",
     primary_specialization: "UX/UI Design",
     secondary_skills: ["Front-end Coding", "Game Design"],
     graduation_year: "2025",
