@@ -12,17 +12,27 @@ nav a {
   color: var(--text-color);
   align-items: center;
   width: fit-content;
+  gap: 2vw;
 }
-nav img {
-  height: 30px;
-  padding-right: 10px;
-  transition: transform 1s;
+.frog {
+  width: 60px;
+  height: 60px;
+  background-image: url(frog_awake.webp);
+  background-size: auto 200%;
+  background-position: top;
+  animation: animateframe steps(2, jump-none) 1s infinite;
 }
-
-nav:hover img {
-  transform: translateX(-10px);
+.frog:active {
+  scale: 105% 90%;
 }
-
+@keyframes animateframe {
+  0% {
+    background-position: top;
+  }
+  100% {
+    background-position: bottom;
+  }
+}
 /*====================================================*/
 /* MAIN SECTION */
 main {

@@ -74,11 +74,11 @@ function readMoreToggle() {
   if (dots.style.display === "none") {
     dots.style.display = "inline";
     moreText.style.display = "none";
-    readMore.innerHTML = "Read more";
+    readMore.innerHTML = "more";
   } else {
     dots.style.display = "none";
     moreText.style.display = "inline";
-    readMore.innerHTML = "Read less";
+    readMore.innerHTML = "Show less";
   }
 }
 
@@ -126,3 +126,10 @@ for (let i = 0; i < itemsArray.length; i++) {
     window.location.href = "profileMock.html";
   });
 }
+
+//flower
+const flower = document.querySelector(".flower");
+flower.addEventListener("click", function () {
+  var splash = new Audio("splash.mp3");
+  splash.play();
+});

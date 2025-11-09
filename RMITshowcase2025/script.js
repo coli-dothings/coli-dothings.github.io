@@ -69,9 +69,13 @@ for (let i = 0; i < itemsArray.length; i++) {
   }
 
   itemsArray[i].addEventListener("click", function () {
+    var bubble = new Audio("bubble.mp3");
+    bubble.play();
     sessionStorage.setItem("studentID", studentID);
     sessionStorage.setItem("projectID", projectID);
-    window.location.href = "profileMock.html";
+    setTimeout(() => {
+      window.location.href = "profileMock.html";
+    }, 500);
   });
 }
 
@@ -102,9 +106,6 @@ const frog = document.querySelector(".frog");
 const bgTrack = document.querySelector("#bg-track");
 frog.addEventListener("click", toggleAudio);
 function toggleAudio() {
-  var frogYip = new Audio("");
-  frogYip.play();
-
   if (bgTrack.muted) {
     bgTrack.muted = false;
     frog.classList.add("frogAnim");
@@ -112,6 +113,15 @@ function toggleAudio() {
     bgTrack.muted = true;
     frog.classList.remove("frogAnim");
   }
+}
+
+//flower
+const flowers = document.querySelectorAll(".flower");
+for (let i = 0; i < flowers.length; i++) {
+  flowers[i].addEventListener("click", function () {
+    var splash = new Audio("splash.mp3");
+    splash.play();
+  });
 }
 //================================================================================
 // Header dialog
