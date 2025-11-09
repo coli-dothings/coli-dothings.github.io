@@ -199,7 +199,9 @@ footer {
     transform: translateY(30px);
   }
 }
-
+#flower2 {
+  top: -10vh;
+}
 /* PC 786px or larger */
 @media only screen and (min-width: 768px) {
   #box1,
@@ -235,7 +237,7 @@ footer {
     left: -8vw;
   }
   #flower3 {
-    top: -10vh;
+    top: -14vh;
     left: 10vw;
   }
 }
@@ -264,8 +266,5 @@ footer {
   #space3 {
     grid-row: 25;
     grid-column: 1;
-  }
-  #flower2 {
-    top: -10vh;
   }
 }
