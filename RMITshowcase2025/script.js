@@ -96,3 +96,65 @@ function fishAnim() {
 
 // play bubble random
 // play anim, once animationend, remove class animation
+
+// frog
+const frog = document.querySelector(".frog");
+const bgAudio = document.querySelector("#bg-track");
+frog.addEventListener("click", toggleAudio);
+function toggleAudio() {}
+//================================================================================
+// Header dialog
+const blocker = document.querySelector("#blocker");
+const dialogText = document.querySelector("#dialog-text");
+const dialogBox = document.querySelector("#dialog-box");
+const dialogHeader = document.querySelector("#dialog-header");
+const flavorText = document.querySelector("#flavor-text");
+
+if (Number(localStorage.clickCount) >= 5) {
+  blocker.remove();
+  dialogBox.style.display = "none";
+  dialogHeader.style.display = "block";
+} else {
+  blocker.addEventListener("click", clickCounter);
+  dialogBox.addEventListener("click", clickCounter);
+}
+
+function clickCounter() {
+  if (localStorage.clickCount) {
+    localStorage.clickCount = Number(localStorage.clickCount) + 1;
+  } else {
+    localStorage.clickCount = 1;
+  }
+  updateDialog();
+}
+
+function updateDialog() {
+  let clickNum = Number(localStorage.clickCount);
+  if (clickNum >= 5) {
+    blocker.remove();
+    dialogBox.style.display = "none";
+    dialogHeader.style.display = "block";
+  } else {
+    switch (clickNum) {
+      case 1:
+        dialogText.innerHTML =
+          "A living pond of creativity where ideas surface and mingle.";
+        break;
+      case 2:
+        dialogText.innerHTML =
+          "Each project drifts into view with its own rhythm, shaped by time, reflection, and collaboration.";
+        break;
+      case 3:
+        dialogText.innerHTML =
+          "Across UX, 3D, sound, and video, these works form a shared ecology of digital media practice.";
+        break;
+      case 4:
+        dialogText.innerHTML =
+          "Fluid, diverse, and alive. </br></br>Look closely! What you see on the surface is only part of the story!";
+        break;
+      default:
+        break;
+    }
+  }
+}
+//localStorage.clear();

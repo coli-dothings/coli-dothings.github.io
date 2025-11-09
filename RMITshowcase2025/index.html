@@ -20,8 +20,19 @@
   </head>
   <body>
     <header>
-      <!-- frog goes here -->
+      <div class="dialog" id="dialog-box">
+        <p id="dialog-text">
+          Welcome to the RMIT Digital Media Graduate Showcase 2025!
+        </p>
+      </div>
+      <div id="blocker"></div>
+
+      <div class="dialog" id="dialog-header">
+        <p id="flavor-text">...shh you can wake the frog to enable sounds</p>
+      </div>
+      <audio src="" id="bg-track"></audio>
     </header>
+
     <!---------------------------------------------------------------------->
     <!-- MAIN SECTION -->
     <main>
@@ -52,7 +63,10 @@
           <div class="head-bg"><h2>3D MODELS</h2></div>
         </div>
         <div class="box-head" id="head-uxui">
-          <div class="head-bg"><h2>INTERACTIVES</h2></div>
+          <div class="head-bg">
+            <div class="frog"></div>
+            <h2>INTERACTIVES</h2>
+          </div>
         </div>
         <div class="box-head" id="head-sound">
           <div class="head-bg"><h2>SOUND DESIGN</h2></div>
