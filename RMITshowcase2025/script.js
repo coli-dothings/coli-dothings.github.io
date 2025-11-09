@@ -77,12 +77,12 @@ for (let i = 0; i < itemsArray.length; i++) {
 
 //================================================================================
 // Decoration
-// play fish anim every 1.5 min
+// play fish anim every 0.8 min
 const fish = document.querySelector("#fish");
 const fish2 = document.querySelector("#fish2");
 const fishMirrored = document.querySelector("#mirror");
 
-setInterval(fishAnim, 60000);
+setInterval(fishAnim, 50000);
 function fishAnim() {
   fish.classList.remove("fishAnim");
   fish2.classList.remove("fishAnimReverse");
@@ -91,5 +91,5 @@ function fishAnim() {
     fish.classList.add("fishAnim");
     fish2.classList.add("fishAnimReverse");
     fishMirrored.classList.add("mirror");
-  }, 1);
+  }, 10);
 }

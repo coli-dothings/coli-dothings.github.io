@@ -48,10 +48,10 @@ footer {
   transform: scaleY(-1);
 }
 .mirror {
-  animation: animateframe steps(6, jump-none) 625ms 16 30s;
+  animation: animateframe steps(6, jump-none) 625ms 16 15s;
 }
 .fishAnimReverse {
-  animation: curvepath 12s ease-in 30s;
+  animation: curvepath 12s ease-in 15s;
 }
 @keyframes curvepath {
   0% {
@@ -83,6 +83,7 @@ footer {
   background-image: url(boxhead.webp);
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  transform: rotate(5deg);
 }
 .head-bg h2 {
   padding: 40% 2vw;
@@ -91,12 +92,12 @@ footer {
 }
 #head-sound h2,
 #head-video h2 {
-  transform: rotate(-8deg);
+  transform: rotate(-4deg);
 }
 #head-uxui .head-bg,
 #head-3d .head-bg {
   top: -8vh;
-  transform: rotate(8deg);
+  transform: rotate(-9deg);
 }
 
 /* SPACER */
