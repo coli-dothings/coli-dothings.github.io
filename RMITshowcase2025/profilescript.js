@@ -2,7 +2,7 @@ const studentID = sessionStorage.getItem("studentID");
 const projectID = sessionStorage.getItem("projectID");
 console.log("profile page " + studentID + " " + projectID);
 // Set heading to student name
-document.title = studentList[studentID].full_name + "'s profile";
+document.title = studentList[studentID].full_name;
 // Get all HTML element
 const youTube = document.querySelector("#youtube");
 const projectImg = document.querySelector("#project-img");
