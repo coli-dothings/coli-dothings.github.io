@@ -125,7 +125,8 @@ iframe {
   border: 2px solid var(--accent-color);
   color: var(--light-blue);
 }
-#bio-box {
+#bio-box,
+.para-box {
   margin: 3vw;
   padding: 2vw;
   border: 3px solid var(--accent-light-color);
@@ -135,17 +136,19 @@ iframe {
   margin-bottom: 10px;
 }
 #website {
-  color: var(--text-color);
   font-size: 1.2rem;
-  transition: color 0.2s;
-}
-#website:hover {
-  color: var(--light-blue);
 }
 
 h3 {
   font-size: 2rem;
   padding-bottom: 10px;
+}
+a {
+  color: var(--text-color);
+  transition: color 0.2s;
+}
+a:hover {
+  color: var(--light-blue);
 }
 
 /*====================================================*/
