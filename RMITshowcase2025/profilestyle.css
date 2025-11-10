@@ -193,6 +193,11 @@ aside {
   #cover-text {
     font-size: 2rem;
   }
+  #flower2 {
+    position: absolute;
+    top: 0;
+    right: 1vh;
+  }
 }
 
 /* Mobile */
@@ -212,5 +217,8 @@ aside {
   }
   #cover-text {
     font-size: 1rem;
+  }
+  #flower2 {
+    margin: auto;
   }
 }
