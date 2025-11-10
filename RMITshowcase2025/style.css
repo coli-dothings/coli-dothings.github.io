@@ -74,9 +74,7 @@ footer a:hover {
   font-size: 1.3rem;
   color: var(--accent-light-color);
 }
-.gap-foot {
-  height: 2vh;
-}
+
 /*==========================================================*/
 /* MAIN */
 #grid-container {
