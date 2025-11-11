@@ -258,6 +258,9 @@ footer a:hover {
     top: 5%;
     right: 0;
   }
+  footer a {
+    font-size: 1rem;
+  }
 }
 /*==========================================================*/
 /* DECORATIONS */

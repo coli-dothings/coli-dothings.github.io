@@ -117,7 +117,6 @@ const frogYips = ["frog_yip1.mp3", "frog_yip2.mp3"];
 const frogText = document.querySelector("#click-me");
 const frog = document.querySelector(".frog");
 const bgTrack = new Audio("bgTrack.mp3");
-bgTrack.load();
 bgTrack.loop = "true";
 
 frog.addEventListener("click", toggleAudio);
