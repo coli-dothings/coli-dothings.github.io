@@ -42,20 +42,22 @@ const studentList = [
     secondary_skills: ["Speculative Design"],
     graduation_year: "2025",
     website: "https://www.instagram.com/mag.obj/",
-    bio: "",
+    bio: "Magnus is a designer driven by a passion for narrative, world building and speculative design.<br>He has explored a range of media throughout his degree, often specialising in 3D environments, narrative video and generative aesthetics.<br>His work often explores existentialism and our relationship with technology and nature.<br>Taking much inspiration from artists like Liam Young and Olafur Eliasson, he finds motivation in how speculative design encourages audiences to reflect on their place within evolving technological and ecological systems.<br>He hopes to continue building this practice to expand discourse, generate affect, and engage with philosophies of the sublime and simulacra.",
     key_projects: [
       {
         title: "Dreams of the Afterward",
         project_type: "video",
         project_cover_image: "s3813111/projects/project1.webp",
-        project_description: "",
+        project_description:
+          "This narrative film explores the concept of humanities demise against the scale of earth's immense timeline.<br>The film is layered into three elements; human, artificial and post human. The aesthetic of each is expressed as reality, hyper reality and speculative reality. The present reality is established with footage of the earth's current state and then moves toward 3D scanned local environments to express our abstract dislocation from nature. The final speculative reflections are told using generative video, allowing artificial intelligence to take on the task of describing what life after us would look like.<br>The piece was created as a story of pragmatic nihilism, and opportunity to have a reflective discourse about what may lie ahead for humanity.",
         youtube_link: "https://youtube.com/embed/4-hIDv1e08I",
       },
       {
         title: "Hope",
         project_type: "3D",
         project_cover_image: "s3813111/projects/project2.webp",
-        project_description: "",
+        project_description:
+          "This 3D environment was constructed to imagine a city hundreds of years into the future. A city adapting to intense climate change where sea level rise pushes cities to build more efficiently and with a more discerning regard for space and adaption. It aims to find a less despairing narrative of the future and <br>This piece was the first experiment with world building in Unreal Engine as a story telling and world building device.",
         youtube_link: "https://youtube.com/embed/W3pp5KE0pBY",
       },
     ],
@@ -727,5 +729,3 @@ const studentList = [
   },
 ];
 console.log("studentList lenth is " + studentList.length);
-
-//project_description: ""
