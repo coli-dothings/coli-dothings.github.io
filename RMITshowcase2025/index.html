@@ -19,7 +19,7 @@
     />
   </head>
   <body>
-    <header>
+    <!-- <header>
       <div class="dialog" id="dialog-box">
         <p id="dialog-text">
           The RMIT Digital Media class acknowledges the Traditional Owners of
@@ -30,7 +30,6 @@
         <img src="arrowdown.webp" alt="" class="arrow-icon" />
       </div>
       <div id="blocker"></div>
-
       <div class="dialog" id="dialog-header">
         <p id="flavor-text">
           shh... the frog is sleeping on a pod, waking him up will enable
@@ -38,12 +37,34 @@
         </p>
         <img src="arrowdown.webp" alt="" class="arrow-icon" />
       </div>
-    </header>
+    </header> -->
 
     <!---------------------------------------------------------------------->
     <!-- MAIN SECTION -->
     <main>
       <div id="grid-container">
+        <div class="box-head" id="head-uxui">
+          <div class="head-bg">
+            <div class="frog-container">
+              <p id="click-me">Click me!</p>
+              <div class="frog"></div>
+            </div>
+            <h2>INTERACTIVES</h2>
+          </div>
+        </div>
+        <div class="box-head" id="head-3d">
+          <div class="head-bg"><h2>3D MODELS</h2></div>
+        </div>
+        <div class="box-head" id="head-sound">
+          <div class="head-bg"><h2>SOUND DESIGN</h2></div>
+        </div>
+        <div class="box-head" id="head-video">
+          <div class="head-bg"><h2>VIDEO & ANIMATION</h2></div>
+        </div>
+        <div class="box-head" id="head-graphics">
+          <div class="head-bg"><h2>GRAPHICS</h2></div>
+        </div>
+
         <div class="box" id="box1"></div>
         <div class="box" id="box2"></div>
         <div class="box" id="box3"></div>
@@ -65,25 +86,6 @@
         <div class="box" id="box19"></div>
         <div class="box" id="box20"></div>
         <div class="box" id="box21"></div>
-
-        <div class="box-head" id="head-3d">
-          <div class="head-bg"><h2>3D MODELS</h2></div>
-        </div>
-        <div class="box-head" id="head-uxui">
-          <div class="head-bg">
-            <div class="frog"></div>
-            <h2>INTERACTIVES</h2>
-          </div>
-        </div>
-        <div class="box-head" id="head-sound">
-          <div class="head-bg"><h2>SOUND DESIGN</h2></div>
-        </div>
-        <div class="box-head" id="head-video">
-          <div class="head-bg"><h2>VIDEO & ANIMATION</h2></div>
-        </div>
-        <div class="box-head" id="head-graphics">
-          <div class="head-bg"><h2>GRAPHICS</h2></div>
-        </div>
 
         <div class="space" id="space1">
           <div class="flower" id="flower1">
@@ -109,7 +111,6 @@
       </div>
     </main>
 
-    <audio src="bgTrack.mp3" id="bg-track" muted autoplay loop></audio>
     <!-- Fixed background elements-->
     <div id="fixed-bg"></div>
     <div id="fish" class="fish fishAnim"></div>

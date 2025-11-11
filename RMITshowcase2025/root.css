@@ -159,19 +159,19 @@ a {
 .layer1 {
   z-index: 1;
   background-image: url(flowerL1.webp);
-  transition: scale 2s;
+  transition: scale 1.2s;
   animation: rotate 5s infinite alternate forwards ease-in-out;
 }
 .layer2 {
   z-index: 2;
   background-image: url(flowerL2.webp);
-  transition: scale 1s;
+  transition: scale 0.6s;
   animation: rotate 5s infinite alternate forwards;
 }
 .layer3 {
   z-index: 3;
   background-image: url(flowerL3.webp);
-  transition: scale 0.5s;
+  transition: scale 0.3s;
 }
 @keyframes rotate {
   0% {
@@ -183,4 +183,7 @@ a {
 }
 .flower:hover div {
   scale: 90%;
+}
+.flower:active div {
+  scale: 50%;
 }

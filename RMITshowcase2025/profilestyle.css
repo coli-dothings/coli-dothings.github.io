@@ -12,7 +12,13 @@ nav a {
   color: var(--text-color);
   align-items: center;
   width: fit-content;
-  gap: 2vw;
+  gap: 8px;
+}
+nav p {
+  font-size: 1.2rem;
+  background-color: var(--bg-color);
+  padding: 8px;
+  border: 3px solid var(--accent-color);
 }
 .frog {
   width: 60px;
@@ -57,17 +63,6 @@ iframe {
   aspect-ratio: 16/9;
 }
 /* COVER img */
-#cover {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  aspect-ratio: 2/1;
-}
-#cover-text {
-  writing-mode: vertical-lr;
-  text-orientation: upright;
-  margin-left: 10px;
-}
 #project-img {
   transform-origin: top left;
   transform: rotate(2deg);
@@ -119,7 +114,10 @@ iframe {
   border: 2px solid var(--accent-light-color);
 }
 #secondary {
-  padding-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-top: 12px;
 }
 #secondary .skill {
   border: 2px solid var(--accent-color);
@@ -150,7 +148,14 @@ a {
 a:hover {
   color: var(--light-blue);
 }
-
+p,
+a {
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+h2 {
+  padding-bottom: 1.4rem;
+}
 /*====================================================*/
 /* My works */
 aside {
@@ -198,6 +203,17 @@ aside {
     top: 0;
     right: 1vh;
   }
+  #cover {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    aspect-ratio: 2/1;
+  }
+  #cover-text {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin-left: 10px;
+  }
 }
 
 /* Mobile */
@@ -215,8 +231,15 @@ aside {
   #bio-box {
     padding: 4vw;
   }
+  #cover {
+    display: grid;
+    place-items: center;
+  }
   #cover-text {
-    font-size: 1rem;
+    display: none;
+  }
+  .flower {
+    max-width: 40vw;
   }
   #flower2 {
     margin: auto;

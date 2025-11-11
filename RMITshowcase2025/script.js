@@ -112,21 +112,49 @@ for (let i = 0; i < allBubble.length; i++) {
   });
 }
 
-// frog
+// click on fog play frog_yip, toggle play pause BG track
+const frogYips = ["frog_yip1.mp3", "frog_yip2.mp3"];
+const frogText = document.querySelector("#click-me");
 const frog = document.querySelector(".frog");
-const bgTrack = document.querySelector("#bg-track");
+const bgTrack = new Audio("bgTrack.mp3");
+bgTrack.load();
+bgTrack.loop = "true";
+
 frog.addEventListener("click", toggleAudio);
 function toggleAudio() {
-  if (bgTrack.muted) {
-    bgTrack.muted = false;
+  if (bgTrack.paused || bgTrack.ended) {
+    // play BG, play frog yip 1
+    bgTrack.play();
+    var yipWake = new Audio(frogYips[0]);
+    yipWake.play();
     frog.classList.add("frogAnim");
+
+    // fade out sound on text
+    if (frogText.classList.contains("fade")) {
+      frogText.classList.remove("fade");
+    }
+    frogText.innerHTML = "Sound On";
+    setTimeout(fadeText, 5000);
   } else {
-    bgTrack.muted = true;
+    // pause BG, play frog yip 2
+    bgTrack.pause();
+    var yipSleep = new Audio(frogYips[1]);
+    yipSleep.play();
     frog.classList.remove("frogAnim");
+
+    // fade out sound off text
+    if (frogText.classList.contains("fade")) {
+      frogText.classList.remove("fade");
+    }
+    frogText.innerHTML = "Sound Off";
+    setTimeout(fadeText, 5000);
   }
 }
+function fadeText() {
+  frogText.classList.add("fade");
+}
 
-//flower
+// click on flower play splash audio
 const flowers = document.querySelectorAll(".flower");
 for (let i = 0; i < flowers.length; i++) {
   flowers[i].addEventListener("click", function () {
@@ -136,6 +164,7 @@ for (let i = 0; i < flowers.length; i++) {
 }
 //================================================================================
 // Header dialog
+/*
 const blocker = document.querySelector("#blocker");
 const dialogText = document.querySelector("#dialog-text");
 const dialogBox = document.querySelector("#dialog-box");
@@ -159,6 +188,7 @@ function clickCounter() {
   }
   updateDialog();
 }
+
 
 function updateDialog() {
   let clickNum = Number(localStorage.clickCount);
@@ -195,3 +225,4 @@ setTimeout(changeFlavor, 60000);
 function changeFlavor() {
   flavorText.innerHTML = "it's Digital Media Showcase of 2025!";
 }
+*/

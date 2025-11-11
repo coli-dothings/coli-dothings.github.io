@@ -1,5 +1,6 @@
 /* ==========================================================*/
 /* HEADER STYLE */
+/* 
 .dialog {
   background-color: var(--bg-color);
   border: 4px solid var(--accent-color);
@@ -43,7 +44,7 @@
   position: absolute;
   right: 5%;
   animation: text-bob 1s infinite;
-}
+} */
 /*==========================================================*/
 /*Footer style*/
 footer {
@@ -199,7 +200,7 @@ footer a:hover {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(13, 1fr);
     aspect-ratio: 4/10;
-    margin: 8vw 8vw 0vw;
+    margin: 12vh 8vw 0vh;
     min-width: 600px;
   }
   #head-video .head-bg {
@@ -222,9 +223,9 @@ footer a:hover {
     top: -14vh;
     left: 10vw;
   }
-  .frog {
+  .frog-container {
     top: 9%;
-    right: 20%;
+    right: 10%;
   }
 }
 /* Mobile 787px or smaller */
@@ -233,7 +234,7 @@ footer a:hover {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(26, 1fr);
     aspect-ratio: 2/20;
-    margin: 6vw 5vw 0vw;
+    margin: 14vh 5vw 0vw;
   }
   #box3,
   #box7,
@@ -253,9 +254,9 @@ footer a:hover {
     grid-row: 25;
     grid-column: 1;
   }
-  .frog {
+  .frog-container {
     top: 5%;
-    right: 12%;
+    right: 0;
   }
 }
 /*==========================================================*/
@@ -294,8 +295,12 @@ footer a:hover {
   animation: curvepath 12s ease-in 15s;
 }
 
-.frog {
+.frog-container {
   position: absolute;
+  width: 100px;
+  justify-items: center;
+}
+.frog {
   width: 60px;
   height: 60px;
   background-image: url(frog_sleep.webp);
@@ -309,6 +314,15 @@ footer a:hover {
   background-size: auto 200%;
   background-position: top;
   animation: animateframe steps(2, jump-none) 1s infinite;
+}
+#click-me {
+  position: absolute;
+  top: -20px;
+  font-size: 1rem;
+  transition: opacity 1s;
+}
+.fade {
+  opacity: 0;
 }
 
 @keyframes curvepath {
