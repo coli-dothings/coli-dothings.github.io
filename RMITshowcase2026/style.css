@@ -1,6 +1,9 @@
 :root {
-    --bg-map: rgb(108, 0, 0);
-    --bg-info: rgb(148, 148, 255);
+    --bg-map: rgb(5, 33, 65);
+    --bg-info: rgb(215, 219, 198);
+    --text-info: black;
+    --text-map: white;
+    --grid: rgba(128, 138, 255, 0.523);
     /* Define all project color here */
 }
 
@@ -14,38 +17,77 @@
 
 /*==========================================================*/
 /* MAIN */
-body {
-    background-color: var(--bg-map);
+nav {
+    position: fixed;
+    top: 0;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 1.5rem;
 }
 
-#main-map {
-    padding: 10px;
+#map-main {
+    min-height: 100vh;
+    background-color: var(--bg-map);
+    background-image: url(BG.webp);
+    background-size: 90% auto;
 }
+
 
 #grid-container {
     /* Mess around with Js items to see if you need to clean grid */
     /* if not dont define template rows & aspect ratio */
     display: grid;
-    gap: 3vw;
-    grid-template-columns: repeat(3, 1fr);
-    /* grid-template-rows: repeat(26, 1fr);
-    aspect-ratio: 2/20;
-    margin: 14vh 5vw 0vw; */
+    gap: 2.5vw;
+    padding: 8vh 3vw 0vh;
+    background-size: 80px 80px;
+     background-image:
+        linear-gradient(to right, var(--grid) 2px, transparent 1px),
+        linear-gradient(to bottom, var(--grid) 2px, transparent 1px);
 }
 
 #info-page {
+    z-index: 80;
     position: fixed;
     background-color: var(--bg-info);
     padding: 10px;
     overflow-y: scroll;
 }
-#test-text {
-    /* scrolling test for info page */
-    background-color: gray;
-    width: 100%;
-    height: 2000px;
+/*==========================================================*/
+/* TEST */
+.test {
+    width: 10;
+    aspect-ratio: 1;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: wheat;
+    margin-bottom: 6vh;
 }
 
+
+/*==========================================================*/
+/* MAP DECOR */
+.map-border {
+    z-index: 99;
+    position: fixed;
+    background-color: var(--bg-info);
+}
+#b-top {
+    top: 0;
+    left: 0;
+    height: 1.8rem;
+}
+#b-left {
+    left: 0;
+    width: 10px;
+}
+#b-right {
+    right: 0;
+    width: 10px;
+}
+#b-bottom {
+    left: 0;
+    height: 10px;
+}
 /*==========================================================*/
 /* PC & mobile share similiar map layout with 3 columns, otherwise
 - Mobile info-page sit bottom half of screen, fixed position */
@@ -55,28 +97,51 @@ body {
     main {
         display: flex;
     }
-    #main-map {
+    #map-main {
         position: relative;
         width: 60vw;
-        height: 100vh;
+    }
+    #grid-container {
+        grid-template-columns: repeat(5, 1fr);
     }
     #info-page {
         width: 40vw;
         height: 100vh;
         right: 0;
-        /* right: -17px;
-        padding-right: 17px; */
+        padding-top: 1.8rem;
+    }
+    #b-top, #b-bottom {
+        width: 60vw;
+    }
+    #b-left, #b-right {
+        height: 100%;
+    }
+    #b-bottom {
+        bottom: 0;
     }
 }
 
 /* Mobile screen */
 @media only screen and (max-width: 787px) {
-    #main-map {
-        padding-bottom: 41vh;
+    #map-main {
+        width: 100%;
+    }
+    #grid-container {
+        grid-template-columns: repeat(4, 1fr);
+        padding-bottom: 40vh;
     }
     #info-page {
-        height: 40vh;
+        height: 40vh; /* Adjustable height */
         width: 100vw;
         bottom: 0;
+    }
+    #b-top, #b-bottom {
+        width: 100%;
+    }
+    #b-left, #b-right {
+        height: 60vh;
+    }
+    #b-bottom {
+        bottom: 40vh;
     }
 }
