@@ -1,9 +1,9 @@
 :root {
-    --bg-map: rgb(223, 222, 198);
-    --bg-info: rgb(215, 219, 198);
-    --text-info: black;
+    --bg-map: rgb(0, 0, 0);
+    --bg-info: rgb(230, 228, 228);
+    --text-info: rgb(1, 0, 0);
     --text-map: white;
-    --grid: rgba(128, 138, 255, 0.523);
+    --grid: rgb(29, 29, 30);
     /* Define all project color here */
 }
 
@@ -15,11 +15,31 @@
     scrollbar-width: none;  /* Firefox */
 }
 
+/*==========================================================
+ TEXT */
+body {
+    color: var(--text-info);
+    /* default & info text font */
+}
+
+#map-main * {
+    color: var(--text-map);
+    /* map font */
+}
+
 h1 {
     font-size: 3rem;
 }
-/*==========================================================*/
-/* MAIN */
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-info);
+    margin: 20px 0px;
+}
+
+/*==========================================================
+ MAIN */
 #map-main {
     min-height: 100vh;
     background-color: var(--bg-map);
@@ -34,7 +54,7 @@ h1 {
     display: grid;
     gap: 3vh;
     padding: 8vh 3vh 0vh;
-    background-size: 80px 80px;
+    background-size: 50px 50px;
      background-image:
         linear-gradient(to right, var(--grid) 2px, transparent 1px),
         linear-gradient(to bottom, var(--grid) 2px, transparent 1px);
@@ -47,8 +67,8 @@ h1 {
     padding: 10px;
     overflow-y: scroll;
 }
-/*==========================================================*/
-/* TEST */
+/*==========================================================
+ TEST */
 .test {
     width: 10;
     aspect-ratio: 1;
@@ -59,8 +79,8 @@ h1 {
 }
 
 
-/*==========================================================*/
-/* MAP BORDER */
+/*==========================================================
+ MAP BORDER */
 nav {
     position: fixed;
     top: 0;
