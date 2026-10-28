@@ -1,5 +1,5 @@
 :root {
-    --bg-map: rgb(5, 33, 65);
+    --bg-map: rgb(223, 222, 198);
     --bg-info: rgb(215, 219, 198);
     --text-info: black;
     --text-map: white;
@@ -15,16 +15,11 @@
     scrollbar-width: none;  /* Firefox */
 }
 
+h1 {
+    font-size: 3rem;
+}
 /*==========================================================*/
 /* MAIN */
-nav {
-    position: fixed;
-    top: 0;
-    cursor: pointer;
-    z-index: 100;
-    font-size: 1.5rem;
-}
-
 #map-main {
     min-height: 100vh;
     background-color: var(--bg-map);
@@ -37,8 +32,8 @@ nav {
     /* Mess around with Js items to see if you need to clean grid */
     /* if not dont define template rows & aspect ratio */
     display: grid;
-    gap: 2.5vw;
-    padding: 8vh 3vw 0vh;
+    gap: 3vh;
+    padding: 8vh 3vh 0vh;
     background-size: 80px 80px;
      background-image:
         linear-gradient(to right, var(--grid) 2px, transparent 1px),
@@ -65,7 +60,16 @@ nav {
 
 
 /*==========================================================*/
-/* MAP DECOR */
+/* MAP BORDER */
+nav {
+    position: fixed;
+    top: 0;
+    cursor: pointer;
+    z-index: 100;
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
 .map-border {
     z-index: 99;
     position: fixed;
