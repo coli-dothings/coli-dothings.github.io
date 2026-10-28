@@ -83,7 +83,7 @@ h1 {
 }
 
 /*==========================================================
- MAP BORDER */
+ MAP BORDER & DECOR */
 nav {
     position: fixed;
     top: 0;
@@ -114,6 +114,57 @@ nav {
 #b-bottom {
     left: 0;
     height: 12px;
+}
+
+#orbit-container {
+    position: fixed;
+    top: 0;
+    left: 15vw;
+    height: 120vh;
+    aspect-ratio: 1;
+}
+.orbit {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 50%;
+    border: solid var(--bg-info) 1px;
+    height: 100%;
+    aspect-ratio: 1;
+}
+#or-1 {
+        animation: orbit 30s infinite ease-in-out;
+
+}
+#or-2 {
+    height: 70%;
+        animation: orbit 26s infinite ease-in-out;
+
+}
+#or-3 {
+    height: 40%;
+        animation: orbit 20s infinite ease-in-out;
+
+}
+#or-4 {
+    height: 10%;
+}
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+.star {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    height: 10px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--bg-info);
 }
 /*==========================================================*/
 /* PC & mobile share similiar map layout with 3 columns, otherwise
