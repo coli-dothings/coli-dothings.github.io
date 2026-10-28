@@ -1,170 +1,166 @@
 :root {
-    --bg-map: rgb(0, 0, 0);
-    --bg-info: rgb(230, 228, 228);
-    --text-info: rgb(1, 0, 0);
-    --text-map: white;
-    --grid: rgb(29, 29, 30);
-    /* Define all project color here */
-    --interactive: blue;
-    --app: red;
-    --audio: green;
-    --vis: purple;
-    --av: yellow;
+	--bg-map: rgb(0, 0, 0);
+	--bg-info: rgb(230, 228, 228);
+	--text-info: rgb(1, 0, 0);
+	--text-map: white;
+	--grid: rgb(29, 29, 30);
+	/* Define all project color here */
+	--interactive: blue;
+	--app: red;
+	--audio: green;
+	--vis: purple;
+	--av: yellow;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 #info-page {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 /*==========================================================
  TEXT */
 body {
-    color: var(--text-info);
-    /* default & info text font */
+	color: var(--text-info);
+	/* default & info text font */
 }
 
 #map-main * {
-    color: var(--text-map);
-    /* map font */
+	color: var(--text-map);
+	/* map font */
 }
 
 h1 {
-    font-size: 3rem;
+	font-size: 3rem;
 }
 
 .line {
-    width: 100%;
-    height: 2px;
-    background-color: var(--text-info);
-    margin: 20px 0px;
+	width: 100%;
+	height: 2px;
+	background-color: var(--text-info);
+	margin: 20px 0px;
 }
 
 /*==========================================================
  MAIN */
 #map-main {
-    min-height: 100vh;
-    background-color: var(--bg-map);
-    background-image: url(BG.webp);
-    background-size: 90% auto;
+	min-height: 100vh;
+	background-color: var(--bg-map);
+	background-image: url(BG.webp);
+	background-size: 90% auto;
 }
 
-
 #grid-container {
-    display: grid;
-    gap: 3vh;
-    padding: 8vh 3vh 0vh;
-    background-size: 50px 50px;
-     background-image:
-        linear-gradient(to right, var(--grid) 2px, transparent 1px),
-        linear-gradient(to bottom, var(--grid) 2px, transparent 1px);
+	display: grid;
+	gap: 3vh;
+	padding: 8vh 3vh 0vh;
+	background-size: 50px 50px;
+	background-image:
+		linear-gradient(to right, var(--grid) 2px, transparent 1px),
+		linear-gradient(to bottom, var(--grid) 2px, transparent 1px);
 }
 
 #info-page {
-    z-index: 80;
-    position: fixed;
-    background-color: var(--bg-info);
-    padding: 12px;
-    overflow-y: scroll;
+	z-index: 80;
+	position: fixed;
+	background-color: var(--bg-info);
+	padding: 12px;
+	overflow-y: scroll;
 }
 
 /*==========================================================
  TEST */
 .test {
-    width: 10;
-    aspect-ratio: 1;
-    z-index: 1;
-    border-radius: 50%;
-    background-color: wheat;
-    margin-bottom: 6vh;
+	width: 10;
+	aspect-ratio: 1;
+	z-index: 1;
+	border-radius: 50%;
+	background-color: wheat;
+	margin-bottom: 6vh;
 }
 
 /*==========================================================
  MAP BORDER & DECOR */
 nav {
-    position: fixed;
-    top: 0;
-    cursor: pointer;
-    z-index: 100;
-    font-size: 1.5rem;
-    padding-left: 12px;
+	position: fixed;
+	top: 0;
+	cursor: pointer;
+	z-index: 100;
+	font-size: 1.5rem;
+	padding-left: 12px;
 }
 
 .map-border {
-    z-index: 99;
-    position: fixed;
-    background-color: var(--bg-info);
+	z-index: 99;
+	position: fixed;
+	background-color: var(--bg-info);
 }
 #b-top {
-    top: 0;
-    left: 0;
-    height: 1.8rem;
+	top: 0;
+	left: 0;
+	height: 1.8rem;
 }
 #b-left {
-    left: 0;
-    width: 12px;
+	left: 0;
+	width: 12px;
 }
 #b-right {
-    right: 0;
-    width: 12px;
+	right: 0;
+	width: 12px;
 }
 #b-bottom {
-    left: 0;
-    height: 12px;
+	left: 0;
+	height: 12px;
 }
 
 #orbit-container {
-    position: fixed;
-    top: 0;
-    left: 15vw;
-    height: 120vh;
-    aspect-ratio: 1;
+	position: fixed;
+	top: 0;
+	left: 15vw;
+	height: 120vh;
+	aspect-ratio: 1;
 }
 .orbit {
-    position: absolute;
-    inset: 0;
-    margin: auto;
-    border-radius: 50%;
-    border: solid var(--bg-info) 1px;
-    height: 100%;
-    aspect-ratio: 1;
+	position: absolute;
+	inset: 0;
+	margin: auto;
+	border-radius: 50%;
+	border: solid var(--bg-info) 2px;
+	height: 100%;
+	aspect-ratio: 1;
 }
 #or-1 {
-        animation: orbit 30s infinite ease-in-out;
-
+	animation: orbit 30s infinite ease-in-out;
 }
 #or-2 {
-    height: 70%;
-        animation: orbit 26s infinite ease-in-out;
-
+	height: 70%;
+	animation: orbit 26s infinite ease-in-out;
 }
 #or-3 {
-    height: 40%;
-        animation: orbit 20s infinite ease-in-out;
-
+	height: 40%;
+	animation: orbit 20s infinite ease-in-out;
 }
 #or-4 {
-    height: 10%;
+	height: 10%;
 }
 @keyframes orbit {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
 }
 .star {
-    position: absolute;
-    top: 50%;
-    left: -5px;
-    height: 10px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    background-color: var(--bg-info);
+	position: absolute;
+	top: 50%;
+	left: -5px;
+	height: 10px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: var(--bg-info);
 }
 /*==========================================================*/
 /* PC & mobile share similiar map layout with 3 columns, otherwise
@@ -172,54 +168,61 @@ nav {
 
 /* PC screen */
 @media only screen and (min-width: 786px) {
-    main {
-        display: flex;
-    }
-    #map-main {
-        position: relative;
-        width: 60vw;
-    }
-    #grid-container {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    #info-page {
-        width: 40vw;
-        height: 100vh;
-        right: 0;
-        padding-top: 1.8rem;
-    }
-    #b-top, #b-bottom {
-        width: 60vw;
-    }
-    #b-left, #b-right {
-        height: 100%;
-    }
-    #b-bottom {
-        bottom: 0;
-    }
+	main {
+		display: flex;
+	}
+	#map-main {
+		position: relative;
+		width: 60vw;
+	}
+	#grid-container {
+		grid-template-columns: repeat(5, 1fr);
+	}
+	#info-page {
+		width: 40vw;
+		height: 100vh;
+		right: 0;
+		padding-top: 1.8rem;
+	}
+	#b-top,
+	#b-bottom {
+		width: 60vw;
+	}
+	#b-left,
+	#b-right {
+		height: 100%;
+	}
+	#b-bottom {
+		bottom: 0;
+	}
 }
 
 /* Mobile screen */
 @media only screen and (max-width: 787px) {
-    #map-main {
-        width: 100%;
-    }
-    #grid-container {
-        grid-template-columns: repeat(4, 1fr);
-        padding-bottom: 40vh;
-    }
-    #info-page {
-        height: 40vh; /* Adjustable height */
-        width: 100vw;
-        bottom: 0;
-    }
-    #b-top, #b-bottom {
-        width: 100%;
-    }
-    #b-left, #b-right {
-        height: 60vh;
-    }
-    #b-bottom {
-        bottom: 40vh;
-    }
+	#map-main {
+		width: 100%;
+	}
+	#grid-container {
+		grid-template-columns: repeat(4, 1fr);
+		padding-bottom: 40vh;
+	}
+	#info-page {
+		height: 40vh; /* Adjustable height */
+		width: 100vw;
+		bottom: 0;
+	}
+	#b-top,
+	#b-bottom {
+		width: 100%;
+	}
+	#b-left,
+	#b-right {
+		height: 60vh;
+	}
+	#b-bottom {
+		bottom: 40vh;
+	}
+	.orbit {
+		border: solid var(--bg-info) 1px;
+	}
 }
