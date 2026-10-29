@@ -3,7 +3,7 @@
 	--bg-info: rgb(230, 228, 228);
 	--text-info: rgb(1, 0, 0);
 	--text-map: white;
-	--grid: rgb(29, 29, 30);
+	--grid: rgb(42, 42, 44);
 	/* Define all project color here */
 	--interactive: blue;
 	--app: red;
@@ -73,7 +73,6 @@ h1 {
 /*==========================================================
  TEST */
 .test {
-	width: 10;
 	aspect-ratio: 1;
 	z-index: 1;
 	border-radius: 50%;
@@ -119,7 +118,7 @@ nav {
 	position: fixed;
 	top: 0;
 	left: 15vw;
-	height: 120vh;
+	height: 150vh;
 	aspect-ratio: 1;
 }
 .orbit {
@@ -128,23 +127,23 @@ nav {
 	margin: auto;
 	border-radius: 50%;
 	border: solid var(--bg-info) 2px;
-	height: 100%;
 	aspect-ratio: 1;
 }
 #or-1 {
-	animation: orbit 30s infinite ease-in-out;
+	height: 100%;
+	animation: orbit 30s infinite;
 }
 #or-2 {
-	height: 70%;
-	animation: orbit 26s infinite ease-in-out;
+	height: 65%;
+	animation: orbit 20s infinite;
 }
 #or-3 {
-	height: 40%;
-	animation: orbit 20s infinite ease-in-out;
+	height: 30%;
 }
 #or-4 {
-	height: 10%;
+	height: 86%;
 }
+
 @keyframes orbit {
 	0% {
 		transform: rotate(0deg);
