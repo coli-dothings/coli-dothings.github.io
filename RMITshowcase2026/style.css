@@ -1,6 +1,6 @@
 :root {
 	--bg-map: rgb(0, 0, 0);
-	--bg-info: rgb(230, 228, 228);
+	--bg-info: rgb(201, 200, 214);
 	--text-info: rgb(1, 0, 0);
 	--text-map: white;
 	--grid: rgb(42, 42, 44);
@@ -132,11 +132,11 @@ nav {
 }
 #or-1 {
 	height: 100%;
-	animation: orbit 40s infinite;
+	animation: orbit 40s linear infinite;
 }
 #or-2 {
 	height: 65%;
-	animation: orbit 28s infinite;
+	animation: orbit 28s linear infinite;
 }
 #or-3 {
 	height: 30%;
