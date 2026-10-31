@@ -27,7 +27,7 @@ body {
 	/* default & info text font */
 }
 
-#map-main * {
+#map-main * p {
 	color: var(--text-map);
 	/* map font */
 }
@@ -35,12 +35,18 @@ body {
 h1 {
 	font-size: 3rem;
 }
+p {
+	font-size: 1rem;
+}
 
 .line {
 	width: 100%;
 	height: 2px;
 	background-color: var(--text-info);
 	margin: 20px 0px;
+}
+.app {
+	color: var(--app);
 }
 
 /*==========================================================
@@ -53,8 +59,8 @@ h1 {
 }
 
 #grid-container {
+	min-width: 0;
 	display: grid;
-	gap: 3vh;
 	padding: 8vh 3vh 0vh;
 	background-size: 50px 50px;
 	background-image:
@@ -71,15 +77,46 @@ h1 {
 }
 
 /*==========================================================
- TEST */
-.test {
+ ITEM */
+.item {
+	position: relative;
+	text-align: center;
+}
+.img-container {
+	position: absolute;
 	z-index: 1;
+	width: 100%;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	background-color: wheat;
-	margin-bottom: 6vh;
+	background-size: contain;
+	border: solid 3px;
+}
+.circ {
+	position: absolute;
+	color: inherit;
+	background-color: currentColor;
+	width: 100%;
+	aspect-ratio: 1;
+	border-radius: 50%;
+}
+.name-plate {
+	margin-top: 108%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+.name-plate p {
+	font-size: 0.7rem;
+	overflow-wrap: anywhere;
 }
 
+/* RANDOM PADDING */
+.pad {
+	padding-top: 100%;
+}
+.pad2 {
+	padding-top: 250%;
+}
 /*==========================================================
  MAP BORDER & DECOR */
 nav {
@@ -174,7 +211,7 @@ INTERACTIVE */
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	color: inherit;	/* Inherit color from parent project type*/
+	color: inherit; /* Inherit color from parent project type*/
 	background-color: currentColor;
 	z-index: 1;
 	pointer-events: none;
@@ -208,6 +245,7 @@ INTERACTIVE */
 		width: 60vw;
 	}
 	#grid-container {
+		gap: 3vw;
 		grid-template-columns: repeat(5, 1fr);
 	}
 	#info-page {
@@ -235,6 +273,7 @@ INTERACTIVE */
 		width: 100%;
 	}
 	#grid-container {
+		gap: 3vh;
 		grid-template-columns: repeat(4, 1fr);
 		padding-bottom: 40vh;
 	}
@@ -256,5 +295,8 @@ INTERACTIVE */
 	}
 	.orbit {
 		border: solid var(--bg-info) 1px;
+	}
+	.img-container {
+		border: solid 2px;
 	}
 }
