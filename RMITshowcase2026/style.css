@@ -1,6 +1,6 @@
 :root {
 	--bg-map: rgb(0, 0, 0);
-	--bg-info: rgb(201, 200, 214);
+	--bg-info: rgba(201, 200, 214);
 	--text-info: rgb(1, 0, 0);
 	--text-map: white;
 	--grid: rgb(42, 42, 44);
@@ -23,8 +23,9 @@
 /*==========================================================
  TEXT */
 body {
+	background-color: var(--bg-map);
 	color: var(--text-info);
-	/* default & info text font */
+	/* catch default & info text font */
 }
 
 #map-main * p {
