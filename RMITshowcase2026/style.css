@@ -194,6 +194,22 @@ INFO-SECTION */
 #intro footer {
 	margin-top: auto;
 }
+.text-hover {
+	font-size: 1.2rem;
+	animation: hover 5s infinite ease-in-out;
+	padding-bottom: 20px;
+}
+@keyframes hover {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 /*==========================================================*/
 /* PC & mobile share similiar map layout with 3 columns, otherwise
 - Mobile info-page sit bottom half of screen, fixed position */
