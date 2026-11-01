@@ -84,6 +84,7 @@ p {
  TEXT */
 body {
 	background-color: var(--bg-map);
+	color: var(--text-info);
 	/* catch default & info text font */
 }
 

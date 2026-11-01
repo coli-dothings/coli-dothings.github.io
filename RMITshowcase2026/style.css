@@ -2,7 +2,6 @@
  MAIN */
 #map-main {
 	min-height: 100vh;
-	background-color: var(--bg-map);
 	background-image: url(BG.webp);
 	background-size: 90% auto;
 	overflow-x: hidden;
@@ -152,6 +151,28 @@ nav {
 	}
 }
 
+/* dot 1 - 12 */
+.dot {
+	position: absolute;
+	z-index: -1;
+	width: 18px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: yellow;
+}
+#dot1 {
+	top: 10vh;
+	left: 25vw;
+	animation: blinking 8s infinite;
+}
+@keyframes blinking {
+	0% {
+		opacity: 100%;
+	}
+	50% {opacity: 100%;}
+	51% {opacity: 0%;}
+	100% {opacity: 0%;}
+}
 /*==========================================================
 INTERACTIVE */
 
