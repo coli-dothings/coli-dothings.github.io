@@ -1,87 +1,3 @@
-:root {
-	--bg-map: rgb(0, 0, 0);
-	--bg-info: rgba(201, 200, 214);
-	--text-info: rgb(1, 0, 0);
-	--text-map: white;
-	--grid: rgb(42, 42, 44);
-	/* Define all project color here */
-	--interactive: blue;
-	--app: red;
-	--audio: green;
-	--vis: rgb(255, 0, 255);
-	--av: rgb(106, 106, 0);
-}
-
-::-webkit-scrollbar {
-	display: none;
-}
-#info-page {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
-}
-
-/*==========================================================
- TEXT */
-body {
-	background-color: var(--bg-map);
-	/* catch default & info text font */
-}
-
-#info-page * p {
-	color: var(--text-info); 
-}
-#map-main * p {
-	color: var(--text-map);
-	/* map font */
-}
-
-h1 {
-	font-size: 3rem;
-}
-p {
-	font-size: 1rem;
-}
-
-ul {
-  list-style-type: none;
-}
-
-li {
-  position: relative;
-  padding-left: 1.5rem; /* Create space for custom dot */
-}
-
-li::before {
-  content: "•";
-  font-size: 3rem;
-  font-weight: bold;
-  position: absolute;
-  top: -105%;
-  left: 0;
-}
-
-.line {
-	width: 100%;
-	height: 2px;
-	background-color: var(--text-info);
-	margin: 20px 0px;
-}
-.interactive {
-	color: var(--interactive);
-}
-.app {
-	color: var(--app);
-}
-.audio {
-	color: var(--audio);
-}
-.vis {
-	color: var(--vis);
-}
-.av {
-	color: var(--av);
-}
-
 /*==========================================================
  MAIN */
 #map-main {
@@ -89,6 +5,7 @@ li::before {
 	background-color: var(--bg-map);
 	background-image: url(BG.webp);
 	background-size: 90% auto;
+	overflow-x: hidden;
 }
 
 #grid-container {
@@ -127,16 +44,17 @@ li::before {
 }
 .circ {
 	position: absolute;
-	color: inherit;
 	background-color: currentColor;
 	width: 100%;
 	aspect-ratio: 1;
 	border-radius: 50%;
+
+	transition: all 1s ease-in;
 }
 .name-plate {
 	margin-top: 108%;
 	display: inline-block;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: var(--bg-map);
 }
 .name-plate p {
 	font-size: 0.7rem;
@@ -197,7 +115,7 @@ nav {
 	inset: 0;
 	margin: auto;
 	border-radius: 50%;
-	border: solid var(--bg-info) 2px;
+	border: solid var(--text-info) 2px;
 	aspect-ratio: 1;
 }
 #or-1 {
@@ -222,7 +140,7 @@ nav {
 	height: 10px;
 	aspect-ratio: 1;
 	border-radius: 50%;
-	background-color: var(--bg-info);
+	background-color: var(--text-info);
 }
 
 @keyframes orbit {
@@ -262,7 +180,19 @@ INTERACTIVE */
 	z-index: 3 !important;
 }
 .big {
-	transform: scale(10) !important; /* Apply for behind bg circ*/
+	transform: scale(18) !important; /* Apply for behind bg circ*/
+}
+
+/*======================================================================================
+INFO-SECTION */
+
+#intro {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+#intro footer {
+	margin-top: auto;
 }
 /*==========================================================*/
 /* PC & mobile share similiar map layout with 3 columns, otherwise
