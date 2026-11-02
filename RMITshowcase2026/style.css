@@ -30,6 +30,8 @@
 .item {
 	position: relative;
 	text-align: center;
+
+	transition: all 1s ease-in-out 0.8s;
 }
 .img-container {
 	position: absolute;
@@ -40,6 +42,7 @@
 	background-color: wheat;
 	background-size: contain;
 	border: solid 3px;
+	cursor: pointer;
 }
 .circ {
 	position: absolute;
@@ -48,7 +51,7 @@
 	aspect-ratio: 1;
 	border-radius: 50%;
 
-	transition: all 1s ease-in;
+	transition: all 1s ease-in-out;
 }
 .name-plate {
 	margin-top: 108%;
@@ -67,6 +70,26 @@
 .pad2 {
 	padding-top: 250%;
 }
+
+/*==========================================================
+INTERACTIVE */
+
+.other {
+	z-index: 2;
+}
+.hidden {
+	display: none !important;
+}
+.centering {
+	z-index: 10 !important;
+}
+.destroy {
+	z-index: 3 !important;
+}
+.big {
+	transform: scale(17) !important; /* Apply for behind bg circ*/
+}
+
 /*==========================================================
  MAP BORDER & DECOR */
 nav {
@@ -169,41 +192,16 @@ nav {
 	0% {
 		opacity: 100%;
 	}
-	50% {opacity: 100%;}
-	51% {opacity: 0%;}
-	100% {opacity: 0%;}
+	50% {
+		opacity: 100%;
+	}
+	51% {
+		opacity: 0%;
+	}
+	100% {
+		opacity: 0%;
+	}
 }
-/*==========================================================
-INTERACTIVE */
-
-.other {
-	z-index: 2;
-}
-.bg-circ {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	color: inherit; /* Inherit color from parent project type*/
-	background-color: currentColor;
-	z-index: 1;
-	pointer-events: none;
-
-	transition: all 1s ease-in;
-}
-
-.hidden {
-	display: none !important;
-}
-.centering {
-	z-index: 10 !important;
-}
-.destroy {
-	z-index: 3 !important;
-}
-.big {
-	transform: scale(18) !important; /* Apply for behind bg circ*/
-}
-
 /*======================================================================================
 INFO-SECTION */
 
@@ -221,15 +219,15 @@ INFO-SECTION */
 	padding-bottom: 20px;
 }
 @keyframes hover {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(5px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
 }
 /*==========================================================*/
 /* PC & mobile share similiar map layout with 3 columns, otherwise
