@@ -137,7 +137,7 @@ nav {
 	inset: 0;
 	margin: auto;
 	border-radius: 50%;
-	border: solid var(--text-info) 2px;
+	border: solid var(--text-info) 0.2vh;
 	aspect-ratio: 1;
 }
 #or-1 {
@@ -158,8 +158,8 @@ nav {
 .star {
 	position: absolute;
 	top: 50%;
-	left: -5px;
-	height: 10px;
+	left: -0.4vh;
+	height: 0.8vh;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	background-color: var(--text-info);
@@ -178,15 +178,70 @@ nav {
 .dot {
 	position: absolute;
 	z-index: -1;
-	width: 18px;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	background-color: yellow;
 }
+/* Percentage based on the size of map (length of grid container) */
 #dot1 {
-	top: 10vh;
-	left: 25vw;
+	top: 18%;
+	left: 10%;
 	animation: blinking 8s infinite;
+}
+#dot2 {
+	top: 20%;
+	left: 40%;
+	animation: blinking 11s infinite;
+}
+#dot3 {
+	top: 35%;
+	left: 82%;
+	animation: blinking 7s infinite;
+} 
+#dot4 {
+	top: 47%;
+	left: 71%;
+	animation: blinking 9s infinite;
+}
+#dot5 {
+	top: 50%;
+	left: 55%;
+	animation: blinking 12.5s infinite;
+}
+#dot6 {
+	top: 28%;
+	left: 94%;
+	animation: blinking 8.2s infinite;
+}
+#dot7 {
+	top: 78%;
+	left: 56%;
+	animation: blinking 9.5s infinite;
+}
+#dot8 {
+	top: 81%;
+	left: 8%;
+	animation: blinking 13s infinite;
+}
+#dot9 {
+	top: 98%;
+	left: 81%;
+	animation: blinking 7.8s infinite;
+}
+#dot10 {
+	top: 58%;
+	left: 12%;
+	animation: blinking 10s infinite;
+}
+#dot11 {
+	top: 38%;
+	left: 22%;
+	animation: blinking 7.8s infinite;
+}
+#dot12 {
+	top: 8%;
+	left: 90%;
+	animation: blinking 12s infinite;
 }
 @keyframes blinking {
 	0% {
@@ -263,6 +318,9 @@ INFO-SECTION */
 	#b-bottom {
 		bottom: 0;
 	}
+	.dot {
+		width: 1vh;
+	}
 }
 
 /* Mobile screen */
@@ -292,9 +350,12 @@ INFO-SECTION */
 		bottom: 40vh;
 	}
 	.orbit {
-		border: solid var(--bg-info) 1px;
+		border: solid var(--text-info) 1px;
 	}
 	.img-container {
 		border: solid 2px;
+	}
+	.dot {
+		width: 6px;
 	}
 }
