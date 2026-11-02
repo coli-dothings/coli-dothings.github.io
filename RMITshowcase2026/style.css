@@ -3,7 +3,8 @@
 #map-main {
 	min-height: 100vh;
 	background-image: url(BG.webp);
-	background-size: 90% auto;
+	background-size: 80% auto;
+	background-position: center;
 	overflow-x: hidden;
 }
 
