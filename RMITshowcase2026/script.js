@@ -2,7 +2,6 @@
 
 // Item interaction
 const item = document.querySelectorAll(".item");
-const test = document.querySelector("#branch-container");
 
 for (let i = 0; i < item.length; i++) {
 	let imgDiv = item[i].querySelector(".img-container");

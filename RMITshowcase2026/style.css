@@ -78,32 +78,38 @@ BRANCHES */
 	top: 0;
 	width: 60vw;
 	height: 100vh;
-	z-index: 9;
+	z-index: 2;
+	background-color: var(--bg-map);
 }
-.absolute-wrapper {
+.absolute-wrapper, .branch {
 	position: absolute;
 	width: 9vw;
 	height: auto;
 }
 .branch {
-	position: absolute;
-	border: solid red 2px;
+	z-index: 8;
 }
 #branch-center {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	border: solid red 2px;
+	transform: translate(-50%, -50%);
+	width: 6vw;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background-color: var(--text-info);
+	z-index: 7;
 }
 svg {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	z-index: 8;
+	z-index: 6;
 }
 svg line {
 	stroke: var(--text-info);
-	stroke-width: 2px;
+	stroke-width: 3;
+	vector-effect: non-scaling-stroke;
 }
 
 #branch1 {
@@ -115,20 +121,20 @@ svg line {
 	left: 8%;
 }
 #branch3 {
-	top: 70%;
-	left: 20%;
+	top: 62%;
+	left: 27%;
 }
 #branch4 {
 	top: 8%;
-	right: 20%
+	left: 52%
 }
 #branch5 {
 	top: 40%;
-	right: 8%;
+	left: 75%;
 }
 #branch6 {
 	top: 70%;
-	right: 20%;
+	left: 62%;
 }
 /*==============================================================================
 INTERACTIVE */
@@ -145,7 +151,6 @@ INTERACTIVE */
 }
 #map-main .hidden {
 	transition: all 2s; /* Add delay as needed */
-	transition-behavior: allow-discrete;
 }
 .display {
 	display: inherit !important;
@@ -355,7 +360,7 @@ INFO-SECTION */
 		transform: translateY(0px);
 	}
 	50% {
-		transform: translateY(5px);
+		transform: translateY(10px);
 	}
 	100% {
 		transform: translateY(0px);
@@ -439,7 +444,7 @@ INFO-SECTION */
 		width: 100vw;
 		height: 60vh;
 	}
-	.absolute-wrapper {
+	.absolute-wrapper, .branch {
 		width: 18vw;
 	}
 	#intro {
