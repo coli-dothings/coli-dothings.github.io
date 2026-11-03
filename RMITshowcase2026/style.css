@@ -66,10 +66,13 @@
 
 /* RANDOM PADDING */
 .pad {
-	padding-top: 100%;
+	padding-top: 80%;
+}
+.pad1 {
+	padding-top: 20%;
 }
 .pad2 {
-	padding-top: 250%;
+	padding-top: 180%;
 }
 /*==========================================================
 BRANCHES */
@@ -171,15 +174,6 @@ INTERACTIVE */
 }
 /*==========================================================
  MAP BORDER & DECOR */
-nav {
-	position: fixed;
-	top: 0;
-	cursor: pointer;
-	z-index: 100;
-	font-size: 1.5rem;
-	padding-left: 12px;
-}
-
 .map-border {
 	z-index: 99;
 	position: fixed;

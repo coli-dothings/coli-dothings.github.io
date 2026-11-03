@@ -165,13 +165,24 @@ li::before {
 }
 
 nav {
+	position: fixed;
+	display: flex;
+	top: 0;
+	cursor: pointer;
+	z-index: 100;
+	font-size: 1.2rem;
+	padding-left: 12px;
+
 	font-weight: bold;
-	transition: all 0.5s;
+	transition: opacity 0.5s;
 }
-nav:hover {
+#shuffle {
+	padding-left: 1rem;
+}
+#reset:hover, #shuffle:hover {
 	color: var(--audio);
 }
-nav:hover span {
+#reset:hover span, #shuffle:hover span {
 	opacity: 1;
 }
 nav span {
