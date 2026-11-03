@@ -44,3 +44,19 @@ function move(i, imgDiv, circ) {
 		}, 1000)
 	} 
 }
+
+const reset = document.querySelector("nav");
+reset.addEventListener("click", resetPage);
+function resetPage() {
+	document.documentElement.style.setProperty("--bg-map", "var(--bg-info)");
+	let destroy = document.querySelectorAll(".destroy");
+	if (destroy.length > 0) {
+		for (let i = 0; i < destroy.length; i++) {
+			let circ = destroy[i].querySelector(".circ");
+			destroy[i].classList.remove("destroy");
+			destroy[i].style.transform = "none";
+			circ.classList.remove("big");
+			console.log(`reseted ${i}`);
+		}
+	}
+}
