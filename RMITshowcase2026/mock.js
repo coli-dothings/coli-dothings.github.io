@@ -1,22 +1,21 @@
-// Test code - functional on first item only
-// Todo: query selectot all - item. Find children img & circ
-// All event listener to img - then the following move func
-const imgDiv = document.querySelector(".img-container");
-const item = document.querySelector(".item");
-const circ = document.querySelector(".circ");
-let isCentered = false;
+// Initializing & placing items
 
-imgDiv.addEventListener("click", move);
+// Item interaction
+const item = document.querySelectorAll(".item");
 
-function move() {
-	if (!isCentered) {
-		isCentered = true;
-        circ.classList.add("big");
-		item.classList.add("centering");
-		// Get current bounding rectangle of the item relative to the viewport
-		const rect = imgDiv.getBoundingClientRect();
+for (let i = 0; i < item.length; i++) {
+	let imgDiv = item[i].querySelector(".img-container");
+	let circ = item[i].querySelector(".circ");
+	imgDiv.addEventListener("click", () => move(i, imgDiv, circ));
+}
 
-		// Find the element's current center point
+function move(i, imgDiv, circ) {
+	if (!item[i].classList.contains("centering")) {
+		circ.classList.add("big");
+		item[i].classList.add("centering");
+
+		let rect = imgDiv.getBoundingClientRect();
+		// Find imgDiv's center point
 		let elementCenterX = rect.left + rect.width / 2;
 		let elementCenterY = rect.top + rect.height / 2;
 
@@ -24,11 +23,11 @@ function move() {
 		let viewportCenterY = 0;
 
 		if (window.innerWidth > 787) {
-			console.log("PC");
+			//console.log("PC");
 			viewportCenterX = window.innerWidth / 3.3;
 			viewportCenterY = window.innerHeight / 2;
 		} else {
-			console.log("mobile");
+			//console.log("mobile");
 			viewportCenterX = window.innerWidth / 2;
 			viewportCenterY = window.innerHeight / 3.3;
 		}
@@ -37,14 +36,16 @@ function move() {
 		const translateX = viewportCenterX - elementCenterX;
 		const translateY = viewportCenterY - elementCenterY;
 
-		// Translation work as follow: The box is not actually moved from its position in doc
-		// When transform translate: XY > 0 => The box will move to new pos
 		// When traslate = 0 it effectively reset & move back to its original pos
-		item.style.transform = `translate(${translateX}px, ${translateY}px)`;
-		console.log("translate " + translateX, translateY);
+		item[i].style.transform = `translate(${translateX}px, ${translateY}px)`;
+		setTimeout(() => {
+			item[i].classList.add ("destroy");
+			item[i].classList.remove("centering")
+		}, 1000)
 	} else {
+		// TEMP RESET ONLY
 		circ.classList.remove("big");
-		isCentered = false;
-		item.style.transform = "none";
+		item[i].classList.remove("centering");
+		item[i].style.transform = "none";
 	}
 }

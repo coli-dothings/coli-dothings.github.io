@@ -2,23 +2,21 @@
 
 // Item interaction
 const item = document.querySelectorAll(".item");
+const test = document.querySelector("#branch-container");
 
 for (let i = 0; i < item.length; i++) {
-	// data queries here(?)
-
-	// visual
 	let imgDiv = item[i].querySelector(".img-container");
 	let circ = item[i].querySelector(".circ");
 	imgDiv.addEventListener("click", () => move(i, imgDiv, circ));
 }
 
 function move(i, imgDiv, circ) {
-	if (!item[i].classList.contains("centering")) {
+	if (!item[i].classList.contains("destroy")) {
 		circ.classList.add("big");
 		item[i].classList.add("centering");
 
 		let rect = imgDiv.getBoundingClientRect();
-		// Find imgDiv's current center point
+		// Find imgDiv's center point
 		let elementCenterX = rect.left + rect.width / 2;
 		let elementCenterY = rect.top + rect.height / 2;
 
@@ -34,19 +32,16 @@ function move(i, imgDiv, circ) {
 			viewportCenterX = window.innerWidth / 2;
 			viewportCenterY = window.innerHeight / 3.3;
 		}
-
 		// Calc the required travel distance
 		const translateX = viewportCenterX - elementCenterX;
 		const translateY = viewportCenterY - elementCenterY;
-
-		// Translation work as follow: The box is not actually moved from its position in doc
-		// When transform translate: XY > 0 => The box will move to new pos
 		// When traslate = 0 it effectively reset & move back to its original pos
 		item[i].style.transform = `translate(${translateX}px, ${translateY}px)`;
-	} else {
-		// TEMP RESET ONLY
-		circ.classList.remove("big");
-		item[i].classList.remove("centering");
-		item[i].style.transform = "none";
-	}
+
+		// Set destroy class to be removed when next item move
+		setTimeout(() => {
+			item[i].classList.add("destroy");
+			item[i].classList.remove("centering");
+		}, 1000)
+	} 
 }

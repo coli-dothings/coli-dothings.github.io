@@ -104,10 +104,22 @@
 					<!-- Number of MP + SP -->
 				</div>
 
-				<div id="branch-container">
+				<div id="branch-container" class="hidden display">
+					<div id="branch-center"></div>
 					<!-- branch-container is display none until active -->
 					<!-- ALL svg line x2 y2 is controlled by JS -->
-					<div class="branch" id="branch1"></div>
+					<div class="branch" id="branch1">
+						<div class="item app">
+							<div class="circ"></div>
+							<div
+								class="img-container"
+								style="background-image: url(img/MPT_Test1.jpg)"
+							></div>
+							<div class="name-plate">
+								<p>LONG NAME NAME NAMENAMENAME</p>
+							</div>
+						</div>
+					</div>
 					<div class="branch" id="branch2"></div>
 					<div class="branch" id="branch3"></div>
 					<div class="branch" id="branch4"></div>
@@ -140,35 +152,37 @@
 			<div id="info-page">
 				<!-- Default-info section includes project type & intro -->
 				<!-- All are in the document, but the other 2 have an invis class when unused -->
-				<section id="intro">
-					<h1>The Digital Media Gradshow 2026</h1>
-					<div class="line"></div>
-					<h2>2026 Guide Book to Project types</h2>
-					<ul>
-						<li class="type-list interactive">
-							<span>Interactive Installation</span>
-						</li>
-						<li class="type-list app">
-							<span>App & Website Development</span>
-						</li>
-						<li class="type-list audio"><span>Audio</span></li>
-						<li class="type-list vis"><span>Visual</span></li>
-						<li class="type-list av"><span>Audiovisual</span></li>
-					</ul>
-					<div class="text-hover">
-						Click on a way point <br />
-						see where it leads...
-					</div>
-					<footer>
-						<p id="copyright">RMIT School of Design</p>
-						<p id="credit">
-							Developed by
-							<a href="https://www.instagram.com/coli_artsnstuffs/"
-								>Mai Anh Vo | Coli</a
-							>
-						</p>
-					</footer>
-				</section>
+				<div class="flex-wrapper">
+					<section id="intro" class="hidden display">
+						<h1>The Digital Media Gradshow 2026</h1>
+						<div class="line"></div>
+						<h2>2026 Guide Book to Project types</h2>
+						<ul>
+							<li class="type-list interactive">
+								<span>Interactive Installation</span>
+							</li>
+							<li class="type-list app">
+								<span>App & Website Development</span>
+							</li>
+							<li class="type-list audio"><span>Audio</span></li>
+							<li class="type-list vis"><span>Visual</span></li>
+							<li class="type-list av"><span>Audiovisual</span></li>
+						</ul>
+						<div class="text-hover">
+							Click on a way point <br />
+							see where it leads...
+						</div>
+						<footer>
+							<p id="copyright">RMIT School of Design</p>
+							<p id="credit">
+								Developed by
+								<a href="https://www.instagram.com/coli_artsnstuffs/"
+									>Mai Anh Vo | Coli</a
+								>
+							</p>
+						</footer>
+					</section>
+				</div>
 
 				<section class="hidden" id="project-info">
 					<h2 id="project-title"></h2>

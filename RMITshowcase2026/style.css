@@ -71,26 +71,88 @@
 .pad2 {
 	padding-top: 250%;
 }
-
 /*==========================================================
+BRANCHES */
+#branch-container {
+	position: fixed;
+	top: 0;
+	width: 60vw;
+	height: 100vh;
+	z-index: 4;
+
+	background-color: var(--bg-map);
+}
+.branch {
+	position: absolute;
+	width: 9vw;
+	aspect-ratio: 1;
+
+	border: solid red 2px;
+}
+#branch-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: solid red 2px;
+}
+#branch1 {
+	top: 8%;
+	left: 20%
+}
+#branch2 {
+	top: 40%;
+	left: 8%;
+}
+#branch3 {
+	top: 70%;
+	left: 20%;
+}
+#branch4 {
+	top: 8%;
+	right: 20%
+}
+#branch5 {
+	top: 40%;
+	right: 8%;
+}
+#branch6 {
+	top: 70%;
+	right: 20%;
+}
+/*==============================================================================
 INTERACTIVE */
 
 .other {
 	z-index: 2;
 }
+
 .hidden {
 	display: none !important;
+	opacity: 0;
+	transition: all 1s;
+	transition-behavior: allow-discrete;
+}
+#map-main .hidden {
+	transition: all 2s 2s;
+	transition-behavior: allow-discrete;
+}
+.display {
+	display: inherit !important;
+	opacity: 1;
+
+	@starting-style {
+		opacity: 0;
+	}
 }
 .centering {
 	z-index: 10 !important;
 }
 .destroy {
-	z-index: 3 !important;
+	z-index: 5 !important;
 }
 .big {
 	transform: scale(17) !important; /* Apply for behind bg circ*/
 }
-
 /*==========================================================
  MAP BORDER & DECOR */
 nav {
@@ -260,14 +322,17 @@ nav {
 }
 /*======================================================================================
 INFO-SECTION */
-
+.flex-wrapper {
+	display: flex;
+}
 #intro {
 	display: flex;
 	flex-direction: column;
-	min-height: 100%;
+	min-height: 95vh;
 }
 #intro footer {
 	margin-top: auto;
+	padding-top: 40px;
 }
 .text-hover {
 	font-size: 1.2rem;
@@ -330,7 +395,7 @@ INFO-SECTION */
 		width: 100%;
 	}
 	#grid-container {
-		gap: 3vh;
+		gap: 5vw;
 		grid-template-columns: repeat(4, 1fr);
 		padding-bottom: 40vh;
 	}
@@ -358,5 +423,15 @@ INFO-SECTION */
 	}
 	.dot {
 		width: 6px;
+	}
+	#branch-container {
+		width: 100vw;
+		height: 60vh;
+	}
+	.branch {
+		width: 18vw;
+	}
+	#intro {
+		min-height: auto;
 	}
 }
