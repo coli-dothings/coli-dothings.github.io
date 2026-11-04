@@ -56,11 +56,11 @@ function formatted(type, i, title, name, category) {
 	return `<div class="other item ${category}">
 						<div class="circ"></div>
 						<div
-							class="img-container"
+							class="img-container ${type}"
 							style="background-image: url(img/${type}_Test1.jpg)"
 						></div>
 						<div class="name-plate">
-							<p>${title}</p>
+							<p id="title">${title}</p>
 						</div>
 					</div>`;
 }
@@ -121,22 +121,29 @@ shuffleBtn.addEventListener("click", shuffleItem);
 //================================================================================
 // Item interaction
 const branchContainer = document.querySelector("#branch-container");
-// Get html component inside item
-for (let i = 0; i < item.length; i++) {
-	let imgDiv = item[i].querySelector(".img-container");
-	let circ = item[i].querySelector(".circ");
-	imgDiv.addEventListener("click", () => move(i, imgDiv, circ));
-}
+const branchPos = document.querySelectorAll(".branch");
+const line = document.querySelectorAll(".b-line");
 
-function move(i, imgDiv, circ) {
-	if (!item[i].classList.contains("destroy")) {
-    if (branchContainer.classList.contains("display")) {
-      branchContainer.classList.remove("display");
-    }
-    item[i].classList.remove("other");
-		item[i].classList.add("centering");
-		item[i].style.transform = "none";
-    circ.classList.add("big");
+// Initilialize new items with click event
+function initItem(newItem) {
+	for (let i = 0; i < newItem.length; i++) {
+		let imgDiv = newItem[i].querySelector(".img-container");
+		let circ = newItem[i].querySelector(".circ");
+		let title = newItem[i].querySelector("#title").textContent;
+		imgDiv.addEventListener("click", () => move(newItem[i], imgDiv, circ, title));
+	}
+}
+initItem(item);
+
+function move(newItem, imgDiv, circ, title) { 
+	if (!newItem.classList.contains("destroy")) {
+		if (branchContainer.classList.contains("display")) {
+			branchContainer.classList.remove("display");
+		}
+		newItem.classList.remove("other");
+		newItem.classList.add("centering");
+		newItem.style.transform = "none";
+		circ.classList.add("big");
 
 		let rect = imgDiv.getBoundingClientRect();
 		// Find imgDiv's center point
@@ -158,8 +165,7 @@ function move(i, imgDiv, circ) {
 		// Calc the required travel distance
 		const translateX = viewportCenterX - elementCenterX;
 		const translateY = viewportCenterY - elementCenterY;
-		// When traslate = 0 it effectively reset & move back to its original pos
-		item[i].style.transform = `translate(${translateX}px, ${translateY}px)`;
+		newItem.style.transform = `translate(${translateX}px, ${translateY}px)`;
 
 		setTimeout(() => {
 			// Wait for circ to hide screen below
@@ -173,62 +179,64 @@ function move(i, imgDiv, circ) {
 			for (let y = 0; y < other.length; y++) {
 				other[y].classList.add("invis");
 			}
-
-			item[i].classList.add("destroy");
-			item[i].classList.remove("centering");
+			newItem.classList.add("destroy");
+			newItem.classList.remove("centering");
 		}, 1000);
-    setTimeout(() => {
-      updateBgMapColor(i);
-      circ.classList.add("invis");
-      branchContainer.classList.add("display");
-    }, 1800)
+
+		setTimeout(() => {
+			updateBgMapColor(newItem);
+			circ.classList.add("invis");
+			branchContainer.classList.add("display");
+		}, 1800);
 	}
 }
-function updateBgMapColor(i) {
-  if (item[i].classList.contains("interactive")) {
-    	document.documentElement.style.setProperty("--bg-map", "var(--interactive)");
-  }
-  if (item[i].classList.contains("app")) {
-    	document.documentElement.style.setProperty("--bg-map", "var(--app)");
-  }
-  if (item[i].classList.contains("audio")) {
-    	document.documentElement.style.setProperty("--bg-map", "var(--audio)");
-  }
-  if (item[i].classList.contains("vis")) {
-    	document.documentElement.style.setProperty("--bg-map", "var(--vis)");
-  }
-  if (item[i].classList.contains("av")) {
-    	document.documentElement.style.setProperty("--bg-map", "var(--av)");
-  }
-}
-function updateBranch(itemCount, ) {
 
-}
-function updateInfo(i) {}
+const branchArr = [1, 2, 3, 4, 5, 6];
 
+
+function updateBgMapColor(newItem) {
+	if (newItem.classList.contains("interactive")) {
+		document.documentElement.style.setProperty("--bg-map", "var(--interactive)");
+	}
+	if (newItem.classList.contains("app")) {
+		document.documentElement.style.setProperty("--bg-map", "var(--app)");
+	}
+	if (newItem.classList.contains("audio")) {
+		document.documentElement.style.setProperty("--bg-map", "var(--audio)");
+	}
+	if (newItem.classList.contains("vis")) {
+		document.documentElement.style.setProperty("--bg-map", "var(--vis)");
+	}
+	if (newItem.classList.contains("av")) {
+		document.documentElement.style.setProperty("--bg-map", "var(--av)");
+	}
+}
+
+//==============================================================================
 const resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", resetPage);
 function resetPage() {
-  if (branchContainer.classList.contains("display")) {
-      branchContainer.classList.remove("display");
-    }
+	if (branchContainer.classList.contains("display")) {
+		branchContainer.classList.remove("display");
+	}
 	document.documentElement.style.setProperty("--bg-map", "var(--bg-info)");
 	let destroy = document.querySelectorAll(".destroy");
 	for (let i = 0; i < destroy.length; i++) {
 		let circ = destroy[i].querySelector(".circ");
+		destroy[i].classList.add("other");
 		destroy[i].classList.remove("destroy");
 		destroy[i].style.transform = "none";
 		circ.classList.remove("big");
-		console.log(`reseted ${i}`);
+		console.log("reset");
 	}
 
-  for (let x = 0; x < item.length; x++) {
-    let circ = item[x].querySelector(".circ");
-    if (circ.classList.contains("invis")) {
-      circ.classList.remove("invis");
-    }
-    if (item[x].classList.contains("invis")) {
-      item[x].classList.remove("invis");
-    }
-  }
+	for (let x = 0; x < item.length; x++) {
+		let circ = item[x].querySelector(".circ");
+		if (circ.classList.contains("invis")) {
+			circ.classList.remove("invis");
+		}
+		if (item[x].classList.contains("invis")) {
+			item[x].classList.remove("invis");
+		}
+	}
 }

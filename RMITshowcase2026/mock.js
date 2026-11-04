@@ -49,3 +49,57 @@ function move(i, imgDiv, circ) {
 		item[i].style.transform = "none";
 	}
 }
+
+
+		// set & get key data from data.js
+		// Look throught data indexes. If a key match send the whole data
+		if (imgDiv.classList.contains("MPT")) {
+			for (let a = 0; a < myData.MP.length; a++) {
+				if (myData.MP[a].title == title) {
+					console.log("data update MP!");
+					updateBranchStudent(myData.MP[a], "MPT");
+				}
+			}
+		} else if (imgDiv.classList.contains("SPT")) {
+			for (let b = 0; b < myData.SP.length; b++) {
+				if (myData.SP[b].title == title) {
+					console.log("data update SP!");
+					updateBranchStudent(myData.SP[b], "SPT");
+				}
+			}
+		}
+
+const branchArr = [1, 2, 3, 4, 5, 6];
+function updateBranchProject(pData, type) {
+	if (pData.representative == "Myself") {
+    let branchItem = `<div class="absolute-wrapper">
+          <div class="other item ${pData.category}">
+						<div class="circ"></div>
+						<div
+							class="img-container ${type}"
+							style="background-image: url(img/${type}_${pData.name}.jpg)"
+						></div>
+						<div class="name-plate">
+							<p id="title">${pData}</p>
+						</div>
+					</div></div>`;
+
+		let rngIndex = Math.floor(Math.random() * branchArr.length);
+		let rngBranch = branchArr.splice(rngIndex, 1)[0];
+		console.log(rngBranch);
+		console.log(branchArr);
+	}
+}
+
+// sData = myData.Person[i]
+let branchStudent = `<div class="absolute-wrapper">
+          <div class="other item student">
+						<div class="circ"></div>
+						<div
+							class="img-container PFP"
+							style="background-image: url(img/PFP_${sData.name}.jpg)"
+						></div>
+						<div class="name-plate">
+							<p id="title">${sData.display_name}</p>
+						</div>
+					</div></div>`;

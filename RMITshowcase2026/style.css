@@ -55,12 +55,13 @@
 	transition: all 1s ease-in-out;
 }
 .name-plate {
-	margin-top: 108%;
+	margin-top: 103%;
+  padding: 2%;
 	display: inline-block;
 	background-color: var(--bg-map);
 }
 .name-plate p {
-	font-size: 0.7rem;
+	font-size: 1rem;
 	overflow-wrap: anywhere;
 }
 
@@ -342,7 +343,6 @@ INFO-SECTION */
 	padding-top: 40px;
 }
 .text-hover {
-	font-size: 1.2rem;
 	animation: hover 5s infinite ease-in-out;
 	padding-bottom: 20px;
 }
@@ -441,4 +441,7 @@ INFO-SECTION */
 	#intro {
 		min-height: auto;
 	}
+  .name-plate p {
+    font-size: 0.7rem;
+  }
 }
