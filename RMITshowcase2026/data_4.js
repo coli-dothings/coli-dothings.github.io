@@ -44,7 +44,7 @@ const myData = {
       description: "a",
       credits: "a",
       add_count: 2,
-      member_count: "3",
+      member_count: 3,
       mem3: 22,
       mem2: 33,
       mem1: 11
@@ -67,46 +67,50 @@ const myData = {
       tagline: "\"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...\"",
       description: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum convallis nibh, id lobortis mi scelerisque in. Donec iaculis, lacus in convallis suscipit, diam lectus pellentesque massa, dignissim fermentum metus eros accumsan mi. Vestibulum sed hendrerit erat. Aliquam erat volutpat. Etiam et laoreet risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc lobortis id nibh ut ornare. Praesent id nisi ut libero tristique convallis. Vivamus lobortis viverra varius. Etiam molestie arcu dictum, egestas sem et, vehicula purus. Line break here.\r\n\r\nDuis eu ante feugiat, aliquam odio at, posuere purus. Etiam id diam non libero porta blandit sed at massa. Etiam et dapibus urna. Donec dapibus eget mi ut accumsan. Nulla et feugiat felis, id dictum lacus. Nullam et nisl ut tortor suscipit pharetra eu sit amet nibh. Integer ut lacus sed arcu fringilla dignissim quis id nulla. Proin dapibus in eros sit amet convallis. Fusce non metus ornare, fermentum nisi at, bibendum leo. Morbi tincidunt quam id lorem pulvinar dictum. Etiam viverra varius mauris, sit amet rhoncus ante faucibus eu. ",
       credits: "creds",
-      add_count: "2",
-      member_count: "3",
+      add_count: 2,
+      member_count: 1,
       mem1: 44
     }
   ],
   SP: [
     {
+      representative: "Myself",
       name: "Test1",
       title: "spa",
       is_group: "No",
       category: "Audiovisual",
       tagline: "b",
       description: "b",
-      add_count: "1",
-      member_count: "1",
+      add_count: 1,
+      member_count: 1,
       mem1: 11
     },
     {
+      representative: "Myself",
       name: "Test2",
       title: "spb",
       is_group: "No",
       category: "App / Website Development",
       tagline: "b",
       description: "b",
-      add_count: "2",
-      member_count: "1",
+      add_count: 2,
+      member_count: 1,
       mem1: 22
     },
     {
+      representative: "Myself",
       name: "Test3",
       title: "spc",
       is_group: "No",
       category: "Visual Design",
       tagline: "a",
       description: "a",
-      add_count: "3",
-      member_count: "1",
+      add_count: 3,
+      member_count: 1,
       mem1: 33
     },
     {
+      representative: "Myself",
       name: "MaiAnhVo",
       title: "SP",
       is_group: "No",

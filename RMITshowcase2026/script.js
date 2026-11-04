@@ -135,7 +135,7 @@ function initItem(newItem) {
 }
 initItem(item);
 
-function move(newItem, imgDiv, circ, title) { 
+function move(newItem, imgDiv, circ, title) {
 	if (!newItem.classList.contains("destroy")) {
 		if (branchContainer.classList.contains("display")) {
 			branchContainer.classList.remove("display");
@@ -187,12 +187,63 @@ function move(newItem, imgDiv, circ, title) {
 			updateBgMapColor(newItem);
 			circ.classList.add("invis");
 			branchContainer.classList.add("display");
-		}, 1800);
+		}, 1200);
+
+		//=============================================================
+		// set & get key data from data.js
+		// Look throught data indexes. If a key match send the whole data
+		if (imgDiv.classList.contains("MPT")) {
+			for (let a = 0; a < myData.MP.length; a++) {
+				if (myData.MP[a].title == title) {
+					updateBranchStudent(myData.MP[a]);
+				}
+			}
+		} else if (imgDiv.classList.contains("SPT")) {
+			for (let b = 0; b < myData.SP.length; b++) {
+				if (myData.SP[b].title == title) {
+					updateBranchStudent(myData.SP[b]);
+				}
+			}
+		}
+		//
 	}
 }
 
-const branchArr = [1, 2, 3, 4, 5, 6];
-
+function updateBranchStudent(pData) {
+	if (pData.representative == "Myself") {
+		let memCount = pData.member_count;
+		let branchArr = [1, 2, 3, 4, 5, 6];
+		console.log(`member count: ${memCount}`);
+		switch (memCount) {
+			case 1:
+				populateStudent(branchArr, pData.mem1);
+				break;
+			case 2:
+				populateStudent(branchArr, pData.mem1, pData.mem2);
+				break;
+			case 3:
+				populateStudent(branchArr, pData.mem1, pData.mem2, pData.mem3);
+				break;
+			case 4:
+				populateStudent(branchArr, pData.mem1, pData.mem2, pData.mem3, pData.mem4);
+				break;
+		}
+	}
+}
+function populateStudent(arr, mem1, mem2, mem3, mem4) {
+  console.log(arr);
+	for (let i = 0; i < myData.Person.length; i++) {
+		let sID = myData.Person[i].sID;
+		if (sID == mem1 || sID == mem2 || sID == mem3 || sID == mem4) {
+			console.log(myData.Person[i].sID);
+			console.log(myData.Person[i].name);
+			let rngIndex = Math.floor(Math.random() * arr.length);
+			let rngBranch = arr.splice(rngIndex, 1)[0];
+			console.log(rngBranch);
+			console.log(arr);
+		}
+	}
+}
 
 function updateBgMapColor(newItem) {
 	if (newItem.classList.contains("interactive")) {
