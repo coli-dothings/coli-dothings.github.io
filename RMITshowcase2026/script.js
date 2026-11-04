@@ -5,23 +5,23 @@ for (let i = 0; i < myData.MP.length; i++) {
 	switch (myData.MP[i].category) {
 		// switch case also ignores non-rep data
 		case "Interactive Installation":
-			item = formatted("MPT", i, myData.MP[i].name, "interactive");
+			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "interactive");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "App / Website Development":
-			item = formatted("MPT", i, myData.MP[i].name, "app");
+			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "app");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Audio Design":
-			item = formatted("MPT", i, myData.MP[i].name, "audio");
+			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "audio");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Visual Design":
-			item = formatted("MPT", i, myData.MP[i].name, "vis");
+			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "vis");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Audiovisual":
-			item = formatted("MPT", i, myData.MP[i].name, "av");
+			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "av");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 	}
@@ -31,51 +31,38 @@ for (let i = 0; i < myData.SP.length; i++) {
 	switch (myData.SP[i].category) {
 		// switch case also ignores non-rep data
 		case "Interactive Installation":
-			item = formatted("SPT", i, myData.SP[i].name, "interactive");
+			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "interactive");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "App / Website Development":
-			item = formatted("SPT", i, myData.SP[i].name, "app");
+			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "app");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Audio Design":
-			item = formatted("SPT", i, myData.SP[i].name, "audio");
+			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "audio");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Visual Design":
-			item = formatted("SPT", i, myData.SP[i].name, "vis");
+			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "vis");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Audiovisual":
-			item = formatted("SPT", i, myData.SP[i].name, "av");
+			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "av");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 	}
 }
-function formatted(type, i, name, category) {
-	if (type == "MPT") {
-		return `<div class="item ${category}">
+function formatted(type, i, title, name, category) {
+	return `<div class="other item ${category}">
 						<div class="circ"></div>
 						<div
 							class="img-container"
 							style="background-image: url(img/${type}_Test1.jpg)"
 						></div>
 						<div class="name-plate">
-							<p>${myData.MP[i].title}</p>
+							<p>${title}</p>
 						</div>
 					</div>`;
-	} else {
-		return `<div class="item ${category}">
-						<div class="circ"></div>
-						<div
-							class="img-container"
-							style="background-image: url(img/${type}_Test1.jpg)"
-						></div>
-						<div class="name-plate">
-							<p>${myData.SP[i].title}</p>
-						</div>
-					</div>`;
-	}
 }
 
 const item = document.querySelectorAll(".item");
@@ -133,6 +120,8 @@ shuffleBtn.addEventListener("click", shuffleItem);
 
 //================================================================================
 // Item interaction
+const branchContainer = document.querySelector("#branch-container");
+// Get html component inside item
 for (let i = 0; i < item.length; i++) {
 	let imgDiv = item[i].querySelector(".img-container");
 	let circ = item[i].querySelector(".circ");
@@ -141,8 +130,13 @@ for (let i = 0; i < item.length; i++) {
 
 function move(i, imgDiv, circ) {
 	if (!item[i].classList.contains("destroy")) {
-		circ.classList.add("big");
+    if (branchContainer.classList.contains("display")) {
+      branchContainer.classList.remove("display");
+    }
+    item[i].classList.remove("other");
 		item[i].classList.add("centering");
+		item[i].style.transform = "none";
+    circ.classList.add("big");
 
 		let rect = imgDiv.getBoundingClientRect();
 		// Find imgDiv's center point
@@ -167,26 +161,74 @@ function move(i, imgDiv, circ) {
 		// When traslate = 0 it effectively reset & move back to its original pos
 		item[i].style.transform = `translate(${translateX}px, ${translateY}px)`;
 
-		// Set destroy class to be removed when next item move
 		setTimeout(() => {
+			// Wait for circ to hide screen below
+			let destroy = document.querySelectorAll(".destroy");
+			for (let x = 0; x < destroy.length; x++) {
+				// Shuffle z-index to ensure nothing clips weird
+				destroy[x].classList.add("other");
+				destroy[x].classList.remove("destroy");
+			}
+			let other = document.querySelectorAll(".other");
+			for (let y = 0; y < other.length; y++) {
+				other[y].classList.add("invis");
+			}
+
 			item[i].classList.add("destroy");
 			item[i].classList.remove("centering");
 		}, 1000);
+    setTimeout(() => {
+      updateBgMapColor(i);
+      circ.classList.add("invis");
+      branchContainer.classList.add("display");
+    }, 1800)
 	}
 }
+function updateBgMapColor(i) {
+  if (item[i].classList.contains("interactive")) {
+    	document.documentElement.style.setProperty("--bg-map", "var(--interactive)");
+  }
+  if (item[i].classList.contains("app")) {
+    	document.documentElement.style.setProperty("--bg-map", "var(--app)");
+  }
+  if (item[i].classList.contains("audio")) {
+    	document.documentElement.style.setProperty("--bg-map", "var(--audio)");
+  }
+  if (item[i].classList.contains("vis")) {
+    	document.documentElement.style.setProperty("--bg-map", "var(--vis)");
+  }
+  if (item[i].classList.contains("av")) {
+    	document.documentElement.style.setProperty("--bg-map", "var(--av)");
+  }
+}
+function updateBranch(itemCount, ) {
+
+}
+function updateInfo(i) {}
 
 const resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", resetPage);
 function resetPage() {
+  if (branchContainer.classList.contains("display")) {
+      branchContainer.classList.remove("display");
+    }
 	document.documentElement.style.setProperty("--bg-map", "var(--bg-info)");
 	let destroy = document.querySelectorAll(".destroy");
-	if (destroy.length > 0) {
-		for (let i = 0; i < destroy.length; i++) {
-			let circ = destroy[i].querySelector(".circ");
-			destroy[i].classList.remove("destroy");
-			destroy[i].style.transform = "none";
-			circ.classList.remove("big");
-			console.log(`reseted ${i}`);
-		}
+	for (let i = 0; i < destroy.length; i++) {
+		let circ = destroy[i].querySelector(".circ");
+		destroy[i].classList.remove("destroy");
+		destroy[i].style.transform = "none";
+		circ.classList.remove("big");
+		console.log(`reseted ${i}`);
 	}
+
+  for (let x = 0; x < item.length; x++) {
+    let circ = item[x].querySelector(".circ");
+    if (circ.classList.contains("invis")) {
+      circ.classList.remove("invis");
+    }
+    if (item[x].classList.contains("invis")) {
+      item[x].classList.remove("invis");
+    }
+  }
 }

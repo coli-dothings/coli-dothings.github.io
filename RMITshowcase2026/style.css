@@ -32,7 +32,7 @@
 	position: relative;
 	text-align: center;
 
-	transition: all 1s ease-in-out 0.8s;
+	transition: transform 1s ease-in-out 0.8s;
 }
 .img-container {
 	position: absolute;
@@ -82,7 +82,6 @@ BRANCHES */
 	width: 60vw;
 	height: 100vh;
 	z-index: 2;
-	background-color: var(--bg-map);
 }
 .absolute-wrapper, .branch {
 	position: absolute;
@@ -141,11 +140,9 @@ svg line {
 }
 /*==============================================================================
 INTERACTIVE */
-
-.other {
-	z-index: 2;
+.invis {
+  opacity: 0;
 }
-
 .hidden {
 	display: none !important;
 	opacity: 0;

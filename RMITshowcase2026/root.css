@@ -159,6 +159,9 @@ li::before {
 .av {
 	color: var(--av);
 }
+.student {
+  color: var(--bg-info);
+}
 
 .text-hover{
 	font-family: "Major Mono Display", monospace;
