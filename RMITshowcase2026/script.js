@@ -139,17 +139,22 @@ initItem(item);
 
 function move(newItem, imgDiv, circ, title) {
 	if (!newItem.classList.contains("destroy")) {
-    let wrapper = newItem.parentElement;
+		let wrapper = newItem.parentElement;
 		if (wrapper.classList.contains("branch-remove")) {
 			wrapper.classList.remove("branch-remove");
 			branchContainer.parentNode.appendChild(wrapper);
+			wrapper.style.position = "fixed";
+			// if you wanna do the absolute thing make a nother branch abs set
+			// & make this a function, ref it to match current branchPos
 		}
 
 		newItem.classList.remove("other");
 		newItem.classList.add("centering");
 		newItem.style.transform = "none";
-    // Small delay so appendChild above have space to execute first
-    setTimeout(()=> {circ.classList.add("big")}, 10)
+		// Small delay so appendChild above have space to execute first
+		setTimeout(() => {
+			circ.classList.add("big");
+		}, 10);
 
 		let rect = imgDiv.getBoundingClientRect();
 		// Find imgDiv's center point
@@ -182,9 +187,9 @@ function move(newItem, imgDiv, circ, title) {
 
 			// Same to absolute-wrapper in branch
 			removeBranch();
-      if (wrapper.classList.contains("absolute-wrapper")) {
-        wrapper.classList.add("branch-remove");
-      }
+			if (wrapper.classList.contains("absolute-wrapper")) {
+				wrapper.classList.add("branch-remove");
+			}
 		}, 1000);
 
 		setTimeout(() => {
@@ -213,7 +218,7 @@ function move(newItem, imgDiv, circ, title) {
 				console.log("student");
 			}
 			branchContainer.classList.add("display");
-      updateBgMapColor(newItem);
+			updateBgMapColor(newItem);
 		}, 1200);
 	}
 }
@@ -353,18 +358,18 @@ function resetPage() {
 	}
 
 	for (let x = 0; x < item.length; x++) {
-    if (item[x].classList.contains("invis")) {
-      item[x].classList.remove("invis")
-      console.log("spare item invis")
-    }
+		if (item[x].classList.contains("invis")) {
+			item[x].classList.remove("invis");
+			console.log("spare item invis");
+		}
 		let circ = item[x].querySelector(".circ");
 		if (circ.classList.contains("invis")) {
 			circ.classList.remove("invis");
-      console.log(`spare invis at ${item[x]}`);
+			console.log(`spare invis at ${item[x]}`);
 		}
-    if (circ.classList.contains("big")) {
+		if (circ.classList.contains("big")) {
 			circ.classList.remove("big");
-      console.log(`spare big at ${item[x]}`);
+			console.log(`spare big at ${item[x]}`);
 		}
 		if (item[x].classList.contains("invis")) {
 			item[x].classList.remove("invis");
