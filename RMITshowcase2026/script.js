@@ -139,10 +139,17 @@ initItem(item);
 
 function move(newItem, imgDiv, circ, title) {
 	if (!newItem.classList.contains("destroy")) {
+    let wrapper = newItem.parentElement;
+		if (wrapper.classList.contains("branch-remove")) {
+			wrapper.classList.remove("branch-remove");
+			branchContainer.parentNode.appendChild(wrapper);
+		}
+
 		newItem.classList.remove("other");
 		newItem.classList.add("centering");
 		newItem.style.transform = "none";
-		circ.classList.add("big");
+    // Small delay so appendChild above have space to execute first
+    setTimeout(()=> {circ.classList.add("big")}, 10)
 
 		let rect = imgDiv.getBoundingClientRect();
 		// Find imgDiv's center point
@@ -166,36 +173,24 @@ function move(newItem, imgDiv, circ, title) {
 		const translateY = viewportCenterY - elementCenterY;
 		newItem.style.transform = `translate(${translateX}px, ${translateY}px)`;
 
-		let wrapper = newItem.parentElement;
 		setTimeout(() => {
-			// Wait for circ to hide screen below & invis PREV items
-			let destroy = document.querySelectorAll(".destroy");
-			for (let x = 0; x < destroy.length; x++) {
-				destroy[x].classList.add("other");
-				destroy[x].classList.remove("destroy");
-			}
-			let other = document.querySelectorAll(".other");
-			for (let y = 0; y < other.length; y++) {
-				other[y].classList.add("invis");
-			}
+			// Wait for circ to hide screen below & remove PREV items
+			removeItem();
 			// Add destroy to current item when main action are done -> process later
 			newItem.classList.add("destroy");
 			newItem.classList.remove("centering");
 
 			// Same to absolute-wrapper in branch
-			if (wrapper.classList.contains("branch-remove")) {
-				wrapper.classList.remove("branch-remove");
-        branchContainer.parentNode.appendChild(wrapper);
-				removeBranch();
-			}
-			wrapper.classList.add("branch-remove");
+			removeBranch();
+      if (wrapper.classList.contains("absolute-wrapper")) {
+        wrapper.classList.add("branch-remove");
+      }
 		}, 1000);
 
 		setTimeout(() => {
 			// remove bg circ for branch visibility
-			updateBgMapColor(newItem);
 			circ.classList.add("invis");
-      
+
 			// set & get key data from data.js
 			// Look throught data indexes. If a key match send the whole data
 			if (!newItem.classList.contains("student")) {
@@ -213,12 +208,12 @@ function move(newItem, imgDiv, circ, title) {
 					}
 				}
 			}
-      // Item is student
-      else {
-        console.log("student")
-      }
-
+			// Item is student
+			else {
+				console.log("student");
+			}
 			branchContainer.classList.add("display");
+      updateBgMapColor(newItem);
 		}, 1200);
 	}
 }
@@ -305,7 +300,7 @@ function updateBgMapColor(newItem) {
 	if (newItem.classList.contains("av")) {
 		document.documentElement.style.setProperty("--bg-map", "var(--av)");
 	}
-  if (newItem.classList.contains("student")) {
+	if (newItem.classList.contains("student")) {
 		document.documentElement.style.setProperty("--bg-map", "var(--bg-info)");
 	}
 }
@@ -329,7 +324,7 @@ function removeBranch() {
 	}
 }
 
-function resetItem() {
+function removeItem() {
 	let destroy = document.querySelectorAll(".destroy");
 	for (let i = 0; i < destroy.length; i++) {
 		let circ = destroy[i].querySelector(".circ");
@@ -337,6 +332,10 @@ function resetItem() {
 		destroy[i].classList.remove("destroy");
 		destroy[i].style.transform = "none";
 		circ.classList.remove("big");
+	}
+	let other = document.querySelectorAll(".other");
+	for (let y = 0; y < other.length; y++) {
+		other[y].classList.add("invis");
 	}
 }
 
@@ -354,9 +353,18 @@ function resetPage() {
 	}
 
 	for (let x = 0; x < item.length; x++) {
+    if (item[x].classList.contains("invis")) {
+      item[x].classList.remove("invis")
+      console.log("spare item invis")
+    }
 		let circ = item[x].querySelector(".circ");
 		if (circ.classList.contains("invis")) {
 			circ.classList.remove("invis");
+      console.log(`spare invis at ${item[x]}`);
+		}
+    if (circ.classList.contains("big")) {
+			circ.classList.remove("big");
+      console.log(`spare big at ${item[x]}`);
 		}
 		if (item[x].classList.contains("invis")) {
 			item[x].classList.remove("invis");
