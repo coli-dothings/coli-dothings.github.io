@@ -124,6 +124,7 @@ shuffleBtn.addEventListener("click", shuffleItem);
 const branchContainer = document.querySelector("#branch-container");
 const branchPos = document.querySelectorAll(".branch");
 const line = document.querySelectorAll(".b-line");
+const tempWrapper = document.querySelector("#temp-wrapper");
 
 // Initilialize new items with click event
 function initItem(newItem) {
@@ -138,7 +139,6 @@ initItem(item);
 
 function move(newItem, imgDiv, circ, title) {
 	if (!newItem.classList.contains("destroy")) {
-		removeBranch();
 		newItem.classList.remove("other");
 		newItem.classList.add("centering");
 		newItem.style.transform = "none";
@@ -166,11 +166,11 @@ function move(newItem, imgDiv, circ, title) {
 		const translateY = viewportCenterY - elementCenterY;
 		newItem.style.transform = `translate(${translateX}px, ${translateY}px)`;
 
+		let wrapper = newItem.parentElement;
 		setTimeout(() => {
-			// Wait for circ to hide screen below
+			// Wait for circ to hide screen below & invis PREV items
 			let destroy = document.querySelectorAll(".destroy");
 			for (let x = 0; x < destroy.length; x++) {
-				// Shuffle z-index to ensure nothing clips weird
 				destroy[x].classList.add("other");
 				destroy[x].classList.remove("destroy");
 			}
@@ -178,32 +178,48 @@ function move(newItem, imgDiv, circ, title) {
 			for (let y = 0; y < other.length; y++) {
 				other[y].classList.add("invis");
 			}
+			// Add destroy to current item when main action are done -> process later
 			newItem.classList.add("destroy");
 			newItem.classList.remove("centering");
+
+			// Same to absolute-wrapper in branch
+			if (wrapper.classList.contains("branch-remove")) {
+				wrapper.classList.remove("branch-remove");
+        branchContainer.parentNode.appendChild(wrapper);
+				removeBranch();
+			}
+			wrapper.classList.add("branch-remove");
 		}, 1000);
 
 		setTimeout(() => {
+			// remove bg circ for branch visibility
 			updateBgMapColor(newItem);
 			circ.classList.add("invis");
+      
+			// set & get key data from data.js
+			// Look throught data indexes. If a key match send the whole data
+			if (!newItem.classList.contains("student")) {
+				if (imgDiv.classList.contains("MPT")) {
+					for (let a = 0; a < myData.MP.length; a++) {
+						if (myData.MP[a].title == title) {
+							updateBranchStudent(myData.MP[a]);
+						}
+					}
+				} else if (imgDiv.classList.contains("SPT")) {
+					for (let b = 0; b < myData.SP.length; b++) {
+						if (myData.SP[b].title == title) {
+							updateBranchStudent(myData.SP[b]);
+						}
+					}
+				}
+			}
+      // Item is student
+      else {
+        console.log("student")
+      }
+
 			branchContainer.classList.add("display");
 		}, 1200);
-
-		//=============================================================
-		// set & get key data from data.js
-		// Look throught data indexes. If a key match send the whole data
-		if (imgDiv.classList.contains("MPT")) {
-			for (let a = 0; a < myData.MP.length; a++) {
-				if (myData.MP[a].title == title) {
-					updateBranchStudent(myData.MP[a]);
-				}
-			}
-		} else if (imgDiv.classList.contains("SPT")) {
-			for (let b = 0; b < myData.SP.length; b++) {
-				if (myData.SP[b].title == title) {
-					updateBranchStudent(myData.SP[b]);
-				}
-			}
-		}
 	}
 }
 
@@ -232,11 +248,11 @@ function populateStudent(arr, mem1, mem2, mem3, mem4) {
 	for (let i = 0; i < myData.Person.length; i++) {
 		let sID = myData.Person[i].sID;
 		let sName = myData.Person[i].display_name;
-    let sSpecial = myData.Person[i].specialization;
+		let sSpecial = myData.Person[i].specialization;
 		let name = myData.Person[i].name;
 		if (sID == mem1 || sID == mem2 || sID == mem3 || sID == mem4) {
 			let branchStudent = `<div class="absolute-wrapper branch-remove">
-          <div class="item student">
+          <div class="other item student">
 						<div class="circ"></div>
 						<div
 							class="img-container PFP"
@@ -259,7 +275,7 @@ function populateStudent(arr, mem1, mem2, mem3, mem4) {
 		let wrapper = branchItem[x].parentElement;
 		let rngIndex = Math.floor(Math.random() * arr.length);
 		let rngBranch = arr.splice(rngIndex, 1)[0];
-		console.log(rngBranch);
+		console.log(`rngbranch: ${rngBranch}`);
 
 		let computedStyles = window.getComputedStyle(branchPos[rngBranch]);
 		let topPos = computedStyles.getPropertyValue("top");
@@ -269,21 +285,6 @@ function populateStudent(arr, mem1, mem2, mem3, mem4) {
 
 		if (line[rngBranch].classList.contains("invis")) {
 			line[rngBranch].classList.remove("invis");
-		}
-	}
-}
-
-function removeBranch() {
-	if (branchContainer.classList.contains("display")) {
-		branchContainer.classList.remove("display");
-	}
-	let branchRemove = branchContainer.querySelectorAll(".branch-remove");
-	for (let y = 0; y < branchRemove.length; y++) {
-		branchRemove[y].remove();
-	}
-	for (let x = 0; x < line.length; x++) {
-		if (!line[x].classList.contains("invis")) {
-			line[x].classList.add("invis");
 		}
 	}
 }
@@ -304,15 +305,43 @@ function updateBgMapColor(newItem) {
 	if (newItem.classList.contains("av")) {
 		document.documentElement.style.setProperty("--bg-map", "var(--av)");
 	}
+  if (newItem.classList.contains("student")) {
+		document.documentElement.style.setProperty("--bg-map", "var(--bg-info)");
+	}
 }
 
 //==============================================================================
 const resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", resetPage);
-function resetPage() {
+
+function removeBranch() {
 	if (branchContainer.classList.contains("display")) {
 		branchContainer.classList.remove("display");
 	}
+	let branchRemove = tempWrapper.querySelectorAll(".branch-remove");
+	for (let y = 0; y < branchRemove.length; y++) {
+		branchRemove[y].remove();
+	}
+	for (let x = 0; x < line.length; x++) {
+		if (!line[x].classList.contains("invis")) {
+			line[x].classList.add("invis");
+		}
+	}
+}
+
+function resetItem() {
+	let destroy = document.querySelectorAll(".destroy");
+	for (let i = 0; i < destroy.length; i++) {
+		let circ = destroy[i].querySelector(".circ");
+		destroy[i].classList.add("other");
+		destroy[i].classList.remove("destroy");
+		destroy[i].style.transform = "none";
+		circ.classList.remove("big");
+	}
+}
+
+function resetPage() {
+	removeBranch();
 	document.documentElement.style.setProperty("--bg-map", "var(--bg-info)");
 	let destroy = document.querySelectorAll(".destroy");
 	for (let i = 0; i < destroy.length; i++) {

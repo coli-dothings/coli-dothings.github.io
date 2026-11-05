@@ -78,47 +78,57 @@
 }
 /*==========================================================
 BRANCHES */
-#branch-container {
-	position: fixed;
+#temp-wrapper {
+  position: fixed;
 	top: 0;
-	width: 60vw;
-	height: 100vh;
-	z-index: 2;
-  rotate: 0;
+  height: 100vh;
+  width: 60vw;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#branch-container {
+	position: absolute;
+  width: 100%;
+  height: 100%;
+  rotate: 0deg;
+  scale: 1;
+  pointer-events: none;
   @starting-style {
     rotate: 30deg;
+    scale: 0.4;
   }
 }
-.absolute-wrapper, .branch {
+
+.absolute-wrapper {
 	position: absolute;
 	width: 9vw;
 	height: auto;
   z-index: 10;
+  pointer-events: none;
 }
 #branch-center {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 6vw;
+	width: 1%;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	background-color: var(--text-info);
-	z-index: 7;
+	z-index: 2;
 }
 svg {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	z-index: 1;
-  pointer-events: none;
+	z-index: -1;
 }
 svg line {
 	stroke: var(--text-info);
 	stroke-width: 2;
 	vector-effect: non-scaling-stroke;
 }
-
 #branch1 {
 	top: 8%;
 	left: 20%
@@ -435,7 +445,7 @@ INFO-SECTION */
 	.dot {
 		width: 6px;
 	}
-	#branch-container {
+	#temp-wrapper {
 		width: 100vw;
 		height: 60vh;
 	}

@@ -26,7 +26,8 @@
 			<div class="map-border" id="b-bottom"></div>
 		</div>
 		<nav>
-			<div id="reset">RESET<span>?</span></div> |
+			<div id="reset">RESET<span>?</span></div>
+			|
 			<div id="shuffle">SHUFFLE<span>?</span></div>
 		</nav>
 		<!-- Split screen into connection map & info -->
@@ -37,25 +38,27 @@
 					<!-- Number of MP + SP -->
 				</div>
 
-				<div id="branch-container" class="hidden">
-					<!-- Branch are set ONLY for location ref
+				<div id="temp-wrapper">
+					<div id="branch-container" class="hidden">
+						<!-- Branch are set ONLY for location ref
 					 Upon placing item, create new items inside .absolute-wrapper
 					 JS: wrapper style top, left = branch style top, left-->
-					<div id="branch-center"></div>
-					<svg viewBox="0 0 100 100" preserveAspectRatio="none">
-						<line class="b-line invis" id="line1" x1="50" y1="50" x2="30" y2="18"></line>
-						<line class="b-line invis" id="line2" x1="50" y1="50" x2="15" y2="48"></line>
-						<line class="b-line invis" id="line3" x1="50" y1="50" x2="35" y2="70"></line>
-						<line class="b-line invis" id="line4" x1="50" y1="50" x2="60" y2="15"></line>
-						<line class="b-line invis" id="line5" x1="50" y1="50" x2="84" y2="48"></line>
-						<line class="b-line invis" id="line6" x1="50" y1="50" x2="70" y2="80"></line>
-					</svg>
-					<div class="branch" id="branch1"></div>
-					<div class="branch" id="branch2"></div>
-					<div class="branch" id="branch3"></div>
-					<div class="branch" id="branch4"></div>
-					<div class="branch" id="branch5"></div>
-					<div class="branch" id="branch6"></div>
+						<div id="branch-center"></div>
+						<svg viewBox="0 0 100 100" preserveAspectRatio="none">
+							<line class="b-line invis" id="line1" x1="50" y1="50" x2="30" y2="18"></line>
+							<line class="b-line invis" id="line2" x1="50" y1="50" x2="15" y2="48"></line>
+							<line class="b-line invis" id="line3" x1="50" y1="50" x2="35" y2="70"></line>
+							<line class="b-line invis" id="line4" x1="50" y1="50" x2="60" y2="15"></line>
+							<line class="b-line invis" id="line5" x1="50" y1="50" x2="84" y2="48"></line>
+							<line class="b-line invis" id="line6" x1="50" y1="50" x2="70" y2="80"></line>
+						</svg>
+						<div class="branch" id="branch1"></div>
+						<div class="branch" id="branch2"></div>
+						<div class="branch" id="branch3"></div>
+						<div class="branch" id="branch4"></div>
+						<div class="branch" id="branch5"></div>
+						<div class="branch" id="branch6"></div>
+					</div>
 				</div>
 
 				<div id="orbit-container">
@@ -104,13 +107,17 @@
 							see where it leads...
 						</div>
 						<footer>
-              <p id="acknowledgement">RMIT Digital Media acknowledges the people of the Woi Wurrung and Boon Wurrung language groups of the eastern Kulin Nations on whose unceded lands we are based. We respectfully acknowledge their Ancestors and Elders, past and present. We also acknowledge the Traditional Custodians of the lands and waters across Australia where we live and work.</p>
+							<p id="acknowledgement">
+								RMIT Digital Media acknowledges the people of the Woi Wurrung and Boon Wurrung
+								language groups of the eastern Kulin Nations on whose unceded lands we are based. We
+								respectfully acknowledge their Ancestors and Elders, past and present. We also
+								acknowledge the Traditional Custodians of the lands and waters across Australia
+								where we live and work.
+							</p>
 							<a id="copyright" href="https://www.rmitdigitalmedia.com/">RMIT School of Design</a>
 							<p id="credit">
 								Developed by
-								<a href="https://www.instagram.com/coli_artsnstuffs/"
-									>Mai Anh Vo | Coli</a
-								>
+								<a href="https://www.instagram.com/coli_artsnstuffs/">Mai Anh Vo | Coli</a>
 							</p>
 						</footer>
 					</section>
