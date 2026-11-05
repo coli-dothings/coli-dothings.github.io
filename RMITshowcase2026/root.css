@@ -61,7 +61,7 @@ p {
 	--bg-info: black;
 	--text-info: rgb(173, 173, 192);
 	--text-map: white;
-	--grid: rgb(42, 42, 44);
+	--grid: rgba(102, 102, 107, 0.47);
 	/* Define all project color here */
 	--interactive: rgb(0, 0, 184);
 	--app: rgb(139, 0, 178);

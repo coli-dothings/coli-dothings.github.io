@@ -103,3 +103,20 @@ let branchStudent = `<div class="absolute-wrapper">
 							<p id="title">${sData.display_name}</p>
 						</div>
 					</div></div>`;
+
+
+
+function populateStudent(arr, mem1, mem2, mem3, mem4) {
+  console.log(arr);
+	for (let i = 0; i < myData.Person.length; i++) {
+		let sID = myData.Person[i].sID;
+		if (sID == mem1 || sID == mem2 || sID == mem3 || sID == mem4) {
+			console.log(myData.Person[i].sID);
+			console.log(myData.Person[i].name);
+			let rngIndex = Math.floor(Math.random() * arr.length);
+			let rngBranch = arr.splice(rngIndex, 1)[0];
+			console.log(rngBranch);
+			console.log(arr);
+		}
+	}
+}

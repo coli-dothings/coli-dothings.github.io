@@ -1,27 +1,28 @@
 // Initializing & placing items
+// When using real data, replace "_Test1.jpg" with "_${name}.webp"
 const grid = document.querySelector("#grid-container");
 for (let i = 0; i < myData.MP.length; i++) {
 	let item;
 	switch (myData.MP[i].category) {
 		// switch case also ignores non-rep data
 		case "Interactive Installation":
-			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "interactive");
+			item = formatted("MPT", myData.MP[i].title, myData.MP[i].name, "interactive");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "App / Website Development":
-			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "app");
+			item = formatted("MPT", myData.MP[i].title, myData.MP[i].name, "app");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Audio Design":
-			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "audio");
+			item = formatted("MPT", myData.MP[i].title, myData.MP[i].name, "audio");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Visual Design":
-			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "vis");
+			item = formatted("MPT", myData.MP[i].title, myData.MP[i].name, "vis");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Audiovisual":
-			item = formatted("MPT", i, myData.MP[i].title, myData.MP[i].name, "av");
+			item = formatted("MPT", myData.MP[i].title, myData.MP[i].name, "av");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 	}
@@ -31,28 +32,28 @@ for (let i = 0; i < myData.SP.length; i++) {
 	switch (myData.SP[i].category) {
 		// switch case also ignores non-rep data
 		case "Interactive Installation":
-			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "interactive");
+			item = formatted("SPT", myData.SP[i].title, myData.SP[i].name, "interactive");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "App / Website Development":
-			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "app");
+			item = formatted("SPT", myData.SP[i].title, myData.SP[i].name, "app");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Audio Design":
-			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "audio");
+			item = formatted("SPT", myData.SP[i].title, myData.SP[i].name, "audio");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Visual Design":
-			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "vis");
+			item = formatted("SPT", myData.SP[i].title, myData.SP[i].name, "vis");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 		case "Audiovisual":
-			item = formatted("SPT", i, myData.SP[i].title, myData.SP[i].name, "av");
+			item = formatted("SPT", myData.SP[i].title, myData.SP[i].name, "av");
 			grid.insertAdjacentHTML("beforeend", item);
 			break;
 	}
 }
-function formatted(type, i, title, name, category) {
+function formatted(type, title, name, category) {
 	return `<div class="other item ${category}">
 						<div class="circ"></div>
 						<div
@@ -137,9 +138,7 @@ initItem(item);
 
 function move(newItem, imgDiv, circ, title) {
 	if (!newItem.classList.contains("destroy")) {
-		if (branchContainer.classList.contains("display")) {
-			branchContainer.classList.remove("display");
-		}
+		removeBranch();
 		newItem.classList.remove("other");
 		newItem.classList.add("centering");
 		newItem.style.transform = "none";
@@ -205,14 +204,13 @@ function move(newItem, imgDiv, circ, title) {
 				}
 			}
 		}
-		//
 	}
 }
 
 function updateBranchStudent(pData) {
 	if (pData.representative == "Myself") {
 		let memCount = pData.member_count;
-		let branchArr = [1, 2, 3, 4, 5, 6];
+		let branchArr = [0, 1, 2, 3, 4, 5];
 		console.log(`member count: ${memCount}`);
 		switch (memCount) {
 			case 1:
@@ -231,16 +229,61 @@ function updateBranchStudent(pData) {
 	}
 }
 function populateStudent(arr, mem1, mem2, mem3, mem4) {
-  console.log(arr);
 	for (let i = 0; i < myData.Person.length; i++) {
 		let sID = myData.Person[i].sID;
+		let sName = myData.Person[i].display_name;
+    let sSpecial = myData.Person[i].specialization;
+		let name = myData.Person[i].name;
 		if (sID == mem1 || sID == mem2 || sID == mem3 || sID == mem4) {
-			console.log(myData.Person[i].sID);
-			console.log(myData.Person[i].name);
-			let rngIndex = Math.floor(Math.random() * arr.length);
-			let rngBranch = arr.splice(rngIndex, 1)[0];
-			console.log(rngBranch);
-			console.log(arr);
+			let branchStudent = `<div class="absolute-wrapper branch-remove">
+          <div class="item student">
+						<div class="circ"></div>
+						<div
+							class="img-container PFP"
+							style="background-image: url(img/PFP_Test1.jpg)"
+						></div>
+						<div class="name-plate">
+							<p id="title">${sName}</p>
+              <p id="specialization">[${sSpecial}]</p>
+						</div>
+					</div></div>`;
+			branchContainer.insertAdjacentHTML("beforeend", branchStudent);
+		}
+	}
+
+	let branchItem = branchContainer.querySelectorAll(".item");
+	initItem(branchItem);
+	console.log("init branch");
+
+	for (let x = 0; x < branchItem.length; x++) {
+		let wrapper = branchItem[x].parentElement;
+		let rngIndex = Math.floor(Math.random() * arr.length);
+		let rngBranch = arr.splice(rngIndex, 1)[0];
+		console.log(rngBranch);
+
+		let computedStyles = window.getComputedStyle(branchPos[rngBranch]);
+		let topPos = computedStyles.getPropertyValue("top");
+		let leftPos = computedStyles.getPropertyValue("left");
+		wrapper.style.top = topPos;
+		wrapper.style.left = leftPos;
+
+		if (line[rngBranch].classList.contains("invis")) {
+			line[rngBranch].classList.remove("invis");
+		}
+	}
+}
+
+function removeBranch() {
+	if (branchContainer.classList.contains("display")) {
+		branchContainer.classList.remove("display");
+	}
+	let branchRemove = branchContainer.querySelectorAll(".branch-remove");
+	for (let y = 0; y < branchRemove.length; y++) {
+		branchRemove[y].remove();
+	}
+	for (let x = 0; x < line.length; x++) {
+		if (!line[x].classList.contains("invis")) {
+			line[x].classList.add("invis");
 		}
 	}
 }
