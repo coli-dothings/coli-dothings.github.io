@@ -147,10 +147,7 @@ function move(newItem, imgDiv, circ, title) {
 		if (wrapper.classList.contains("branch-remove")) {
 			wrapper.classList.remove("branch-remove");
 			branchContainer.parentNode.appendChild(wrapper);
-			if (window.innerWidth < 787) {
-				// mobile screen break fix
-				wrapper.style.position = "fixed";
-			}
+      tempWrapper.style.zIndex = 2;
 		}
 
 		newItem.classList.remove("other");
@@ -195,6 +192,7 @@ function move(newItem, imgDiv, circ, title) {
 			if (wrapper.classList.contains("absolute-wrapper")) {
 				wrapper.classList.add("branch-remove");
 			}
+      tempWrapper.removeAttribute("style");
 		}, 1000);
 
 		setTimeout(() => {
@@ -328,6 +326,7 @@ function removeBranch() {
 	let branchRemove = tempWrapper.querySelectorAll(".branch-remove");
 	for (let y = 0; y < branchRemove.length; y++) {
 		branchRemove[y].remove();
+    console.log("removed branch item")
 	}
 	for (let x = 0; x < line.length; x++) {
 		if (!line[x].classList.contains("invis")) {
@@ -359,29 +358,27 @@ function resetPage() {
 		let circ = destroy[i].querySelector(".circ");
 		destroy[i].classList.add("other");
 		destroy[i].classList.remove("destroy");
-		destroy[i].style.transform = "none";
 		circ.classList.remove("big");
-		console.log("reset");
+    circ.classList.remove("invis");
 	}
-
+  tempWrapper.removeAttribute("style");
 	for (let x = 0; x < item.length; x++) {
+    item[x].style.transform = "none";
 		if (item[x].classList.contains("invis")) {
 			item[x].classList.remove("invis");
-			console.log("spare item invis");
 		}
+    // catch for destroy error
 		let circ = item[x].querySelector(".circ");
 		if (circ.classList.contains("invis")) {
 			circ.classList.remove("invis");
-			console.log(`spare invis at ${item[x]}`);
+      console.log("spare circ invis");
 		}
 		if (circ.classList.contains("big")) {
 			circ.classList.remove("big");
-			console.log(`spare big at ${item[x]}`);
-		}
-		if (item[x].classList.contains("invis")) {
-			item[x].classList.remove("invis");
+      console.log("spare big");
 		}
 	}
+  console.log("reset");
 }
 
 //============================================================
