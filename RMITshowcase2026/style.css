@@ -213,28 +213,32 @@ INTERACTIVE */
 	position: fixed;
 	top: 0;
 	left: 15vw;
-	height: 150vh;
+	height: 120vh;
 	aspect-ratio: 1;
 	z-index: 0;
 }
 .orbit {
 	position: absolute;
-	inset: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
 	margin: auto;
 	border-radius: 50%;
-	border: solid var(--text-info) 0.2vh;
+	border: solid rgb(75, 75, 75) 0.2vh;
 	aspect-ratio: 1;
+    translate: -5% 0px;
 }
 #or-1 {
 	height: 100%;
-	animation: orbit 40s linear infinite;
+	animation: orbit 50s linear infinite;
 }
 #or-2 {
 	height: 65%;
-	animation: orbit 28s linear infinite;
+	animation: orbit 48s linear infinite;
 }
 #or-3 {
 	height: 30%;
+	animation: orbit 34s linear infinite;
 }
 #or-4 {
 	height: 86%;
