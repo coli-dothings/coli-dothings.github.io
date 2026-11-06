@@ -156,9 +156,9 @@ function move(newItem, imgDiv, circ, title) {
 		// Small delay so appendChild above have space to execute first
 		setTimeout(() => {
 			circ.classList.add("big");
-		}, 10);
+		}, 100);
 
-		let rect = imgDiv.getBoundingClientRect();
+		let rect = circ.getBoundingClientRect();
 		// Find imgDiv's center point
 		let elementCenterX = rect.left + rect.width / 2;
 		let elementCenterY = rect.top + rect.height / 2;
