@@ -125,6 +125,7 @@ const branchContainer = document.querySelector("#branch-container");
 const branchPos = document.querySelectorAll(".branch");
 const line = document.querySelectorAll(".b-line");
 const tempWrapper = document.querySelector("#temp-wrapper");
+let currentBlockedBranch = 0;
 
 // Initilialize new items with click event
 function initItem(newItem) {
@@ -143,17 +144,20 @@ initItem(item);
 
 function move(newItem, imgDiv, circ, title) {
 	if (!newItem.classList.contains("destroy")) {
-		let wrapper = newItem.parentElement;
-		if (wrapper.classList.contains("branch-remove")) {
-			wrapper.classList.remove("branch-remove");
-			branchContainer.parentNode.appendChild(wrapper);
+    // if item is branch item
+		let absoluteWrapper = newItem.parentElement;
+		if (absoluteWrapper.classList.contains("branch-remove")) {
+			absoluteWrapper.classList.remove("branch-remove");
+			branchContainer.parentNode.appendChild(absoluteWrapper);
 			tempWrapper.style.zIndex = 2;
+      let str = absoluteWrapper.classList.toString();
+      currentBlockedBranch = parseInt(str[str.length - 1]);
 		}
 
 		newItem.classList.remove("other");
 		newItem.classList.add("centering");
 		newItem.style.transform = "none";
-		// Small delay so appendChild above have space to execute first
+		// Small delay so appendChild & fixed pos have abs time to execute first
 		setTimeout(() => {
 			circ.classList.add("big");
 		}, 100);
@@ -188,8 +192,8 @@ function move(newItem, imgDiv, circ, title) {
 
 			// Same to absolute-wrapper in branch
 			removeBranch();
-			if (wrapper.classList.contains("absolute-wrapper")) {
-				wrapper.classList.add("branch-remove");
+			if (absoluteWrapper.classList.contains("absolute-wrapper")) {
+				absoluteWrapper.classList.add("branch-remove");
 			}
 			tempWrapper.removeAttribute("style");
 		}, 1000);
@@ -351,6 +355,9 @@ function initBranch(arr) {
 	initItem(branchItem);
 	console.log("init branch");
 
+  // remove branchPos that was occupied by last clicked item from arr
+  arr.splice(currentBlockedBranch, 1);
+
 	for (let x = 0; x < branchItem.length; x++) {
 		let wrapper = branchItem[x].parentElement;
 		let rngIndex = Math.floor(Math.random() * arr.length);
@@ -362,6 +369,7 @@ function initBranch(arr) {
 		let leftPos = computedStyles.getPropertyValue("left");
 		wrapper.style.top = topPos;
 		wrapper.style.left = leftPos;
+    wrapper.classList.add(rngBranch);
 
 		if (line[rngBranch].classList.contains("invis")) {
 			line[rngBranch].classList.remove("invis");
