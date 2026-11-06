@@ -185,7 +185,7 @@ function move(newItem, imgDiv, circ, title) {
 		newItem.style.transform = `translate(${translateX}px, ${translateY}px)`;
 
 		setTimeout(() => {
-			// Wait for circ to hide screen below & remove PREV items
+			// Wait for circ to hide screen below & remove PREV items, then add class
 			removeItem();
 			newItem.classList.add("destroy");
 			newItem.classList.remove("centering");
@@ -231,7 +231,10 @@ function move(newItem, imgDiv, circ, title) {
 			}
 			branchContainer.classList.add("display");
 		}, 1200);
-	}
+	} else {
+    // Middle item
+    console.log("mid");
+  }
 }
 
 function updateBranchStudent(pData) {
@@ -288,7 +291,7 @@ function updateBranchProject(sData) {
 		for (let x = 0; x < myData.MP.length; x++) {
 			if (
 				sID == myData.MP[x].mem1 ||
-				sID == myData.MP[x].mem3 ||
+				sID == myData.MP[x].mem2 ||
 				sID == myData.MP[x].mem3 ||
 				sID == myData.MP[x].mem4
 			) {
@@ -362,7 +365,6 @@ function initBranch(arr) {
 		let wrapper = branchItem[x].parentElement;
 		let rngIndex = Math.floor(Math.random() * arr.length);
 		let rngBranch = arr.splice(rngIndex, 1)[0];
-		console.log(`rngbranch: ${rngBranch}`);
 
 		let computedStyles = window.getComputedStyle(branchPos[rngBranch]);
 		let topPos = computedStyles.getPropertyValue("top");
@@ -409,7 +411,6 @@ function removeBranch() {
 	let branchRemove = tempWrapper.querySelectorAll(".branch-remove");
 	for (let y = 0; y < branchRemove.length; y++) {
 		branchRemove[y].remove();
-		console.log("removed branch item");
 	}
 	for (let x = 0; x < line.length; x++) {
 		if (!line[x].classList.contains("invis")) {
