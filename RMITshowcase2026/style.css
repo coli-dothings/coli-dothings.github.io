@@ -91,7 +91,7 @@ BRANCHES */
 }
 .absolute-wrapper, .branch {
 	position: absolute;
-	width: 9vw;
+	width: 8vw;
 	height: auto;
   z-index: 10;
 }
@@ -100,7 +100,7 @@ BRANCHES */
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 6vw;
+	width: 1%;
 	aspect-ratio: 1;
 	border-radius: 50%;
 	background-color: var(--text-info);

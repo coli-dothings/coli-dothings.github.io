@@ -143,9 +143,9 @@ function move(newItem, imgDiv, circ, title) {
 		if (wrapper.classList.contains("branch-remove")) {
 			wrapper.classList.remove("branch-remove");
 			branchContainer.parentNode.appendChild(wrapper);
-			wrapper.style.position = "fixed";
-			// if you wanna do the absolute thing make a nother branch abs set
-			// & make this a function, ref it to match current branchPos
+			if (window.innerWidth < 787) {
+				wrapper.style.position = "fixed";
+			}
 		}
 
 		newItem.classList.remove("other");
