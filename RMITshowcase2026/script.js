@@ -133,6 +133,10 @@ function initItem(newItem) {
 		let circ = newItem[i].querySelector(".circ");
 		let title = newItem[i].querySelector("#title").textContent;
 		imgDiv.addEventListener("click", () => move(newItem[i], imgDiv, circ, title));
+		// Easter Egg
+		if (title == "Mai Anh Vo") {
+      newItem[i].querySelector("#title").classList.add("rainbow");
+		}
 	}
 }
 initItem(item);
@@ -144,6 +148,7 @@ function move(newItem, imgDiv, circ, title) {
 			wrapper.classList.remove("branch-remove");
 			branchContainer.parentNode.appendChild(wrapper);
 			if (window.innerWidth < 787) {
+				// mobile screen break fix
 				wrapper.style.position = "fixed";
 			}
 		}
@@ -195,6 +200,7 @@ function move(newItem, imgDiv, circ, title) {
 		setTimeout(() => {
 			// remove bg circ for branch visibility
 			circ.classList.add("invis");
+			updateBgMapColor(newItem);
 
 			// set & get key data from data.js
 			// Look throught data indexes. If a key match send the whole data
@@ -215,10 +221,8 @@ function move(newItem, imgDiv, circ, title) {
 			}
 			// Item is student
 			else {
-				console.log("student");
 			}
 			branchContainer.classList.add("display");
-			updateBgMapColor(newItem);
 		}, 1200);
 	}
 }
@@ -266,7 +270,10 @@ function populateStudent(arr, mem1, mem2, mem3, mem4) {
 			branchContainer.insertAdjacentHTML("beforeend", branchStudent);
 		}
 	}
+	initBranch(arr);
+}
 
+function initBranch(arr) {
 	let branchItem = branchContainer.querySelectorAll(".item");
 	initItem(branchItem);
 	console.log("init branch");
@@ -374,5 +381,20 @@ function resetPage() {
 		if (item[x].classList.contains("invis")) {
 			item[x].classList.remove("invis");
 		}
+	}
+}
+
+//============================================================
+const infoPage = document.querySelector("#info-page");
+const pullTab = document.querySelector("#pull-tab");
+function pull() {
+	if (!infoPage.classList.contains("hide-info")) {
+		infoPage.classList.add("hide-info");
+		pullTab.classList.add("hide-info");
+		pullTab.textContent = "[ ]";
+	} else {
+		infoPage.classList.remove("hide-info");
+		pullTab.classList.remove("hide-info");
+		pullTab.textContent = "[X]";
 	}
 }

@@ -27,7 +27,7 @@ const myData = {
     },
     {
       name: "MaiAnhVo",
-      display_name: "Mai",
+      display_name: "Mai Anh Vo",
       sID: 44,
       specialization: "Design",
       bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed bibendum convallis nibh, id lobortis mi scelerisque in. Donec iaculis, lacus in convallis suscipit, diam lectus pellentesque massa, dignissim fermentum metus eros accumsan mi. Vestibulum sed hendrerit erat. Aliquam erat volutpat. Etiam et laoreet risus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc lobortis id nibh ut ornare. Praesent id nisi ut libero tristique convallis. Vivamus lobortis viverra varius. Etiam molestie arcu dictum, egestas sem et, vehicula purus. ",

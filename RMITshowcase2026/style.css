@@ -51,13 +51,13 @@
 	width: 100%;
 	aspect-ratio: 1;
 	border-radius: 50%;
-  pointer-events: none;
+	pointer-events: none;
 
 	transition: all 1s ease-in-out;
 }
 .name-plate {
 	margin-top: 103%;
-  padding: 2%;
+	padding: 2%;
 	display: inline-block;
 	background-color: var(--bg-map);
 }
@@ -66,6 +66,15 @@
 	overflow-wrap: anywhere;
 }
 
+.rainbow {
+  animation: rainbow 5s infinite 2s !important;
+}
+@keyframes rainbow {
+  0% {color: yellow;}
+  30% {color: rgb(255, 46, 46);}
+  60% {color: cyan;}
+  100% {color: yellow;}
+}
 /* RANDOM PADDING */
 .pad {
 	padding-top: 80%;
@@ -84,16 +93,17 @@ BRANCHES */
 	width: 60vw;
 	height: 100vh;
 	z-index: 2;
-  rotate: 0;
-  @starting-style {
-    rotate: 30deg;
-  }
+	rotate: 0;
+	@starting-style {
+		rotate: 30deg;
+	}
 }
-.absolute-wrapper, .branch {
+.absolute-wrapper,
+.branch {
 	position: absolute;
 	width: 8vw;
 	height: auto;
-  z-index: 10;
+	z-index: 10;
 }
 #branch-center {
 	position: absolute;
@@ -111,7 +121,7 @@ svg {
 	width: 100%;
 	height: 100%;
 	z-index: 1;
-  pointer-events: none;
+	pointer-events: none;
 }
 svg line {
 	stroke: var(--text-info);
@@ -121,7 +131,7 @@ svg line {
 
 #branch1 {
 	top: 8%;
-	left: 20%
+	left: 20%;
 }
 #branch2 {
 	top: 40%;
@@ -133,7 +143,7 @@ svg line {
 }
 #branch4 {
 	top: 8%;
-	left: 52%
+	left: 52%;
 }
 #branch5 {
 	top: 40%;
@@ -146,7 +156,7 @@ svg line {
 /*==============================================================================
 INTERACTIVE */
 .invis {
-  opacity: 0;
+	opacity: 0;
 }
 .hidden {
 	display: none !important;
@@ -272,7 +282,7 @@ INTERACTIVE */
 	top: 35%;
 	left: 82%;
 	animation: blinking 7s infinite;
-} 
+}
 #dot4 {
 	top: 47%;
 	left: 71%;
@@ -364,8 +374,12 @@ INFO-SECTION */
 /*==========================================================*/
 /* PC & mobile share similiar map layout with 3 columns, otherwise
 - Mobile info-page sit bottom half of screen, fixed position */
-
 /* PC screen */
+#b-left,
+#b-right {
+	height: 100%;
+}
+
 @media only screen and (min-width: 786px) {
 	main {
 		display: flex;
@@ -377,6 +391,7 @@ INFO-SECTION */
 	#grid-container {
 		gap: 3vw;
 		grid-template-columns: repeat(5, 1fr);
+		padding-bottom: 50vh;
 	}
 	#info-page {
 		width: 40vw;
@@ -388,15 +403,14 @@ INFO-SECTION */
 	#b-bottom {
 		width: 60vw;
 	}
-	#b-left,
-	#b-right {
-		height: 100%;
-	}
 	#b-bottom {
 		bottom: 0;
 	}
 	.dot {
 		width: 1vh;
+	}
+	#pull-tab {
+		display: none;
 	}
 }
 
@@ -408,23 +422,38 @@ INFO-SECTION */
 	#grid-container {
 		gap: 5vw;
 		grid-template-columns: repeat(4, 1fr);
-		padding-bottom: 40vh;
+		padding-bottom: 60vh;
 	}
 	#info-page {
-		height: 40vh; /* Adjustable height */
+		height: 60vh; /* Adjustable height */
 		width: 100vw;
+		padding-top: 20px;
 		bottom: 0;
+		transition: transform 1s;
+	}
+	#pull-tab {
+		cursor: pointer;
+		position: fixed;
+		bottom: 58vh;
+    right: 0;
+		background-color: var(--bg-info);
+		border-radius: 8px;
+		text-align: center;
+		font-size: 1.5rem;
+		font-weight: bold;
+		padding: 10px;
+		transition: transform 1s;
+		z-index: 200;
+	}
+	.hide-info {
+		transform: translateY(50vh);
+	}
+	#pull-tab:hover {
+		color: var(--audio);
 	}
 	#b-top,
 	#b-bottom {
 		width: 100%;
-	}
-	#b-left,
-	#b-right {
-		height: 60vh;
-	}
-	#b-bottom {
-		bottom: 40vh;
 	}
 	.orbit {
 		border: solid var(--text-info) 1px;
@@ -439,13 +468,14 @@ INFO-SECTION */
 		width: 100vw;
 		height: 60vh;
 	}
-	.absolute-wrapper, .branch {
+	.absolute-wrapper,
+	.branch {
 		width: 18vw;
 	}
 	#intro {
 		min-height: auto;
 	}
-  .name-plate p {
-    font-size: 0.7rem;
-  }
+	.name-plate p {
+		font-size: 0.7rem;
+	}
 }
