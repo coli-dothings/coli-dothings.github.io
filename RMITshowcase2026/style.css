@@ -44,10 +44,14 @@
 	background-size: contain;
 	border: solid 3px;
 	cursor: pointer;
+
   transition: translate 0.5s;
 }
 .img-container:hover {
   translate: 10% -10%;
+}
+.img-container:active {
+  translate: none;
 }
 .circ {
 	position: absolute;
