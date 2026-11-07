@@ -1,7 +1,7 @@
 const myData = {
   Person: [
     {
-      name: "KienBuiNguyenTruong",
+      name: "KienBuiNguyenTruo",
       display_name: "Nguyen Truong Kien Bui",
       sID: 4133236,
       specialization: "Illustrator/Animator",
@@ -200,7 +200,7 @@ const myData = {
       website: "https://finifugil.com"
     },
     {
-      name: "MohamadShahazrinAirielBinMatAzli",
+      name: "MohamadShahazrinAi",
       display_name: "MOHAMAD SHAHAZRIN AIRIEL BIN MAT AZLI",
       sID: 4058375,
       specialization: "Immersive Media/ Motion Design",
@@ -208,7 +208,7 @@ const myData = {
       showreel: "https://youtube.com/embed/RpTymEis_TM"
     },
     {
-      name: "Lin,Zoe",
+      name: "LinZoe",
       display_name: "Zoe Lin",
       sID: 4070890,
       specialization: "UXUI / Web Design / Graphic Design",
@@ -258,7 +258,7 @@ const myData = {
   ],
   MP: [
     {
-      name: "KienBuiNguyenTruong",
+      name: "KienBuiNguyenTruo",
       title: "OUR SPECIES WERE SPARED",
       representative: "Myself",
       category: "Audiovisual",
@@ -521,7 +521,7 @@ const myData = {
       representative: "Airiel"
     },
     {
-      name: "MohamadShahazrinAirielBinMatAzli",
+      name: "MohamadShahazrinAi",
       title: "Nest Up",
       representative: "Myself",
       category: "Interactive Installation",
@@ -537,7 +537,7 @@ const myData = {
       mem1: 4089062
     },
     {
-      name: "Lin,Zoe",
+      name: "LinZoe",
       title: "To Gather",
       representative: "Myself",
       category: "App / Website Development",
@@ -597,7 +597,7 @@ const myData = {
   ],
   SP: [
     {
-      name: "KienBuiNguyenTruong",
+      name: "KienBuiNguyenTruo",
       title: "Microcosm",
       is_group: "Yes",
       representative: "Myself",
@@ -905,7 +905,7 @@ const myData = {
       mem1: 4096900
     },
     {
-      name: "MohamadShahazrinAirielBinMatAzli",
+      name: "MohamadShahazrinAi",
       title: "The Dreamers",
       is_group: "No",
       category: "Interactive Installation",
@@ -918,7 +918,7 @@ const myData = {
       mem1: 4058375
     },
     {
-      name: "Lin,Zoe",
+      name: "LinZoe",
       title: "Social Legacy",
       is_group: "No",
       category: "App / Website Development",

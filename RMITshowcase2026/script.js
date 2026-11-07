@@ -301,7 +301,8 @@ function updateBranchProject(sData) {
 			) {
 				let title = myData.MP[x].title;
 				let category = myData.MP[x].category;
-				let branchProject = formatBranchProject("MPT", title, sData.name, category);
+        let name = myData.SP[x].name;
+				let branchProject = formatBranchProject("MPT", title, name, category);
 				branchContainer.insertAdjacentHTML("beforeend", branchProject);
 			}
 		}
@@ -314,7 +315,8 @@ function updateBranchProject(sData) {
 			) {
 				let title = myData.SP[x].title;
 				let category = myData.SP[x].category;
-				let branchProject = formatBranchProject("SPT", title, sData.name, category);
+        let name = myData.SP[x].name;
+				let branchProject = formatBranchProject("SPT", title, name, category);
 				branchContainer.insertAdjacentHTML("beforeend", branchProject);
 			}
 		}

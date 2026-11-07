@@ -434,7 +434,7 @@ INFO-SECTION */
 	#grid-container {
 		gap: 3vw;
 		grid-template-columns: repeat(5, 1fr);
-		padding-bottom: 50vh;
+		padding-bottom: 10vh;
 	}
 	#info-page {
 		width: 40vw;
