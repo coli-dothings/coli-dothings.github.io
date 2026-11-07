@@ -45,13 +45,13 @@
 	border: solid 3px;
 	cursor: pointer;
 
-  transition: translate 0.5s;
+	transition: translate 0.5s;
 }
 .img-container:hover {
-  translate: 10% -10%;
+	translate: 10% -10%;
 }
 .img-container:active {
-  translate: none;
+	translate: none;
 }
 .circ {
 	position: absolute;
@@ -73,7 +73,16 @@
 	font-size: 1rem;
 	overflow-wrap: anywhere;
 }
+.name-plate #specialization {
+  top: 0;
+	display: none;
+	opacity: 0;
+}
 
+.name-plate:hover #specialization {
+	display: block;
+	opacity: 1;
+}
 .rainbow {
 	animation: rainbow 5s infinite 2s !important;
 }
@@ -398,12 +407,12 @@ INFO-SECTION */
 	}
 }
 
-
-#credit:hover #credit-hover, #credit:active #credit-hover {
-  display: block;
+#credit:hover #credit-hover,
+#credit:active #credit-hover {
+	display: block;
 }
 #credit-hover {
-  display: none;
+	display: none;
 }
 /*==========================================================*/
 /* PC & mobile share similiar map layout with 3 columns, otherwise
@@ -512,5 +521,9 @@ INFO-SECTION */
 	}
 	.name-plate p {
 		font-size: 0.7rem;
+	}
+	#branch3 {
+		top: 70%;
+		left: 21%;
 	}
 }

@@ -58,7 +58,7 @@ function formatted(type, title, name, category) {
 						<div class="circ"></div>
 						<div
 							class="img-container ${type}"
-							style="background-image: url(img/${type}_Test1.jpg)"
+							style="background-image: url(img/${type}_${name}.webp)"
 						></div>
 						<div class="name-plate">
 							<p id="title">${title}</p>
@@ -94,7 +94,7 @@ function shuffleItem() {
 		if (item[i].classList.contains("pad2")) {
 			item[i].classList.remove("pad2");
 		}
-		let padIndex = Math.floor(Math.random() * 9);
+		let padIndex = Math.floor(Math.random() * 8);
 		switch (padIndex) {
 			case 0:
 			case 3:
@@ -106,6 +106,7 @@ function shuffleItem() {
 				item[i].classList.add("pad1");
 				break;
 			case 2:
+      case 6:
 				item[i].classList.add("pad2");
 				break;
 			default:
@@ -137,6 +138,7 @@ function initItem(newItem) {
 		// Easter Egg
 		if (title == "Mai Anh Vo") {
 			newItem[i].querySelector("#title").classList.add("rainbow");
+      newItem[i].querySelector("#specialization").classList.add("rainbow")
 		}
 	}
 }
@@ -238,7 +240,7 @@ function move(newItem, imgDiv, circ, title) {
 }
 
 function updateBranchStudent(pData) {
-	if (pData.representative == "Myself") {
+	if (pData.representative == "Myself" || pData.is_group == "No") {
 		let memCount = pData.member_count;
 		let branchArr = [0, 1, 2, 3, 4, 5];
 		console.log(`member count: ${memCount}`);
@@ -256,6 +258,8 @@ function updateBranchStudent(pData) {
 			case 4:
 				populateStudent(branchArr, pData.mem1, pData.mem2, pData.mem3, pData.mem4);
 				break;
+      default:
+        console.error("student number error");
 		}
 	}
 }
@@ -271,7 +275,7 @@ function populateStudent(arr, mem1, mem2, mem3, mem4) {
 						<div class="circ"></div>
 						<div
 							class="img-container PFP"
-							style="background-image: url(img/PFP_Test1.jpg)"
+							style="background-image: url(img/PFP_${name}.webp)"
 						></div>
 						<div class="name-plate">
 							<p id="title">${sName}</p>
@@ -345,7 +349,7 @@ function formatBranchProject(type, title, name, category) {
 						<div class="circ"></div>
 						<div
 							class="img-container ${type}"
-							style="background-image: url(img/${type}_Test1.jpg)"
+							style="background-image: url(img/${type}_${name}.webp)"
 						></div>
 						<div class="name-plate">
 							<p id="title">${title}</p>
