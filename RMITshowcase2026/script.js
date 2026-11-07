@@ -106,7 +106,7 @@ function shuffleItem() {
 				item[i].classList.add("pad1");
 				break;
 			case 2:
-      case 6:
+			case 6:
 				item[i].classList.add("pad2");
 				break;
 			default:
@@ -138,7 +138,7 @@ function initItem(newItem) {
 		// Easter Egg
 		if (title == "Mai Anh Vo") {
 			newItem[i].querySelector("#title").classList.add("rainbow");
-      newItem[i].querySelector("#specialization").classList.add("rainbow")
+			newItem[i].querySelector("#specialization").classList.add("rainbow");
 		}
 	}
 }
@@ -146,14 +146,14 @@ initItem(item);
 
 function move(newItem, imgDiv, circ, title) {
 	if (!newItem.classList.contains("destroy")) {
-    // if item is branch item
+		// if item is branch item
 		let absoluteWrapper = newItem.parentElement;
 		if (absoluteWrapper.classList.contains("branch-remove")) {
 			absoluteWrapper.classList.remove("branch-remove");
 			branchContainer.parentNode.appendChild(absoluteWrapper);
 			tempWrapper.style.zIndex = 2;
-      let str = absoluteWrapper.classList.toString();
-      currentBlockedBranch = parseInt(str[str.length - 1]);
+			let str = absoluteWrapper.classList.toString();
+			currentBlockedBranch = parseInt(str[str.length - 1]);
 		}
 
 		newItem.classList.remove("other");
@@ -234,9 +234,9 @@ function move(newItem, imgDiv, circ, title) {
 			branchContainer.classList.add("display");
 		}, 1200);
 	} else {
-    // Middle item
-    console.log("mid");
-  }
+		// Middle item
+		console.log("mid");
+	}
 }
 
 function updateBranchStudent(pData) {
@@ -258,8 +258,8 @@ function updateBranchStudent(pData) {
 			case 4:
 				populateStudent(branchArr, pData.mem1, pData.mem2, pData.mem3, pData.mem4);
 				break;
-      default:
-        console.error("student number error");
+			default:
+				console.error("student number error");
 		}
 	}
 }
@@ -301,35 +301,37 @@ function updateBranchProject(sData) {
 			) {
 				let title = myData.MP[x].title;
 				let category = myData.MP[x].category;
-        let name = myData.SP[x].name;
+				let name = myData.MP[x].name;
 				let branchProject = formatBranchProject("MPT", title, name, category);
 				branchContainer.insertAdjacentHTML("beforeend", branchProject);
+				console.log("MP found");
 			}
 		}
 		for (let x = 0; x < myData.SP.length; x++) {
 			if (
 				sID == myData.SP[x].mem1 ||
-				sID == myData.SP[x].mem3 ||
+				sID == myData.SP[x].mem2 ||
 				sID == myData.SP[x].mem3 ||
 				sID == myData.SP[x].mem4
 			) {
 				let title = myData.SP[x].title;
 				let category = myData.SP[x].category;
-        let name = myData.SP[x].name;
+				let name = myData.SP[x].name;
 				let branchProject = formatBranchProject("SPT", title, name, category);
 				branchContainer.insertAdjacentHTML("beforeend", branchProject);
+				console.log("SP found");
 			}
 		}
-    let arr = [0, 1, 2, 3, 4, 5];
-    initBranch(arr);
+		let arr = [0, 1, 2, 3, 4, 5];
+		initBranch(arr);
 	} else {
 		console.error("Null sID in updateBranchProject()");
 	}
 }
 function formatBranchProject(type, title, name, category) {
-  let categoryClass;
-  switch (category) {
-    case "Interactive Installation":
+	let categoryClass;
+	switch (category) {
+		case "Interactive Installation":
 			categoryClass = "interactive";
 			break;
 		case "App / Website Development":
@@ -346,7 +348,7 @@ function formatBranchProject(type, title, name, category) {
 			break;
 	}
 
-  return `<div class="absolute-wrapper branch-remove">
+	return `<div class="absolute-wrapper branch-remove">
           <div class="other item ${categoryClass}">
 						<div class="circ"></div>
 						<div
@@ -364,8 +366,8 @@ function initBranch(arr) {
 	initItem(branchItem);
 	console.log("init branch");
 
-  // remove branchPos that was occupied by last clicked item from arr
-  arr.splice(currentBlockedBranch, 1);
+	// remove branchPos that was occupied by last clicked item from arr
+	arr.splice(currentBlockedBranch, 1);
 
 	for (let x = 0; x < branchItem.length; x++) {
 		let wrapper = branchItem[x].parentElement;
@@ -377,7 +379,7 @@ function initBranch(arr) {
 		let leftPos = computedStyles.getPropertyValue("left");
 		wrapper.style.top = topPos;
 		wrapper.style.left = leftPos;
-    wrapper.classList.add(rngBranch);
+		wrapper.classList.add(rngBranch);
 
 		if (line[rngBranch].classList.contains("invis")) {
 			line[rngBranch].classList.remove("invis");
