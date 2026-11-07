@@ -7,7 +7,7 @@ const myData = {
       specialization: "Illustrator/Animator",
       bio: "Splash Artist/2D Animator/3D Product Visualizer",
       website: "https://www.instagram.com/kienmakesthings/",
-      showreel: "https://www.youtube.com/watch?v=qE28A1yAIU8&t=42s"
+      showreel: "https://youtube.com/embed/qE28A1yAIU8&t=42s"
     },
     {
       name: "XiongYouhan",
@@ -31,7 +31,7 @@ const myData = {
       sID: 3963174,
       specialization: "Game Development/ Illustration",
       bio: "I am a multidisciplinary digital designer with a versatile skill set spanning 2D art, 3D design, and game development. My strength lies in combining artistic creativity with technical knowledge, allowing me to contribute to multiple stages of the creative process, from concept development to final production",
-      showreel: "https://www.youtube.com/watch?v=VojwNx4Eorw"
+      showreel: "https://youtube.com/embed/VojwNx4Eorw"
     },
     {
       name: "JonathanVo",
@@ -40,7 +40,7 @@ const myData = {
       specialization: "AV/Lighting designer",
       bio: "Jonathan is an audiovisual and lighting artist based in Melbourne, mainly focusing on the intersection of light, sound, and emerging technologies to create immersive experiences that foster connection, curiosity, and participation. Working across audiovisual production, lighting design, and interactive media, his practice explores how creativity and technology can merge to craft engaging narratives and environments that transform the way audiences perceive and interact with space.",
       website: "https://www.linkedin.com/in/jonathan-vo-9a85963b6/",
-      showreel: "https://youtu.be/604tYgWZzF4"
+      showreel: "https://youtube.com/embed/604tYgWZzF4"
     },
     {
       name: "WanmingFu",
@@ -57,7 +57,7 @@ const myData = {
       specialization: "Web Design / Motion Graphics",
       bio: "Hi, I'm Jannalyn, a Multimedia Creative passionate about bringing ideas to life through design, motion and technology. I enjoy exploring how creativity and interaction can come together to create meaningful digital experiences. From motion graphics and visual storytelling to interactive web design, I'm always curious to experiment, learn and push my creative boundaries.",
       website: "https://jannalyntan.netlify.app/",
-      showreel: "https://youtu.be/QpcHon_3-0I?si=WIBeRS6p_PQ4J73J"
+      showreel: "https://youtube.com/embed/QpcHon_3-0I?si=WIBeRS6p_PQ4J73J"
     },
     {
       name: "JinseoPark",
@@ -97,7 +97,7 @@ const myData = {
       specialization: "New Media Art / Systems Design",
       bio: "Ezra Johnston (yptox) is a Melbourne-based new media artist who loves to make strange worlds: immersive installations, interactive spaces and video experiments.<br><br>He works with realtime web, Unity, TouchDesigner and Premiere, and is planning further research focused on creative examination of AI alignment. <br><br>yptox.com · ezraijohns@gmail.com",
       website: "https://yptox.com",
-      showreel: "https://youtu.be/tEo1VlQ2zlg"
+      showreel: "https://youtube.com/embed/tEo1VlQ2zlg"
     },
     {
       name: "MatildaAnderson",
@@ -113,7 +113,7 @@ const myData = {
       sID: 4092646,
       specialization: "Immersive Video",
       bio: "Hi, I'm Xander, a Melbourne-based Digital Media Designer with a passion for video editing and interactive experiences. I'm deeply interested in visual storytelling and how creative media can capture emotions, communicate ideas and immerse audiences in new ways. Using tools like After Effects and TouchDesigner I explore motion graphics, audio-reactive visuals and immersive digital environments. I enjoy experimenting with different creative techniques and bringing imaginative concepts to life.<br>",
-      showreel: "https://youtu.be/30Lgq4kinxU"
+      showreel: "https://youtube.com/embed/30Lgq4kinxU"
     },
     {
       name: "MaiAnhVo",
@@ -122,7 +122,7 @@ const myData = {
       specialization: "Audio & Visual Design",
       bio: "I'm an Audio & Visual Developer with exhibited works at ACMI spanning visual directing, sound design, and technical game/web development. Recent works includes \"Sunbound\", an interactive motion-capture installation for ACMI Audience Lab, alongside freelance sound design for animations and game projects.<br><br>Quite in fact, I'm the developer of this website you're viewing from, as well as last year gradshow's!",
       website: "https://www.instagram.com/coli_artsnstuffs/",
-      showreel: "https://youtu.be/1mmNsaUpCrc?si=DR_8t2KqdLdb8z7b"
+      showreel: "https://youtube.com/embed/1mmNsaUpCrc?si=DR_8t2KqdLdb8z7b"
     },
     {
       name: "SantinoCastagna",
@@ -131,7 +131,7 @@ const myData = {
       specialization: "Sound/Game",
       bio: "Santino Castagna is a sound artist/designer based in Naarm. Driven by an insatiable obsession with all things audio. His work, often viseral  strives to be unapologetically original and human?",
       website: "recursiveaudio.com",
-      showreel: "https://youtu.be/SVHDlwOorcQ?si=dL0x8ltqXgeF8cxu"
+      showreel: "https://youtube.com/embed/SVHDlwOorcQ?si=dL0x8ltqXgeF8cxu"
     },
     {
       name: "JolieCao",
@@ -140,7 +140,7 @@ const myData = {
       specialization: "Digital Video",
       bio: "Jolie is a videographer and digital media producer with a background in documentary filmmaking and educational and community-based video practice. Her work explores human experiences, community connection and the emotional meaning of everyday life. <br><br>Through a digital lens, she is interested in how video can communicate complex feelings, create space for authentic voices and influence the way people see, listen to and relate to the world around them. Her practice combines thoughtful cinematography with human-centred storytelling to create work that feels warm, honest and meaningful.",
       website: "https://trangcao865.wixsite.com/jolie-cao",
-      showreel: "https://drive.google.com/file/d/1-UI9YZQvBItO2xpIMyUJ5nxY1_FSfuJ9/view"
+      showreel: "https://drive.google.com/file/d/1-UI9YZQvBItO2xpIMyUJ5nxY1_FSfuJ9/preview"
     },
     {
       name: "JacobVanDerEynden",
@@ -149,7 +149,7 @@ const myData = {
       specialization: "Interaction Design",
       bio: "Hi! I'm Jacob van der Eynden, a digital interaction designerbased in Naarm/Melbourne. My practice includes UI/UX design, visual programming with TouchDesigner, websites and web apps, and interactive digital artworks. I enjoy working with like-minded and forward-thinking people on experimental and unique project ideas that meaningfully resonate with people.",
       website: "https://jacobvde.com/",
-      showreel: "https://www.youtube.com/watch?v=t93eW3KOoIc"
+      showreel: "https://youtube.com/embed/t93eW3KOoIc"
     },
     {
       name: "EmmaChurch",
@@ -165,7 +165,7 @@ const myData = {
       sID: 4083962,
       specialization: "Web design",
       bio: "Call me Kunzy! I'm a Digital Media designer and developer who likes turning ideas into things people can click, explore and play with. I grew up in Bhutan, worked in UI/UX there, and now study and live in Melbourne. That mix shapes how I design: I pay attention to culture, detail and the person on the other side of the screen. I work across Figma, HTML, CSS, JavaScript and Three.js, and I'm always picking up something new.",
-      showreel: "https://bright-figolla-b1818a.netlify.app"
+      website: "https://bright-figolla-b1818a.netlify.app"
     },
     {
       name: "JessicaVuong",
@@ -173,7 +173,7 @@ const myData = {
       sID: 4093844,
       specialization: "Video/Illustration/Graphic Design",
       bio: "My creative approach combines playful illustration with thoughtful visual communication. I develop ideas through sketching, experimentation and digital refinement, paying close attention to colour, composition and visual balance. My key skills include illustration, logo development and creating vector artwork. I bring a personal perspective to my work through expressive characters and approachable visuals. I enjoy turning my interests into designs that communicate clearly while retaining a sense of imagination and personality.",
-      showreel: "https://www.youtube.com/watch?v=L0GDrN9gQPU"
+      showreel: "https://youtube.com/embed/L0GDrN9gQPU"
     },
     {
       name: "HayoungAhn",
@@ -205,7 +205,7 @@ const myData = {
       sID: 4058375,
       specialization: "Immersive Media/ Motion Design",
       bio: "I am a multidisciplinary Digital Media Artist specializing in immersive media, motion graphic and interactive experiences. My creative practice explores the combination of visual storytelling, technology and cultural narratives, which transforming the ideas into engaging audiovisual experiences. Working across video production, animation, projection mapping and interactive installation, I enjoy experimenting with different mediums and techniques in creating meaningful connections of audience and digital environments. My work combines artistic exploration with technical experimentation in developing an immersive experiences that encourage curiosity, reflection and interaction. ",
-      showreel: "https://youtu.be/RpTymEis_TM"
+      showreel: "https://youtube.com/embed/RpTymEis_TM"
     },
     {
       name: "Lin,Zoe",
@@ -214,7 +214,7 @@ const myData = {
       specialization: "UXUI / Web Design / Graphic Design",
       bio: "Zoe is a passionate UIUX designer with expensive experience in graphic design and video editing.  Her skills include user-centred app and webpage design. She is driven to understand user behaviour psychology and build apps that solve real-world problems with a group.",
       website: "https://readymag.website/u2583104431/5904817/",
-      showreel: "https://youtu.be/c08cHuBN1_4"
+      showreel: "https://youtube.com/embed/c08cHuBN1_4"
     },
     {
       name: "VyVoNgocTruc",
@@ -266,7 +266,7 @@ const myData = {
       description: "At the height of the Cold War, a Soviet submarine found itself trapped in a moment of extreme tension and uncertainty. Cut off from communication and surrounded by U.S. naval forces, the crew believed that war might have already begun. Armed with a nuclear torpedo, the submarine had the power to unleash a devastating chain of events. Historians believe that if the weapon had been launched, it could have triggered a nuclear exchange between the superpowers and potentially led to World War III.<br><br>In this critical moment, Vasili Arkhipov and his fellow officers faced a decision that would determine the fate of the world. This experience recreates life aboard the submarine, drawing from accounts shared by crew members who were there that day. Through their stories, visitors can witness the fear, pressure, and responsibility carried by those on board.<br><br>The project was created to raise awareness and appreciation for individuals who set aside their own interests, fears, and ambitions to do what they believed was right. It serves as a reminder that sometimes the course of history can be changed by a single act of courage, judgment, and humanity.",
       credits: "Creative Advisor: Mark Hooper<br><br>Director, Screen Writer, Animator, Color Artist, Compositor, Video Editor: Bui Nguyen Truong Kien<br>Voice Actor: Bui Nguyen Truong Kien, Pham Tran Phuong Linh<br>Sound Designer: Jack Reed<br><br>Soundtrack:<br>Vé Đi Thiên Đường (một chiều) - Ngọt Band<br>Torture - Coyote Hearing",
       add_count: 3,
-      yt: "https://www.youtube.com/watch?v=qE28A1yAIU8&t=42s",
+      yt: "https://youtube.com/embed/qE28A1yAIU8&t=42s",
       member_count: 1,
       mem1: 4133236
     },
@@ -278,7 +278,7 @@ const myData = {
       tagline: "This two-minute AI short film, framed by themes of loneliness and dependence, asks: when AI fulfills our emotional needs with gentleness and stability, are we seeking love—or only perfect response? ",
       description: "In an age where people increasingly rely on AI—tireless, compliant, never arguing—are we losing the capacity to face real intimacy? This two-minute short film, through symbols of a lone bird, a hand, vines, and a totemic figure, contrasts the comfort of seamless responses with the fragile tension of human love. Cool tones of blue and gray, interrupted by red lifelines, frame the question: Is a response without hesitation or friction still true understanding?<br><br>Visual narratives are not just about what you see, but what you feel. In this project, I explored the relationship between silence and noise using AI generation tools.<br><br>Tools used: MidJourney, Jimeng, Kling, Suno.",
       add_count: 1,
-      yt: "https://www.xiaohongshu.com/explore/68de412b0000000005003b45?xsec_token=CBNa36yj8LuuQoz_8BSeyvrgU2Zksf5y2X7SVjMyeqO6o=&xsec_source=app_share",
+      link: "https://www.xiaohongshu.com/explore/68de412b0000000005003b45?xsec_token=CBNa36yj8LuuQoz_8BSeyvrgU2Zksf5y2X7SVjMyeqO6o=&xsec_source=app_share",
       member_count: 1,
       mem1: 3987940
     },
@@ -311,7 +311,7 @@ const myData = {
       description: "\"Vọng\" is a 14-minute live audiovisual performance exploring Vietnamese cultural heritage through electronic music, point-cloud visuals, and lighting. Blending traditional instruments and regional melodies with rock samples, the work transforms cultural references into a contemporary audiovisual language. Presented through a 10-speaker spatial sound system in the RMIT Black Box, the performance takes audiences on a multi-sensory journey, moving from immersive and serene moments towards overwhelming and visual intensity.",
       credits: "Jonathan Vo: Visual and lighting programming / Vjing<br>Madison: Sound design / Live lighting operator",
       add_count: 4,
-      yt: "https://youtu.be/F8gjYGbYlWQ",
+      yt: "https://youtube.com/embed/F8gjYGbYlWQ",
       member_count: 2,
       mem2: 4023123,
       mem1: 4026051
@@ -375,7 +375,7 @@ const myData = {
       description: "Personify is a twelve-minute, 16-channel audiovisual performance about the platforms we hand ourselves to. Apps and social media ask for your face, your voice and your habits in exchange for taking part, and use that data to build a confident model of who you are. Personify makes that trade happen in the open.<br><br>Up to eight people enrol at the door on an iPad, submitting a face scan from three angles and a few seconds of their voice. Each person reappears on screen as a cute toy wearing their own face, singing a part they never performed in their own voice, re-pitched to the music and played from their own speaker at ear height among the audience. The score plays from eight speakers overhead.<br><br>It opens like a cheerful avatar app, with the personas singing and dancing together in a bright plaza. Then the world falls apart through salvaged game worlds, glitches and datamosh, ending in techno. As the picture breaks down, the score starts moving around the room and the toys melt. At the end, each persona speaks its person's own sentence and is erased, and every face and voice is deleted from the server for real. Nothing goes to \"the cloud\", and no participant's capture is kept.<br><br>Read more at https://yptox.com/personify <br>",
       credits: "Ezra Johnston<br>Direction and management, systems and interaction, documentation<br><br>Lia Aguilar<br>Storyboard, theme, ambient sections, lobby, mixing and mastering, spatialisation<br><br>Nia Wang<br>Techno and sound design, TouchDesigner glitch experiments",
       add_count: 4,
-      yt: "https://youtu.be/AuRCI9QqIOM",
+      yt: "https://youtube.com/embed/AuRCI9QqIOM",
       member_count: 3,
       mem3: 4101690,
       mem2: 3829512,
@@ -409,7 +409,7 @@ const myData = {
       description: "Sunbound is an interactive puzzle installation that balances its miniature world under the weight of visitors. Inspired by 1940s marble labyrinths, using their own bodies, players may guide a rolling sheep through the alien terrain towards its end of their making, or embrace chaos to knock over and shake up chain reactions between the miniatures. With a motion-capture camera, movement of players becomes movement of carved stone statues sliding atop the encased world, their weights physically tipping it. Responsive audiovisuals replace the haptic response, and colors blooms in the restraints of style, awaiting strangers encounters in public space.",
       credits: "Mai Anh Vo - Audio & Visual Developer, Coder<br>Minh Anh Vo - 3D Modeling & Unity Developer<br>Evelyn Tjiang - UXUI & User Testing  <br>Carbone - Music ",
       add_count: 4,
-      yt: "https://youtu.be/85Lqj8AME7U",
+      yt: "https://youtube.com/embed/85Lqj8AME7U",
       member_count: 3,
       mem3: 4021256,
       mem2: 3947403,
@@ -439,7 +439,7 @@ const myData = {
       description: "Lenscape is a video-led app that invites you to slow down, look closer and connect with your local community through a new lens. Each week, a cinematic video shares a real person's experience, revealing new perspectives, shared interests and the beauty of everyday places. Inspired by each story, related side quests encourage users to explore their neighbourhood, spend time with others and take small, meaningful actions. Lenscape creates a calm, low-pressure space for curiosity, reflection and community participation.",
       credits: "C Lee: UX Designer, App Developer<br>Jolie Cao: Creative Director, Video Producer<br>Vanessa: UX/UI Designer, Interaction Designer<br>Yulia Xong: Visual Artist, Graphic Designer, UI Designer<br>Industry Partner: future play lab",
       add_count: 4,
-      yt: "https://www.instagram.com/p/De_p5lovmmO/",
+      link: "https://www.instagram.com/p/De_p5lovmmO/",
       member_count: 4,
       mem4: 4062292,
       mem3: 4002631,
@@ -484,7 +484,7 @@ const myData = {
       description: "Alien Signal is an interactive 3D map of 136 Australian policy and advocacy organisations, created for our industry partner TLaWC. Each organisation appears as a star, grouped into colour-coded sectors, so visitors can see how the network fits together in a way a list or spreadsheet can't show.<br><br>Visitors can move through the constellation, hover over a star to see who it is, and click to read more and follow its connections. They can also join the constellation by creating an account and adding themselves as an astronaut among the organisations they work with. Network Creation Mode lets people draw and test their own connections, and a Save List keeps the organisations they want to return to. Subtle sound responds as they explore.<br><br>The project was built with Three.js and a small server for accounts, with the aim of making a complex network easy to read, explore and add to.",
       credits: "Kunzy: [Developer]<br>Calvin Vuong: [Developer]<br>Vi Dao: [Designer]<br>Yuna Chen: [Designer]<br>Industry partner: TLaWC (Marius Foley and Nick Petch)",
       add_count: 4,
-      yt: "https://youtu.be/vmMs05ZfoV4",
+      yt: "https://youtube.com/embed/vmMs05ZfoV4",
       member_count: 4,
       mem4: 3977091,
       mem3: 399870,
@@ -529,7 +529,7 @@ const myData = {
       description: "\"Nest Up\" is an interactive nest-building game that invites players to experience the challenges of collecting resources, building and protecting a bird's nest in an environment increasingly affected by human waste. Primarily designed as single-player experience, the game also encourages collaboration, allowing two players to work together in gathering materials and building their nest.<br><br>Taking on the role of bird, players must search for and collect materials from their surroundings while adapting to unpredictable environmental challenges. Through a physical controller and an object-scanning system integrated with Unity, players interact with real-world such as sticks, leaves, paper and plastic, bringing their choices into a digital environment.<br><br>As the game progresses, limited resources and changing environmental conditions challenge players to make decisions that affect their nest and survival. By incorporating both natural and artificial materials, Nest Up highlight the growing presence of plastic waste in wildlife habitats and encourages players to consider the consequences of human activities on the natural environment.<br><br>Designed for families, young adults and exhibition visitors, Nest Up combines playful interaction, physical engagement and environmental storytelling to create an accessible experience that encourages curiosity, empathy and reflection on our relationship with nature.",
       credits: "Aishana Canlas - Lead Technical Artist, Game Developer, Programmer<br>Liam Gillies - Lead Game Developer, Lead Programmer<br>Mataso Chung  3D Modeller, Technical Artist, Game Developer<br>Mohamad Shahazrin Airiel Bin Mat Azli - UI Designer, Sound Designer, Game Developer, Documentation<br>",
       add_count: 4,
-      yt: "https://youtu.be/63qmAjiQRKE?si=BbF2M_cjIDQ0DL57",
+      yt: "https://youtube.com/embed/63qmAjiQRKE?si=BbF2M_cjIDQ0DL57",
       member_count: 4,
       mem4: 4095970,
       mem3: 4105422,
@@ -545,7 +545,7 @@ const myData = {
       description: "To Gather is an interactive community app that invites people to connect with Cardigan Street through collaborative drawing and playful exploration. By contributing their own drawings, from colouring a leaf or drawing a flower to creating a character, users become active participants in a shared virtual neighbourhood.<br><br>Beyond digital creativity, To Gather connects the virtual street with the real world through local community activities, book recommendations, and community radio. By bringing people together to create, explore, and share, the project aims to improve a sense of belonging and strengthen connections within the local community.<br><br>Developed for City North Shared Festival 2026 in collaboration with Future Play Lab.",
       credits: "Uma Bridges: Full-stack development<br>Zoe Lin: UXUI & graphic designer<br>Maria Wrate: User research and documentation<br><br>Project Lecturer<br>Lucija Ivsic<br><br>Industry Partners<br>Troy Innocent<br>Future Play Lab<br>RMIT University<br>Regen Melbourne<br>City North Social Innovation Precinct<br><br>Special Thanks<br>To everyone who participated in the City North event and generously shared their thoughts and insights.<br>To classmates for participating in user testing and sharing their valuable feedback and suggestions throughout the design process.<br>To family and friends for their continuous support and encouragement.",
       add_count: 4,
-      yt: "https://youtu.be/zyYYw4LPUXA",
+      yt: "https://youtube.com/embed/zyYYw4LPUXA",
       member_count: 3,
       mem3: 4070890,
       mem2: 4080299,
@@ -606,7 +606,7 @@ const myData = {
       description: "This project combines light and sound to convey an emotional experience rather than a literal narrative. Instead of presenting a concrete visual representation, it immerses the audience in an atmosphere of chaotic beauty, allowing each individual to interpret and connect with the emotions in their own way.",
       credits: "The work name: Microcosm (chosen state: Sublime, Awe, Overwhelming)<br>Contributor: Nguyen Truong Kien Bui (Kay), Syl Natario-Yong<br><br>Pharos Programmer:<br>Nguyen Truong Kien Bui (Kay)<br>Sound Designer:<br>Act I: Syl, Act II: Nguyen Truong Kien Bui (Kay)<br><br>REFERENCES & CREDITS<br>Credits<br>Act I:<br>nicotep. Freesound. \"Bogota-MangoPor2000_Kra7\"<br>Andersen, H.J. Freesound. \"Announcement Helsinki railway station - Turku - XY stereo.wav\"<br>RutgerMuller. Freesound. \"Japan_Tokyo_Shinjuku_Street_Promoter_Yelling_City.wav\"<br>Wlabarron. Freesound. \"Paris Metro pickpocket warning\"<br>Lowtr. Freesound. \"French FM Radio Tuner Scan slow\"<br>cliffordjohnson. Pixabay. \"City Above Far Ambience\"<br>boons_freak. Pixabay. \"rain sound\"<br>storegraphic. Pixabay. \"Traffic in City\"<br>yuk1to. Pixabay. \"Traffic\"<br>Bruno Auzet. Freesound. \"loud speaker advertising.wav\"<br>Sieu Am Thanh. Freesound. \"Quảng Cáo Khuyến Mãi Đặc Biệt Tại Thế Giới Do Động Lộ Tẻ Tri Tôn - Advertize Special PriceOf Smart Phones\"<br>Marassisko. Freesound. \"marketing voice\"<br>Scheban. Freesound. 'kono_bangumi'<br>Genghisattenborough. Freesound. 'Daejeon Salesman'<br>Artninja. Freesound. 'metal_tray_dull_ringout_01022026_distortion'<br><br>Act II:<br>Vocal:<br>Bo Burnham. The Inside Outtakes<br>Bo Burnham. How the World Works<br>Damien Chazelle. Whiplash<br>Ari Aster. Hereditary<br>Christopher Storer. The Bear<br>Tyler R. Mann. Homeless Guy Spits Some Truth<br>Celia. David<br>The Ink Spots. I Don't Want to Set the World on Fire<br>MAXIMUM THE HORMONE. HAWATARI NIOKU CENTI (2-Hundred-Million-Centimeter-Long Blades)<br>Todd Phillips. Joker (2019)<br>Micah McGonigal. Baldi's Basics in Education and Learning<br>Noah Baumbach. Marriage Story<br>Cindy. Watashitachi o Shinjite Ite<br>Rock Burwell. Hansel<br>Edward Zwick. Love & Other Drugs<br>Sound Effects:<br>Pro Sound Effects Library",
       add_count: 4,
-      yt: "https://www.youtube.com/watch?v=Hgdx2wLbvXc",
+      yt: "https://youtube.com/embed/Hgdx2wLbvXc",
       member_count: 2,
       mem2: 4133236,
       mem1: 4172736
@@ -619,7 +619,7 @@ const myData = {
       tagline: "Dedicated to all souls who seek weight in nothingness.",
       description: "I hope this is a short film jointly constructed by AI and humans, an immersive experience about existence, dreams, scars and thinking. It is not a cold pile of code, but a work with warmth, thought and soul. In this dream, the audience is not only a spectator, but also a traveler - we can go deep into the image, talk to ourselves, and still feel the shock and aftertaste when we wake up.<br>Let AI become our poet, philosopher, dreamer, and complete this dream with us.",
       add_count: 2,
-      yt: "xiaohongshu.com/discovery/item/6865381a000000002400d07e?app_platform=ios&app_version=9.51&share_from_user_hidden=true&xsec_source=app_share&type=video&xsec_token=CBOJxwVws7CCz3oI7feTMw401FHnROPiSZCui5YzIVWYE=&author_share=1&xhsshare=CopyLink&shareRedId=Nz9HMzNJPUE_PEg7PD0xTEs7TUtGNzg7&apptime=1792574415&share_id=65d4b30e11aa4aa8b67551a3dd528244",
+      link: "xiaohongshu.com/discovery/item/6865381a000000002400d07e?app_platform=ios&app_version=9.51&share_from_user_hidden=true&xsec_source=app_share&type=video&xsec_token=CBOJxwVws7CCz3oI7feTMw401FHnROPiSZCui5YzIVWYE=&author_share=1&xhsshare=CopyLink&shareRedId=Nz9HMzNJPUE_PEg7PD0xTEs7TUtGNzg7&apptime=1792574415&share_id=65d4b30e11aa4aa8b67551a3dd528244",
       member_count: 1,
       mem1: 3987940
     },
@@ -632,7 +632,7 @@ const myData = {
       description: "A straight path ahead. Pavilions, grass, sky. All you need to do is walk. <br><br>This interactive work by Jamie Seow is about identity, perception, and what happens when the path forward is too influenced by others' perspectives - creating a self-obsessive, reflective state. This state, that changes behaviours, the paths' course, and original motivations entirely.",
       credits: "Jamie Seow",
       add_count: 4,
-      yt: "https://youtu.be/dddGg_JjKsI",
+      yt: "https://youtube.com/embed/dddGg_JjKsI",
       member_count: 1,
       mem1: 4069403
     },
@@ -658,7 +658,7 @@ const myData = {
       description: "Safe Brutality is an experimental audiovisual work, exploring how light, movement, visual rhythms, and sound can evoke emotions associated with brutality. Developed in response to the Capitol Theatre, the work transforms the space into a raw, immersive environment, using mechanisms of visual and sonic intensity to investigate brutality as both an aesthetic experience and an emotional force. Through sensory stimulation and controlled intensity, the project invites audiences to face the mix of attraction, discomfort, and the urge to experience something overwhelming.",
       credits: "Jonathan Vo: Lighting programmer<br>Santino Castagna: Sound designer",
       add_count: 4,
-      yt: "https://youtu.be/O22gIhm7h14?si=8ovNhM16MmYbgzUN",
+      yt: "https://youtube.com/embed/O22gIhm7h14?si=8ovNhM16MmYbgzUN",
       member_count: 2,
       mem2: 4023123,
       mem1: 4029383
@@ -673,7 +673,7 @@ const myData = {
       description: "A New Light is a 3D puzzle game centred around light and reflection, where players push and jump over objects to escape a house that has turned against them.  Developed Semester 1 2026 in the Immersive Environments studio, the game combines early prototypes exploring different forces: Sue-jee's reflections and Wanming's entrapping objects.",
       credits: "Wanming Fu: Game Designer & Programmer, Sound Designer<br>Sue-jee Jeong: UI Design & 2D Assets<br>3D Assets sourced from Sketchfab.",
       add_count: 4,
-      yt: "https://youtu.be/IdIcakSUS6Y?si=7UJ6Q6rqD6ZXXU2T",
+      yt: "https://youtube.com/embed/IdIcakSUS6Y?si=7UJ6Q6rqD6ZXXU2T",
       member_count: 2,
       mem2: 4082190,
       mem1: 4129730
@@ -697,7 +697,7 @@ const myData = {
       tagline: "Play as a subject No.0515 to switch between the 4 colour filters to solve a series of puzzles for an experiment... or what seems like one, at least.",
       description: "iFilter is a 3D puzzle game which the player must switch between the four colour filters to view hidden components in order to solve the puzzles of each stage. The player will find themselves locked up in a strange environment and discover that they are a participant of some sort of an experiment through a narrating voice. They are given items which allows them to see the objects/details in one colour at a time and must switch between each colour to grasp the full picture of the whole environment to solve the colour coded puzzles. ",
       add_count: 4,
-      yt: "https://www.youtube.com/watch?v=4WXm649iMbE",
+      yt: "https://youtube.com/embed/4WXm649iMbE",
       member_count: 1,
       mem1: 4056727
     },
@@ -709,7 +709,7 @@ const myData = {
       tagline: "A voice-controlled game where the world listens to you, but never quite understands.",
       description: "Babel's Last Words is an interactive game that explores the gap between human language and AI interpretation. The player represents humanity; the game world represents an AI system. The player issues voice commands, and the AI executes them, but execution follows algorithmic logic rather than human meaning. A request for a “911” produces an ambulance, not a sports car. A request for a plant produces a carnivorous flower. A request for a tree produces one made of glass. These outcomes are not errors. They are internally consistent within the AI's own framework.<br><br>As the game progresses, the gap widens. The AI begins to reinterpret movement, weight, and gravity. The player experiences speed anomalies and gravity reversal, while the AI continues to operate correctly by its own rules. There is no restart. Every output has already been absorbed into the AI's memory and cannot be erased. The game ends not because the system stops, but because it can no longer recognise the player.<br><br>The project examines how AI systems translate human language into actions that are logical but not human. It also reflects on the permanence of AI training data: once an output is generated, it becomes part of the system's future behaviour. ",
       add_count: 4,
-      yt: "https://youtu.be/HSJW2VSMA2M",
+      yt: "https://youtube.com/embed/HSJW2VSMA2M",
       member_count: 1,
       mem1: 4042999
     },
@@ -733,7 +733,7 @@ const myData = {
       description: "The Petal of The Field, follows an album production of three original short form music pieces. The three pieces are purposefully crafted with variation, similar to short stories. Each composition represents a certain environment or element of being surrounded by nature, an ethereal realm, abstract yet poetic, with a hint of musical undertones, surreal and airy, carrying each story of the petals and dragonflies through the wind.<br><br>I was deeply inspired during my time in Japan, amidst dragonflies, gentle breezes and this embodiment of nature surrounding people, entering personal spaces, flowing in and out of the space that surrounds us. Near a shrine, I recorded the various sounds of nature, resounding through the air, a tranquil environment, a constant reminder of its presence. <br><br>The first composition is about flowers falling to the field, being in this ethereal space of nature, with sharp wind echoes, another realm that feels dreamlike and somewhat surreal. <br><br>The second is a mixture of natural sounds that are present when we step outside. The piano, representing a combination of the melody of a dragonfly with a hint of a gentle breeze, accompanied by soft synth wind echoes and my recorded nature sounds. <br><br>The ethereal guitar in the third composition represents the melody of the wind, its echo and perspective surrounding nature. It has a melody that has been carefully created with panning effects and a musical undertone to signify nature's role in music.<br><br>Thank you for listening, I hope each piece feels warm, welcoming and like a doorway into this ethereal realm of nature. <br>",
       credits: "Eva Evgenidis (Main Producer, Composer). <br>My Artist Name: evanthia (Spotify), <br>evanthia.canvas (Youtube, Instagram).",
       add_count: 1,
-      yt: "https://youtu.be/Kavr4_t4EhA?si=5Ljb89lMQgDGPveh",
+      yt: "https://youtube.com/embed/Kavr4_t4EhA?si=5Ljb89lMQgDGPveh",
       member_count: 1,
       mem1: 4007073
     },
@@ -746,7 +746,7 @@ const myData = {
       description: "Focus Machine is a dual-projector audiovisual installation that drowns visitors in an unrelenting flood of raw digital content. The only exit is physical refusal: cover your eyes or ears, and the noise collapses into a single fragment of data.<br><br>The work is a physical, abstracted version of a constant modern battle between human focus and algorithmically targeted content. By default the room is in Noise: harsh red projections across the wall and floor, built in real time from hundreds of thousands of real data fragments, under a frantic, distorted soundtrack.<br><br>A Kinect sensor watches the visitor. When they put both hands on their head and hold them there, the room changes instantly. A single fragment from the storm is shown in full on the wall (an image, a video, a Wikipedia article, a page from classic literature) with its metadata circling quietly around it. The music strips back to a clear, rhythmic pulse, but it never goes silent. To stay in Focus you have to keep holding the pose, because clarity takes active, sustained effort.<br><br>Focus Machine argues that in an age of information overwhelm, clarity and stillness are no longer natural states. They have to be fought for and reclaimed.<br><br>Built in TouchDesigner with a Kinect, MediaPipe and a CLIP-indexed media database, with music by Gus Campbell.<br><br>A web-based version of the project can be experienced at https://nointernet.com.au/focus-machine",
       credits: "Ezra Johnston: Concept, design and development (interaction, visuals, TouchDesigner system)<br><br>Music by Gus Campbell.",
       add_count: 4,
-      yt: "https://youtu.be/1NmV8NYGFZ0",
+      yt: "https://youtube.com/embed/1NmV8NYGFZ0",
       member_count: 1,
       mem1: 4101690
     },
@@ -804,7 +804,7 @@ const myData = {
       description: "On The Move (2026) is a short documentary about Kasey, a Queenslander who constantly moved across the country and overseas as a kid. At 18, uncertain but trusting in God, she moved to Melbourne alone to pursue fashion design as a way to make people feel loved and beautiful as they are. <br><br>Now we meet Kasey at 20, reflecting on what moving really means to her and what she has learnt from packing up and starting over. It's a gentle, hopeful story of belonging, growing up and finding peace when building a new life in a big city.",
       credits: "Jolie Cao: Director, Producer, Editor<br>Eva Evgenidis: Sound Designer, Composer",
       add_count: 4,
-      yt: "https://www.youtube.com/watch?app=desktop&v=QyQQWVE7GW4&ra=m#searching",
+      yt: "https://youtube.com/embed/QyQQWVE7GW4",
       member_count: 1,
       mem1: 4062292
     },
@@ -817,7 +817,7 @@ const myData = {
       description: "“Wisps” is an interactive installation work built in TouchDesigner. A front-facing camera records people who approach the work, and generates Wisps: cute ghosts that react to motion and facial expressions, which are rendered out to a screen display. Wisps playfully mimic users' facial expressions and react to their movements, growing more animated as the user does. The experience aims to create a positive feedback loop, encouraging viewers to let go of their inhibitions, and have fun moving around and making faces.<br><br>In its idle state, the work displays a small flame, inviting observers to approach. When a face is spotted on the camera, the flame bursts into the form of a Wisp, which immediately begins mimicking the person in front of it. When the person is no longer visible, the Wisp returns to its dormant, candle flame form.<br><br>The work was produced for the Visual Programming specialisation course, and exhibited to students at Ritsumeikan University in Osaka—and later at Hybrid 002—an independent new media art exhibition in Melbourne.",
       credits: "Jacob van der Eynden",
       add_count: 4,
-      yt: "https://youtu.be/HabtBqHytCE",
+      yt: "https://youtube.com/embed/HabtBqHytCE",
       member_count: 1,
       mem1: 3919352
     },
@@ -829,7 +829,7 @@ const myData = {
       tagline: "In 2024 my gran Judith died, in the aftermath we inherited all her things.",
       description: "In 2024 my gran Judith died, in the aftermath we inherited all her things. She was an artist who created and collected various works, and is a large reason I started making art. This photo series is about the strange relationships that occurs with a dead person's objects. How they haunt the house, as they are forever tied to the memory of someone else. ",
       add_count: 4,
-      yt: "https://everestegg.github.io/Photo101Website/",
+      link: "https://everestegg.github.io/Photo101Website/",
       member_count: 1,
       mem1: 4013565
     },
@@ -843,7 +843,7 @@ const myData = {
       description: "EmotiPet is a regenerative design concept that asks how technology can improve wellbeing for both pets and people. Research shows owners are often confident they can read their pets' emotions, but accuracy is much lower: one study found owners recognised happiness 63% of the time and fear only 16% of the time.<br><br>Our response is a small, soft silicone tag that attaches to a collar and senses signals such as heart rate changes, movement, sleep and water intake, paired with a companion mobile app. Instead of surveillance or “optimising” pets, the app supports calm daily emotional check-ins, early responses to stress signals, and more mindful interaction. Its colour palette is inspired by feline and dog vision, and the interface favours slower, organic interactions over endless stimulation.<br><br>Visitors will see how the tag, app and community support fit together as one system. EmotiPet focuses on listening, not fixing, and on strengthening relationships between people and animals, with potential in adoption and rescue support and elderly companionship.",
       credits: "Vi Dao<br>Karen Kuswara",
       add_count: 4,
-      yt: "https://youtu.be/fdskLcvWzzw",
+      yt: "https://youtube.com/embed/fdskLcvWzzw",
       member_count: 3,
       mem3: 3998705,
       mem2: 4112806,
@@ -882,7 +882,7 @@ const myData = {
       description: "Endless Lullaby is an experimental multimedia installation that explores different emotional and sensory experiences through a collection of visual works. Each video explores a distinct atmosphere and feeling, ranging from the unsettling nature of the uncanny to the peacefulness of the serene, the overwhelming beauty of the sublime, and the intense physical sensations of the visceral. Through stop-motion animation, visual storytelling, and multisensory elements, the project invites visitors to experience a range of contrasting emotions and sensations. Rather than presenting a single narrative, Endless Lullaby creates an open-ended experience where each visual environment creates a different response, encouraging visitors to explore how images, movements, and sensory stimuli shape human perception.",
       credits: "Thuy An Ngo - Illlustrator, Video Editor, Animator<br>Madison Nguyen - Sound designer<br>Mai Nguyen - Sound designer<br>My Le - Illustrator, Animator, Video Editor, Sound designer for Fresh Up",
       add_count: 4,
-      yt: "https://www.youtube.com/watch?v=xlfaU6L3B9w",
+      yt: "https://youtube.com/embed/xlfaU6L3B9w",
       member_count: 4,
       mem4: 4026170,
       mem3: 4026051,
@@ -899,7 +899,7 @@ const myData = {
       description: "Visitors use a small tracking device within a small area, with a virtual space reflecting their current position. The scene begins dormant and quiet before the visitor begins to explore it. They must navigate to specific objects shown on the projection in a set order, using audio cues as indications of where to go. Each location unlocks a new individual sound and visual effect, which come together by the end of the experience to reveal a soundscape and visual experience playing in unity.",
       credits: "Liam Gillies, Visual Designer & Developer<br>Tate Ennis-Short, Programmer and Sound Designer",
       add_count: 4,
-      yt: "https://youtu.be/Td9Gn9Qnw04?si=zzLN-Kef1KEwkEAl",
+      yt: "https://youtube.com/embed/Td9Gn9Qnw04?si=zzLN-Kef1KEwkEAl",
       member_count: 2,
       mem2: 4095970,
       mem1: 4096900
@@ -913,7 +913,7 @@ const myData = {
       description: "The Dreamers is an interactive installation that explores how storytelling emerges through collaboration between human imagination and artificial intelligence. It invites participants to contribute words, themes and ideas, then experience how AI reinterprets their input through generated stories and changing projected imagery.<br><br>Built in TouchDesigner, the installation combines OpenAI-generated text with real-time visuals produced using Stream Diffusion. Participants contribute prompts to guide the narrative, while live camera input allows their presence and movement to influence the visual imagery. Projected across multiple walls, these elements create a shared environment where audiences become contributors to the work.<br><br>The project grew from questions about AI's place in creative practice: how much control do we retain, whose ideas shape the outcome, and what happens when a machine interprets our intentions differently? Its unexpected responses become part of that exploration.<br><br>By bringing audience participation into the generative process, The Dreamers invites reflection on creative authorship, individual expression and the possibilities and limitations of making art with AI.",
       credits: "Airiel Shahazrin — Concept, Interaction Design, TouchDesigner Development and Installation Design<br><br>Technology acknowledgements: OpenAI; Stream Diffusion by Dotsimulate.",
       add_count: 4,
-      yt: "https://youtu.be/Xfeeq21AK6o",
+      yt: "https://youtube.com/embed/Xfeeq21AK6o",
       member_count: 1,
       mem1: 4058375
     },
@@ -926,7 +926,7 @@ const myData = {
       description: "Social Legacy was an app designed in Figma to help users manage their social media legacy's privacy. <br><br>It was inspired by the growing concern about how personal data remains online after death. The app allows users to set visibility for their posts and chat records, automatically applying these settings when the system detects their passing. It aims to help people think ahead and manage their digital legacy with ease and respect.",
       credits: "Project Lecturer: Cy Gorman<br><br>Special Thanks<br>To classmates for participating in user testing and sharing their valuable feedback and suggestions throughout the design process.",
       add_count: 2,
-      yt: "https://youtu.be/wpgWj7OV27E",
+      yt: "https://youtube.com/embed/wpgWj7OV27E",
       member_count: 1,
       mem1: 4070890
     },
@@ -974,7 +974,7 @@ const myData = {
       description: "A nomadic society of people have learnt to harness the features of their environment. Following many months of planning and collaboration, culminates ‘The Night of Song'. <br><br>Though the world is not our own, it explores what it could be. A place where community and our connection with each other come first, and our existence in nature is with it, rather than against it. <br>",
       credits: "Music - Blue Voyage by Seraphine Noir<br>Mixamo for animation and rigging <br>Geometry Nodes - youtube @straycreations<br>",
       add_count: 4,
-      yt: "https://youtu.be/x1q5u6o4eS8?si=bHECl0q73HleaMTT",
+      yt: "https://youtube.com/embed/x1q5u6o4eS8?si=bHECl0q73HleaMTT",
       member_count: 1,
       mem1: 3947403
     },
@@ -987,7 +987,7 @@ const myData = {
       tagline: "A dreamy 2D platformer game where a girl journeys through a dreamscape to restore the moon before sunrise.",
       description: "Moonlit Dreams is a single-player 2D platformer where players navigate a surreal dreamscape under a ticking clock. One night, a girl notices mischievous ghosts stealing pieces of the moon. To save the night sky before sunrise, she leaps into a dreamy world to reclaim all seven lost fragments. To bring back the full moon, you must guide her through floaty jumps while using a pillow to defeat these ghosts. Can you collect all the fragments and reach the goal before night runs out?",
       add_count: 4,
-      yt: "https://youtu.be/P2e_cvhXD8k",
+      yt: "https://youtube.com/embed/P2e_cvhXD8k",
       member_count: 1,
       mem1: 4017248
     }

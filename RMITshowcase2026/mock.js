@@ -120,3 +120,28 @@ function populateStudent(arr, mem1, mem2, mem3, mem4) {
 		}
 	}
 }
+
+
+//============================================================
+// Data.js youtube embed checker :3
+for (let a = 0; a < myData.Person.length; a++) {
+  if (myData.Person[a].showreel) {
+    if (!myData.Person[a].showreel.includes("https://youtube.com/embed/")) {
+      console.log(`Person ${a}, ${myData.Person[a].display_name}`)
+    }
+  }
+}
+for (let b = 0; b < myData.MP.length; b++) {
+  if (myData.MP[b].yt) {
+    if (!myData.MP[b].yt.includes("https://youtube.com/embed/")) {
+      console.log(`MP ${b}, ${myData.MP[b].name}`)
+    }
+  }
+}
+for (let c = 0; c < myData.SP.length; c++) {
+  if (myData.SP[c].yt) {
+    if (!myData.SP[c].yt.includes("https://youtube.com/embed/")) {
+      console.log(`SP ${c}, ${myData.SP[c].name}`)
+    }
+  }
+}
