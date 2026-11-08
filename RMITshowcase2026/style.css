@@ -65,26 +65,17 @@
 }
 .name-plate {
 	margin-top: 103%;
-	padding: 2%;
 	display: inline-block;
-	background-color: var(--bg-map);
+
 }
 .name-plate p {
 	font-size: 1rem;
 	overflow-wrap: anywhere;
-}
-.name-plate #specialization {
-  top: 0;
-	display: none;
-	opacity: 0;
+  background-color: var(--bg-map);
 }
 
-.name-plate:hover #specialization {
-	display: block;
-	opacity: 1;
-}
 .rainbow {
-	animation: rainbow 5s infinite 2s !important;
+	animation: rainbow 5s infinite 1s !important;
 }
 @keyframes rainbow {
 	0% {
@@ -526,4 +517,7 @@ INFO-SECTION */
 		top: 70%;
 		left: 21%;
 	}
+  #specialization {
+    display: none;
+  }
 }

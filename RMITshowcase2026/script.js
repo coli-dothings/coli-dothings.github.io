@@ -1,5 +1,6 @@
 // Initializing & placing items
-// When using real data, replace "_Test1.jpg" with "_${name}.webp"
+// Old code - if it aint broke dont FIX IT :3
+
 const grid = document.querySelector("#grid-container");
 for (let i = 0; i < myData.MP.length; i++) {
 	let item;
@@ -126,6 +127,12 @@ const branchContainer = document.querySelector("#branch-container");
 const branchPos = document.querySelectorAll(".branch");
 const line = document.querySelectorAll(".b-line");
 const tempWrapper = document.querySelector("#temp-wrapper");
+
+const info = document.querySelector("#info-page");
+const introPage = info.querySelector("#intro");
+const projectPage = info.querySelector("#project-info");
+const studentPage = info.querySelector("#student-info");
+
 let currentBlockedBranch = 0;
 
 // Initilialize new items with click event
@@ -213,21 +220,23 @@ function move(newItem, imgDiv, circ, title) {
 					for (let a = 0; a < myData.MP.length; a++) {
 						if (myData.MP[a].title == title) {
 							updateBranchStudent(myData.MP[a]);
+							updateInfoProject(myData.MP[a], "MP");
 						}
 					}
 				} else if (imgDiv.classList.contains("SPT")) {
 					for (let b = 0; b < myData.SP.length; b++) {
 						if (myData.SP[b].title == title) {
 							updateBranchStudent(myData.SP[b]);
+							updateInfoProject(myData.SP[b], "SP");
 						}
 					}
 				}
-			}
-			// Item is student
-			else {
+			} else {
+				// Item is student
 				for (let c = 0; c < myData.Person.length; c++) {
 					if (myData.Person[c].display_name == title) {
 						updateBranchProject(myData.Person[c]);
+						updateInfoStudent(myData.Person[c]);
 					}
 				}
 			}
@@ -409,6 +418,78 @@ function updateBgMapColor(newItem) {
 }
 
 //==============================================================================
+// INFO
+const projectTitle = projectPage.querySelector("#project-title");
+const tagLine = projectPage.querySelector("#tagline");
+const thumbnailImg = projectPage.querySelector("#thumbnail-img");
+const ytContainer = projectPage.querySelector("#yt-container");
+const yt = projectPage.querySelector("#youtube");
+const addContainer = projectPage.querySelector("#add-container");
+const projectDescription = projectPage.querySelector("#project-description");
+const creditContainer = projectPage.querySelector("#credit-container");
+const credit = projectPage.querySelector("#credit");
+
+function updateInfoProject(pData, type) {
+	projectPage.classList.add("display");
+	introPage.classList.remove("display");
+	studentPage.classList.remove("display");
+	console.log("info project");
+
+	projectTitle.innerHTML = pData.title;
+	tagLine.innerHTML = pData.tagline;
+	if (pData.yt) {
+		// if there is a youtube video, remove thumbnail img
+		thumbnailImg.style.display = "none";
+		yt.src = pData.yt;
+	} else {
+		ytContainer.style.display = "none";
+		thumbnailImg.src = `img/${type}T_${pData.name}.webp`;
+	}
+	for (let i = 0; i < pData.add_count; i++) {
+		addContainer.insertAdjacentHTML(
+			"beforeend",
+			`<img class="add-img" src="img/${type}A_${i + 1}_${pData.name}.webp"/>`,
+		);
+	}
+	projectDescription.innerHTML = pData.description;
+	if (pData.credits) {
+		credit.innerHTML = pData.credits;
+	} else {
+		creditContainer.style.display = "none";
+	}
+}
+
+const pfp = studentPage.querySelector("#pfp");
+const displayName = studentPage.querySelector("#display-name");
+const specialization = studentPage.querySelector("#specialization");
+const showreelContainer = studentPage.querySelector("#showreel-container");
+const showreel = studentPage.querySelector("#showreel");
+const bio = studentPage.querySelector("#bio");
+const website = studentPage.querySelector("#website");
+
+function updateInfoStudent(sData) {
+	projectPage.classList.remove("display");
+	introPage.classList.remove("display");
+	studentPage.classList.add("display");
+
+	pfp.src = `img/PFP_${sData.name}.webp`;
+	displayName.innerHTML = sData.display_name;
+	specialization.innerHTML = sData.specialization;
+	if (sData.showreel) {
+		showreel.src = sData.showreel;
+	} else {
+		showreelContainer.style.display = "none";
+	}
+  bio.innerHTML = sData.bio;
+	if (sData.website) {
+		website.src = sData.website;
+	} else {
+		website.style.display = "none";
+	}
+}
+
+//==============================================================================
+// RESET
 const resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", resetPage);
 
@@ -443,6 +524,10 @@ function removeItem() {
 }
 
 function resetPage() {
+	introPage.classList.add("display");
+	studentPage.classList.remove("display");
+	projectPage.classList.remove("display");
+
 	removeBranch();
 	document.documentElement.style.setProperty("--bg-map", "var(--bg-info)");
 	let destroy = document.querySelectorAll(".destroy");
@@ -454,6 +539,7 @@ function resetPage() {
 		circ.classList.remove("invis");
 	}
 	tempWrapper.removeAttribute("style");
+
 	for (let x = 0; x < item.length; x++) {
 		item[x].style.transform = "none";
 		if (item[x].classList.contains("invis")) {
@@ -474,15 +560,14 @@ function resetPage() {
 }
 
 //============================================================
-const infoPage = document.querySelector("#info-page");
 const pullTab = document.querySelector("#pull-tab");
 function pull() {
-	if (!infoPage.classList.contains("hide-info")) {
-		infoPage.classList.add("hide-info");
+	if (!info.classList.contains("hide-info")) {
+		info.classList.add("hide-info");
 		pullTab.classList.add("hide-info");
 		pullTab.textContent = "[ ]";
 	} else {
-		infoPage.classList.remove("hide-info");
+		info.classList.remove("hide-info");
 		pullTab.classList.remove("hide-info");
 		pullTab.textContent = "[X]";
 	}
