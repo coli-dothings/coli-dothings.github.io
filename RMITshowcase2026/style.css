@@ -428,6 +428,7 @@ iframe {
 }
 .add-img {
 	padding: 5px;
+  max-height: 100vh;
 }
 
 #pfp-section {
