@@ -216,23 +216,29 @@ function move(newItem, imgDiv, circ, title) {
 			// Look throught data indexes. If a key match send the whole data
 			if (!newItem.classList.contains("student")) {
 				// is MP or SP
+				clearProjectInfo();
 				if (imgDiv.classList.contains("MPT")) {
 					for (let a = 0; a < myData.MP.length; a++) {
-						if (myData.MP[a].title == title) {
-							updateBranchStudent(myData.MP[a]);
-							updateInfoProject(myData.MP[a], "MP");
+						if (myData.MP[a].representative == "Myself") {
+							if (myData.MP[a].title == title) {
+								updateBranchStudent(myData.MP[a]);
+								updateInfoProject(myData.MP[a], "MP");
+							}
 						}
 					}
 				} else if (imgDiv.classList.contains("SPT")) {
 					for (let b = 0; b < myData.SP.length; b++) {
-						if (myData.SP[b].title == title) {
-							updateBranchStudent(myData.SP[b]);
-							updateInfoProject(myData.SP[b], "SP");
+						if (myData.SP[b].is_group == "No" || myData.SP[b].representative == "Myself") {
+							if (myData.SP[b].title == title) {
+								updateBranchStudent(myData.SP[b]);
+								updateInfoProject(myData.SP[b], "SP");
+							}
 						}
 					}
 				}
 			} else {
 				// Item is student
+				clearStudentInfo();
 				for (let c = 0; c < myData.Person.length; c++) {
 					if (myData.Person[c].display_name == title) {
 						updateBranchProject(myData.Person[c]);
@@ -249,27 +255,23 @@ function move(newItem, imgDiv, circ, title) {
 }
 
 function updateBranchStudent(pData) {
-	if (pData.representative == "Myself" || pData.is_group == "No") {
-		let memCount = pData.member_count;
-		let branchArr = [0, 1, 2, 3, 4, 5];
-		console.log(`member count: ${memCount}`);
-		// max mem count is 4 based on survey...
-		switch (memCount) {
-			case 1:
-				populateStudent(branchArr, pData.mem1);
-				break;
-			case 2:
-				populateStudent(branchArr, pData.mem1, pData.mem2);
-				break;
-			case 3:
-				populateStudent(branchArr, pData.mem1, pData.mem2, pData.mem3);
-				break;
-			case 4:
-				populateStudent(branchArr, pData.mem1, pData.mem2, pData.mem3, pData.mem4);
-				break;
-			default:
-				console.error("student number error");
-		}
+	let memCount = pData.member_count;
+	let branchArr = [0, 1, 2, 3, 4, 5];
+	console.log(`member count: ${memCount}`);
+	// max mem count is 4 based on survey...
+	switch (memCount) {
+		case 1:
+			populateStudent(branchArr, pData.mem1);
+			break;
+		case 2:
+			populateStudent(branchArr, pData.mem1, pData.mem2);
+			break;
+		case 3:
+			populateStudent(branchArr, pData.mem1, pData.mem2, pData.mem3);
+			break;
+		case 4:
+			populateStudent(branchArr, pData.mem1, pData.mem2, pData.mem3, pData.mem4);
+			break;
 	}
 }
 function populateStudent(arr, mem1, mem2, mem3, mem4) {
@@ -298,10 +300,11 @@ function populateStudent(arr, mem1, mem2, mem3, mem4) {
 }
 
 function updateBranchProject(sData) {
-	// Check for exactly 1 Mp & 1 SP per student
+	// Check for at least 1 Mp & 1 SP per student
 	let sID = sData.sID;
 	if (sID != null) {
 		for (let x = 0; x < myData.MP.length; x++) {
+			// if any MP/SP that has mem (clear non-rep)
 			if (
 				sID == myData.MP[x].mem1 ||
 				sID == myData.MP[x].mem2 ||
@@ -428,12 +431,12 @@ const addContainer = projectPage.querySelector("#add-container");
 const projectDescription = projectPage.querySelector("#project-description");
 const creditContainer = projectPage.querySelector("#credit-container");
 const credit = projectPage.querySelector("#credit");
+const pLink = projectPage.querySelector("#p-link");
 
 function updateInfoProject(pData, type) {
 	projectPage.classList.add("display");
 	introPage.classList.remove("display");
 	studentPage.classList.remove("display");
-	console.log("info project");
 
 	projectTitle.innerHTML = pData.title;
 	tagLine.innerHTML = pData.tagline;
@@ -441,10 +444,17 @@ function updateInfoProject(pData, type) {
 		// if there is a youtube video, remove thumbnail img
 		thumbnailImg.style.display = "none";
 		yt.src = pData.yt;
+    console.log("yes YT")
 	} else {
 		ytContainer.style.display = "none";
 		thumbnailImg.src = `img/${type}T_${pData.name}.webp`;
+    console.log("no YT")
 	}
+  if (pData.link) {
+    pLink.href = pData.link;
+  } else {
+    pLink.style.display = "none";
+  }
 	for (let i = 0; i < pData.add_count; i++) {
 		addContainer.insertAdjacentHTML(
 			"beforeend",
@@ -466,13 +476,14 @@ const showreelContainer = studentPage.querySelector("#showreel-container");
 const showreel = studentPage.querySelector("#showreel");
 const bio = studentPage.querySelector("#bio");
 const website = studentPage.querySelector("#website");
+const sLink = studentPage.querySelector("#s-link");
 
 function updateInfoStudent(sData) {
 	projectPage.classList.remove("display");
 	introPage.classList.remove("display");
 	studentPage.classList.add("display");
 
-	pfp.src = `img/PFP_${sData.name}.webp`;
+  pfp.style= `background-image: url(img/PFP_${sData.name}.webp)`;
 	displayName.innerHTML = sData.display_name;
 	specialization.innerHTML = sData.specialization;
 	if (sData.showreel) {
@@ -480,11 +491,16 @@ function updateInfoStudent(sData) {
 	} else {
 		showreelContainer.style.display = "none";
 	}
-  bio.innerHTML = sData.bio;
+	bio.innerHTML = sData.bio;
 	if (sData.website) {
-		website.src = sData.website;
+		website.href = sData.website;
 	} else {
 		website.style.display = "none";
+	}
+  if (sData.s_link) {
+		sLink.href = sData.s_link;
+	} else {
+		sLink.style.display = "none";
 	}
 }
 
@@ -521,6 +537,20 @@ function removeItem() {
 	for (let y = 0; y < other.length; y++) {
 		other[y].classList.add("invis");
 	}
+}
+
+function clearProjectInfo() {
+	ytContainer.removeAttribute("style");
+	thumbnailImg.removeAttribute("style");
+	addContainer.replaceChildren();
+  pLink.removeAttribute("style");
+  creditContainer.removeAttribute("style");
+}
+
+function clearStudentInfo() {
+	showreelContainer.removeAttribute("style");
+	website.removeAttribute("style");
+  sLink.removeAttribute("style");
 }
 
 function resetPage() {

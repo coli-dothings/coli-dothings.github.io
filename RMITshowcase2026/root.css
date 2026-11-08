@@ -100,12 +100,15 @@ body {
 h1 {
 	font-size: 3rem;
 	font-family: "Major Mono Display", monospace;
-  font-weight: bold;
+	font-weight: bold;
 }
-h2 {
+h2, h3 {
 	font-size: 2rem;
 	margin-bottom: 20px;
 	font-family: "Major Mono Display", monospace;
+}
+h3 {
+	font-size: 1.7rem;
 }
 p {
 	font-size: 1rem;
@@ -161,11 +164,7 @@ li::before {
 	color: var(--av);
 }
 .student {
-  color: var(--bg-info);
-}
-
-.text-hover{
-	font-family: "Major Mono Display", monospace;
+	color: var(--bg-info);
 }
 
 nav {
@@ -174,7 +173,7 @@ nav {
 	top: 0;
 	cursor: pointer;
 	z-index: 100;
-	font-size: 1.2rem;
+	font-size: 1.4rem;
 	padding-left: 12px;
 
 	font-weight: bold;
@@ -183,10 +182,12 @@ nav {
 #shuffle {
 	padding-left: 1rem;
 }
-#reset:hover, #shuffle:hover {
+#reset:hover,
+#shuffle:hover {
 	color: var(--audio);
 }
-#reset:hover span, #shuffle:hover span {
+#reset:hover span,
+#shuffle:hover span {
 	opacity: 1;
 }
 nav span {
@@ -195,5 +196,5 @@ nav span {
 }
 
 #acknowledgement {
-  padding-bottom: 20px;
+	padding-bottom: 20px;
 }

@@ -120,7 +120,7 @@ const myData = {
       display_name: "Mai Anh Vo",
       sID: 4021256,
       specialization: "Audio & Visual Design",
-      bio: "I'm an Audio & Visual Developer with exhibited works at ACMI spanning visual directing, sound design, and technical game/web development. Recent works includes \"Sunbound\", an interactive motion-capture installation for ACMI Audience Lab, alongside freelance sound design for animations and game projects.<br><br>Quite in fact, I'm the developer of this website you're viewing from, as well as last year gradshow's!",
+      bio: "I'm an Audio & Visual Developer with exhibited works spanning visual directing, sound design, and technical game/web development. Recent works includes \"Sunbound\", an interactive motion-capture installation for ACMI Audience Lab, alongside freelance sound design for animations and games.<br><br>Quite in fact, I'm the <span class=\"rainbow\">developer</span> of this website you're viewing from, as well as last year gradshow's :)",
       website: "https://www.instagram.com/coli_artsnstuffs/",
       showreel: "https://youtube.com/embed/1mmNsaUpCrc?si=DR_8t2KqdLdb8z7b"
     },
@@ -140,7 +140,7 @@ const myData = {
       specialization: "Digital Video",
       bio: "Jolie is a videographer and digital media producer with a background in documentary filmmaking and educational and community-based video practice. Her work explores human experiences, community connection and the emotional meaning of everyday life. <br><br>Through a digital lens, she is interested in how video can communicate complex feelings, create space for authentic voices and influence the way people see, listen to and relate to the world around them. Her practice combines thoughtful cinematography with human-centred storytelling to create work that feels warm, honest and meaningful.",
       website: "https://trangcao865.wixsite.com/jolie-cao",
-      showreel: "https://drive.google.com/file/d/1-UI9YZQvBItO2xpIMyUJ5nxY1_FSfuJ9/preview"
+      s_link: "https://drive.google.com/file/d/1-UI9YZQvBItO2xpIMyUJ5nxY1_FSfuJ9/view"
     },
     {
       name: "JacobVanDerEynden",

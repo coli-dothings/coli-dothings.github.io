@@ -40,8 +40,10 @@
 	width: 100%;
 	aspect-ratio: 1;
 	border-radius: 50%;
-	background-color: wheat;
-	background-size: contain;
+	background-color: black; /* fallback without img */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 	border: solid 3px;
 	cursor: pointer;
 
@@ -66,16 +68,16 @@
 .name-plate {
 	margin-top: 103%;
 	display: inline-block;
-
 }
 .name-plate p {
 	font-size: 1rem;
 	overflow-wrap: anywhere;
-  background-color: var(--bg-map);
+  border-radius: 8px;
+	background-color: var(--bg-map);
 }
 
 .rainbow {
-	animation: rainbow 5s infinite 1s !important;
+	animation: rainbow 5s infinite !important;
 }
 @keyframes rainbow {
 	0% {
@@ -183,8 +185,8 @@ INTERACTIVE */
 .hidden {
 	display: none !important;
 	opacity: 0;
-	transition: all 1s;
 	transition-behavior: allow-discrete;
+	transition: all 1s;
 }
 #map-main .hidden {
 	transition: all 2s; /* Add delay as needed */
@@ -368,6 +370,8 @@ INTERACTIVE */
 		opacity: 0%;
 	}
 }
+
+/*======================================================================================
 /*======================================================================================
 INFO-SECTION */
 .flex-wrapper {
@@ -376,7 +380,7 @@ INFO-SECTION */
 #intro {
 	display: flex;
 	flex-direction: column;
-	min-height: 95vh;
+	min-height: 96vh;
 }
 #intro footer {
 	margin-top: auto;
@@ -398,13 +402,61 @@ INFO-SECTION */
 	}
 }
 
-#credit:hover #credit-hover,
-#credit:active #credit-hover {
-	display: block;
+#credit:hover #credit-hover {
+	opacity: 1;
 }
 #credit-hover {
-	display: none;
+	opacity: 0;
+	transition: opacity 0.4s;
 }
+
+/*==========================================================
+Project & STudent info */
+#yt-container,
+#showreel-container {
+	width: 100%;
+	overflow: hidden;
+  border-radius: 8px;
+}
+iframe {
+	width: 100%;
+	aspect-ratio: 16/9;
+}
+#add-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+.add-img {
+	padding: 5px;
+}
+
+#pfp-section {
+	display: flex;
+	padding-bottom: 20px;
+}
+#pfp {
+	height: 15vh;
+	aspect-ratio: 1;
+	border-radius: 8px;
+	background-color: black; /* fallback without img */
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+#name-skill {
+	padding-left: 12px;
+}
+#display-name, #project-title {
+  margin-bottom: 8px;
+}
+#tagline {
+  margin: 10px 0px;
+}
+#bio,
+#project-description {
+	margin: 10px 0 20px;
+}
+
 /*==========================================================*/
 /* PC & mobile share similiar map layout with 3 columns, otherwise
 - Mobile info-page sit bottom half of screen, fixed position */
@@ -517,7 +569,10 @@ INFO-SECTION */
 		top: 70%;
 		left: 21%;
 	}
-  #specialization {
-    display: none;
+	#map-main #specialization {
+		display: none;
+	}
+  #display-name {
+    font-size: 2rem;
   }
 }
