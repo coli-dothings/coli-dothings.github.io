@@ -8,14 +8,21 @@
 	overflow-x: hidden;
 }
 
+#grid-vis {
+  position: fixed;
+  top: 0;
+  width: 60vw;
+  height: 100vh;
+  z-index: -99;
+  background-size: 50px 50px;
+	background-image:
+		linear-gradient(to right, var(--grid) 2px, transparent 1px),
+		linear-gradient(to bottom, var(--grid) 2px, transparent 1px);
+}
 #grid-container {
 	min-width: 0;
 	display: grid;
 	padding: 8vh 3vh 0vh;
-	background-size: 50px 50px;
-	background-image:
-		linear-gradient(to right, var(--grid) 2px, transparent 1px),
-		linear-gradient(to bottom, var(--grid) 2px, transparent 1px);
 }
 
 #info-page {
@@ -388,7 +395,6 @@ INFO-SECTION */
 }
 .text-hover {
 	animation: hover 5s infinite ease-in-out;
-	padding-bottom: 20px;
 }
 @keyframes hover {
 	0% {
@@ -408,6 +414,10 @@ INFO-SECTION */
 #credit-hover {
 	opacity: 0;
 	transition: opacity 0.4s;
+}
+
+#welcome-text, #acknowledgement {
+  font-size: 0.9rem;
 }
 
 /*==========================================================
@@ -459,7 +469,7 @@ iframe {
 }
 
 /*==========================================================*/
-/* PC & mobile share similiar map layout with 3 columns, otherwise
+/* PC & mobile share similiar map layout with 4 columns, otherwise
 - Mobile info-page sit bottom half of screen, fixed position */
 /* PC screen */
 #b-left,
@@ -506,6 +516,10 @@ iframe {
 	#map-main {
 		width: 100%;
 	}
+  #grid-vis {
+    width: 100vw;
+    height: 100vh;
+  }
 	#grid-container {
 		gap: 5vw;
 		grid-template-columns: repeat(4, 1fr);

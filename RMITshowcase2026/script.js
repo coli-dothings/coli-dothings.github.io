@@ -212,11 +212,13 @@ function move(newItem, imgDiv, circ, title) {
 			circ.classList.add("invis");
 			updateBgMapColor(newItem);
 
+			clearStudentInfo();
+			clearProjectInfo();
+
 			// set & get key data from data.js
 			// Look throught data indexes. If a key match send the whole data
 			if (!newItem.classList.contains("student")) {
 				// is MP or SP
-				clearProjectInfo();
 				if (imgDiv.classList.contains("MPT")) {
 					for (let a = 0; a < myData.MP.length; a++) {
 						if (myData.MP[a].representative == "Myself") {
@@ -238,7 +240,6 @@ function move(newItem, imgDiv, circ, title) {
 				}
 			} else {
 				// Item is student
-				clearStudentInfo();
 				for (let c = 0; c < myData.Person.length; c++) {
 					if (myData.Person[c].display_name == title) {
 						updateBranchProject(myData.Person[c]);
@@ -444,17 +445,17 @@ function updateInfoProject(pData, type) {
 		// if there is a youtube video, remove thumbnail img
 		thumbnailImg.style.display = "none";
 		yt.src = pData.yt;
-    console.log("yes YT")
+		console.log("yes YT");
 	} else {
 		ytContainer.style.display = "none";
 		thumbnailImg.src = `img/${type}T_${pData.name}.webp`;
-    console.log("no YT")
+		console.log("no YT");
 	}
-  if (pData.link) {
-    pLink.href = pData.link;
-  } else {
-    pLink.style.display = "none";
-  }
+	if (pData.link) {
+		pLink.href = pData.link;
+	} else {
+		pLink.style.display = "none";
+	}
 	for (let i = 0; i < pData.add_count; i++) {
 		addContainer.insertAdjacentHTML(
 			"beforeend",
@@ -483,7 +484,7 @@ function updateInfoStudent(sData) {
 	introPage.classList.remove("display");
 	studentPage.classList.add("display");
 
-  pfp.style= `background-image: url(img/PFP_${sData.name}.webp)`;
+	pfp.style = `background-image: url(img/PFP_${sData.name}.webp)`;
 	displayName.innerHTML = sData.display_name;
 	specialization.innerHTML = sData.specialization;
 	if (sData.showreel) {
@@ -497,7 +498,7 @@ function updateInfoStudent(sData) {
 	} else {
 		website.style.display = "none";
 	}
-  if (sData.s_link) {
+	if (sData.s_link) {
 		sLink.href = sData.s_link;
 	} else {
 		sLink.style.display = "none";
@@ -540,24 +541,32 @@ function removeItem() {
 }
 
 function clearProjectInfo() {
+	yt.src = "";
 	ytContainer.removeAttribute("style");
 	thumbnailImg.removeAttribute("style");
 	addContainer.replaceChildren();
-  pLink.removeAttribute("style");
-  creditContainer.removeAttribute("style");
+	pLink.removeAttribute("style");
+	creditContainer.removeAttribute("style");
 }
 
 function clearStudentInfo() {
+	showreel.src = "";
 	showreelContainer.removeAttribute("style");
 	website.removeAttribute("style");
-  sLink.removeAttribute("style");
+	sLink.removeAttribute("style");
 }
 
 function resetPage() {
 	introPage.classList.add("display");
 	studentPage.classList.remove("display");
 	projectPage.classList.remove("display");
+	clearProjectInfo();
+	clearStudentInfo();
 
+  for (let x = 0; x < typeLi.length; x++) {
+		typeLi[x].querySelector("span").classList.remove("li-active");
+	}
+  
 	removeBranch();
 	document.documentElement.style.setProperty("--bg-map", "var(--bg-info)");
 	let destroy = document.querySelectorAll(".destroy");
@@ -574,6 +583,9 @@ function resetPage() {
 		item[x].style.transform = "none";
 		if (item[x].classList.contains("invis")) {
 			item[x].classList.remove("invis");
+		}
+    if (item[x].classList.contains("hidden")) {
+			item[x].classList.remove("hidden");
 		}
 		// catch for destroy error
 		let circ = item[x].querySelector(".circ");
@@ -601,4 +613,25 @@ function pull() {
 		pullTab.classList.remove("hide-info");
 		pullTab.textContent = "[X]";
 	}
+}
+//============================================================
+const typeLi = document.querySelectorAll("li");
+
+for (let i = 0; i < typeLi.length; i++) {
+	typeLi[i].addEventListener("click", () => findType(typeLi[i]));
+}
+function findType(listItem) {
+	let item = grid.querySelectorAll(".item");
+	for (let i = 0; i < item.length; i++) {
+		if (!item[i].classList.contains(listItem.classList.toString())) {
+			item[i].classList.add("hidden");
+		} else {
+			item[i].classList.remove("hidden");
+		}
+	}
+
+	for (let x = 0; x < typeLi.length; x++) {
+		typeLi[x].querySelector("span").classList.remove("li-active");
+	}
+	listItem.querySelector("span").classList.add("li-active");
 }

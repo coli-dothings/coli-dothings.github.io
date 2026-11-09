@@ -59,7 +59,7 @@ p {
 
 :root {
 	--bg-info: black;
-	--text-info: rgb(173, 173, 192);
+	--text-info: rgb(191, 191, 210);
 	--text-map: white;
 	--grid: rgba(102, 102, 107, 0.47);
 	/* Define all project color here */
@@ -133,7 +133,15 @@ li {
 }
 li span {
 	color: var(--text-info);
+  cursor: pointer;
 }
+li span:hover {
+  color: inherit;
+}
+.li-active {
+  color: inherit;
+}
+
 li::before {
 	content: "•";
 	font-size: 5rem;
